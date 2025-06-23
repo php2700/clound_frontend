@@ -176,7 +176,7 @@ const Implementation = () => {
           >
             For companies new to Salesforce
           </h1>
-          <p className="text-gray-700 text-base md:text-xl mt-8">
+          <p className="text-gray-700 text-xl md:text-2xl mt-8">
             We activate the first clouds and partner with them in their first
             steps,
             <br />
@@ -355,7 +355,7 @@ const Implementation = () => {
         </div>
         <div className="container mx-auto px-4 py-16">
           {/* Heading */}
-          <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#008093] mb-12">
+          <h2 className="text-center text-4xl md:text-4xl font-semibold text-[#008093] mb-12">
             Check our other services
           </h2>
 
@@ -363,7 +363,7 @@ const Implementation = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaLightbulb className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-3.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">
                 Innovation
               </h3>
@@ -382,7 +382,7 @@ const Implementation = () => {
 
             {/* Card 2 */}
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaChartLine className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-4.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">
                 Strategic Growth
               </h3>
@@ -401,7 +401,7 @@ const Implementation = () => {
 
             {/* Card 3 */}
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaLightbulb className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-2.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">
                 Optimization
               </h3>

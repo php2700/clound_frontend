@@ -36,16 +36,16 @@ const Footer = () => {
         <div className="w-40">
           <p className="text-3xl font-semibold">Certifications</p>
           <p className="text-yellow-400 text-3xl font-bold mt-1 text-left">
-            +1000
+            +50
           </p>
         </div>
         <div className="w-40">
           <p className="text-3xl font-semibold">Projects</p>
-          <p className="text-yellow-400 text-3xl font-bold mt-1">+240</p>
+          <p className="text-yellow-400 text-3xl font-bold mt-1">+120</p>
         </div>
         <div className="w-40">
           <p className="text-3xl font-semibold">Experts</p>
-          <p className="text-yellow-400 text-3xl font-bold mt-1">+240</p>
+          <p className="text-yellow-400 text-3xl font-bold mt-1">+50</p>
         </div>
         <div className="flex flex-col items-center w-64 text-center">
           <p className="text-white text-xl font-semibold mb-2 whitespace-nowrap">
@@ -68,7 +68,7 @@ const Footer = () => {
           <h4 className="font-semibold mb-2 text-gray-400">
             Cloudgaia offices around the world
           </h4>
-          <ul className="space-y-1">
+          <ul className="space-y-1 ">
             {[
               "United States",
               "United Kingdom",
@@ -77,7 +77,7 @@ const Footer = () => {
               "Colombia",
             ].map((label) => (
               <li key={label}>
-                <a href="#" className="underline-bar text-sm  ">
+                <a href="#" className="underline-bar text-sm ">
                   {label}
                 </a>
               </li>
@@ -85,7 +85,7 @@ const Footer = () => {
             <li>
               <a
                 href="mailto:hello@cloudgaia.com"
-                className="relative text-yellow-400 group inline-block transition-colors duration-300 hover:text-[#FF83A9]"
+                className="relative text-yellow-400 group inline-block transition-colors duration-300 hover: "
               >
                 hello@cloudgaia.com
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FF83A9] transition-all duration-300 group-hover:w-full"></span>

@@ -220,7 +220,7 @@ const Optimization = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaLightbulb className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-1.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">Innovation</h3>
               <p className="text-gray-700 text-lg mb-4">
                 Discover cutting-edge solutions that help you stay ahead of the curve.
@@ -232,7 +232,7 @@ const Optimization = () => {
             </div>
 
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaChartLine className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-3.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">Strategic Growth</h3>
               <p className="text-gray-700 text-lg mb-4">
                 Accelerate your business growth with focused strategic initiatives.
@@ -244,7 +244,7 @@ const Optimization = () => {
             </div>
 
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaLightbulb className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-4.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">Optimization</h3>
               <p className="text-gray-700 text-lg mb-4">
                 Improve efficiency by streamlining operations and maximizing ROI.

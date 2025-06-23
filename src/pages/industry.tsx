@@ -78,20 +78,19 @@ const Industries = () => {
 
         {/* Card Grid Section */}
         <div className="mt-16 flex justify-center">
-          <div className="w-full max-w-[1200px] flex flex-col items-center gap-6">
+          <div className="w-full max-w-[1200px] flex flex-col items-center gap-2">
             {/* Row 1 */}
-            <div className="flex gap-6 w-full">
+            <div className="flex gap-2 w-full">
               {[
                 {
-                  icon: <FaIndustry className="text-[#FF83A9] text-3xl mb-2" />,
+                  // icon: <FaIndustry className="text-[#FF83A9] text-3xl mb-2" />,
+                  icon: <img src="/industries-icon-1.svg" className="mb-2" />,
                   title: "Retail & Consumer Goods",
                   description:
                     "We empower retail and consumer goods companies to enhance customer engagement and streamline operations with customized Salesforce solutions tailored to their unique business needs.",
                 },
                 {
-                  icon: (
-                    <FaPiggyBank className="text-[#FF83A9] text-3xl mb-2" />
-                  ),
+                  icon: <img src="/industries-icon-2.svg" className="mb-2" />,
                   title: "Financial Services",
                   description:
                     "We help financial service providers increase customer satisfaction and improve operational efficiency through secure, data-driven Salesforce solutions designed for growth and compliance.",
@@ -99,34 +98,34 @@ const Industries = () => {
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="flex-1 bg-white border rounded-lg shadow-md p-6 h-[200px]"
+                  className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
                 >
                   {card.icon}
-                  <h4 className="text-2xl font-bold text-[#008093] mb-1">
+                  <h4 className="text-3xl font-semibold text-[#008093] mb-1">
                     {card.title}
                   </h4>
-                  <p className="text-[#474747] text-sm">{card.description}</p>
+                  <p className="text-[#474747] text-lg leading-tight">{card.description}</p>
                 </div>
               ))}
             </div>
 
             {/* Row 2 */}
-            <div className="flex gap-6 w-full">
+            <div className="flex gap-2 w-full">
               {[
                 {
-                  icon: <FaLeaf className="text-[#FF83A9] text-3xl mb-2" />,
+                  icon: <img src="/industries-icon-3.svg" className="mb-2" />,
                   title: "Agriculture & Mining",
                   description:
                     "We enable agriculture and mining businesses to manage resources efficiently and strengthen partnerships through industry-specific Salesforce solutions.",
                 },
                 {
-                  icon: <FaEnvelope className="text-[#FF83A9] text-3xl mb-2" />,
+                  icon: <img src="/industries-icon-4.svg" className="mb-2" />,
                   title: "Communications, Media & Telco",
                   description:
                     "We help communications, media, and telecom companies elevate customer experiences and streamline processes with Salesforce-driven, flexible solutions.",
                 },
                 {
-                  icon: <FaPills className="text-[#FF83A9] text-3xl mb-2" />,
+                  icon: <img src="/industries-icon-5.svg" className="mb-2" />,
                   title: "Health & Life Science", // fixed typo
                   description:
                     "Our solutions for health and life sciences integrate Salesforce to improve patient experiences, streamline workflows, and drive innovation in healthcare.",
@@ -134,30 +133,28 @@ const Industries = () => {
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="flex-1 bg-white border rounded-lg shadow-md p-6 h-[200px]"
+                  className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
                 >
                   {card.icon}
-                  <h4 className="text-2xl font-bold text-[#008093] mb-1">
+                  <h4 className="text-3xl font-semibold text-[#008093] mb-1">
                     {card.title}
                   </h4>
-                  <p className="text-[#474747] text-sm">{card.description}</p>
+                  <p className="text-[#474747] text-lg leading-tight">{card.description}</p>
                 </div>
               ))}
             </div>
 
             {/* Row 3 */}
-            <div className="flex gap-6 w-full">
+            <div className="flex gap-2 w-full">
               {[
                 {
-                  icon: <FaTools className="text-[#FF83A9] text-3xl mb-2" />,
+                  icon: <img src="/industries-icon-6.svg" className="mb-2" />,
                   title: "Manufacturing & Automotive",
                   description:
                     "Our Salesforce solutions help manufacturing and automotive industries boost productivity, improve supply chain management, and enhance customer satisfaction at every stage.",
                 },
                 {
-                  icon: (
-                    <FaBatteryFull className="text-[#FF83A9] text-3xl mb-2" />
-                  ),
+                  icon: <img src="/industries-icon-7.svg" className="mb-2" />,
                   title: "Energy",
                   description:
                     "We support energy companies in managing complex operations and optimizing customer relationships by implementing robust, scalable Salesforce solutions.",
@@ -165,13 +162,13 @@ const Industries = () => {
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="flex-1 bg-white border rounded-lg shadow-md p-6 h-[200px]"
+                  className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
                 >
                   {card.icon}
-                  <h4 className="text-2xl font-bold text-[#008093] mb-1">
+                  <h4 className="text-3xl font-semibold text-[#008093] mb-1">
                     {card.title}
                   </h4>
-                  <p className="text-[#474747] text-sm">{card.description}</p>
+                  <p className="text-[#474747] text-lg leading-tight">{card.description}</p>
                 </div>
               ))}
             </div>

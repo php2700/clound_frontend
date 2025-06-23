@@ -332,7 +332,7 @@ const Innovation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaLightbulb className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-1.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">
                 Innovation
               </h3>
@@ -350,7 +350,7 @@ const Innovation = () => {
             </div>
 
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaChartLine className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-4.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">
                 Strategic Growth
               </h3>
@@ -368,7 +368,7 @@ const Innovation = () => {
             </div>
 
             <div className="p-6 border rounded-lg shadow-md text-left">
-              <FaLightbulb className="text-[#FF83A9] text-4xl mb-4" />
+              <img src='/services-icon-2.svg' className="mb-4" />
               <h3 className="text-3xl text-[#008093] font-semibold mb-2">
                 Optimization
               </h3>

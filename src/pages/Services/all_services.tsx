@@ -56,9 +56,9 @@ const Services = () => {
             <p className="text-black text-base md:text-xl mt-8 max-w-3xl">
               We offer a variety of tailor-made services designed to meet your
               needs and align with your level of maturity within the Salesforce
-              ecosystem. We understand the specific requirements of your industry
-              and design end-to-end solutions ensuring that every step is aligned
-              with your goals.
+              ecosystem. We understand the specific requirements of your
+              industry and design end-to-end solutions ensuring that every step
+              is aligned with your goals.
             </p>
           </div>
 
@@ -74,17 +74,17 @@ const Services = () => {
           {/* 4 Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-0 mt-16">
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
-              <FaPlaneArrival className="text-3xl text-[#008093] mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-[#008093]">
+              <img src="/services-icon-1.svg" className="mb-4" />
+              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
                 Landing Services
               </h3>
               <p className="text-gray-700 mb-4">
-                Supporting your first steps with Salesforce to ensure a smooth and
-                successful adoption.
+                Supporting your first steps with Salesforce to ensure a smooth
+                and successful adoption.
               </p>
               <a
                 href="#"
-                className="group inline-block font-semibold text-[#008093] relative"
+                className="group inline-block font-semibold  relative"
               >
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
@@ -92,17 +92,17 @@ const Services = () => {
             </div>
 
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
-              <FaTools className="text-3xl text-[#008093] mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-[#008093]">
+              <img src="/services-icon-2.svg" className="mb-4" />
+              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
                 Optimization
               </h3>
               <p className="text-gray-700 mb-4">
-                Enhancing Salesforce by tailoring it to the specific needs of your
-                business.
+                Enhancing Salesforce by tailoring it to the specific needs of
+                your business.
               </p>
               <a
                 href="#"
-                className="group inline-block font-semibold text-[#008093] relative"
+                className="group inline-block font-semibold  relative"
               >
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
@@ -110,36 +110,30 @@ const Services = () => {
             </div>
 
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
-              <FaLightbulb className="text-3xl text-[#008093] mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-[#008093]">
+              <img src="/services-icon-3.svg" className="mb-4" />
+              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
                 Innovation
               </h3>
               <p className="text-gray-700 mb-4">
-                Identifying opportunities and overcoming challenges with efficient
-                solutions.
+                Identifying opportunities and overcoming challenges with
+                efficient solutions.
               </p>
-              <a
-                href="#"
-                className="group inline-block font-semibold text-[#008093] relative"
-              >
+              <a href="#" className="group inline-block font-semibold relative">
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </div>
 
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
-              <FaChartLine className="text-3xl text-[#008093] mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-[#008093]">
+              <img src="/services-icon-4.svg" className="mb-4" />
+              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
                 Strategic Growth
               </h3>
               <p className="text-gray-700 mb-4">
-                Aligning Salesforce with your business goals to drive sustainable
-                growth.
+                Aligning Salesforce with your business goals to drive
+                sustainable growth.
               </p>
-              <a
-                href="#"
-                className="group inline-block font-semibold text-[#008093] relative"
-              >
+              <a href="#" className="group inline-block font-semibold relative">
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
@@ -148,11 +142,11 @@ const Services = () => {
 
           {/* Expand Section */}
           <div className="flex justify-center items-center mt-20 px-6 md:px-0">
-            <div className="flex items-start space-x-6 max-w-4xl">
+            <div className="flex items-start items-center space-x-6 max-w-4xl">
               <img
-                src="/icon.PNG"
+                src="/services-expand-icon.svg"
                 alt="Airplane Icon"
-                className="w-20 h-20 object-contain"
+                className="w-30 h-30 object-contain "
               />
               <div className="text-left">
                 <h2 className="text-2xl md:text-3xl font-bold leading-tight">
@@ -196,16 +190,16 @@ const Services = () => {
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 mt-20 px-6">
             <div className="relative w-[200px] h-[200px] flex justify-center items-center">
-              <div className="absolute inset-0 animate-spin-slow flex justify-center items-center">
+              <div className="absolute inset-0  flex justify-center items-center">
                 <img
-                  src="https://cloudgaia.com/storage/2025/01/services-circle-animated-1.svg"
+                  src="/services-circle-animated-1.svg"
                   alt="Rotating Circle"
-                  className="w-full h-full absolute"
+                  className="w-full h-full absolute animate-spin-slow"
                 />
                 <img
-                  src="/vive.webp"
+                  src="/services-vibe-logo-1.svg"
                   alt="Inner Image"
-                  className="w-[100px] h-[100px] rounded-full object-cover border-4 border-white z-10"
+                  className="w-full h-full rounded-full object-cover border-4 border-white z-10"
                 />
               </div>
             </div>
@@ -216,12 +210,13 @@ const Services = () => {
               </h2>
               <p className="text-black text-base md:text-lg">
                 At Cloudgaia, we venture beyond the ordinary, aiming to be the
-                best by challenging and redefining best practices, while including
-                diverse perspectives that enrich our approach and foster
-                meaningful collaboration. Guided by our values, we believe in the
-                power of our work to contribute to a better world, and we enjoy
-                every step of the way, celebrating talent, empathy, and shared
-                success as we achieve extraordinary results together.
+                best by challenging and redefining best practices, while
+                including diverse perspectives that enrich our approach and
+                foster meaningful collaboration. Guided by our values, we
+                believe in the power of our work to contribute to a better
+                world, and we enjoy every step of the way, celebrating talent,
+                empathy, and shared success as we achieve extraordinary results
+                together.
               </p>
             </div>
           </div>

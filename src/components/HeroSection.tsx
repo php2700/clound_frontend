@@ -49,12 +49,16 @@ const HeroSection = () => {
       const img = new Image();
       img.src = image;
       img.onload = () => console.log(`Image ${index} loaded: ${image}`);
-      img.onerror = () => console.error(`Failed to load image ${index}: ${image}`);
+      img.onerror = () =>
+        console.error(`Failed to load image ${index}: ${image}`);
     });
   }, []);
 
   // Log render cycle
-  console.log("Rendering HeroSection, current image:", images[currentImageIndex]);
+  console.log(
+    "Rendering HeroSection, current image:",
+    images[currentImageIndex]
+  );
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 overflow-hidden">
@@ -68,7 +72,7 @@ const HeroSection = () => {
             <div
               key={index}
               className="min-w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{ 
+              style={{
                 backgroundImage: `url('${image}')`,
                 width: "100%",
                 height: "100%",
@@ -84,7 +88,7 @@ const HeroSection = () => {
       </div> */}
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-6xl md:text-6xl font-bold mb-8">
             <span className="text-yellow-400">All-in for your Growth</span>
@@ -94,7 +98,9 @@ const HeroSection = () => {
             <span className="text-white">through the power of Salesforce</span>
           </h1>
           <p className="text-xl md:text-3xl text-white mb-2">
-            We are a <span className="text-[#ff83a9] font-bold">100% Salesforce</span> Summit Consulting Partner
+            We are a{" "}
+            <span className="text-[#ff83a9] font-bold">100% Salesforce</span>{" "}
+            Summit Consulting Partner
           </p>
           <div className="mt-12">
             <Button className="bg-white text-gray-900 transition-colors duration-300 hover:bg-[#ff83a9] hover:text-white px-8 py-3 text-lg font-medium rounded-full">
