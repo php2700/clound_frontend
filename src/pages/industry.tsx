@@ -32,7 +32,14 @@ const Industries = () => {
   }, [lastScrollY]);
 
   return (
-    <div className="relative min-h-screen bg-white">
+    <div className="relative min-h-screen bg-white overflow-x-hidden">
+      {/* Blue Right-Angle Triangle in the Top-Right Corner */}
+      <div
+        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+        aria-hidden="true"
+      />
+
       {/* Sticky Header */}
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${
