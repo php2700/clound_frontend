@@ -50,166 +50,166 @@ const Industries = () => {
       </div>
 
       {/* Main Content */}
-      <div className="px-6 md:px-20 pt-24 pb-10 mt-20">
-        {/* Breadcrumb */}
-        <div className="flex items-center text-sm text-gray-500 mb-6">
-          <FaHome className="mr-1 text-xl" />
-          <span className="mx-1 text-lg font-medium">/</span>
-          <span className="text-lg font-semibold">Industries</span>
-        </div>
+      <div className="container mx-auto mt-20 px-4 py-10 md:px-6">
+        <div className="px-6 md:px-10 py-10">
+          <div className="flex items-center text-sm text-gray-500 mb-3 mt-10">
+            <FaHome className="mr-1 text-xl" />
+            <span className="mx-1 text-lg font-medium">/</span>
+            <span className="text-lg font-semibold">Industries</span>
+          </div>
 
-        {/* Title */}
-        <div className="max-w-7xl mx-auto mt-10">
-          <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
-            We match strong industry knowledge
-            <br />
-            with unparalleled Salesforce expertise
-          </h1>
-          <p className="text-[#474747] text-base md:text-2xl mt-5">
-            We have implemented, developed, and customized Salesforce for
-            hundreds of companies, understanding the business
-            <br />
-            needs of each industry and addressing challenges by considering
-            their maturity within the Salesforce ecosystem.
-          </p>
-        </div>
+          {/* Title */}
+          <div className="mt-5">
+            <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
+              We match strong industry knowledge
+              <br />
+              with unparalleled Salesforce expertise
+            </h1>
+            <p className="text-[#474747] text-base md:text-2xl mt-5">
+              We have implemented, developed, and customized Salesforce for
+              hundreds of companies, understanding the business
+              <br />
+              needs of each industry and addressing challenges by considering
+              their maturity within the Salesforce ecosystem.
+            </p>
+          </div>
 
-        {/* First Full-width Image */}
-        <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
-          <img
-            src="/industries1.PNG"
-            alt="visual"
-            className="w-full h-[500px] object-cover"
-          />
-        </div>
+          {/* First Full-width Image */}
+          <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
+            <img
+              src="/industries1.PNG"
+              alt="visual"
+              className="w-full h-[500px] object-cover"
+            />
+          </div>
 
-        {/* Card Grid Section */}
-        <div className="mt-16 flex justify-center">
-          <div className="w-full max-w-[1200px] flex flex-col items-center gap-2">
-            {/* Row 1 */}
-            <div className="flex gap-2 w-full">
-              {[
-                {
-                  // icon: <FaIndustry className="text-[#FF83A9] text-3xl mb-2" />,
-                  icon: <img src="/industries-icon-1.svg" className="mb-2" />,
-                  title: "Retail & Consumer Goods",
-                  description:
-                    "We empower retail and consumer goods companies to enhance customer engagement and streamline operations with customized Salesforce solutions tailored to their unique business needs.",
-                },
-                {
-                  icon: <img src="/industries-icon-2.svg" className="mb-2" />,
-                  title: "Financial Services",
-                  description:
-                    "We help financial service providers increase customer satisfaction and improve operational efficiency through secure, data-driven Salesforce solutions designed for growth and compliance.",
-                },
-              ].map((card, i) => (
-                <div
-                  key={i}
-                  className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
-                >
-                  {card.icon}
-                  <h4 className="text-3xl font-semibold text-[#008093] mb-1">
-                    {card.title}
-                  </h4>
-                  <p className="text-[#474747] text-lg leading-tight">
-                    {card.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+          {/* Card Grid Section */}
+          <div className="mt-16 flex justify-center">
+            <div className="w-full flex flex-col items-center gap-2">
+              {/* Row 1 */}
+              <div className="flex gap-2 w-full">
+                {[
+                  {
+                    // icon: <FaIndustry className="text-[#FF83A9] text-3xl mb-2" />,
+                    icon: <img src="/industries-icon-1.svg" className="mb-2" />,
+                    title: "Retail & Consumer Goods",
+                    description:
+                      "We empower retail and consumer goods companies to enhance customer engagement and streamline operations with customized Salesforce solutions tailored to their unique business needs.",
+                  },
+                  {
+                    icon: <img src="/industries-icon-2.svg" className="mb-2" />,
+                    title: "Financial Services",
+                    description:
+                      "We help financial service providers increase customer satisfaction and improve operational efficiency through secure, data-driven Salesforce solutions designed for growth and compliance.",
+                  },
+                ].map((card, i) => (
+                  <div
+                    key={i}
+                    className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
+                  >
+                    {card.icon}
+                    <h4 className="text-3xl font-semibold text-[#008093] mb-1">
+                      {card.title}
+                    </h4>
+                    <p className="text-[#474747] text-lg leading-tight">
+                      {card.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
-            {/* Row 2 */}
-            <div className="flex gap-2 w-full">
-              {[
-                {
-                  icon: <img src="/industries-icon-3.svg" className="mb-2" />,
-                  title: "Agriculture & Mining",
-                  description:
-                    "We enable agriculture and mining businesses to manage resources efficiently and strengthen partnerships through industry-specific Salesforce solutions.",
-                },
-                {
-                  icon: <img src="/industries-icon-4.svg" className="mb-2" />,
-                  title: "Communications, Media & Telco",
-                  description:
-                    "We help communications, media, and telecom companies elevate customer experiences and streamline processes with Salesforce-driven, flexible solutions.",
-                },
-                {
-                  icon: <img src="/industries-icon-5.svg" className="mb-2" />,
-                  title: "Health & Life Science", // fixed typo
-                  description:
-                    "Our solutions for health and life sciences integrate Salesforce to improve patient experiences, streamline workflows, and drive innovation in healthcare.",
-                },
-              ].map((card, i) => (
-                <div
-                  key={i}
-                  className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
-                >
-                  {card.icon}
-                  <h4 className="text-3xl font-semibold text-[#008093] mb-1">
-                    {card.title}
-                  </h4>
-                  <p className="text-[#474747] text-lg leading-tight">
-                    {card.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+              {/* Row 2 */}
+              <div className="flex gap-2 w-full">
+                {[
+                  {
+                    icon: <img src="/industries-icon-3.svg" className="mb-2" />,
+                    title: "Agriculture & Mining",
+                    description:
+                      "We enable agriculture and mining businesses to manage resources efficiently and strengthen partnerships through industry-specific Salesforce solutions.",
+                  },
+                  {
+                    icon: <img src="/industries-icon-4.svg" className="mb-2" />,
+                    title: "Communications, Media & Telco",
+                    description:
+                      "We help communications, media, and telecom companies elevate customer experiences and streamline processes with Salesforce-driven, flexible solutions.",
+                  },
+                  {
+                    icon: <img src="/industries-icon-5.svg" className="mb-2" />,
+                    title: "Health & Life Science", // fixed typo
+                    description:
+                      "Our solutions for health and life sciences integrate Salesforce to improve patient experiences, streamline workflows, and drive innovation in healthcare.",
+                  },
+                ].map((card, i) => (
+                  <div
+                    key={i}
+                    className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
+                  >
+                    {card.icon}
+                    <h4 className="text-3xl font-semibold text-[#008093] mb-1">
+                      {card.title}
+                    </h4>
+                    <p className="text-[#474747] text-lg leading-tight">
+                      {card.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
-            {/* Row 3 */}
-            <div className="flex gap-2 w-full">
-              {[
-                {
-                  icon: <img src="/industries-icon-6.svg" className="mb-2" />,
-                  title: "Manufacturing & Automotive",
-                  description:
-                    "Our Salesforce solutions help manufacturing and automotive industries boost productivity, improve supply chain management, and enhance customer satisfaction at every stage.",
-                },
-                {
-                  icon: <img src="/industries-icon-7.svg" className="mb-2" />,
-                  title: "Energy",
-                  description:
-                    "We support energy companies in managing complex operations and optimizing customer relationships by implementing robust, scalable Salesforce solutions.",
-                },
-              ].map((card, i) => (
-                <div
-                  key={i}
-                  className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
-                >
-                  {card.icon}
-                  <h4 className="text-3xl font-semibold text-[#008093] mb-1">
-                    {card.title}
-                  </h4>
-                  <p className="text-[#474747] text-lg leading-tight">
-                    {card.description}
-                  </p>
-                </div>
-              ))}
+              {/* Row 3 */}
+              <div className="flex gap-2 w-full">
+                {[
+                  {
+                    icon: <img src="/industries-icon-6.svg" className="mb-2" />,
+                    title: "Manufacturing & Automotive",
+                    description:
+                      "Our Salesforce solutions help manufacturing and automotive industries boost productivity, improve supply chain management, and enhance customer satisfaction at every stage.",
+                  },
+                  {
+                    icon: <img src="/industries-icon-7.svg" className="mb-2" />,
+                    title: "Energy",
+                    description:
+                      "We support energy companies in managing complex operations and optimizing customer relationships by implementing robust, scalable Salesforce solutions.",
+                  },
+                ].map((card, i) => (
+                  <div
+                    key={i}
+                    className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
+                  >
+                    {card.icon}
+                    <h4 className="text-3xl font-semibold text-[#008093] mb-1">
+                      {card.title}
+                    </h4>
+                    <p className="text-[#474747] text-lg leading-tight">
+                      {card.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Scrolling Logos */}
-        <div className="mt-10">
-          <Scroll />
-        </div>
+          {/* Scrolling Logos */}
+          <div className="mt-10">
+            <Scroll />
+          </div>
 
-        <div className="text-center mt-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#474747] mt-13">
-            Industry Expertise
-          </h2>
-        </div>
+          <div className="text-center mt-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#474747] mt-13">
+              Industry Expertise
+            </h2>
+          </div>
 
-        {/* Second Image */}
-        <div className="mt-20 flex justify-center">
-          <img
-            src="/industries2.PNG"
-            alt="Image"
-            className="w-full max-w-[1200px] h-[400px] object-cover rounded-2xl"
-          />
+          {/* Second Image */}
+          <div className="mt-20 flex justify-center">
+            <img
+              src="/industries2.PNG"
+              alt="Image"
+              className="w-full max-w-[1200px] h-[400px] object-cover rounded-2xl"
+            />
+          </div>
         </div>
       </div>
-      {/* Full-width Image with Text and Button Centered Over It */}
-      <div className="relative w-screen">
+      <div className="relative">
         <img
           src="/industries4.png"
           alt="Salesforce Challenge"
@@ -225,8 +225,6 @@ const Industries = () => {
           </button>
         </div>
       </div>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
