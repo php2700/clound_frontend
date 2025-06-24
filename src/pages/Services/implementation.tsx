@@ -188,7 +188,7 @@ const Implementation = () => {
           {/* Full Width Image */}
           <div className="w-screen mt-16 relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
             <img
-              src="/public/implementation1.PNG"
+              src="/implementation1.PNG"
               alt="img.visual"
               className="w-full h-[500px] object-cover"
             />
