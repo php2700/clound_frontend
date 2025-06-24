@@ -31,7 +31,7 @@ export const Dexter_Detail = () => {
       </div>
       <div className="bg-[#f9f9f9]">
         <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
-          <div className="px-6 py-10 md:px-20 ">
+          <div className="px-6 py-10 md:px-10 ">
             <div className="flex items-center text-sm text-gray-700 mt-8">
               <FaHome className="mr-1 text-xl" />
               <span className="mx-1 text-lg font-medium">/</span>
@@ -43,13 +43,13 @@ export const Dexter_Detail = () => {
               <span className="mx-1 text-lg font-medium">/</span>
               <span className="mx-1 text-lg font-medium">Grupo Dexter</span>
             </div>
-            <div className={`text-6xl font-bold text-teal-700 mt-5 `}>
+            <div className={`text-6xl font-bold text-[#008093] mt-5 `}>
               +57% Growth in Online Orders:
             </div>
-            <div className={`text-6xl font-bold text-teal-700  `}>
+            <div className={`text-6xl font-bold text-[#008093]  `}>
               Dexter’s Success in E-Commerce
             </div>
-            <div className={`text-6xl font-bold text-teal-700 mb-5  `}>
+            <div className={`text-6xl font-bold text-[#008093] mb-5  `}>
               Digitization with Salesforce
             </div>
             <div className="flex items-center gap-5 mb-10">
@@ -78,7 +78,7 @@ export const Dexter_Detail = () => {
                     className="w-10 h-10"
                   />
                 </div>
-                <div className="text-2xl md:text-4xl font-bold text-teal-700 ">
+                <div className="text-2xl md:text-4xl font-bold text-[#008093] ">
                   About Grupo Dexter
                 </div>
                 <div className="text-lg md:text-base leading-relaxed">
@@ -178,7 +178,7 @@ export const Dexter_Detail = () => {
                   alt="Cart Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-teal-700 font-bold text-3xl">57%</div>
+                <div className="text-[#008093] font-bold text-3xl">57%</div>
                 <p className="text-gray-700">
                   of e-commerce orders within six months
                 </p>
@@ -190,7 +190,7 @@ export const Dexter_Detail = () => {
                   alt="Growth Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-teal-700 font-bold text-3xl">27%</div>
+                <div className="text-[#008093] font-bold text-3xl">27%</div>
                 <p className="text-gray-700">average conversion rate growth</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow">
@@ -199,7 +199,7 @@ export const Dexter_Detail = () => {
                   alt="Duplicate Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-teal-700 font-bold text-3xl">1.5M</div>
+                <div className="text-[#008093] font-bold text-3xl">1.5M</div>
                 <p className="text-gray-700">
                   contacts migrated to Marketing Cloud
                 </p>
@@ -211,7 +211,7 @@ export const Dexter_Detail = () => {
                   alt="Cart Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-teal-700 font-bold text-3xl">24M</div>
+                <div className="text-[#008093] font-bold text-3xl">24M</div>
                 <p className="text-gray-700">emails sent monthly</p>
               </div>
 
@@ -221,7 +221,7 @@ export const Dexter_Detail = () => {
                   alt="Growth Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-teal-700 font-bold text-3xl">120%</div>
+                <div className="text-[#008093] font-bold text-3xl">120%</div>
                 <p className="text-gray-700">
                   email sales growth during Cyber Monday
                 </p>
@@ -248,7 +248,7 @@ export const Dexter_Detail = () => {
         </div>
 
         <div className="container mx-auto pt-[50px] px-4 md:px-6 ">
-          <div className="px-6 py-10 md:px-20 ">
+          <div className="px-6 py-10 md:px-10 ">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-5 md:px-16 py-12 gap-8">
               <div className="md:w-2/3 text-center md:text-center">
                 <p className="italic text-gray-800 text-xl leading-relaxed">

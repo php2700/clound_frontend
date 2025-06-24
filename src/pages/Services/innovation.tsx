@@ -158,18 +158,21 @@ const Innovation = () => {
       </div>
 
       {/* Main Content */}
-      <div className="px-6 md:px-20 pt-24 pb-10 mt-20">
+      <div className="container mx-auto  px-4 py-10 md:px-6 mt-20">
+        <div className="px-6 py-10 md:px-10">
+
+     
         {/* Breadcrumb */}
-        <div className="flex items-center text-sm text-gray-500 mb-6">
+        <div className="flex items-center text-sm text-gray-500 mt-10 mb-3">
           <FaHome className="mr-1 text-xl" />
           <span className="mx-1 text-lg font-medium">/</span>
           <span className="text-lg font-semibold">
-            Services / Implementation / Innovation
+            Services / Innovation
           </span>
         </div>
 
         {/* Title */}
-        <div className="max-w-7xl mx-auto mt-10">
+        <div className="mt-5">
           <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
             For companies seeking to stay one
             <br />
@@ -194,7 +197,7 @@ const Innovation = () => {
         </div>
 
         {/* Two-column Layout */}
-        <div className="mt-16 px-0 md:px-10">
+        <div className="mt-16 ">
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Left Cards */}
             <div className="lg:w-[58%] w-full flex flex-col gap-10">
@@ -325,7 +328,7 @@ const Innovation = () => {
         </div>
 
         {/* Other Services Section */}
-        <div className="container mx-auto px-4 py-16">
+        <div className="py-16">
           <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#008093] mb-12">
             Check our other services
           </h2>
@@ -418,7 +421,7 @@ const Innovation = () => {
           </div>
         </div>
       </div>
-
+   </div>
       {/* Footer */}
       <Footer />
     </div>

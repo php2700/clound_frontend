@@ -65,8 +65,8 @@ export const Blog = () => {
       >
         <Header />
       </div>
-      <div className="container mx-auto mt-[100px] px-4 md:px-6">
-        <div className="px-6 py-10 md:px-20">
+      <div className="container mx-auto mt-20 px-4 md:px-6">
+        <div className="px-6 py-10 md:px-10">
           <div className="flex items-center text-sm text-gray-500 mt-8">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-lg font-medium">/</span>
@@ -77,7 +77,7 @@ export const Blog = () => {
             <span className="mx-1 text-lg font-medium">Blog</span>
           </div>
           <h1
-            className={`mt-4 text-5xl font-bold text-[#008093] transition-transform  ${
+            className={`mt-4 text-6xl font-bold text-[#008093] transition-transform  ${
               loaded ? "translate-y-0 duration-300" : "translate-y-12"
             } `}
           >
@@ -121,13 +121,13 @@ export const Blog = () => {
           </div>
           <div className="mt-8">
             <div className="flex flex-wrap items-center gap-5">
-              <div className="text-teal-600 border border-teal-600 rounded-full px-5 py-1 font-medium cursor-pointer bg-white">
+              <div className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 font-medium cursor-pointer bg-white">
                 All articles
               </div>
               {headings.map((item, index) => (
                 <div
                   key={index}
-                  className="text-gray-700 bg-white hover:text-teal-600 border border-transparent hover:border-teal-600 hover:rounded-full px-5 py-1 cursor-pointer"
+                  className="text-gray-700 bg-white hover:text-[#008093] border border-transparent hover:border-[#008093] hover:rounded-full px-5 py-1 cursor-pointer"
                 >
                   {item}
                 </div>
@@ -161,7 +161,7 @@ export const Blog = () => {
                   <div className="text-sm text-red-400 font-medium mb-1">
                     {item?.fetchFrom}
                   </div>
-                  <div className="text-2xl font-semibold text-teal-700 mb-2 cursor-pointer">
+                  <div className="text-2xl font-semibold text-[#008093] mb-2 cursor-pointer">
                     {item?.title}
                   </div>
                   <div className="text-md text-gray-600 flex-grow">

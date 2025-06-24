@@ -179,16 +179,18 @@ const Company = () => {
         <Header />
       </div>
       {/* Main Content */}
-      <div className="px-4 sm:px-6 md:px-20 pt-24 pb-10 mt-20">
+      <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
+        <div className="px-6 py-10 md:px-10">          
+        
         {/* Breadcrumb */}
-        <div className="flex items-center text-sm text-gray-500 mb-6">
+        <div className="flex items-center text-sm text-gray-500 mb-3">
           <FaHome className="mr-1 text-xl" aria-hidden="true" />
           <span className="mx-1 text-lg font-medium">/</span>
           <span className="text-lg font-semibold">Company</span>
         </div>
 
         {/* Hero Section */}
-        <div className="max-w-7xl mx-auto mt-10">
+        <div className="max-w-7xl mx-auto mt-5">
           <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
             Experience the Cloudgaia vibe
           </h1>
@@ -319,7 +321,7 @@ const Company = () => {
         )}
 
         {/* Team Members Section */}
-        <div className="w-full px-4 sm:px-6 md:px-20 mt-16">
+        <div className=" mt-16">
           <h2 className="text-3xl md:text-6xl font-bold text-center text-[#474747] mb-10">
             Our senior leadership team
           </h2>
@@ -332,7 +334,7 @@ const Company = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-lg mx-auto object-cover mb-4"
+                  className="w-35 h-35 rounded-lg mx-auto object-cover mb-4"
                 />
                 <p className="text-[#008093] font-bold text-xl">in</p>
                 <h3 className="text-gray-600 font-semibold text-lg mt-1">
@@ -462,7 +464,7 @@ const Company = () => {
   </p>
 </div>
 
-
+</div>
 
       <Footer />
     </div>

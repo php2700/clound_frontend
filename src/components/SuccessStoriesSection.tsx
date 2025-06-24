@@ -62,14 +62,14 @@ const SuccessStoriesSection = () => {
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-pink-300 rounded-tr-full opacity-80"></div>
         <div className="absolute bottom-0 right-0 w-64 h-32 bg-yellow-400 rounded-tl-full opacity-90"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 sm:px-6 md:px-10 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
               Success stories we're proud to share
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 md:px-10">
             {stories.map((story, index) => (
               <div
                 key={index}

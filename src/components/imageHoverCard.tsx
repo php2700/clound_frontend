@@ -12,7 +12,7 @@ const ImageHoverCard: React.FC<ImageHoverCardProps> = ({
   description,
 }) => {
   return (
-    <div className="w-64">
+    <div className="w-80">
       <div className="overflow-hidden rounded-lg">
         <img
           src={imageSrc}
@@ -20,8 +20,12 @@ const ImageHoverCard: React.FC<ImageHoverCardProps> = ({
           className="w-full h-65 object-cover filter grayscale hover:grayscale-0 transition duration-500"
         />
       </div>
-      <h3 className="mt-4 text-3xl font-semibold text-left text-[#008093]">{title}</h3>
-      <p className="mt-2 text-gray-600 text-left text-sm text-black">{description}</p>
+      <h3 className="mt-4 text-3xl font-semibold text-left text-[#008093]">
+        {title}
+      </h3>
+      <p className="mt-2 text-gray-600  text-left text-xl text-black leading-tight">
+        {description}
+      </p>
     </div>
   );
 };
