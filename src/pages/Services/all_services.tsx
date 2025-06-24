@@ -42,7 +42,7 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto mt-[110px] px-4 md:px-6">
-        <div className="px-6 py-10 md:px-20">
+        <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
           <div className="flex items-center text-sm text-gray-500 mt-8">
             <FaHome className="mr-1 text-xl" />

@@ -31,7 +31,7 @@ export const Ealde_Detail = () => {
       </div>
       <div className="bg-[#f9f9f9]">
         <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
-          <div className="px-6 py-10 md:px-20 ">
+          <div className="px-6 py-10 md:px-10 ">
             <div className="flex items-center text-sm text-gray-700 mt-8">
               <FaHome className="mr-1 text-xl" />
               <span className="mx-1 text-lg font-medium">/</span>
@@ -43,7 +43,7 @@ export const Ealde_Detail = () => {
               <span className="mx-1 text-lg font-medium">/</span>
               <span className="mx-1 text-lg font-medium">EALDE - Spain</span>
             </div>
-            <div className={`text-6xl font-bold text-teal-700 my-5      `}>
+            <div className={`text-6xl font-bold text-[#008093] my-5      `}>
               Automation and Scalability: How EALDE Optimized Its Operations
               with Salesforce
             </div>
@@ -71,7 +71,7 @@ export const Ealde_Detail = () => {
               <div>
                 <img src="/icon-info.svg" />
               </div>
-              <div className="text-5xl font-bold text-teal-700 my-5">
+              <div className="text-5xl font-bold text-[#008093] my-5">
                 About EALDE Business School
               </div>
               <div>
@@ -117,7 +117,7 @@ export const Ealde_Detail = () => {
               </div>
             </div>
 
-            <div className="bg-teal-700 text-white py-16 px-6 mt-2">
+            <div className="bg-[#008093] text-white py-16 px-6 mt-2">
               <div className="mb-10 ">
                 <div className="flex items-center gap-2 text-yellow-400 text-2xl mb-2">
                   <img
@@ -261,7 +261,7 @@ export const Ealde_Detail = () => {
             </div>
           </div>
         </div>
-      
+
         <div className="relative h-[300px] w-full overflow-hidden">
           <img
             className="absolute inset-0 h-full w-full object-cover"
@@ -317,7 +317,7 @@ export const Ealde_Detail = () => {
           </div>
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
   );
 };

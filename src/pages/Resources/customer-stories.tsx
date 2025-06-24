@@ -146,8 +146,8 @@ export const Customer_Stories = () => {
         </div>
 
         <div className="bg-[#f9f9f9]">
-          <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
-            <div className="px-6 py-10 md:px-20 ">
+          <div className="container mx-auto pt-[100px] px-4 md:px-6 ">
+            <div className="px-6 py-10 md:px-10 ">
               <div className="flex items-center text-sm text-gray-700 mt-8">
                 <FaHome className="mr-1 text-xl" />
                 <span className="mx-1 text-lg font-medium">/</span>
@@ -160,7 +160,7 @@ export const Customer_Stories = () => {
                 </span>
               </div>
               <div
-                className={`text-5xl font-bold text-teal-700 my-5 transition-transform 
+                className={`text-5xl font-bold text-[#008093] my-5 transition-transform 
                                     ${
                                       loaded
                                         ? "translate-y-0  duration-300"
@@ -170,7 +170,7 @@ export const Customer_Stories = () => {
               >
                 All-in for our clients
               </div>
-              <div className="text-2xl">
+              <div className="text-2xl leading-tight">
                 Discover how we’ve transformed our clients' businesses with
                 powerful Salesforce solutions, customized to meet the unique
                 needs of each business through a one-team collaborative
@@ -207,9 +207,9 @@ export const Customer_Stories = () => {
 
         <div className="bg-[#f9f9f9]">
           <div className=" container mx-auto  px-4 md:px-6">
-            <div className="px-6 py-10 md:px-20 ">
+            <div className="px-6 py-10 md:px-10 ">
               <h2
-                className={`text-4xl md:text-5xl font-bold text-teal-700 leading-tight max-w-5xl `}
+                className={`text-4xl md:text-5xl font-bold text-[#008093] leading-tight max-w-5xl `}
               >
                 At Cloudgaia, our dedication to customer success is driven by a
                 vibrant VIBE and a total commitment to Salesforce.
@@ -236,7 +236,7 @@ export const Customer_Stories = () => {
           </div>
 
           <div className=" container mx-auto mt-[100px] px-4 md:px-6">
-            <div className="px-6  md:px-20 ">
+            <div className="px-6  md:px-10 ">
               {storyData?.map((item, index) => (
                 <div
                   key={index}

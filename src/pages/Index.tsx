@@ -45,7 +45,7 @@ const Index = () => {
       <HeroSection />
       <StatsSection />
       <NewCloudgaiaSection />
-			<Home/>
+      <Home />
       <SuccessStoriesSection />
       <Footer />
     </div>

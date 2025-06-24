@@ -1,7 +1,7 @@
 const NewCloudgaiaSection = () => {
   return (
     <section className="bg-[#2F2F2F] py-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left Section: Video Player */}
           <div className="relative bg-[#2A8A9D] rounded-lg p-12 w-full lg:w-1/2 h-64 flex items-center justify-center overflow-hidden">
@@ -16,8 +16,9 @@ const NewCloudgaiaSection = () => {
             {/* Main Text */}
             <div className="text-center absolute top-12 z-10">
               <h2 className="text-white text-4xl font-bold leading-tight">
-                Welcome<br />to the{" "}
-                <span className="text-yellow-400">new</span>
+                Welcome
+                <br />
+                to the <span className="text-yellow-400">new</span>
               </h2>
             </div>
             {/* Video */}
@@ -37,10 +38,11 @@ const NewCloudgaiaSection = () => {
           {/* Right Section: Text */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-5xl font-semibold text-white mb-6 leading-tight">
-           <span className="text-pink-400">   A new Cloudgaia</span>
+              <span className="text-pink-400"> A new Cloudgaia</span>
             </h2>
             <p className="text-xl text-white leading-relaxed">
-              New visual identity. New brand tagline.<br />
+              New visual identity. New brand tagline.
+              <br />
               New challenges. The same purpose.
             </p>
           </div>
