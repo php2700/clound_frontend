@@ -188,141 +188,141 @@ const Growth = () => {
         </div>
 
         {/* Two-column Layout */}
-        <div className="mt-16 px-0 md:px-10">
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-            {/* Left Cards */}
-            <div className="lg:w-[58%] w-full flex flex-col gap-10">
-              {[
-                {
-                  icon: <FaLayerGroup className="text-3xl text-[#FF83A9]" />,
-                  title: "Advisory for Centers of Excellence (CoE)",
-                  description: (
-                    <>
-                      We partner with companies in establishing and
-                      consolidating a Salesforce Center of Excellence to
-                      implement complex, high-impact use cases that generate
-                      long-term strategic value. This service includes defining
-                      governance structures, establishing methodologies, and
-                      training teams in best practices for advanced Salesforce
-                      management.
-                      <br /> <br />
-                      The CoE becomes a pillar of continuous innovation and
-                      optimization, allowing companies to fully leverage their
-                      Salesforce investment and maintain relevance and
-                      efficiency in their operations.
-                    </>
-                  ),
-                },
-              ].map((card, index) => (
-                <div
-                  key={index}
-                  className="bg-white border rounded-lg p-6 shadow-md min-h-[320px] flex flex-col justify-center"
-                >
-                  <div className="flex items-center">
-                    {card.icon}
-                    <h4 className="ml-4 text-3xl md:text-4xl font-semibold text-[#008093]">
-                      {card.title}
-                    </h4>
-                  </div>
-                  <p className="mt-4 text-gray-700 text-base md:text-lg">
-                    {card.description}
-                  </p>
-                </div>
-              ))}
+<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="mt-16">
+    <div className="flex flex-col lg:flex-row gap-3 items-start">
+      {/* Left Cards */}
+      <div className="lg:w-[58%] w-full flex flex-col gap-10">
+        {[
+          {
+            icon: <img src="/company-purpose-icon.svg" className="text-3xl text-[#FF83A9]" />,
+            title: "Advisory for Centers of Excellence (CoE)",
+            description: (
+              <>
+                We partner with companies in establishing and consolidating a
+                Salesforce Center of Excellence to implement complex,
+                high-impact use cases that generate long-term strategic value.
+                This service includes defining governance structures,
+                establishing methodologies, and training teams in best
+                practices for advanced Salesforce management.
+                <br /> <br />
+                The CoE becomes a pillar of continuous innovation and
+                optimization, allowing companies to fully leverage their
+                Salesforce investment and maintain relevance and efficiency in
+                their operations.
+              </>
+            ),
+          },
+        ].map((card, index) => (
+          <div
+            key={index}
+            className="bg-white border rounded-lg p-6 shadow-md min-h-[320px] flex flex-col justify-center"
+          >
+            <div className="flex items-center">
+              {card.icon}
+              <h4 className="ml-4 text-2xl md:text-3xl font-semibold text-[#008093]">
+                {card.title}
+              </h4>
             </div>
-
-            {/* Right Sticky Form */}
-            <div className="lg:w-[42%] w-full">
-              <div className="lg:sticky top-28">
-                <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[600px]">
-                  <h2 className="text-2xl font-semibold mb-2 leading-tight">
-                    Complete the form and book
-                    <br />a free consultation
-                  </h2>
-
-                  {/* First & Last Name */}
-                  <div className="flex gap-4">
-                    <input
-                      type="text"
-                      placeholder="First Name*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last Name*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                  </div>
-
-                  {/* Email & Company */}
-                  <div className="flex gap-4">
-                    <input
-                      type="email"
-                      placeholder="Email*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                    <input
-                      type="text"
-                      placeholder="Company*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                  </div>
-
-                  {/* Country Dropdown */}
-                  <select
-                    required
-                    className="w-full p-3 rounded bg-white text-black focus:outline-none"
-                    defaultValue=""
-                  >
-                    <option disabled value="">
-                      Select Company*
-                    </option>
-                    {countries.map((country, index) => (
-                      <option key={index} value={country}>
-                        {country}
-                      </option>
-                    ))}
-                  </select>
-
-                  {/* Message */}
-                  <textarea
-                    placeholder="Message*"
-                    className="w-full p-3 h-28 rounded bg-white text-black resize-none focus:outline-none"
-                    required
-                  ></textarea>
-
-                  {/* Checkbox */}
-                  <p className="text-sm text-gray-800">
-                    By continuing, I confirm that I have read and agree to the
-                    Privacy Policy.
-                  </p>
-                  <div className="flex items-start gap-2">
-                    <input type="checkbox" className="mt-1" required />
-                    <p className="text-sm text-gray-800">
-                      I agree to receive emails from CloudGaia with updates on
-                      services, events, and alerts. I can unsubscribe at any
-                      time.
-                    </p>
-                  </div>
-
-                  {/* Submit */}
-                  <div className="flex justify-end">
-                    <button
-                      type="submit"
-                      className="bg-white text-black font-semibold py-2 px-6 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition"
-                    >
-                      Send
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <p className="mt-4 text-gray-700 text-base md:text-sm">
+              {card.description}
+            </p>
           </div>
+        ))}
+      </div>
+
+      {/* Right Sticky Form */}
+      <div className="lg:w-[42%] w-full">
+        <div className="lg:sticky top-28">
+          <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[600px]">
+            <h2 className="text-2xl font-semibold mb-2 leading-tight">
+              Complete the form and book
+              <br />a free consultation
+            </h2>
+
+            {/* First & Last Name */}
+            <div className="flex gap-4">
+              <input
+                type="text"
+                placeholder="First Name*"
+                className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last Name*"
+                className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                required
+              />
+            </div>
+
+            {/* Email & Company */}
+            <div className="flex gap-4">
+              <input
+                type="email"
+                placeholder="Email*"
+                className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Company*"
+                className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                required
+              />
+            </div>
+
+            {/* Country Dropdown */}
+            <select
+              required
+              className="w-full p-3 rounded bg-white text-black focus:outline-none"
+              defaultValue=""
+            >
+              <option disabled value="">
+                Select Company*
+              </option>
+              {countries.map((country, index) => (
+                <option key={index} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
+
+            {/* Message */}
+            <textarea
+              placeholder="Message*"
+              className="w-full p-3 h-28 rounded bg-white text-black resize-none focus:outline-none"
+              required
+            ></textarea>
+
+            {/* Checkbox */}
+            <p className="text-sm text-gray-800">
+              By continuing, I confirm that I have read and agree to the
+              Privacy Policy.
+            </p>
+            <div className="flex items-start gap-2">
+              <input type="checkbox" className="mt-1" required />
+              <p className="text-sm text-gray-800">
+                I agree to receive emails from CloudGaia with updates on
+                services, events, and alerts. I can unsubscribe at any time.
+              </p>
+            </div>
+
+            {/* Submit */}
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="bg-white text-black font-semibold py-2 px-6 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition"
+              >
+                Send
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Other Services Section */}
         <div className="container mx-auto px-4 py-16">

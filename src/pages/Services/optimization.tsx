@@ -92,117 +92,81 @@ const Optimization = () => {
         </div>
 
         {/* Two-column Layout */}
-        <div className="mt-16 px-0 md:px-10">
-          <div className="flex flex-col lg:flex-row gap-10">
-            {/* Left Scrollable Cards */}
-            <div className="lg:h-[calc(100vh-150px)] overflow-y-auto pr-2 lg:w-2/3 w-full flex flex-col gap-10">
-              {[
-                {
-                  icon: <FaLayerGroup className="text-3xl text-[#FF83A9]" />,
-                  title: "Scale Salesforce Solutions",
-                  description:
-                    "We help scale your existing solution by adding new licenses or features, either within the same cloud or a new one. Using a co-creation strategy, we customize the expansion to support business growth, enhance operational efficiency, and address unique needs, including adding automation modules and advanced analytics tools.",
-                },
-                {
-                  icon: <FaProjectDiagram className="text-3xl text-[#FF83A9]" />,
-                  title: "Customization, Expansion & Integration",
-                  description:
-                    "We improve your current Salesforce setup with specific customizations and integrations with key external systems, business management tools, and custom solutions to meet specific use cases. We ensure an implementation that respects security and scalability best practices.",
-                },
-                {
-                  icon: <FaHandsHelping className="text-3xl text-[#FF83A9]" />,
-                  title: "Support and Managed Services",
-                  description:
-                    "We provide ongoing support and platform maintenance, ensuring that Salesforce operates seamlessly over time, with optimal performance, security, and adaptability. Our team manages updates, resolves issues, and implements necessary optimizations so you can focus on growing your business.",
-                },
-              ].map((card, index) => (
-                <div key={index} className="bg-white border rounded-lg p-6 shadow-md">
-                  <div className="flex items-center">
-                    {card.icon}
-                    <h4 className="ml-4 text-2xl font-bold text-[#008093]">{card.title}</h4>
+       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+          {/* Se ha quitado `justify-center` de aquí */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+
+            {/* 
+      CAMBIO: Se ha añadido `lg:col-start-2`.
+      Esto deja la primera columna del grid vacía, empujando todo el bloque al centro.
+    */}
+            <div className="lg:col-start-2 lg:col-span-5 w-full">
+              <div className="flex flex-col gap-8 text-base md:text-sm" >
+                {[
+                  {
+                    icon: <img src="/implementation-icon-1.svg" className="text-3xl text-[#FF83A9]" />,
+                    title: "Scale Salesforce Solutions",
+                    description: "We help scale your existing solution by adding new licenses or features, either within the same cloud or a new one. Using a co-creation strategy, we customize the expansion to support business growth, enhance operational efficiency, and address unique needs, including adding automation modules and advanced analytics tools.",
+                  },
+                  {
+                    icon: <img src="/optimization-icon-2.svg" className="text-3xl text-[#FF83A9]" />,
+                    title: "Customization, Expansion & Integration",
+                    description: "We improve your current Salesforce setup with specific customizations and integrations with key external systems, business management tools, and custom solutions to meet specific use cases. We ensure an implementation that respects security and scalability best practices.",
+                  },
+                  {
+                    icon: <img src="/optimization-icon-3.svg" className="text-3xl text-[#FF83A9]" />,
+                    title: "Support and Managed Services",
+                    description :  " We provide ongoing support and platform maintenance, ensuring that Salesforce operates seamlessly over time, with optimal performance, security, and adaptability. Our team manages updates, resolves issues, and implements necessary optimizations so you can focus on growing your business.",
+                  },
+                ].map((card, index) => (
+                  <div key={index} className="bg-white border rounded-lg p-6 shadow-sm">
+                    <div className="flex items-center">
+                      {card.icon}
+                      <h4 className="ml-4 text-2xl font-bold text-[#008093]">{card.title}</h4>
+                    </div>
+                    <p className="mt-4 text-gray-700">{card.description}</p>
                   </div>
-                  <p className="mt-2 text-gray-700">{card.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
-            {/* Sticky Form */}
-            <div className="lg:w-1/3 w-full h-10">
+            {/* Esta columna no necesita cambios, se ajustará automáticamente */}
+            <div className="lg:col-span-5 w-full">
               <div className="lg:sticky top-28">
                 <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4">
                   <h2 className="text-2xl font-semibold mb-2 leading-tight">
                     Complete the form and book<br />a free consultation
                   </h2>
 
-                  {/* First & Last Name */}
-                  <div className="flex gap-4">
-                    <input
-                      type="text"
-                      placeholder="First Name*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last Name*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <input type="text" placeholder="First Name*" className="w-full p-3 rounded bg-white text-black focus:outline-none" required />
+                    <input type="text" placeholder="Last Name*" className="w-full p-3 rounded bg-white text-black focus:outline-none" required />
                   </div>
 
-                  {/* Email & Company */}
-                  <div className="flex gap-4">
-                    <input
-                      type="email"
-                      placeholder="Email*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                    <input
-                      type="text"
-                      placeholder="Company*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Email*" className="w-full p-3 rounded bg-white text-black focus:outline-none" required />
+                    <input type="text" placeholder="Company*" className="w-full p-3 rounded bg-white text-black focus:outline-none" required />
                   </div>
 
-                  {/* Country Dropdown */}
-                  <select
-                    required
-                    className="w-full p-3 rounded bg-white text-black focus:outline-none"
-                    defaultValue=""
-                  >
-                    <option disabled value="">Select Company*</option>
-                    {countries.map((country, index) => (
-                      <option key={index} value={country}>{country}</option>
-                    ))}
+                  <select required className="w-full p-3 rounded bg-white text-black focus:outline-none" defaultValue="">
+                    <option disabled value="">Select Country*</option>
+                    {/* {countries.map(...)} */}
                   </select>
 
-                  {/* Message */}
-                  <textarea
-                    placeholder="Message*"
-                    className="w-full p-3 h-28 rounded bg-white text-black resize-none focus:outline-none"
-                    required
-                  ></textarea>
+                  <textarea placeholder="Message*" className="w-full p-3 h-24 rounded bg-white text-black resize-none focus:outline-none" required></textarea>
 
-                  {/* Checkbox */}
-                  <p className="text-sm text-gray-800">
+                  <p className="text-xs !mt-2 text-gray-800">
                     By continuing, I confirm that I have read and agree to the Privacy Policy.
                   </p>
                   <div className="flex items-start gap-2">
                     <input type="checkbox" className="mt-1" required />
                     <p className="text-sm text-gray-800">
-                      I agree to receive emails from CloudGaia with updates on services, events, and alerts.
-                      I can unsubscribe at any time.
+                      I agree to receive emails from CloudGaia with updates on services, events, and alerts. I can unsubscribe at any time.
                     </p>
                   </div>
 
-                  {/* Submit */}
                   <div className="flex justify-end">
-                    <button
-                      type="submit"
-                      className="bg-white text-black font-semibold py-2 px-6 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition"
-                    >
+                    <button type="submit" className="bg-white text-black font-semibold py-2 px-6 rounded-full hover:bg-[#FF83A9] hover:text-white transition">
                       Send
                     </button>
                   </div>

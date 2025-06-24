@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 // import { FaHome, FaRegLightbulb, FaRocket, FaInfoCircle, FaAngleUp } from "react-icons/fa";
-import { FaHome, FaRegLightbulb, FaRocket, FaInfoCircle, FaAngleUp,  } from "react-icons/fa";
+import { FaHome, FaRegLightbulb, FaRocket, FaInfoCircle, FaAngleUp, } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight, FaAngleDown } from "react-icons/fa";
 import Header from "@/components/Header";
 import footer from "@/components/Footer";
 import Footer from "@/components/Footer";
- 
+
 const images = [
     { img: "/careers-slide-1.webp" },
     { img: "/careers-slide-4.webp" },
@@ -13,7 +13,7 @@ const images = [
     { img: "/careers-slide-8.webp" },
     { img: "/careers-slide-7.webp" },
 ];
- 
+
 const testimonials = [
     {
         quote: "Cloudgaia represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
@@ -54,8 +54,8 @@ const accordionData = [
         textColor: 'text-white',
     }
 ];
- 
- 
+
+
 // Data for Open Positions
 const jobPositions = [
     { title: 'Solution Engineer Executive', department: 'Commercial', type: 'Remote' },
@@ -63,8 +63,8 @@ const jobPositions = [
     { title: 'Salesforce Solution Architect – Commerce B2C', department: 'Operations', type: 'Remote' },
     { title: 'Senior Salesforce Frontend Developer (LWC Specialist)', department: 'Operations', type: 'Remote' },
 ];
- 
- 
+
+
 /*
 For the scrolling text animation, add this to your global CSS file (e.g., globals.css):
 @keyframes scroll-vertical {
@@ -79,7 +79,7 @@ For the scrolling text animation, add this to your global CSS file (e.g., global
   animation: scroll-vertical 30s linear infinite;
 }
 */
- 
+
 export const Careers = () => {
     const [loaded, setLoaded] = useState(false);
     const [imageIndex, setImageIndex] = useState(0);
@@ -89,7 +89,7 @@ export const Careers = () => {
       const handleAccordionClick = (title) => {
         setOpenAccordion(openAccordion === title ? null : title);
     };// State for job filters
- 
+
     // State for the form
     const [formData, setFormData] = useState({
         firstName: "",
@@ -102,7 +102,7 @@ export const Careers = () => {
         message: "",
         agreed: false,
     });
- 
+
     // Handler for form input changes
     const handleFormChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -111,55 +111,63 @@ export const Careers = () => {
             [name]: type === 'checkbox' ? checked : value,
         }));
     };
- 
+
     // Handler for form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form Data Submitted:", formData);
         alert("Application submitted successfully! (Check console for data)");
     };
- 
- 
+
+
     useEffect(() => {
         setLoaded(true);
     }, []);
- 
+
     const handlePrevious = () => {
         setImageIndex((prev) =>
             prev === 0 ? images.length - 1 : prev - 1
         );
     };
- 
+
     const handleNext = () => {
         setImageIndex((prev) =>
             prev === images.length - 1 ? 0 : prev + 1
         );
     };
- 
+
     const currentImage = images[imageIndex]?.img;
- 
+
     const handlePrevTestimonial = () => {
         setTestimonialIndex((prev) =>
             prev === 0 ? testimonials.length - 1 : prev - 1
         );
     };
- 
+
     const handleNextTestimonial = () => {
         setTestimonialIndex((prev) =>
             prev === testimonials.length - 1 ? 0 : prev + 1
         );
     };
- 
+
     const currentTestimonial = testimonials[testimonialIndex];
- 
+
     const filteredJobs = jobPositions.filter(job => activeTab === 'All areas' || job.department === activeTab);
     const inputStyle = "w-full p-4 bg-gray-50 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500";
     const selectStyle = `${inputStyle} appearance-none`;
- 
+
     return (
-        <div>
+        <div className="relative min-h-screen overflow-x-hidden">
+            
+            {/* Blue Right-Angle Triangle in the Top-Right Corner */}
+            <div
+                className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+                style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+                aria-hidden="true" // Hides the decorative element from screen readers
+            />
+
             <Header />
- 
+
             {/* ... (Previous sections remain unchanged) ... */}
             <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
                 <div className="px-6 py-10 md:px-20 ">
@@ -208,7 +216,7 @@ export const Careers = () => {
                     </div>
                 </div>
             </div>
- 
+
   <div className=" bg-[#f9f9f9]">
                 <div className="container mx-auto pt-[80px] px-4 md:px-6">
                     <div className="px-6 py-10 md:px-20">
@@ -388,11 +396,11 @@ export const Careers = () => {
                     </div>
                 </div>
             </div>
- 
+
  <div className="bg-white py-16">
                 <div className="container mx-auto px-4">
                     <div className="relative bg-[#4a4a4a] text-white p-12 md:p-20 rounded-2xl overflow-hidden">
- 
+
                         <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">
                             <blockquote className="text-2xl lg:text-3xl font-semibold leading-relaxed">
                                 “{currentTestimonial.quote}”
@@ -416,7 +424,7 @@ export const Careers = () => {
                     </div>
                 </div>
             </div>
- 
+
             <div className="relative w-full py-24">
                 <img src="/careersback.webp" alt="People working in an office" className="absolute inset-0 w-full h-full object-cover z-0" />
                 <div className="absolute inset-0 bg-black/75 z-0"></div>
@@ -453,7 +461,7 @@ export const Careers = () => {
                     </form>
                 </div>
             </div>
- 
+
             {/* START: OPEN POSITIONS SECTION */}
             <div className="bg-white py-20">
                 <div className="container mx-auto px-4">
@@ -461,7 +469,7 @@ export const Careers = () => {
                         <h2 className="text-5xl font-bold text-teal-600">Open positions</h2>
                         <p className="text-gray-600 mt-4 text-lg">Join the team, these are our open positions.</p>
                     </div>
- 
+
                     <div className="max-w-4xl mx-auto space-y-10 mb-16">
                         <div className="flex items-start gap-4">
                             <FaRegLightbulb className="text-pink-500 text-2xl mt-1 flex-shrink-0" />
@@ -498,13 +506,13 @@ export const Careers = () => {
                             </div>
                         </div>
                     </div>
- 
+
                     <div className="flex justify-center items-center gap-4 mb-8">
                         <button onClick={() => setActiveTab('All areas')} className={`py-2 px-6 rounded-full font-semibold transition-colors ${activeTab === 'All areas' ? 'border-2 border-teal-500 text-teal-500' : 'text-gray-500 hover:text-teal-500'}`}>All areas</button>
                         <button onClick={() => setActiveTab('Commercial')} className={`py-2 px-6 rounded-full font-semibold transition-colors ${activeTab === 'Commercial' ? 'border-2 border-teal-500 text-teal-500' : 'text-gray-500 hover:text-teal-500'}`}>Commercial</button>
                         <button onClick={() => setActiveTab('Operations')} className={`py-2 px-6 rounded-full font-semibold transition-colors ${activeTab === 'Operations' ? 'border-2 border-teal-500 text-teal-500' : 'text-gray-500 hover:text-teal-500'}`}>Operations</button>
                     </div>
- 
+
                     <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg p-4">
                         {filteredJobs.map((job, index) => (
                             <div key={index} className={`flex items-center justify-between p-4 ${index < filteredJobs.length - 1 ? 'border-b border-gray-200' : ''}`}>
@@ -521,7 +529,7 @@ export const Careers = () => {
                             </div>
                         ))}
                     </div>
- 
+
                     <div className="text-center mt-12">
                         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="inline-flex items-center gap-2 text-gray-700 font-semibold">
                             <div className="bg-yellow-400 text-white w-10 h-10 rounded-full flex items-center justify-center">
@@ -533,9 +541,8 @@ export const Careers = () => {
                 </div>
             </div>
             {/* END: OPEN POSITIONS SECTION */}
- 
+
             < Footer />
         </div>
     );
 };
- 

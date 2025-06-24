@@ -142,6 +142,12 @@ const Contact = () => {
   };
 
   return (
+    <div className="relative min-h-screen bg-white overflow-x-hidden">
+       <div
+        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+        aria-hidden="true"
+      />
     <div className="relative min-h-screen">
       <div
         className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
@@ -278,6 +284,7 @@ const Contact = () => {
       </div>
 
       <Footer />
+    </div>
     </div>
   );
 };
