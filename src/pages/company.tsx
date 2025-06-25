@@ -170,7 +170,14 @@ const Company = () => {
   }, [lastScrollY]);
 
   return (
-    <div className="relative min-h-screen bg-white">
+    <div className="relative min-h-screen bg-white overflow-x-hidden">
+      {/* Blue Right-Angle Triangle in the Top-Right Corner */}
+      <div
+        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+        aria-hidden="true"
+      />
+
       {/* Header */}
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${
@@ -452,115 +459,118 @@ const Company = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="relative w-full mt-4">
-        <img
-          src="laptop.png"
-          alt="AI and Data Certifications"
-          className="w-full h-[500px] object-cover rounded-lg"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h2 className="text-4xl font-bold text-white mb-2">
-            150+ AI & Data certifications
-          </h2>
-          <p className="text-white text-xl px-4">
-            Chosen by Salesforce as an Agentforce implementer, we continue to
-            <br />
-            empower ourselves to drive innovation, streamline processes and
-            drive
-            <br />
-            business growth through artificial intelligence and autonomous
-            agents.
-          </p>
-        </div>
-      </div>
+         </div>
 
-      {/* Salesforce Expertise Section */}
-      <div className="w-full flex flex-col items-center justify-center px-4 py-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#474747] mb-6 text-center">
-          Salesforce Expertise
-        </h2>
-        <img
-          src="salesforce.PNG"
-          alt="Salesforce Expertise"
-          className="w-full max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto rounded-lg object-cover"
-        />
-      </div>
-
-      {/* Industry Expertise Section */}
-      <div className="w-full flex flex-col items-center justify-center px-4 py-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#474747] mb-6 text-center">
-          Industry Expertise
-        </h2>
-        <img
-          src="expertise.PNG"
-          alt="Industry Expertise"
-          className="w-full max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto rounded-lg object-cover"
-        />
-      </div>
-
-      {/* Two Column Section */}
-      <div className="w-full flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 bg-[#008093] flex flex-col items-center justify-center px-4 py-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4 text-center">
-            We Join Salesforce
-            <br />
-            Pledge 1% Commitment
-          </h2>
-          <p className="text-white text-base md:text-lg mb-6 text-center">
-            We are commited to the Salesforce Pledge 1% by making our resources,{" "}
-            <br />
-            time and products available to support the integration & growth of
-            <br /> NGOs and organizations.
-          </p>
+        {/* AI & Data Certifications Section */}
+        <div className="relative w-full mt-20">
           <img
-            src="https://cloudgaia.com/storage/2025/01/company-pledge-img.webp" // Replace with your actual image URL or path
-            alt="Our Mission"
-            className="w-full max-w-sm sm:max-w-md md:max-w-lg h-auto rounded-lg object-cover"
+            src="laptop.png"
+            alt="AI and Data Certifications"
+            className="w-full h-[500px] object-cover rounded-lg"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <h2 className="text-4xl font-bold text-white mb-2">
+              150+ AI & Data certifications
+            </h2>
+            <p className="text-white text-xl px-4">
+              Chosen by Salesforce as an Agentforce implementer, we continue to
+              <br />
+              empower ourselves to drive innovation, streamline processes and
+              drive
+              <br />
+              business growth through artificial intelligence and autonomous
+              agents.
+            </p>
+          </div>
+        </div>
+       
+
+        <div className="w-full flex flex-col items-center justify-center px-4 py-8 mt-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#474747] mb-6 text-center">
+            Salesforce Expertise
+          </h2>
+          <img
+            src="salesforce.PNG"
+            alt="Salesforce Expertise"
+            className="w-full max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto rounded-lg object-cover"
           />
         </div>
-        <div className="w-full md:w-1/2 bg-yellow-400 flex flex-col items-center justify-center px-4 py-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#008093] mb-4 text-center">
-            We Signed the United Nations Women's <br />
-            Empowerment Principles
+
+        <div className="w-full flex flex-col items-center justify-center px-4 py-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#474747] mb-6 text-center">
+            Industry Expertise
           </h2>
-          <p className="text-gray-800 text-base md:text-lg mb-8 text-center">
-            “We are convinced of the power of diversity for organizations and
-            the
-            <br /> impact it has on their evolution and their surroundings. We
-            believe that <br />
-            through the UN WEPs, we will be able to deepen and focus our efforts{" "}
-            <br />
-            in achieving gender equality, a foundation for a sustainable
-            future.”
-          </p>
-          <div className="flex items-center justify-center space-x-4 mb-4">
+          <img
+            src="expertise.PNG"
+            alt="Industry Expertise"
+            className="w-full max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto rounded-lg object-cover"
+          />
+        </div>
+
+        {/* Two Column Section */}
+        <div className="w-full flex flex-col md:flex-row mt-10">
+          {/* Left Div */}
+          <div className="w-full md:w-1/2 bg-[#008093] flex flex-col items-center justify-center px-4 py-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4 text-center">
+              We Join Salesforce
+              <br />
+              Pledge 1% Commitment
+            </h2>
+            <p className="text-white text-base md:text-lg mb-6 text-center">
+              We are commited to the Salesforce Pledge 1% by making our
+              resources, <br />
+              time and products available to support the integration & growth of
+              <br /> NGOs and organizations.
+            </p>
             <img
-              src="https://cloudgaia.com/storage/2025/01/company-nicolas-circle.webp"
-              alt="Nicolás Orzabal"
-              className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover"
+              src="https://cloudgaia.com/storage/2025/01/company-pledge-img.webp"
+              alt="Our Mission"
+              className="w-full max-w-sm sm:max-w-md md:max-w-lg h-auto rounded-lg object-cover"
             />
-            <div className="text-center sm:text-left">
-              <p className="text-gray-800 font-semibold text-lg">
-                Nicolás Orzabal
-              </p>
-              <p className="text-gray-800 text-lg font-bold">
-                Co-Founder & CEO
-              </p>
+          </div>
+          {/* Right Div */}
+          <div className="w-full md:w-1/2 bg-yellow-400 flex flex-col items-center justify-center px-4 py-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#008093] mb-4 text-center">
+              We Signed the United Nations Women's <br />
+              Empowerment Principles
+            </h2>
+            <p className="text-gray-800 text-base md:text-lg mb-8 text-center">
+              “We are convinced of the power of diversity for organizations and
+              the
+              <br /> impact it has on their evolution and their surroundings. We
+              believe that <br />
+              through the UN WEPs, we will be able to deepen and focus our
+              efforts <br />
+              in achieving gender equality, a foundation for a sustainable
+              future.”
+            </p>
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <img
+                src="https://cloudgaia.com/storage/2025/01/company-nicolas-circle.webp"
+                alt="Nicolás Orzabal"
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover"
+              />
+              <div className="text-center sm:text-left">
+                <p className="text-gray-800 font-semibold text-lg">
+                  Nicolás Orzabal
+                </p>
+                <p className="text-gray-800 text-lg font-bold">
+                  Co-Founder & CEO
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="container mx-auto px-4 py-10 md:px-16 mt-8">
+
         <div
-          className=" rounded-lg shadow-lg text-center px-6 py-10 md:px-10"
-          style={{ backgroundColor: "#008093" }}
+          className="mx-auto my-6 p-6 mt-20 rounded-lg shadow-lg text-center max-w-7xl"
+          style={{ backgroundColor: '#008093' }}
         >
           <img
             src="https://cloudgaia.com/storage/2025/01/logo-salesforce.svg"
             alt="Top"
-            className="mx-auto mb-6 w-32 h-20"
+            className="mx-auto mb-6 w-32 h-32"
           />
           <h2 className="text-2xl font-semibold mb-4 text-white">
             Empowered by Salesforce Ventures investment
@@ -568,15 +578,14 @@ const Company = () => {
           <p className="text-white text-base leading-relaxed">
             In 2024, we proudly announced an investment from Salesforce
             Ventures, marking a significant milestone in our journey <br />
-            as a leading global Salesforce partner. This partnership empowers us
-            to expand our reach across the Americas and <br />
+            as a leading global Salesforce partner. This partnership empowers
+            us to expand our reach across the Americas and <br />
             Europe, bringing even greater innovation and expertise to help our
             clients thrive through digital transformation.
           </p>
         </div>
-      </div>
-
       <Footer />
+      
     </div>
   );
 };

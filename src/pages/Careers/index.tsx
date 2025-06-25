@@ -107,118 +107,111 @@ For the scrolling text animation, add this to your global CSS file (e.g., global
 */
 
 export const Careers = () => {
-  const [loaded, setLoaded] = useState(false);
-  const [imageIndex, setImageIndex] = useState(0);
-  const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState("All areas");
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [openAccordion, setOpenAccordion] = useState(null);
-  const handleAccordionClick = (title) => {
-    setOpenAccordion(openAccordion === title ? null : title);
-  }; // State for job filters
+    const [loaded, setLoaded] = useState(false);
+    const [imageIndex, setImageIndex] = useState(0);
+    const [testimonialIndex, setTestimonialIndex] = useState(0);
+    const [activeTab, setActiveTab] = useState('All areas');
+      const [openAccordion, setOpenAccordion] = useState(null);
+      const handleAccordionClick = (title) => {
+        setOpenAccordion(openAccordion === title ? null : title);
+    };// State for job filters
 
-  // State for the form
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    mobile: "",
-    email: "",
-    country: "",
-    area: "",
-    linkedin: "",
-    message: "",
-    agreed: false,
-  });
+    // State for the form
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        mobile: "",
+        email: "",
+        country: "",
+        area: "",
+        linkedin: "",
+        message: "",
+        agreed: false,
+    });
 
-  // Handler for form input changes
-  const handleFormChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  // Handler for form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    alert("Application submitted successfully! (Check console for data)");
-  };
-
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
-
-  const handlePrevious = () => {
-    setImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
-
-  const currentImage = images[imageIndex]?.img;
-
-  const handlePrevTestimonial = () => {
-    setTestimonialIndex((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
-  };
-
-  const handleNextTestimonial = () => {
-    setTestimonialIndex((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const currentTestimonial = testimonials[testimonialIndex];
-
-  const filteredJobs = jobPositions.filter(
-    (job) => activeTab === "All areas" || job.department === activeTab
-  );
-  const inputStyle =
-    "w-full p-4 bg-gray-50 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500";
-  const selectStyle = `${inputStyle} appearance-none`;
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsHeaderVisible(currentScrollY <= lastScrollY);
-      setLastScrollY(currentScrollY);
+    // Handler for form input changes
+    const handleFormChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'checkbox' ? checked : value,
+        }));
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
-  return (
-    <div>
-      <div
-        className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
-          isHeaderVisible ? "translate-y-6" : "-translate-y-full"
-        }`}
-      >
-        <Header />
-      </div>
+    // Handler for form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form Data Submitted:", formData);
+        alert("Application submitted successfully! (Check console for data)");
+    };
 
-      {/* ... (Previous sections remain unchanged) ... */}
-      <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
-        <div className="px-6 py-10 md:px-10 ">
-          <div className="flex items-center text-sm text-gray-700 mt-8">
-            <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold cursor-pointer">
-              Careers
-            </span>
-          </div>
-          <div
-            className={`text-5xl font-bold text-[#008093] my-5 transition-transform
-                                                     ${
-                                                       loaded
-                                                         ? "translate-y-0  duration-300"
-                                                         : " translate-y-12"
-                                                     }
+
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
+
+    const handlePrevious = () => {
+        setImageIndex((prev) =>
+            prev === 0 ? images.length - 1 : prev - 1
+        );
+    };
+
+    const handleNext = () => {
+        setImageIndex((prev) =>
+            prev === images.length - 1 ? 0 : prev + 1
+        );
+    };
+
+    const currentImage = images[imageIndex]?.img;
+
+    const handlePrevTestimonial = () => {
+        setTestimonialIndex((prev) =>
+            prev === 0 ? testimonials.length - 1 : prev - 1
+        );
+    };
+
+    const handleNextTestimonial = () => {
+        setTestimonialIndex((prev) =>
+            prev === testimonials.length - 1 ? 0 : prev + 1
+        );
+    };
+
+    const currentTestimonial = testimonials[testimonialIndex];
+
+    const filteredJobs = jobPositions.filter(job => activeTab === 'All areas' || job.department === activeTab);
+    const inputStyle = "w-full p-4 bg-gray-50 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500";
+    const selectStyle = `${inputStyle} appearance-none`;
+
+    return (
+        <div className="relative min-h-screen overflow-x-hidden">
+            
+            {/* Blue Right-Angle Triangle in the Top-Right Corner */}
+            <div
+                className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+                style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+                aria-hidden="true" // Hides the decorative element from screen readers
+            />
+
+            <Header />
+
+            {/* ... (Previous sections remain unchanged) ... */}
+            <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
+                <div className="px-6 py-10 md:px-20 ">
+                    <div className="flex items-center text-sm text-gray-700 mt-8">
+                        <FaHome className="mr-1 text-xl" />
+                        <span className="mx-1 text-lg font-medium">
+                            /
+                        </span>
+                        <span className="text-lg font-semibold cursor-pointer">
+                            Careers
+                        </span>
+                    </div>
+                    <div
+                        className={`text-5xl font-bold text-teal-700 my-5 transition-transform
+                                                     ${loaded
+                                ? "translate-y-0  duration-300"
+                                : " translate-y-12"
+                            }
                                                            `}
           >
             All-in for people

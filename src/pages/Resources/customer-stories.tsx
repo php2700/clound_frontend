@@ -38,7 +38,7 @@ export const Customer_Stories = () => {
 
   const storyData = [
     {
-      url:'/customer-stories/cona-detail  ',
+      url: "/customer-stories/cona-detail",
       flagImg: "/flag-arg.svg",
       userImg: "/stories-cona.webp",
       companyImg: "/cona7.png",
@@ -48,7 +48,7 @@ export const Customer_Stories = () => {
         "CONA Services transformed its customer engagement platform to help Coca-Cola bottlers deliver a more personalized, connected, and efficient B2B commerce experience — driving growth, automation, and smarter commerce at scale.",
     },
     {
-      url:'/customer-stories/ealde-detail',
+      url: "/customer-stories/ealde-detail",
       flagImg: "/flag-usa.svg",
       userImg: "/53587161679_f0c0a75c22_6k-scaled.jpg",
       companyImg: "/ealde-nuevo-logo-2-2048x597.png",
@@ -59,7 +59,7 @@ export const Customer_Stories = () => {
         "EALDE modernized its data model and automated key processes with Salesforce, improving operational efficiency and enhancing the personalization of its educational offering. The result: a more agile, scalable operation ready for the future.",
     },
     {
-      url:'/customer-stories/gador-detail',
+      url: "/customer-stories/gador-detail",
       flagImg: "/flag-usa.svg",
       userImg: "/stories-gador.webp",
       companyImg: "/logo-gador-2.svg",
@@ -70,7 +70,7 @@ export const Customer_Stories = () => {
         "Grupo Dexter, Argentina’s leading sports retailer, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders.",
     },
     {
-      url:'/customer-stories/dexter-detail',
+      url: "/customer-stories/dexter-detail",
       flagImg: "/flag-arg.svg",
       userImg: "/stories-dexter.webp",
       companyImg: "/logo-grupo-dexter.svg",
@@ -117,10 +117,6 @@ export const Customer_Stories = () => {
   }, []);
 
   useEffect(() => {
-    setLoaded(true);
-  }, []);
-
-  useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsHeaderVisible(currentScrollY <= lastScrollY);
@@ -133,7 +129,14 @@ export const Customer_Stories = () => {
 
   return (
     <div>
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen overflow-x-hidden">
+        {/* Blue Right-Angle Triangle in the Top-Right Corner */}
+        <div
+          className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
+          style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+          aria-hidden="true"
+        />
+
         <div
           className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
             isHeaderVisible ? "translate-y-6" : "-translate-y-full"
@@ -223,6 +226,7 @@ export const Customer_Stories = () => {
             <div className="flex gap-20 animate-scroll whitespace-nowrap">
               {[...images, ...images].map((src, index) => (
                 <img
+                  key={index} // Added key for list items
                   src={src}
                   alt={`logo-${index}`}
                   className="h-10 w-auto object-contain"
@@ -280,7 +284,7 @@ export const Customer_Stories = () => {
           </div>
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
   );
 };

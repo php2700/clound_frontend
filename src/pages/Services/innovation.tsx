@@ -197,135 +197,147 @@ const Innovation = () => {
         </div>
 
         {/* Two-column Layout */}
-        <div className="mt-16 ">
-          <div className="flex flex-col lg:flex-row gap-5 items-start">
-            {/* Left Cards */}
-            <div className="lg:w-[58%] w-full flex flex-col gap-5">
-              {[
-                {
-                  icon: <FaLayerGroup className="text-3xl text-[#FF83A9]" />,
-                  title: "Specialized Consulting",
-                  description:
-                    "We provide consulting to identify and resolve short-term business challenges with agile solutions within Salesforce. We design clear, measurable action plans to achieve results in a short timeframe, enabling your business to respond quickly to changing market conditions.",
-                },
-                {
-                  icon: (
-                    <FaProjectDiagram className="text-3xl text-[#FF83A9]" />
-                  ),
-                  title: "Strategic Advisory",
-                  description:
-                    "We offer strategic advisory on platform architecture, data governance, and long-term growth. Our approach focuses on building a solid structure that supports continuous evolution and the adoption of new technologies within the Salesforce ecosystem, such as artificial intelligence and process automation.",
-                },
-              ].map((card, index) => (
-                <div
-                  key={index}
-                  className="bg-white border rounded-lg p-6 shadow-md min-h-[320px] flex flex-col justify-center"
-                >
-                  <div className="flex items-center">
-                    {card.icon}
-                    <h4 className="ml-4 text-3xl md:text-4xl font-bold text-[#008093]">
-                      {card.title}
-                    </h4>
-                  </div>
-                  <p className="mt-2 text-gray-700 text-base md:text-lg">
-                    {card.description}
-                  </p>
-                </div>
-              ))}
-            </div>
 
-            {/* Right Sticky Form */}
-            <div className="lg:w-[42%] w-full">
-              <div className="lg:sticky top-28">
-                <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[680px]">
-                  <h2 className="text-2xl font-semibold mb-2 leading-tight">
-                    Complete the form and book
-                    <br />a free consultation
-                  </h2>
 
-                  {/* First & Last Name */}
-                  <div className="flex gap-4">
-                    <input
-                      type="text"
-                      placeholder="First Name*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last Name*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                  </div>
+<div className="max-w-6xl mx-auto px-4 mt-16">
 
-                  {/* Email & Company */}
-                  <div className="flex gap-4">
-                    <input
-                      type="email"
-                      placeholder="Email*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                    <input
-                      type="text"
-                      placeholder="Company*"
-                      className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
-                      required
-                    />
-                  </div>
-
-                  {/* Country Dropdown */}
-                  <select
-                    required
-                    className="w-full p-3 rounded bg-white text-black focus:outline-none"
-                    defaultValue=""
-                  >
-                    <option disabled value="">
-                      Select Country*
-                    </option>
-                    {countries.map((country, index) => (
-                      <option key={index} value={country}>
-                        {country}
-                      </option>
-                    ))}
-                  </select>
-
-                  {/* Message */}
-                  <textarea
-                    placeholder="Message*"
-                    className="w-full p-3 h-28 rounded bg-white text-black resize-none focus:outline-none"
-                    required
-                  ></textarea>
-
-                  {/* Checkbox */}
-                  <p className="text-sm text-gray-800">
-                    By continuing, I confirm that I have read and agree to the
-                    Privacy Policy.
-                  </p>
-                  <div className="flex items-start gap-2">
-                    <input type="checkbox" className="mt-1" required />
-                    <p className="text-sm text-gray-800">
-                      I agree to receive emails from CloudGaia with updates on
-                      services, events, and alerts. I can unsubscribe at any
-                      time.
-                    </p>
-                  </div>
-
-                  {/* Submit */}
-                  <div className="flex justify-end">
-                    <button
-                      type="submit"
-                      className="bg-white text-black font-semibold py-2 px-6 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition"
-                    >
-                      Send
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+  {/* CHANGE 2: Flexbox ki jagah 12-column Grid system use kiya gaya hai for better control. */}
+  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-3 items-start">
+    
+    {/* Left Cards Section (ab 7 columns leta hai) */}
+    <div className="lg:col-span-7 w-full flex flex-col gap-10">
+      {[
+        {
+          // NOTE: Screenshot me icon alag hai. Aapko SVG ya alag icon library use karna padega.
+          icon: <img src="/innovation-icon-1.svg" className="text-3xl text-[#FF83A9]" />,
+          title: "Specialized Consulting",
+          description:
+            "We provide consulting to identify and resolve short-term business challenges with agile solutions within Salesforce. We design clear, measurable action plans to achieve results in a short timeframe, enabling your business to respond quickly to changing market conditions.",
+        },
+        {
+          icon: <img src="/innovation-icon-2.svg" className="text-3xl text-[#FF83A9]" />,
+          title: "Strategic Advisory",
+          description:
+            "We offer strategic advisory on platform architecture, data governance, and long-term growth. Our approach focuses on building a solid structure that supports continuous evolution and the adoption of new technologies within the Salesforce ecosystem, such as artificial intelligence and process automation.",
+        },
+      ].map((card, index) => (
+        // Card ki styling ko thoda refine kiya gaya hai
+        <div
+          key={index}
+          className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm" // Padding badhai gayi hai
+        >
+          <div className="flex items-center">
+            {card.icon}
+            <h4 className="ml-4 text-3xl font-semibold text-[#008093]"> {/* Font-bold ko font-semibold kiya gaya hai to match */}
+              {card.title}
+            </h4>
           </div>
+          <p className="mt-4 text-gray-600 text-base md:text-sm"> {/* Margin-top aur text color aadjust kiya gaya hai */}
+            {card.description}
+          </p>
         </div>
+      ))}
+    </div>
+
+    {/* Right Sticky Form Section (ab 5 columns leta hai) */}
+    {/* CHANGE 3: 'sticky top-28' se form scroll ke saath stick rahega. */}
+    <div className="lg:col-span-5 w-full sticky top-28 self-start">
+      
+      {/* CHANGE 4: Form ki styling ko screenshot jaisa banaya gaya hai. h-[680px] HATA DIYA GAYA HAI. */}
+      <form className="bg-[#FCC000] text-black p-8 rounded-xl shadow-lg space-y-5">
+        <h2 className="text-2xl font-semibold leading-tight text-gray-800">
+          Complete the form and book
+          <br />a free consultation
+        </h2>
+
+        {/* First & Last Name */}
+        {/* CHANGE 5: Input fields ab choti screen par stacked aur badi screen par side-by-side honge. */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <input
+            type="text"
+            placeholder="First Name*"
+            className="flex-1 p-3 rounded-md bg-white text-black focus:outline-none min-w-0"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name*"
+            className="flex-1 p-3 rounded-md bg-white text-black focus:outline-none min-w-0"
+            required
+          />
+        </div>
+
+        {/* Company & Email */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <input
+            type="text"
+            placeholder="Company*"
+            className="flex-1 p-3 rounded-md bg-white text-black focus:outline-none min-w-0"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email*"
+            className="flex-1 p-3 rounded-md bg-white text-black focus:outline-none min-w-0"
+            required
+          />
+        </div>
+
+        {/* Country Dropdown */}
+        <select
+          required
+          className="w-full p-3 rounded-md bg-white text-black focus:outline-none"
+          defaultValue=""
+        >
+          <option disabled value="">
+            Country*
+          </option>
+          {/* {countries.map((country, index) => (
+            <option key={index} value={country}>
+              {country}
+            </option>
+          ))} */}
+        </select>
+
+        {/* Message */}
+        <textarea
+          placeholder="Message*"
+          className="w-full p-3 h-28 rounded-md bg-white text-black resize-none focus:outline-none"
+          required
+        ></textarea>
+
+        {/* Checkbox */}
+        <p className="text-xs text-gray-700">
+          By continuing, I confirm that I have read and agree to the Privacy Policy.
+        </p>
+        <div className="flex items-start gap-3">
+          <input type="checkbox" className="mt-1 h-4 w-4" required />
+          <p className="text-xs text-gray-700">
+            I agree to receive emails from CloudGaia with updates on services, events, and alerts. I can unsubscribe at any time.
+          </p>
+        </div>
+        
+        {/* CHANGE 6: reCAPTCHA ke liye placeholder. Yahan aapko library integrate karni hogi. */}
+        <div className="pt-2">
+            {/* <ReCAPTCHA sitekey="YOUR_RECAPTCHA_SITE_KEY" /> */}
+            <div className="h-20 w-full bg-gray-200/50 flex items-center justify-center text-gray-500 rounded-md">
+                reCAPTCHA Placeholder
+            </div>
+        </div>
+
+        {/* Submit Button */}
+        <div className="flex justify-end pt-2">
+          <button
+            type="submit"
+            className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition"
+          >
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
         {/* Other Services Section */}
         <div className="py-16">

@@ -21,7 +21,14 @@ const Services = () => {
   }, [lastScrollY]);
 
   return (
+    <div className="relative min-h-screen overflow-x-hidden">
+      <div
+  className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+  style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+  aria-hidden="true" 
+/>
     <div className="relative min-h-screen">
+      
       <div
         className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
           isHeaderVisible ? "translate-y-6" : "-translate-y-full"
@@ -223,6 +230,7 @@ const Services = () => {
       </div>
 
       <Footer />
+    </div>
     </div>
   );
 };
