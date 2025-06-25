@@ -1,8 +1,8 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import Footer from "../Footer";
 
 export const Blog = () => {
   const [loaded, setLoaded] = useState(false);
@@ -63,7 +63,7 @@ export const Blog = () => {
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true"
       />
-    <div className="relative min-h-screen ">
+    {/* <div className="relative min-h-screen "> */}
       <div
         className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
           isHeaderVisible ? "translate-y-6" : "-translate-y-full"
@@ -187,6 +187,6 @@ export const Blog = () => {
       </div>
         <Footer />
     </div>
-    </div>
+    // </div>
   );
 };

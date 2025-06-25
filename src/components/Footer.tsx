@@ -83,7 +83,7 @@ const Footer = () => {
                     "Colombia",
                   ].map((label) => (
                     <li key={label}>
-                      <a href="#" className="text-sm text-white">
+                      <a href="#" className="underline-bar text-sm font-medium">
                         {label}
                       </a>
                     </li>

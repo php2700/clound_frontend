@@ -1,9 +1,9 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
 
 export const Ealde_Detail = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
