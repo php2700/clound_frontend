@@ -107,6 +107,8 @@ For the scrolling text animation, add this to your global CSS file (e.g., global
 */
 
 export const Careers = () => {
+    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     const [loaded, setLoaded] = useState(false);
     const [imageIndex, setImageIndex] = useState(0);
     const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -182,6 +184,18 @@ export const Careers = () => {
     const inputStyle = "w-full p-4 bg-gray-50 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500";
     const selectStyle = `${inputStyle} appearance-none`;
 
+    
+      useEffect(() => {
+        const handleScroll = () => {
+          const currentScrollY = window.scrollY;
+          setIsHeaderVisible(currentScrollY <= lastScrollY);
+          setLastScrollY(currentScrollY);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, [lastScrollY]);
+
     return (
         <div className="relative min-h-screen overflow-x-hidden">
             
@@ -191,8 +205,15 @@ export const Careers = () => {
                 style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
                 aria-hidden="true" // Hides the decorative element from screen readers
             />
+            <div
+        className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
+          isHeaderVisible ? "translate-y-6" : "-translate-y-full"
+        }`}
+      >
+        <Header />
+      </div>
 
-            <Header />
+            {/* <Header /> */}
 
             {/* ... (Previous sections remain unchanged) ... */}
             <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
