@@ -1,13 +1,5 @@
-import React from "react";
-import { IconType } from "react-icons";
 
-interface FeatureCardProps {
-  imageName: string;
-  title: string;
-  description: string;
-}
-
-const FeatureCard: React.FC<FeatureCardProps> = ({
+const FeatureCard = ({
   imageName,
   title,
   description,

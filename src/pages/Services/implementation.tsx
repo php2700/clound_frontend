@@ -184,24 +184,26 @@ const Implementation = () => {
               ensuring a smooth and successful adoption.
             </p>
           </div>
+        </div>
+      </div>
+      {/* Full Width Image */}
+      <div className="w-full mt-4 ">
+        <img
+          src="/implementation1.PNG"
+          alt="img.visual"
+          className="w-full h-[500px] object-cover"
+        />
+      </div>
 
-          {/* Full Width Image */}
-          <div className="w-screen mt-16 relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
-            <img
-              src="/implementation1.PNG"
-              alt="img.visual"
-              className="w-full h-[500px] object-cover"
-            />
-          </div>
-
-          {/* Two Column Layout */}
-          <div className="flex flex-col lg:flex-row items-start mt-20 gap-10 ">
+      <div className="container mx-auto px-4 py-10 md:px-6">
+        <div className="px-6 py-10 md:px-10">
+          <div className="flex flex-col lg:flex-row items-start mt-20 gap-5 ">
             {/* Left Side */}
             <div className="lg:w-[55%] w-full flex flex-col gap-12">
               <div className="p-6 border rounded-lg shadow-md">
                 <div className="flex justify-center">
                   <img
-                    src="https://cloudgaia.com/storage/2025/01/services-expand-icon.svg"
+                    src="/services-expand-icon.svg"
                     alt="Deployment Icon"
                     className="h-20 w-20 object-contain rounded-full"
                   />

@@ -4,9 +4,8 @@ import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const images = [
-    "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    "/image-10.avif","/image-11.avif",
+    "/image (8).png",'/image (9).png'
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

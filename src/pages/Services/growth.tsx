@@ -176,19 +176,21 @@ const Growth = () => {
               with your strategic objectives, driving sustainable growth.
             </p>
           </div>
+        </div>
+      </div>
+      {/* Full-width Image */}
+      <div className="w-full mt-4">
+        <img
+          src="/growth1.PNG"
+          alt="growth visual"
+          className="w-full h-[500px] object-cover"
+        />
+      </div>
 
-          {/* Full-width Image */}
-          <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
-            <img
-              src="/growth1.PNG"
-              alt="growth visual"
-              className="w-full h-[500px] object-cover"
-            />
-          </div>
-
-          {/* Two-column Layout */}
+      <div className="container mx-auto  px-4 mt-10 py-10  md:px-6 ">
+        <div className="px-6 py-10 md:px-10">
           <div className="mt-16 ">
-            <div className="flex flex-col lg:flex-row gap-10 items-start">
+            <div className="flex flex-col lg:flex-row gap-5 items-start">
               {/* Left Cards */}
               <div className="lg:w-[58%] w-full flex flex-col gap-10">
                 {[
@@ -325,15 +327,15 @@ const Growth = () => {
 
           {/* Other Services Section */}
           <div className="py-16">
-            <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#008093] mb-12">
+            <h2 className="text-center text-4xl md:text-4xl font-bold text-[#008093] mb-12">
               Check our other services
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="p-6 border rounded-lg shadow-md text-left">
                 <img src="/services-icon-1.svg" className="mb-4" />
-                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
-                  Innovation
+                <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                  Landing Services
                 </h3>
                 <p className="text-gray-700 text-lg mb-4">
                   Discover cutting-edge solutions that help you stay ahead of
@@ -350,7 +352,7 @@ const Growth = () => {
 
               <div className="p-6 border rounded-lg shadow-md text-left">
                 <img src="/services-icon-3.svg" className="mb-4" />
-                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
+                <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Landing Services
                 </h3>
                 <p className="text-gray-700 text-lg mb-4">
@@ -368,7 +370,7 @@ const Growth = () => {
 
               <div className="p-6 border rounded-lg shadow-md text-left">
                 <img src="/services-icon-2.svg" className="mb-4" />
-                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
+                <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Optimization
                 </h3>
                 <p className="text-gray-700 text-lg mb-4">

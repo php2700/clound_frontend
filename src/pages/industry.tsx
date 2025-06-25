@@ -66,16 +66,17 @@ const Industries = () => {
               their maturity within the Salesforce ecosystem.
             </p>
           </div>
-
-          {/* First Full-width Image */}
-          <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
-            <img
-              src="/industries1.PNG"
-              alt="visual"
-              className="w-full h-[500px] object-cover"
-            />
-          </div>
-
+        </div>
+      </div>
+      <div className="w-full mt-4">
+        <img
+          src="industries1.PNG"
+          alt="visual"
+          className="w-full h-[500px] object-cover"
+        />
+      </div>
+      <div className="container mx-auto mt-20 px-4 py-10 md:px-6">
+        <div className="px-6 md:px-10 py-10">
           {/* Card Grid Section */}
           <div className="mt-16 flex justify-center">
             <div className="w-full flex flex-col items-center gap-2">
@@ -101,7 +102,7 @@ const Industries = () => {
                     className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
                   >
                     {card.icon}
-                    <h4 className="text-3xl font-semibold text-[#008093] mb-1">
+                    <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       {card.title}
                     </h4>
                     <p className="text-[#474747] text-lg leading-tight">
@@ -138,7 +139,7 @@ const Industries = () => {
                     className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
                   >
                     {card.icon}
-                    <h4 className="text-3xl font-semibold text-[#008093] mb-1">
+                    <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       {card.title}
                     </h4>
                     <p className="text-[#474747] text-lg leading-tight">
@@ -169,7 +170,7 @@ const Industries = () => {
                     className="flex-1 bg-white border rounded-lg shadow-md p-6 min-h-[220px]"
                   >
                     {card.icon}
-                    <h4 className="text-3xl font-semibold text-[#008093] mb-1">
+                    <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       {card.title}
                     </h4>
                     <p className="text-[#474747] text-lg leading-tight">
@@ -180,20 +181,23 @@ const Industries = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* Scrolling Logos */}
+      <div className="mt-10">
+        <Scroll />
+      </div>
 
-          {/* Scrolling Logos */}
-          <div className="mt-10">
-            <Scroll />
-          </div>
-
-          <div className="text-center mt-16">
+      <div className="container mx-auto  px-4 py-10 md:px-6">
+        <div className="px-6 md:px-10 py-10">
+          <div className="text-center mt-10">
             <h2 className="text-4xl md:text-5xl font-bold text-[#474747] mt-13">
               Industry Expertise
             </h2>
           </div>
 
           {/* Second Image */}
-          <div className="mt-20 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <img
               src="/industries2.PNG"
               alt="Image"
