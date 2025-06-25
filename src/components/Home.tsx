@@ -44,12 +44,12 @@ const Home = () => {
             countless SMEs.
           </p>
         </div>
+      </div>
+      <div className=" mt-10 py-10">
+        <Scroll />
+      </div>
 
-        <div className="container mt-10 py-10 md:px-10">
-          <Scroll />
-        </div>
-
-        {/* 🔷 Feature Cards */}
+      <div className="container mx-auto px-4 md:px-6 mt-6">
         <div className="container mx-auto my-10 md:px-10 px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
             <FeatureCard
@@ -131,31 +131,64 @@ const Home = () => {
         >
           Why Partner with us?
         </h2>
-
-        {/* 🖼️ Hover Cards */}
       </div>
       <div className="container mx-auto my-12 px-6 md:px-10">
-        <div className="flex flex-wrap justify-center gap-3">
-          <ImageHoverCard
-            imageSrc="/image1.webp"
-            title="100% Salesforce"
-            description="With a global presence and 15+ years as Salesforce partners, we’ve dedicated ourselves exclusively to mastering the Salesforce ecosystem working with leading industries of all sizes. Our team of industry experts collaborates with clients to develop solid strategies aligned with their business objectives, accelerating value delivery and adapting to their unique needs."
-          />
-          <ImageHoverCard
-            imageSrc="/image2.webp"
-            title="Expert Staff"
-            description="We stay at the forefront of Salesforce technology, mastering all its clouds with an unmatched level of expertise and technical depth. We have a global team of experts that combines local and international knowledge to design customized solutions that maximize Salesforce platforms and our clients’ roadmaps, ensuring exceptional experiences for their users."
-          />
-          <ImageHoverCard
-            imageSrc="/image3.webp"
-            title="One Team"
-            description="Seamlessly integrating with your teams and Salesforce to create a unified force for innovation. Our collaborative model means we’re deeply invested in your success, working side-by-side to drive meaningful transformation and measurable business impact."
-          />
-          <ImageHoverCard
-            imageSrc="/image4.webp"
-            title="Agentforce Ready"
-            description="We’re at the forefront of AI-driven transformation as Agentforce implementers, our expertise in artificial intelligence and innovation enables our clients to focus on growing their businesses while we take care of the rest. With 150 AI & Data certifications, we architect intelligent experiences that give our clients a competitive edge, combining human expertise with advanced AI capabilities to deliver transformative business outcomes."
-          />
+        <div className="px-6 py-10 md:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <ImageHoverCard
+              imageSrc="/image1.webp"
+              title="100% Salesforce"
+              description={
+                <>
+                  With a
+                  <b> global presence and 15+ years as Salesforce partners</b>,
+                  we’ve dedicated ourselves exclusively to mastering the
+                  Salesforce ecosystem working with
+                  <b> eading industries of all sizes.</b> Our team of industry{" "}
+                  <b> experts collaborates with clients </b> to develop solid
+                  strategies aligned with their business objectives,
+                  accelerating value delivery and adapting to their unique
+                  needs.{" "}
+                </>
+              }
+            />
+            <ImageHoverCard
+              imageSrc="/image2.webp"
+              title="Expert Staff"
+              description={
+                <>
+                  We stay at the <b> forefront of Salesforce technology</b>,
+                  mastering all its clouds with an unmatched level of expertise
+                  and technical depth.<b> We have a global team of experts</b>{" "}
+                  that combines local and international knowledge to design
+                  <b> customized solutions </b> that maximize Salesforce
+                  platforms and our clients’ roadmaps, ensuring exceptional
+                  experiences for their users.
+                </>
+              }
+            />
+            <ImageHoverCard
+              imageSrc="/image3.webp"
+              title="One Team"
+              description="Seamlessly integrating with your teams and Salesforce to create a unified force for innovation. Our collaborative model means we’re deeply invested in your success, working side-by-side to drive meaningful transformation and measurable business impact."
+            />
+            <ImageHoverCard
+              imageSrc="/image4.webp"
+              title="Agentforce Ready"
+              description={
+                <>
+                  We’re at the forefront of AI-driven transformation as{" "}
+                  <b> Agentforce implementers</b>, our expertise in artificial
+                  intelligence and innovation enables our clients{" "}
+                  <b> to focus on growing their businesses </b> while we take
+                  care of the rest. With <b> 150 AI & Data certifications</b>,
+                  we architect intelligent experiences that give our clients a
+                  competitive edge, combining human expertise with advanced AI
+                  capabilities to deliver transformative business outcomes.
+                </>
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

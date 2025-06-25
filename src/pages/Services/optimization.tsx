@@ -158,7 +158,6 @@ const Optimization = () => {
         <Header />
       </div>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
@@ -180,21 +179,23 @@ const Optimization = () => {
               adapting it to the changing needs of your business.
             </p>
           </div>
-
-          {/* Full-width Image */}
-          <div className="w-screen mt-8 relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
-            <img
-              src="/optimization1.PNG"
-              alt="Optimization visual"
-              className="w-full h-[500px] object-cover"
-            />
-          </div>
-
+        </div>
+      </div>
+      <div className="w-full mt-4">
+        <img
+          src="/optimization1.PNG"
+          alt="Optimization visual"
+          className="w-full h-[500px] object-cover"
+        />
+      </div>
+      <div className="bg-[#f9f9f9]">
+      <div className="container mx-auto px-4 py-10 md:px-6 ">
+        <div className="px-6 py-10 md:px-10">
           {/* Two-column Layout */}
           <div className="mt-16 ">
-            <div className="flex flex-col lg:flex-row gap-10">
+            <div className="flex flex-col lg:flex-row gap-3">
               {/* Left Scrollable Cards */}
-              <div className="lg:h-[calc(100vh-150px)] overflow-y-auto pr-2 lg:w-2/3 w-full flex flex-col gap-10">
+              <div className="lg:h-[calc(90vh-150px)] overflow-y-auto pr-2 lg:w-2/3 w-full flex flex-col gap-3">
                 {[
                   {
                     icon: <FaLayerGroup className="text-3xl text-[#FF83A9]" />,
@@ -221,15 +222,15 @@ const Optimization = () => {
                 ].map((card, index) => (
                   <div
                     key={index}
-                    className="bg-white border rounded-lg p-6 shadow-md"
+                    className="bg-white  rounded-lg p-8 shadow-md"
                   >
                     <div className="flex items-center">
                       {card.icon}
-                      <h4 className="ml-4 text-2xl font-bold text-[#008093]">
+                      <h4 className="ml-4 text-4xl font-bold text-[#008093]">
                         {card.title}
                       </h4>
                     </div>
-                    <p className="mt-2 text-gray-700">{card.description}</p>
+                    <p className="mt-3 text-lg leading-tight text-gray-700">{card.description}</p>
                   </div>
                 ))}
               </div>
@@ -329,19 +330,34 @@ const Optimization = () => {
 
           {/* Other Services Section */}
           <div className="py-16">
-            <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#008093] mb-12">
+            <h2 className="text-center text-4xl md:text-4xl font-bold text-[#008093] mb-12">
               Check our other services
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6 border rounded-lg shadow-md text-left bg-white">
+                <img src="/services-icon-1.svg" className="mb-4" />
+                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
+                  Landing Services
+                </h3>
+                <p className="text-gray-700 text-lg mb-4">
+                  Supporting your first steps with Salesforce to ensure a smooth and successful adoption.
+                </p>
+                <a
+                  href="#"
+                  className="text-gray-700 font-medium relative inline-block group"
+                >
+                  Learn more
+                  <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                </a>
+              </div>
+              <div className="p-6 border rounded-lg shadow-md text-left bg-white">
                 <img src="/services-icon-1.svg" className="mb-4" />
                 <h3 className="text-3xl text-[#008093] font-semibold mb-2">
                   Innovation
                 </h3>
                 <p className="text-gray-700 text-lg mb-4">
-                  Discover cutting-edge solutions that help you stay ahead of
-                  the curve.
+                  Identifying opportunities and overcoming challenges with efficient solutions.
                 </p>
                 <a
                   href="#"
@@ -352,32 +368,13 @@ const Optimization = () => {
                 </a>
               </div>
 
-              <div className="p-6 border rounded-lg shadow-md text-left">
-                <img src="/services-icon-3.svg" className="mb-4" />
-                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
-                  Strategic Growth
-                </h3>
-                <p className="text-gray-700 text-lg mb-4">
-                  Accelerate your business growth with focused strategic
-                  initiatives.
-                </p>
-                <a
-                  href="#"
-                  className="text-gray-700 font-medium relative inline-block group"
-                >
-                  Learn more
-                  <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                </a>
-              </div>
-
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6 border rounded-lg shadow-md text-left bg-white">
                 <img src="/services-icon-4.svg" className="mb-4" />
                 <h3 className="text-3xl text-[#008093] font-semibold mb-2">
-                  Optimization
+                  Stragetic Growth
                 </h3>
                 <p className="text-gray-700 text-lg mb-4">
-                  Improve efficiency by streamlining operations and maximizing
-                  ROI.
+                  Aligning Salesforce with your business goals to drive sustainable growth.
                 </p>
                 <a
                   href="#"
@@ -399,15 +396,14 @@ const Optimization = () => {
                 <FaArrowLeft className="text-white text-xl" />
               </div>
 
-              {/* Label */}
               <span className="ml-4 text-lg font-medium text-[#474747] group-hover:underline">
                 Back to Services
               </span>
             </div>
           </div>
         </div>
+          </div>
       </div>
-      {/* Footer */}
       <Footer />
     </div>
   );

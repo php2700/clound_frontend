@@ -427,7 +427,7 @@ export const Careers = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-10 md:px-6 mt-20 bg-white py-16">
+      <div className="container mx-auto px-4 py-10 md:px-6  bg-white py-16">
         <div className="cpx-6 py-10 md:px-10">
           <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
             <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">

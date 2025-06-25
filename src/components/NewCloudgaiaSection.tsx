@@ -28,7 +28,7 @@ const NewCloudgaiaSection = () => {
               poster="https://via.placeholder.com/600x400?text=Video+Thumbnail"
             >
               <source
-                src="https://www.w3schools.com/html/mov_bbb.mp4" // Sample video; replace with your video URL
+                src="/mov_bbb.mp4" // Sample video; replace with your video URL
                 type="video/mp4"
               />
               Your browser does not support the video tag.

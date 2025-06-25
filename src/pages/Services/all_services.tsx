@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "@/components/Header"; // Fixed import path
 import Footer from "@/components/Footer"; // Fixed import path
 import {
-  FaPlaneArrival,
-  FaLightbulb,
-  FaChartLine,
-  FaTools,
-  FaHome,
+    FaHome,
 } from "react-icons/fa";
 
 const Services = () => {
@@ -68,16 +64,19 @@ const Services = () => {
               is aligned with your goals.
             </p>
           </div>
+        </div>
+      </div>
 
-          {/* Full Width Image */}
-          <div className="w-screen mt-[150px] relative left-1/2 right-1/2 -mx-[50vw]">
-            <img
-              src="/services.PNG"
-              alt="Services Visual"
-              className="w-full h-[500px] object-cover"
-            />
-          </div>
+      <div className="w-full mt-4">
+        <img
+          src="/services.png"
+          alt="Services Visual"
+          className="w-full h-[500px] object-cover"
+        />
+      </div>
 
+      <div className="container mx-auto  px-4 md:px-6">
+        <div className="px-6 py-10 md:px-10">
           {/* 4 Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-0 mt-16">
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
