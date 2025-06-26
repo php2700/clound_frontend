@@ -195,7 +195,7 @@ const Growth = () => {
               <div className="lg:w-[58%] w-full flex flex-col gap-10">
                 {[
                   {
-                    icon: <FaLayerGroup className="text-3xl text-[#FF83A9]" />,
+                    icon: <img src='/growth-icon.svg' />,
                     title: "Advisory for Centers of Excellence (CoE)",
                     description: (
                       <>

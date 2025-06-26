@@ -56,7 +56,7 @@ const Services = () => {
               <br />
               Salesforce all-in
             </h1>
-            <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-800  md:text-xl mt-8">
+            <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-800   md:text-xl mt-8">
               We offer a variety of tailor-made services designed to meet your
               needs and align with your level of maturity within the <br/> Salesforce
               ecosystem. We understand the specific requirements of your
