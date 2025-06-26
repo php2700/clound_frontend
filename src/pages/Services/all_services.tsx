@@ -40,7 +40,7 @@ const Services = () => {
       <div className="container mx-auto mt-[110px] px-4 md:px-6">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-gray-500 mt-8">
+          <div className="flex items-center text-sm  mt-8 text-gray-800">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-lg font-medium">/</span>
             <span className="text-lg font-semibold">Services</span>
@@ -56,11 +56,11 @@ const Services = () => {
               <br />
               Salesforce all-in
             </h1>
-            <p className="text-black text-base md:text-xl mt-8 max-w-3xl">
+            <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-800  md:text-xl mt-8">
               We offer a variety of tailor-made services designed to meet your
-              needs and align with your level of maturity within the Salesforce
+              needs and align with your level of maturity within the <br/> Salesforce
               ecosystem. We understand the specific requirements of your
-              industry and design end-to-end solutions ensuring that every step
+              industry and design end-to-end solutions ensuring <br/> that every step
               is aligned with your goals.
             </p>
           </div>
@@ -78,19 +78,19 @@ const Services = () => {
       <div className="container mx-auto  px-4 md:px-6">
         <div className="px-6 py-10 md:px-10">
           {/* 4 Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-0 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 px-6 md:px-0 mt-16">
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
               <img src="/services-icon-1.svg" className="mb-4" />
-              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
+              <h3  className="text-4xl font-bold mb-2 text-[#008093]">
                 Landing Services
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 mb-4 text-lg leading-tight">
                 Supporting your first steps with Salesforce to ensure a smooth
                 and successful adoption.
               </p>
               <a
                 href="#"
-                className="group inline-block font-semibold  relative"
+                className="group inline-block font-semibold  relative" style={{  fontFamily: 'sans-serif,dm-sans'}}
               >
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
@@ -99,16 +99,16 @@ const Services = () => {
 
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
               <img src="/services-icon-2.svg" className="mb-4" />
-              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
+              <h3 className="text-4xl font-bold mb-2 text-[#008093]">
                 Optimization
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 mb-4 text-lg leading-tight">
                 Enhancing Salesforce by tailoring it to the specific needs of
                 your business.
               </p>
               <a
                 href="#"
-                className="group inline-block font-semibold  relative"
+                className="group inline-block font-semibold  relative" style={{  fontFamily: 'sans-serif,dm-sans'}}
               >
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
@@ -117,14 +117,14 @@ const Services = () => {
 
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
               <img src="/services-icon-3.svg" className="mb-4" />
-              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
+              <h3 className="text-4xl font-bold mb-2 text-[#008093]">
                 Innovation
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 mb-4 text-lg leading-tight">
                 Identifying opportunities and overcoming challenges with
                 efficient solutions.
               </p>
-              <a href="#" className="group inline-block font-semibold relative">
+              <a style={{  fontFamily: 'sans-serif,dm-sans'}} href="#" className="group inline-block font-semibold relative">
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
@@ -132,14 +132,14 @@ const Services = () => {
 
             <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
               <img src="/services-icon-4.svg" className="mb-4" />
-              <h3 className="text-3xl font-semibold mb-2 text-[#008093]">
+              <h3 className="text-4xl font-bold mb-2 text-[#008093]">
                 Strategic Growth
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 mb-4 text-lg leading-tight">
                 Aligning Salesforce with your business goals to drive
                 sustainable growth.
               </p>
-              <a href="#" className="group inline-block font-semibold relative">
+              <a style={{  fontFamily: 'sans-serif,dm-sans'}} href="#" className="group inline-block font-semibold relative">
                 Learn more
                 <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
@@ -161,7 +161,7 @@ const Services = () => {
                     in-house capabilities
                   </span>
                 </h2>
-                <p className="mt-4 text-black text-base md:text-lg max-w-2xl">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}}  className="mt-4 md:text-md max-w-2xl text-gray-800 leading-tight">
                   Our Salesforce experts around the world integrate seamlessly
                   with your team, empowering your internal talents by providing
                   support and training with a business vision that drives your
@@ -211,10 +211,10 @@ const Services = () => {
             </div>
 
             <div className="text-left max-w-2xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#474747] mb-4">
+              <h2 className="text-xl md:text-6xl font-bold text-[#474747] mb-4">
                 Our way of work
               </h2>
-              <p className="text-black text-base md:text-lg">
+              <p style={{  fontFamily: 'sans-serif,dm-sans'}}  className="leading-tight text-gray-800 md:text-lg">
                 At Cloudgaia, we venture beyond the ordinary, aiming to be the
                 best by challenging and redefining best practices, while
                 including diverse perspectives that enrich our approach and

@@ -45,10 +45,13 @@ const SuccessStoriesSection = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-white">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
             New to Salesforce?
           </h2>
-          <p className="text-lg md:text-xl mb-4">
+          <p
+            style={{ fontFamily: "sans-serif,dm-sans" }}
+            className="text-lg md:text-2xl mb-4"
+          >
             Unlock its potential with us
           </p>
           <button className="bg-pink-400 hover:bg-white hover:text-black text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
@@ -76,7 +79,7 @@ const SuccessStoriesSection = () => {
                 className={`${story.bgColor} rounded-2xl p-8 hover:bg-yellow-300 shadow-xl flex flex-col justify-between h-full transform hover:scale-105 transition-all duration-300 hover:shadow-2xl`}
               >
                 <div className="flex justify-between items-center">
-                  <p className="text-[11px] font-bold text-pink-500 hover:text-gray-800 mb-3 uppercase tracking-wide">
+                  <p className="text-[13px] font-bold text-pink-500 hover:text-gray-800 mb-3  tracking-wide">
                     {story.subtitle}
                   </p>
 
@@ -87,7 +90,10 @@ const SuccessStoriesSection = () => {
                           {story.logo}
                         </div>
                         {story.logoSubtext && (
-                          <div className="text-[8px] font-semibold text-red-600 hover:text-gray-800">
+                          <div
+                            style={{ fontFamily: "sans-serif,dm-sans" }}
+                            className="text-[8px] font-semibold text-red-600 hover:text-gray-800"
+                          >
                             {story.logoSubtext}
                           </div>
                         )}

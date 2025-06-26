@@ -32,7 +32,7 @@ const Home = () => {
           >
             Salesforce, every day.
           </h2>
-          <p className="text-left mt-4 text-2xl text-gray-700 max-w-4xl whitespace-pre-line relative z-20 leading-tight">
+          <p style={{  fontFamily: 'sans-serif'}} className="text-left mt-4 text-2xl text-gray-700 max-w-4xl whitespace-pre-line relative z-20 leading-tight">
             We provide end-to-end Salesforce solutions, driven by Human +
             AI-powered{"\n"}
             innovation—from consulting and implementation to staff augmentation
@@ -126,7 +126,7 @@ const Home = () => {
 
         {/* 💡 Why Partner With Us */}
         <h2
-          className="text-6xl font-semibold text-center"
+          className="text-6xl font-bold text-center"
           style={{ color: "#008093" }}
         >
           Why Partner with us?

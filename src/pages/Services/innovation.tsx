@@ -163,7 +163,7 @@ const Innovation = () => {
 
      
         {/* Breadcrumb */}
-        <div className="flex items-center text-sm text-gray-500 mt-10 mb-3">
+        <div className="flex items-center text-sm text-gray-800 mt-10 mb-3">
           <FaHome className="mr-1 text-xl" />
           <span className="mx-1 text-lg font-medium">/</span>
           <span className="text-lg font-semibold">
@@ -178,7 +178,7 @@ const Innovation = () => {
             <br />
             step ahead of their competitors
           </h1>
-          <p className="text-[#474747] text-base md:text-2xl mt-5">
+          <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-[#474747] text-base md:text-2xl mt-5 leading-tight">
             In a dynamic business environment, innovation and adaptability are
             essential. We offer services designed to identify <br />
             opportunities and address specific challenges, all-in an agile way
@@ -348,7 +348,7 @@ const Innovation = () => {
                       {card.title}
                     </h4>
                   </div>
-                  <p className="mt-2 text-gray-700 text-base md:text-lg">
+                  <p style={{  fontFamily: 'sans-serif,dm-sans'}} className=" mt-2 text-gray-700 md:text-lg ">
                     {card.description}
                   </p>
                 </div>
@@ -460,13 +460,13 @@ const Innovation = () => {
               <h3 className="text-4xl text-[#008093] font-bold mb-2">
                 Landing Services
               </h3>
-              <p className="text-gray-700 text-lg mb-4">
+              <p  style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                 Discover cutting-edge solutions that help you stay ahead of the
                 curve.
               </p>
               <a
                 href="#"
-                className="text-gray-700 font-medium relative inline-block group"
+                className="text-gray-800 font-medium relative inline-block group"
               >
                 Learn more
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -478,13 +478,13 @@ const Innovation = () => {
               <h3 className="text-4xl text-[#008093] font-bold mb-2">
                 Strategic Growth
               </h3>
-              <p className="text-gray-700 text-lg mb-4">
+              <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                 Accelerate your business growth with focused strategic
                 initiatives.
               </p>
               <a
                 href="#"
-                className="text-gray-700 font-medium relative inline-block group"
+                className="text-gray-800 font-medium relative inline-block group"
               >
                 Learn more
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -496,13 +496,13 @@ const Innovation = () => {
               <h3 className="text-4xl text-[#008093] font-bold mb-2">
                 Optimization
               </h3>
-              <p className="text-gray-700 text-lg mb-4">
+              <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                 Improve efficiency by streamlining operations and maximizing
                 ROI.
               </p>
               <a
                 href="#"
-                className="text-gray-700 font-medium relative inline-block group"
+                className="text-gray-800 font-medium relative inline-block group"
               >
                 Learn more
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>

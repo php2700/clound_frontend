@@ -52,7 +52,7 @@ const Industries = () => {
       {/* Main Content */}
       <div className="container mx-auto mt-20 px-4 py-10 md:px-6">
         <div className="px-6 md:px-10 py-10">
-          <div className="flex items-center text-sm text-gray-500 mb-3 mt-10">
+          <div className="flex items-center text-sm text-gray-800 mb-3 mt-10">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-lg font-medium">/</span>
             <span className="text-lg font-semibold">Industries</span>
@@ -60,12 +60,12 @@ const Industries = () => {
 
           {/* Title */}
           <div className="mt-5">
-            <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
+            <h1  className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
               We match strong industry knowledge
               <br />
               with unparalleled Salesforce expertise
             </h1>
-            <p className="text-[#474747] text-base md:text-2xl mt-5">
+            <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-[#474747] text-base md:text-2xl mt-5">
               We have implemented, developed, and customized Salesforce for
               hundreds of companies, understanding the business
               <br />
@@ -112,7 +112,7 @@ const Industries = () => {
                     <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       {card.title}
                     </h4>
-                    <p className="text-[#474747] text-lg leading-tight">
+                    <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-[#474747] text-lg leading-tight">
                       {card.description}
                     </p>
                   </div>
@@ -149,7 +149,7 @@ const Industries = () => {
                     <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       {card.title}
                     </h4>
-                    <p className="text-[#474747] text-lg leading-tight">
+                    <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-[#474747] text-lg leading-tight">
                       {card.description}
                     </p>
                   </div>
@@ -180,7 +180,7 @@ const Industries = () => {
                     <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       {card.title}
                     </h4>
-                    <p className="text-[#474747] text-lg leading-tight">
+                    <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-[#474747] text-lg leading-tight">
                       {card.description}
                     </p>
                   </div>
