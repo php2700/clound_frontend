@@ -161,10 +161,10 @@ const Implementation = () => {
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-gray-500 mt-10">
+          <div className="flex items-center text-sm text-gray-800 mt-10">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold">
+            <span  className="text-lg font-semibold">
               Services / Implementation
             </span>
           </div>
@@ -177,7 +177,7 @@ const Implementation = () => {
             >
               For companies new to Salesforce
             </h1>
-            <p className="text-gray-700 text-xl md:text-2xl mt-4">
+            <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="leading-tight text-gray-700 text-xl md:text-2xl mt-4 ">
               We activate the first clouds and partner with them in their first
               steps,
               <br />
@@ -208,21 +208,21 @@ const Implementation = () => {
                     className="h-20 w-20 object-contain rounded-full"
                   />
                 </div>
-                <h3 className="text-4xl font-semibold mt-4 text-[#008093] text-left">
+                <h3 className="text-4xl font-bold mt-4 text-[#008093] text-left">
                   Initial Deployment
                 </h3>
-                <p className="mt-2 text-text-gray-700 text-lg">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="mt-2 text-gray-700 text-lg leading-tight">
                   We take care of the configuration and activation of Salesforce
                   clouds, using standard out-of-the-box features from day one.
                 </p>
-                <p className="mt-6 text-text-gray-700 text-lg">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="mt-6 text-gray-700 text-lg leading-tight">
                   In addition, we train users on the core Salesforce features,
                   ensuring they have the basic knowledge necessary to maximize
                   their use.
                 </p>
               </div>
 
-              <h2 className="text-4xl font-semibold text-[#474747]">
+              <h2 className="text-4xl font-bold text-[#474747]">
                 Blend of services to suit <br /> your business needs
               </h2>
 
@@ -231,10 +231,10 @@ const Implementation = () => {
                 <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
                   <FaBolt className="text-3xl text-[#FF83A9]" />
                   <div>
-                    <h4 className="text-4xl font-semibold text-[#008093] mb-1">
+                    <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       Quick Starts
                     </h4>
-                    <p className="text-text-gray-700 mt-1 text-lg">
+                    <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 mt-1 text-lg">
                       Solutions ready for use in a few weeks.
                     </p>
                   </div>
@@ -244,10 +244,10 @@ const Implementation = () => {
                 <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
                   <FaUsers className="text-3xl text-[#FF83A9]" />
                   <div>
-                    <h4 className="text-4xl font-semibold text-[#008093]">
+                    <h4 className="text-4xl font-bold text-[#008093]">
                       Agile Team
                     </h4>
-                    <p className="text-text-gray-700 text-lg mt-1">
+                    <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mt-1">
                       A team of experts with different skills adapts quickly to
                       the needs of your business.
                     </p>
@@ -258,10 +258,10 @@ const Implementation = () => {
                 <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
                   <FaStar className="text-3xl text-[#FF83A9]" />
                   <div>
-                    <h4 className="text-4xl font-semibold text-[#008093]">
+                    <h4 className="text-4xl font-bold text-[#008093]">
                       Custom E2E
                     </h4>
-                    <p className="text-text-gray-700 text-lg mt-1">
+                    <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mt-1">
                       We work together with a team of experts on a specific
                       solution customized to your needs.
                     </p>
@@ -365,7 +365,7 @@ const Implementation = () => {
           </div>
           <div className="py-16">
             {/* Heading */}
-            <h2 className="text-center text-4xl md:text-4xl font-semibold text-[#008093] mb-12">
+            <h2 className="text-center text-5xl md:text-4xl font-bold text-[#008093] mb-12">
               Check our other services
             </h2>
 
@@ -374,10 +374,10 @@ const Implementation = () => {
               {/* Card 1 */}
               <div className="p-6 border rounded-lg shadow-md text-left">
                 <img src="/services-icon-3.svg" className="mb-4" />
-                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
+                <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Innovation
                 </h3>
-                <p className="text-gray-700 text-lg mb-4">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                   Discover cutting-edge solutions that help you stay ahead of
                   the curve.
                 </p>
@@ -393,10 +393,10 @@ const Implementation = () => {
               {/* Card 2 */}
               <div className="p-6 border rounded-lg shadow-md text-left">
                 <img src="/services-icon-4.svg" className="mb-4" />
-                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
+                <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Strategic Growth
                 </h3>
-                <p className="text-gray-700 text-lg mb-4">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                   Accelerate your business growth with focused strategic
                   initiatives.
                 </p>
@@ -412,10 +412,10 @@ const Implementation = () => {
               {/* Card 3 */}
               <div className="p-6 border rounded-lg shadow-md text-left">
                 <img src="/services-icon-2.svg" className="mb-4" />
-                <h3 className="text-3xl text-[#008093] font-semibold mb-2">
+                <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Optimization
                 </h3>
-                <p className="text-gray-700 text-lg mb-4">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                   Improve efficiency by streamlining operations and maximizing
                   ROI.
                 </p>

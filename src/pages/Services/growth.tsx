@@ -159,7 +159,7 @@ const Growth = () => {
       <div className="container mx-auto  px-4 mt-10 py-10  md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-gray-500 mb-3 mt-10">
+          <div className="flex items-center text-sm text-gray-800 mb-3 mt-10">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-lg font-medium">/</span>
             <span className="text-lg font-semibold">Services / Growth</span>
@@ -167,10 +167,10 @@ const Growth = () => {
 
           {/* Title */}
           <div className="mt-5">
-            <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
+            <h1  className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
               For companies seeking Strategic Growth
             </h1>
-            <p className="text-[#474747] text-base md:text-2xl mt-5">
+            <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="leading-tight text-[#474747] text-base md:text-2xl mt-5">
               We offer services to maximize the value of Salesforce and align it{" "}
               <br />
               with your strategic objectives, driving sustainable growth.
@@ -225,7 +225,7 @@ const Growth = () => {
                         {card.title}
                       </h4>
                     </div>
-                    <p className="mt-4 text-gray-700 text-base md:text-lg">
+                    <p style={{  fontFamily: 'sans-serif,dm-sans'}} className=" mt-4 text-gray-700 text-base md:text-lg">
                       {card.description}
                     </p>
                   </div>
@@ -335,16 +335,16 @@ const Growth = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="p-6 border rounded-lg shadow-md text-left">
                 <img src="/services-icon-1.svg" className="mb-4" />
-                <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                <h3  className=" text-4xl text-[#008093] font-bold mb-2">
                   Landing Services
                 </h3>
-                <p className="text-gray-700 text-lg mb-4">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="leading-tight text-gray-700 text-lg mb-4">
                   Discover cutting-edge solutions that help you stay ahead of
                   the curve.
                 </p>
                 <a
                   href="#"
-                  className="text-gray-700 font-medium relative inline-block group"
+                  className="text-gray-800 font-medium relative inline-block group"
                 >
                   Learn more
                   <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -356,13 +356,13 @@ const Growth = () => {
                 <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Landing Services
                 </h3>
-                <p className="text-gray-700 text-lg mb-4">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                   Supporting your first steps with Salesforce to ensure a smooth
                   and successful adoption.
                 </p>
                 <a
                   href="#"
-                  className="text-gray-700 font-medium relative inline-block group"
+                  className="text-gray-800 font-medium relative inline-block group"
                 >
                   Learn more
                   <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -374,13 +374,13 @@ const Growth = () => {
                 <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Optimization
                 </h3>
-                <p className="text-gray-700 text-lg mb-4">
+                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
                   Improve efficiency by streamlining operations and maximizing
                   ROI.
                 </p>
                 <a
                   href="#"
-                  className="text-gray-700 font-medium relative inline-block group"
+                  className="text-gray-800 font-medium relative inline-block group"
                 >
                   Learn more
                   <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>

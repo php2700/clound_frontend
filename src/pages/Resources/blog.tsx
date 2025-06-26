@@ -73,7 +73,7 @@ export const Blog = () => {
       </div>
       <div className="container mx-auto mt-20 px-4 md:px-6">
         <div className="px-6 py-10 md:px-10">
-          <div className="flex items-center text-sm text-gray-500 mt-8">
+          <div className="flex items-center text-sm text-gray-800 mt-8">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-lg font-medium">/</span>
             <span className="text-lg font-semibold cursor-pointer">
@@ -89,7 +89,7 @@ export const Blog = () => {
           >
             Check out our latest updates
           </h1>
-          <div className="mt-5 text-2xl ">
+          <div style={{ fontFamily: "sans-serif,dm-sans" }} className="mt-5 text-2xl leading-tight text-gray-700 ">
             Stay up-to-date with the latest insights, trends, and best practices
             from the Salesforce ecosystem. Our blog features reflections,
             perspectives, and advice from our team of experts, helping you stay
@@ -167,10 +167,10 @@ export const Blog = () => {
                   <div className="text-sm text-red-400 font-medium mb-1">
                     {item?.fetchFrom}
                   </div>
-                  <div className="text-2xl font-semibold text-[#008093] mb-2 cursor-pointer">
+                  <div className="text-2xl font-bold text-[#008093] mb-2 cursor-pointer">
                     {item?.title}
                   </div>
-                  <div className="text-md text-gray-600 flex-grow">
+                  <div style={{ fontFamily: "sans-serif,dm-sans" }} className="text-lg text-gray-600 flex-grow leading-tight">
                     {item?.description}
                   </div>
 

@@ -24,7 +24,7 @@ const StatsSection = () => {
         <div className="flex flex-col md:flex-row justify-around items-center gap-8">
           {/* Customer Satisfaction */}
           <div className="text-center">
-            <h3 className="text-white text-xl mb-2 font-sans">
+            <h3 className="text-white text-2xl font-bold mb-2 font-sans">
               Customer satisfaction
             </h3>
             <div className="flex justify-center items-center space-x-1 mb-2">
@@ -43,7 +43,7 @@ const StatsSection = () => {
 
           {/* Certifications */}
           <div className="text-center">
-            <h3 className="text-white text-xl mb-2 font-sans">
+            <h3 className="text-white text-2xl font-bold mb-2 font-sans">
               Certifications
             </h3>
             <p className="text-yellow-400 text-3xl font-bold font-sans">
@@ -53,7 +53,7 @@ const StatsSection = () => {
 
           {/* Projects */}
           <div className="text-center">
-            <h3 className="text-white text-xl mb-2 font-sans">Projects</h3>
+            <h3 className="text-white text-2xl mb-2 font-bold font-sans">Projects</h3>
             <p className="text-yellow-400 text-3xl font-bold font-sans">
               {statsData.projects}
             </p>
@@ -61,7 +61,7 @@ const StatsSection = () => {
 
           {/* Experts */}
           <div className="text-center">
-            <h3 className="text-white text-xl mb-2 font-sans">Experts</h3>
+            <h3 className="text-white text-2xl font-bold mb-2 font-sans">Experts</h3>
             <p className="text-yellow-400 text-3xl font-bold font-sans">
               {statsData.experts}
             </p>
