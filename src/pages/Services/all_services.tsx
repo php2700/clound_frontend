@@ -69,7 +69,7 @@ const Services = () => {
 
       <div className="w-full mt-4">
         <img
-          src="/services.png"
+          src="/services.PNG"
           alt="Services Visual"
           className="w-full h-[500px] object-cover"
         />
