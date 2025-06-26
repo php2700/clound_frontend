@@ -156,8 +156,8 @@ const Growth = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto  px-4 mt-10 py-10  md:px-6 mt-20">
-        <div className="px-6 py-10 md:px-10">
+      <div className="container mx-auto  px-4 mt-10 pt-10  md:px-6 mt-20">
+        <div className="px-6 pt-10 md:px-10">
           {/* Breadcrumb */}
           <div className="flex items-center text-sm text-gray-800 mb-3 mt-10">
             <FaHome className="mr-1 text-xl" />
@@ -186,8 +186,8 @@ const Growth = () => {
           className="w-full h-[500px] object-cover"
         />
       </div>
-
-      <div className="container mx-auto  px-4 mt-10 py-10  md:px-6 ">
+<div className="bg-[#f9f9f9]">
+      <div className="container mx-auto  px-4  py-10  md:px-6 ">
         <div className="px-6 py-10 md:px-10">
           <div className="mt-16 ">
             <div className="flex flex-col lg:flex-row gap-5 items-start">
@@ -217,7 +217,7 @@ const Growth = () => {
                 ].map((card, index) => (
                   <div
                     key={index}
-                    className="bg-white border rounded-lg p-6 shadow-md min-h-[320px] flex flex-col justify-center"
+                    className="bg-white  rounded-lg p-6 shadow-md min-h-[320px] flex flex-col justify-center"
                   >
                     <div className="flex items-center">
                       {card.icon}
@@ -333,7 +333,7 @@ const Growth = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6  rounded-lg shadow-md text-left bg-white">
                 <img src="/services-icon-1.svg" className="mb-4" />
                 <h3  className=" text-4xl text-[#008093] font-bold mb-2">
                   Landing Services
@@ -351,7 +351,7 @@ const Growth = () => {
                 </a>
               </div>
 
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6 bg-white rounded-lg shadow-md text-left">
                 <img src="/services-icon-3.svg" className="mb-4" />
                 <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Landing Services
@@ -369,7 +369,7 @@ const Growth = () => {
                 </a>
               </div>
 
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6 bg-white rounded-lg shadow-md text-left">
                 <img src="/services-icon-2.svg" className="mb-4" />
                 <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Optimization
@@ -406,7 +406,7 @@ const Growth = () => {
           </div>
         </div>
       </div>
-
+</div>
       {/* Footer */}
       <Footer />
     </div>

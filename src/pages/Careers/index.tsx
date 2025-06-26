@@ -304,31 +304,31 @@ export const Careers = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className=" container mx-auto pt-[80px] px-4 md:px-6 bg-white py-16">
-        <div className="px-6 py-10 md:px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
-            {accordionData.map((item) => {
-              const isOpen = openAccordion === item.title;
-              return (
-                <div
-                  key={item.title}
-                  className={`
+
+        <div className=" container mx-auto pt-[80px] px-4 md:px-6  py-8">
+          <div className="px-6 py-10 md:px-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
+              {accordionData.map((item) => {
+                const isOpen = openAccordion === item.title;
+                return (
+                  <div
+                    key={item.title}
+                    className={`
                                         ${item.bgColor} ${item.textColor}
                                         rounded-lg
                                         transition-all duration-500 ease-in-out
                                     `}
-                >
-                  <button
-                    onClick={() => handleAccordionClick(item.title)}
-                    className="w-full font-bold text-lg p-6 flex items-center justify-between text-left"
                   >
-                    <span>{item.title}</span>
-                    {isOpen ? <FaAngleUp /> : <FaAngleDown />}
-                  </button>
+                    <button
+                      onClick={() => handleAccordionClick(item.title)}
+                      className="w-full font-bold text-lg p-6 flex items-center justify-between text-left"
+                    >
+                      <span>{item.title}</span>
+                      {isOpen ? <FaAngleUp /> : <FaAngleDown />}
+                    </button>
 
-                  <div
-                    className={`
+                    <div
+                      className={`
                                             overflow-hidden transition-all duration-500 ease-in-out
                                             ${
                                               isOpen
@@ -336,184 +336,186 @@ export const Careers = () => {
                                                 : "max-h-0 opacity-0"
                                             }
                                         `}
-                  >
-                    <p className="px-4 pb-4 text-sm">{item.description}</p>
+                    >
+                      <p className="px-4 pb-4 text-sm">{item.description}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-          <p
-            style={{ fontFamily: "sans-serif,dm-sans" }}
-            className="text-center text-gray-600 mb-16 max-w-2xl mx-auto"
-          >
-            Here, it's not just about work—it's about working together to create
-            something extraordinary.
-          </p>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-              We're all-in for your professional growth
-            </h2>
+                );
+              })}
+            </div>
             <p
               style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="leading-tight max-w-4xl mx-auto text-gray-600 text-lg"
+              className="text-center text-gray-600 mb-16 max-w-2xl mx-auto"
             >
-              We're here to empower you to become the best version of yourself
-              every day, offering the flexibility to shape your work experience
-              around your unique needs and goals. Whether it's how, when, or
-              where you work, we're by your side, creating the space for you to
-              grow, thrive, and make an impact.
+              Here, it's not just about work—it's about working together to
+              create something extraordinary.
             </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto">
-            <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-              <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                {/* IMG ko VIDEO se replace kiya gaya hai */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="max-h-full w-auto"
-                >
-                  <source src="/Workmy.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div className="text-gray-700">
-                <ul
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="list-disc list-inside space-y-3 leading-tight"
-                >
-                  <li>
-                    Work from home, the office, or a coworking space—it's your
-                    choice!
-                  </li>
-                  <li>
-                    The freedom to work from anywhere in the world (1 month).
-                  </li>
-                </ul>
-              </div>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                We're all-in for your professional growth
+              </h2>
+              <p
+                style={{ fontFamily: "sans-serif,dm-sans" }}
+                className="leading-tight max-w-4xl mx-auto text-gray-600 text-lg"
+              >
+                We're here to empower you to become the best version of yourself
+                every day, offering the flexibility to shape your work
+                experience around your unique needs and goals. Whether it's how,
+                when, or where you work, we're by your side, creating the space
+                for you to grow, thrive, and make an impact.
+              </p>
             </div>
-            <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-              <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                {/* NOTE: Is path ko apni video file se replace karein */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="max-h-full w-auto"
-                >
-                  <source src="/freetimeoffs.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div className="text-gray-700">
-                <ul
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="list-disc list-inside space-y-3 leading-tight"
-                >
-                  <li>Flexible time off and vacations</li>
-                  <li>Work schedules that fit your lifestyle</li>
-                </ul>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-              <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="max-h-full w-auto"
-                >
-                  <source src="/academy.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                {/* <img src="/academy.png" alt="Academy logo" className="max-h-full" /> */}
-              </div>
-              <div className="text-gray-700">
-                <ul
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="list-disc list-inside space-y-3 leading-tight"
-                >
-                  <li>
-                    Free Salesforce certifications and other related
-                    certifications
-                  </li>
-                  <li>English-Spanish language classes</li>
-                  <li>Workshops and training sessions</li>
-                </ul>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-              <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="max-h-full w-auto"
-                >
-                  <source src="/wellness.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div className="text-gray-700">
-                <ul
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="list-disc list-inside space-y-3 leading-tight"
-                >
-                  <li>A culture of care</li>
-                  <li>Flexible work options</li>
-                  <li>Comprehensive wellness programs</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 py-10 md:px-6  bg-white py-16">
-        <div className="cpx-6 py-10 md:px-10">
-          <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
-            <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">
-              <blockquote className="text-2xl lg:text-3xl font-semibold leading-relaxed">
-                “{currentTestimonial.quote}”
-              </blockquote>
-              <div className="mt-8">
-                <div className="flex items-center justify-center gap-3">
-                  <img
-                    src={currentTestimonial.flag}
-                    alt={`${currentTestimonial.name}'s country flag`}
-                    className="w-8 h-auto rounded-sm"
-                  />
-                  <span className="font-bold text-lg text-yellow-400">
-                    {currentTestimonial.name}
-                  </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto">
+              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
+                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
+                  {/* IMG ko VIDEO se replace kiya gaya hai */}
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="max-h-full w-auto"
+                  >
+                    <source src="/Workmy.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
-                <p className="text-gray-300 mt-1">{currentTestimonial.title}</p>
+                <div className="text-gray-700">
+                  <ul
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside space-y-3 leading-tight"
+                  >
+                    <li>
+                      Work from home, the office, or a coworking space—it's your
+                      choice!
+                    </li>
+                    <li>
+                      The freedom to work from anywhere in the world (1 month).
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="flex gap-4 mt-8">
-                <button
-                  onClick={handlePrevTestimonial}
-                  className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors "
-                >
-                  <FaArrowLeft />
-                </button>
-                <button
-                  onClick={handleNextTestimonial}
-                  className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors"
-                >
-                  <FaArrowRight />
-                </button>
+              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
+                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
+                  {/* NOTE: Is path ko apni video file se replace karein */}
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="max-h-full w-auto"
+                  >
+                    <source src="/freetimeoffs.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className="text-gray-700">
+                  <ul
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside space-y-3 leading-tight"
+                  >
+                    <li>Flexible time off and vacations</li>
+                    <li>Work schedules that fit your lifestyle</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
+                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="max-h-full w-auto"
+                  >
+                    <source src="/academy.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  {/* <img src="/academy.png" alt="Academy logo" className="max-h-full" /> */}
+                </div>
+                <div className="text-gray-700">
+                  <ul
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside space-y-3 leading-tight"
+                  >
+                    <li>
+                      Free Salesforce certifications and other related
+                      certifications
+                    </li>
+                    <li>English-Spanish language classes</li>
+                    <li>Workshops and training sessions</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
+                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="max-h-full w-auto"
+                  >
+                    <source src="/wellness.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className="text-gray-700">
+                  <ul
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside space-y-3 leading-tight"
+                  >
+                    <li>A culture of care</li>
+                    <li>Flexible work options</li>
+                    <li>Comprehensive wellness programs</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4  md:px-6   ">
+          <div className="cpx-6 py-5 md:px-10">
+            <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
+              <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">
+                <blockquote className="text-2xl lg:text-3xl font-semibold leading-relaxed">
+                  “{currentTestimonial.quote}”
+                </blockquote>
+                <div className="mt-8">
+                  <div className="flex items-center justify-center gap-3">
+                    <img
+                      src={currentTestimonial.flag}
+                      alt={`${currentTestimonial.name}'s country flag`}
+                      className="w-8 h-auto rounded-sm"
+                    />
+                    <span className="font-bold text-lg text-yellow-400">
+                      {currentTestimonial.name}
+                    </span>
+                  </div>
+                  <p className="text-gray-300 mt-1">
+                    {currentTestimonial.title}
+                  </p>
+                </div>
+                <div className="flex gap-4 mt-8">
+                  <button
+                    onClick={handlePrevTestimonial}
+                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors "
+                  >
+                    <FaArrowLeft />
+                  </button>
+                  <button
+                    onClick={handleNextTestimonial}
+                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors"
+                  >
+                    <FaArrowRight />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div className="relative w-full py-24">
         <img
           src="/careersback.webp"
@@ -656,155 +658,157 @@ export const Careers = () => {
       </div>
 
       {/* START: OPEN POSITIONS SECTION */}
-      <div className="bg-white container mx-auto px-4 py-10 md:px-6 mt-20">
-        <div className="px-6 py-10 md:px-10">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold text-[#008093]">
-              Open positions
-            </h2>
-            <p className="text-gray-600 mt-4 text-2xl">
-              Join the team, these are our open positions.
-            </p>
-          </div>
+      <div className=" bg-[#f9f9f9]">
+        <div className="container mx-auto px-4 py-20 md:px-6 ">
+          <div className="px-6 py-10 md:px-10">
+            <div className="text-center mb-12">
+              <h2 className="text-5xl font-bold text-[#008093]">
+                Open positions
+              </h2>
+              <p className="text-gray-600 mt-4 text-2xl">
+                Join the team, these are our open positions.
+              </p>
+            </div>
 
-          <div className="space-y-10 mb-16">
-            <div className="flex items-start gap-4">
-              <img src="/benefits-icon.svg" className="h-6" />
+            <div className="space-y-10 mb-16">
+              <div className="flex items-start gap-4">
+                <img src="/benefits-icon.svg" className="h-6" />
 
-              <div>
-                <h3 className="font-bold text-lg text-pink-500">
-                  What we offer
-                </h3>
-                <ul
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
-                >
-                  <li>A dynamic and collaborative work environment</li>
-                  <li>Flexibility to work from anywhere in the world</li>
-                  <li>
-                    A supportive culture that values creativity and innovation
-                  </li>
-                  <li>Free certifications</li>
-                  <li>Free time-off</li>
-                  <li>English and Spanish classes</li>
-                </ul>
+                <div>
+                  <h3 className="font-bold text-lg text-pink-500">
+                    What we offer
+                  </h3>
+                  <ul
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
+                  >
+                    <li>A dynamic and collaborative work environment</li>
+                    <li>Flexibility to work from anywhere in the world</li>
+                    <li>
+                      A supportive culture that values creativity and innovation
+                    </li>
+                    <li>Free certifications</li>
+                    <li>Free time-off</li>
+                    <li>English and Spanish classes</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <img src="/icon-plane.svg" className="h-6" />
+                <div>
+                  <h3 className="font-bold text-lg text-pink-500">
+                    Why Join Cloudgaia?
+                  </h3>
+                  <ul
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
+                  >
+                    <li>
+                      Work on cutting-edge Salesforce projects with top-tier
+                      clients.
+                    </li>
+                    <li>Be part of a high-performing, collaborative team.</li>
+                    <li>Ongoing training and support for certifications.</li>
+                    <li>
+                      Flexibility and growth opportunities within the company.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                {/* <FaInfoCircle className="text-pink-500 text-2xl mt-1 flex-shrink-0" /> */}
+                <img src="/2-lampara-emoji.png" className="h-6" />
+
+                <div>
+                  <h3 className="font-bold text-lg text-pink-500">
+                    About Cloudgaia:
+                  </h3>
+                  <p
+                    className="text-gray-600 mt-2"
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                  >
+                    At Cloudgaia, we are passionate about digital transformation
+                    with Salesforce. We partner with companies to drive
+                    innovation, ensuring real business impact.
+                  </p>
+                  <p className="text-gray-700 mt-4 text-xl font-semibold leading-tight">
+                    Ready to take your career to the next level? <br /> Join
+                    Cloudgaia and be part of the digital evolution!
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <img src="/icon-plane.svg" className="h-6" />
-              <div>
-                <h3 className="font-bold text-lg text-pink-500">
-                  Why Join Cloudgaia?
-                </h3>
-                <ul
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
-                >
-                  <li>
-                    Work on cutting-edge Salesforce projects with top-tier
-                    clients.
-                  </li>
-                  <li>Be part of a high-performing, collaborative team.</li>
-                  <li>Ongoing training and support for certifications.</li>
-                  <li>
-                    Flexibility and growth opportunities within the company.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              {/* <FaInfoCircle className="text-pink-500 text-2xl mt-1 flex-shrink-0" /> */}
-              <img src="/2-lampara-emoji.png" className="h-6" />
 
-              <div>
-                <h3 className="font-bold text-lg text-pink-500">
-                  About Cloudgaia:
-                </h3>
-                <p
-                  className="text-gray-600 mt-2"
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                >
-                  At Cloudgaia, we are passionate about digital transformation
-                  with Salesforce. We partner with companies to drive
-                  innovation, ensuring real business impact.
-                </p>
-                <p className="text-gray-700 mt-4 text-xl font-semibold leading-tight">
-                  Ready to take your career to the next level? <br /> Join
-                  Cloudgaia and be part of the digital evolution!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex  items-left gap-4 mb-8">
-            <button
-              onClick={() => setActiveTab("All areas")}
-              className={`py-2 px-6 rounded-full font-semibold transition-colors ${
-                activeTab === "All areas"
-                  ? "border-2 border-teal-500 text-teal-500"
-                  : "text-gray-500 hover:text-teal-500"
-              }`}
-            >
-              All areas
-            </button>
-            <button
-              onClick={() => setActiveTab("Commercial")}
-              className={`py-2 px-6 rounded-full font-semibold transition-colors ${
-                activeTab === "Commercial"
-                  ? "border-2 border-teal-500 text-teal-500"
-                  : "text-gray-500 hover:text-teal-500"
-              }`}
-            >
-              Commercial
-            </button>
-            <button
-              onClick={() => setActiveTab("Operations")}
-              className={`py-2 px-6 rounded-full font-semibold transition-colors ${
-                activeTab === "Operations"
-                  ? "border-2 border-teal-500 text-teal-500"
-                  : "text-gray-500 hover:text-teal-500"
-              }`}
-            >
-              Operations
-            </button>
-          </div>
-
-          <div className=" bg-white rounded-2xl shadow-lg p-4">
-            {filteredJobs.map((job, index) => (
-              <div
-                key={index}
-                className={`flex items-center justify-between p-4 ${
-                  index < filteredJobs.length - 1
-                    ? "border-b border-gray-200"
-                    : ""
+            <div className="flex  items-left gap-4 mb-8">
+              <button
+                onClick={() => setActiveTab("All areas")}
+                className={`py-2 px-6 rounded-full font-semibold transition-colors ${
+                  activeTab === "All areas"
+                    ? "border border-[#008093] text-[#008093]"
+                    : "text-gray-500 hover:text-[#008093]"
                 }`}
               >
-                <div className="flex items-center gap-4">
-                  <div className="bg-yellow-400 text-white w-10 h-10 rounded-full flex items-center justify-center">
-                    <FaAngleDown />
-                  </div>
-                  <h4 className="font-bold text-lg text-gray-800">
-                    {job.title}
-                  </h4>
-                </div>
-                <div className="flex items-center gap-4 text-pink-500 font-semibold">
-                  <span>{job.department}</span>
-                  <span>{job.type}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+                All areas
+              </button>
+              <button
+                onClick={() => setActiveTab("Commercial")}
+                className={`py-2 px-6  bg-white rounded-full font-semibold transition-colors ${
+                  activeTab === "Commercial"
+                    ? "border-2 border-teal-500 text-[#008093]"
+                    : "text-gray-500 hover:text-[#008093] hover:border-[#008093] border border-white"
+                }`}
+              >
+                Commercial
+              </button>
+              <button
+                onClick={() => setActiveTab("Operations")}
+                className={`py-2 px-6 rounded-full  bg-white font-semibold transition-colors ${
+                  activeTab === "Operations"
+                    ? "border-2 border-teal-500 text-[#008093]"
+                    : "text-gray-500 hover:text-[#008093] hover:border-[#008093] border border-white"
+                }`}
+              >
+                Operations
+              </button>
+            </div>
 
-          <div className="text-center mt-12">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="inline-flex items-center gap-2 text-gray-700 font-semibold"
-            >
-              <div className="bg-yellow-400 text-white w-10 h-10 rounded-full flex items-center justify-center">
-                <FaAngleUp />
-              </div>
-              Go to top
-            </button>
+            <div className=" bg-white rounded-2xl shadow-lg p-4">
+              {filteredJobs.map((job, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center justify-between p-4 ${
+                    index < filteredJobs.length - 1
+                      ? "border-b border-gray-200"
+                      : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="bg-yellow-400 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                      <FaAngleDown />
+                    </div>
+                    <h4 className="font-bold text-lg text-gray-800">
+                      {job.title}
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-4 text-pink-500 font-semibold">
+                    <span>{job.department}</span>
+                    <span>{job.type}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="inline-flex items-center gap-2 text-gray-700 font-semibold"
+              >
+                <div className="bg-yellow-400 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                  <FaAngleUp />
+                </div>
+                Go to top
+              </button>
+            </div>
           </div>
         </div>
       </div>

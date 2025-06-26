@@ -15,7 +15,7 @@ const Scroll = () => {
   ];
 
   return (
-    <div className="scrolling-wrapper">
+    <div className="scrolling-wrapper ">
       <div className="scrolling-track">
         {[...images, ...images].map((src, idx) => (
           <img

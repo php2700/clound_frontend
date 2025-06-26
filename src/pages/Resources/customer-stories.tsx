@@ -170,7 +170,10 @@ export const Customer_Stories = () => {
               >
                 All-in for our clients
               </div>
-              <div style={{ fontFamily: "sans-serif,dm-sans" }}  className="text-2xl leading-tight text-gray-700">
+              <div
+                style={{ fontFamily: "sans-serif,dm-sans" }}
+                className="text-2xl leading-tight text-gray-700"
+              >
                 Discover how we’ve transformed our clients' businesses with
                 powerful Salesforce solutions, customized to meet the unique
                 needs of each business through a one-team collaborative
@@ -208,7 +211,8 @@ export const Customer_Stories = () => {
         <div className="bg-[#f9f9f9]">
           <div className=" container mx-auto  px-4 md:px-6">
             <div className="px-6 py-10 md:px-10 ">
-              <h2 style={{ fontFamily: "sans-serif,dm-sans" }}
+              <h2
+                style={{ fontFamily: "sans-serif,dm-sans" }}
                 className={`text-4xl md:text-5xl font-bold text-[#008093] leading-tight max-w-5xl `}
               >
                 At Cloudgaia, our dedication to customer success is driven by a
@@ -269,7 +273,10 @@ export const Customer_Stories = () => {
                     <div className="text-3xl font-bold text-gray-800 mb-2">
                       {item?.title}
                     </div>
-                    <div style={{ fontFamily: "sans-serif,dm-sans" }} className="text-gray-600 text-lg mb-4 leading-tight">
+                    <div
+                      style={{ fontFamily: "sans-serif,dm-sans" }}
+                      className="text-gray-600 text-lg mb-4 leading-tight"
+                    >
                       {item?.description}
                     </div>
                     <Link to={item?.url}>
@@ -280,6 +287,24 @@ export const Customer_Stories = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div
+            className="relative w-full h-[300px] bg-cover bg-center"
+            style={{ backgroundImage: "url('/stories-banner-back.webp')" }}
+
+          >
+            
+            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+
+            <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+                Let's talk!
+              </h2>
+              <button className="bg-[#FF83A9] text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition">
+                Contact us
+              </button>
             </div>
           </div>
         </div>
