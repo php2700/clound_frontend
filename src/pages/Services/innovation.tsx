@@ -324,14 +324,14 @@ const Innovation = () => {
             <div className="lg:w-[58%] w-full flex flex-col gap-5">
               {[
                 {
-                  icon: <FaLayerGroup className="text-3xl text-[#FF83A9]" />,
+                  icon:    <img src='/innovation-icon-1.svg' />,
                   title: "Specialized Consulting",
                   description:
                     "We provide consulting to identify and resolve short-term business challenges with agile solutions within Salesforce. We design clear, measurable action plans to achieve results in a short timeframe, enabling your business to respond quickly to changing market conditions.",
                 },
                 {
                   icon: (
-                    <FaProjectDiagram className="text-3xl text-[#FF83A9]" />
+                       <img src='/implementation-icon-2.svg' />
                   ),
                   title: "Strategic Advisory",
                   description:

@@ -307,7 +307,7 @@ export const Careers = () => {
       </div>
       <div className=" container mx-auto pt-[80px] px-4 md:px-6 bg-white py-16">
         <div className="px-6 py-10 md:px-10">
-          <div className="flex flex-wrap justify-center items-start gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
             {accordionData.map((item) => {
               const isOpen = openAccordion === item.title;
               return (
@@ -315,13 +315,13 @@ export const Careers = () => {
                   key={item.title}
                   className={`
                                         ${item.bgColor} ${item.textColor}
-                                        rounded-lg w-56 md:w-60
+                                        rounded-lg
                                         transition-all duration-500 ease-in-out
                                     `}
                 >
                   <button
                     onClick={() => handleAccordionClick(item.title)}
-                    className="w-full font-bold text-lg p-4 flex items-center justify-between text-left"
+                    className="w-full font-bold text-lg p-6 flex items-center justify-between text-left"
                   >
                     <span>{item.title}</span>
                     {isOpen ? <FaAngleUp /> : <FaAngleDown />}
@@ -621,7 +621,7 @@ export const Careers = () => {
               ></textarea>
             </div>
             <div className="mb-6">
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-white">
                 By continuing, I confirm that I have read and agree to the
                 Privacy Policy.
               </p>
@@ -669,9 +669,10 @@ export const Careers = () => {
 
           <div className="space-y-10 mb-16">
             <div className="flex items-start gap-4">
-              <FaRegLightbulb className="text-pink-500 text-2xl mt-1 flex-shrink-0" />
+              <img src="/benefits-icon.svg" className="h-6" />
+
               <div>
-                <h3 className="font-bold text-lg text-gray-800">
+                <h3 className="font-bold text-lg text-pink-500">
                   What we offer
                 </h3>
                 <ul
@@ -690,9 +691,9 @@ export const Careers = () => {
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <FaRocket className="text-pink-500 text-2xl mt-1 flex-shrink-0" />
+              <img src="/icon-plane.svg" className="h-6" />
               <div>
-                <h3 className="font-bold text-lg text-gray-800">
+                <h3 className="font-bold text-lg text-pink-500">
                   Why Join Cloudgaia?
                 </h3>
                 <ul
@@ -712,9 +713,11 @@ export const Careers = () => {
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <FaInfoCircle className="text-pink-500 text-2xl mt-1 flex-shrink-0" />
+              {/* <FaInfoCircle className="text-pink-500 text-2xl mt-1 flex-shrink-0" /> */}
+              <img src="/2-lampara-emoji.png" className="h-6" />
+
               <div>
-                <h3 className="font-bold text-lg text-gray-800">
+                <h3 className="font-bold text-lg text-pink-500">
                   About Cloudgaia:
                 </h3>
                 <p
@@ -725,7 +728,7 @@ export const Careers = () => {
                   with Salesforce. We partner with companies to drive
                   innovation, ensuring real business impact.
                 </p>
-                <p className="text-gray-800 mt-4 text-xl text-bold leading-tight">
+                <p className="text-gray-700 mt-4 text-xl font-semibold leading-tight">
                   Ready to take your career to the next level? <br /> Join
                   Cloudgaia and be part of the digital evolution!
                 </p>

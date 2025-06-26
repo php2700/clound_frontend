@@ -229,7 +229,7 @@ const Implementation = () => {
               <div className="flex flex-col gap-6">
                 {/* Quick Starts */}
                 <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
-                  <FaBolt className="text-3xl text-[#FF83A9]" />
+                  <img src='/implementation-icon-1.svg' />
                   <div>
                     <h4 className="text-4xl font-bold text-[#008093] mb-1">
                       Quick Starts
@@ -242,7 +242,7 @@ const Implementation = () => {
 
                 {/* Agile Team */}
                 <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
-                  <FaUsers className="text-3xl text-[#FF83A9]" />
+                  <img src='/implementation-icon-2.svg' />
                   <div>
                     <h4 className="text-4xl font-bold text-[#008093]">
                       Agile Team
@@ -256,7 +256,7 @@ const Implementation = () => {
 
                 {/* Custom E2E */}
                 <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
-                  <FaStar className="text-3xl text-[#FF83A9]" />
+                  <img src='/implementation-icon-3.svg' />
                   <div>
                     <h4 className="text-4xl font-bold text-[#008093]">
                       Custom E2E
