@@ -462,7 +462,7 @@ const Company = () => {
          </div>
 
         {/* AI & Data Certifications Section */}
-        <div className="relative w-full mt-20">
+        <div className="relative w-full ">
           <img
             src="laptop.png"
             alt="AI and Data Certifications"

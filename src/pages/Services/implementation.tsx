@@ -194,13 +194,13 @@ const Implementation = () => {
           className="w-full h-[500px] object-cover"
         />
       </div>
-
+<div className="bg-[#f9f9f9]"> 
       <div className="container mx-auto px-4 py-10 md:px-6">
         <div className="px-6 py-10 md:px-10">
           <div className="flex flex-col lg:flex-row items-start mt-20 gap-5 ">
             {/* Left Side */}
             <div className="lg:w-[55%] w-full flex flex-col gap-12">
-              <div className="p-6 border rounded-lg shadow-md">
+              <div className="p-6 bg-white rounded-lg shadow-md ">
                 <div className="flex justify-center">
                   <img
                     src="/services-expand-icon.svg"
@@ -228,7 +228,7 @@ const Implementation = () => {
 
               <div className="flex flex-col gap-6">
                 {/* Quick Starts */}
-                <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
+                <div className="p-6 bg-white rounded-lg shadow-md flex items-start gap-4">
                   <img src='/implementation-icon-1.svg' />
                   <div>
                     <h4 className="text-4xl font-bold text-[#008093] mb-1">
@@ -241,7 +241,7 @@ const Implementation = () => {
                 </div>
 
                 {/* Agile Team */}
-                <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
+                <div className="p-6 bg-white rounded-lg shadow-md flex items-start gap-4">
                   <img src='/implementation-icon-2.svg' />
                   <div>
                     <h4 className="text-4xl font-bold text-[#008093]">
@@ -255,7 +255,7 @@ const Implementation = () => {
                 </div>
 
                 {/* Custom E2E */}
-                <div className="p-6 border rounded-lg shadow-md flex items-start gap-4">
+                <div className="p-6 bg-white rounded-lg shadow-md flex items-start gap-4">
                   <img src='/implementation-icon-3.svg' />
                   <div>
                     <h4 className="text-4xl font-bold text-[#008093]">
@@ -372,7 +372,7 @@ const Implementation = () => {
             {/* Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
               {/* Card 1 */}
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6 bg-white rounded-lg shadow-md text-left">
                 <img src="/services-icon-3.svg" className="mb-4" />
                 <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Innovation
@@ -391,7 +391,7 @@ const Implementation = () => {
               </div>
 
               {/* Card 2 */}
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6 bg-white rounded-lg shadow-md text-left">
                 <img src="/services-icon-4.svg" className="mb-4" />
                 <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Strategic Growth
@@ -410,7 +410,7 @@ const Implementation = () => {
               </div>
 
               {/* Card 3 */}
-              <div className="p-6 border rounded-lg shadow-md text-left">
+              <div className="p-6 bg-white rounded-lg shadow-md text-left">
                 <img src="/services-icon-2.svg" className="mb-4" />
                 <h3 className="text-4xl text-[#008093] font-bold mb-2">
                   Optimization
@@ -447,7 +447,7 @@ const Implementation = () => {
           </div>
         </div>
       </div>
-
+</div>
       <Footer />
     </div>
   );

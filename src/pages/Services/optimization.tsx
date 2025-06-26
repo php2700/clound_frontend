@@ -341,7 +341,7 @@ const Optimization = () => {
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div className="p-6 border rounded-lg shadow-md text-left bg-white">
+                <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-1.svg" className="mb-4" />
                   <h3 className="text-4xl text-[#008093] font-bold mb-2">
                     Landing Services
@@ -361,7 +361,7 @@ const Optimization = () => {
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </a>
                 </div>
-                <div className="p-6 border rounded-lg shadow-md text-left bg-white">
+                <div className="p-6  rounded-lg shadow-md text-left bg-white">
                     <img src="/services-icon-3.svg" className="mb-4" />
                     <h3 className="text-4xl text-[#008093] font-bold mb-2">
                     Innovation
@@ -382,7 +382,7 @@ const Optimization = () => {
                   </a>
                 </div>
 
-                <div className="p-6 border rounded-lg shadow-md text-left bg-white">
+                <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
                   <h3 className="text-3xl text-[#008093] font-bold mb-2">
                     Stragetic Growth
