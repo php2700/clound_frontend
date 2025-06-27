@@ -161,7 +161,7 @@ const Implementation = () => {
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-[#474747] mt-10">
+          <div className="flex items-center text-sm text-[#474747] my-10">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">Services / Implementation</span>

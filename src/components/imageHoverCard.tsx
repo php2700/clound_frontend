@@ -15,8 +15,8 @@ const ImageHoverCard = ({ imageSrc, title, description }) => {
         {title}
       </h3>
       <p
-        style={{ fontFamily: "sans-serif,dm-sans" }}
-        className="mt-2 text-[#474747]  text-left text-[18px] text-gray leading-tight"
+        style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+        className="mt-2 text-[#474747]  text-left text-[18px]"
       >
         {description}
       </p>

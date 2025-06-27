@@ -158,17 +158,17 @@ const Contact = () => {
         </div>
 
         <div className="container mx-auto mt-[120px] px-4 md:px-6">
-          <div className="px-6 py-10 md:px-20">
+          <div className="px-6 py-10 md:px-10">
             {/* Breadcrumb */}
-            <div className="flex items-center text-sm text-gray-800 mb-4">
+            <div className="flex items-center text-sm mb-4">
               <FaHome className="mr-1 text-xl" />
-              <span className="mx-1 text-lg font-medium">/</span>
-              <span className="text-lg font-semibold">Contact</span>
+              <span className="mx-1 text-base font-bold">/</span>
+              <span className="text-base font-bold">Contact</span>
             </div>
 
             {/* Heading */}
             <h1
-              className="text-xl md:text-5xl font-bold mb-2"
+              className="text-xl md:text-6xl font-bold mb-2"
               style={{ color: "#008093" }}
             >
               Unlock the Salesforce potential
@@ -176,11 +176,11 @@ const Contact = () => {
 
             {/* Paragraph */}
             <p
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-gray-800 md:text-xl mb-12 max-w-3xl leading-tight"
+                 style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              className="text-[#474747] text-xl md:text-2xl mb-12 "
             >
               With our team of experts and the power of Salesforce, we're here
-              to bring your projects to life and take your business to the next
+              to bring <br/> your projects to life and take your business to the next
               level.
             </p>
 

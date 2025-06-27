@@ -146,21 +146,21 @@ export const Customer_Stories = () => {
         </div>
 
         <div className="bg-[#f9f9f9]">
-          <div className="container mx-auto pt-[100px] px-4 md:px-6 ">
+          <div className="container mx-auto pt-[130px] px-4 md:px-6 ">
             <div className="px-6 py-10 md:px-10 ">
               <div className="flex items-center text-sm text-gray-800 mt-8">
                 <FaHome className="mr-1 text-xl" />
-                <span className="mx-1 text-lg font-medium">/</span>
-                <span className="text-lg font-semibold cursor-pointer">
+                <span className="mx-1 text-base font-bold">/</span>
+                <span className="text-base font-bold cursor-pointer">
                   Resources
                 </span>
-                <span className="mx-1 text-lg font-medium">/</span>
-                <span className="mx-1 text-lg font-medium">
+                <span className="mx-1 text-base font-bold">/</span>
+                <span className="mx-1 text-base font-bold">
                   Customer Stories
                 </span>
               </div>
               <div
-                className={`text-5xl font-bold text-[#008093] my-5 transition-transform 
+                className={`text-2xl md:text-6xl font-bold text-[#008093] my-4 transition-transform 
                                     ${
                                       loaded
                                         ? "translate-y-0  duration-300"
@@ -171,8 +171,8 @@ export const Customer_Stories = () => {
                 All-in for our clients
               </div>
               <div
-                style={{ fontFamily: "sans-serif,dm-sans" }}
-                className="text-2xl leading-tight text-gray-700"
+             style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+                className="text-2xl text-[#474747] my-4"
               >
                 Discover how we’ve transformed our clients' businesses with
                 powerful Salesforce solutions, customized to meet the unique
@@ -209,16 +209,16 @@ export const Customer_Stories = () => {
         </div>
 
         <div className="bg-[#f9f9f9]">
-          <div className=" container mx-auto  px-4 md:px-6">
+          <div className=" container mx-auto py-10  px-4 md:px-6">
             <div className="px-6 py-10 md:px-10 ">
               <h2
-                style={{ fontFamily: "sans-serif,dm-sans" }}
-                className={`text-4xl md:text-5xl font-bold text-[#008093] leading-tight max-w-5xl `}
+                style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1em' }}
+                className={`text-4xl md:text-6xl font-bold text-[#008093]   `}
               >
                 At Cloudgaia, our dedication to customer success is driven by a
                 vibrant VIBE and a total commitment to Salesforce.
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 mt-6 max-w-3xl">
+              <p style={{lineHeight:'1.2em'}} className="text-lg md:text-3xl text-[#474747] mt-5 ">
                 We combine our expertise with a global reach, offering unmatched
                 value through strategic pricing, the convenience of the same
                 time zone and greater cultural affinity.
@@ -267,20 +267,20 @@ export const Customer_Stories = () => {
                         <img src={item?.flagImg} alt="flag" className="h-4" />
                       )}
                     </div>
-                    <div className="text-sm text-pink-600 font-medium mb-2">
+                    <div style={{lineHeight:'1.2em'}} className="text-lg text-[#ff83a9]  mb-2">
                       {item?.services}
                     </div>
-                    <div className="text-3xl font-bold text-gray-800 mb-2">
+                    <div style={{lineHeight:'1.2em'}} className="text-3xl font-bold text-[#474747] mb-2">
                       {item?.title}
                     </div>
                     <div
-                      style={{ fontFamily: "sans-serif,dm-sans" }}
-                      className="text-gray-600 text-lg mb-4 leading-tight"
+                      style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                      className="text-[#474747] text-lg mb-4"
                     >
                       {item?.description}
                     </div>
                     <Link to={item?.url}>
-                      <button className="mt-auto self-start bg-yellow-400  font-semibold px-5 py-2 rounded-3xl hover:bg-pink-500 hover:text-white transition">
+                      <button className="mt-auto self-start bg-[#fcc000] text-base text-[#474747]  font-bold px-5 py-2 rounded-3xl hover:bg-[#ff83a9] hover:text-white transition">
                         Read the full story
                       </button>
                     </Link>
@@ -299,10 +299,10 @@ export const Customer_Stories = () => {
             <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
             <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
-              <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+              <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9]">
                 Let's talk!
               </h2>
-              <button className="bg-[#FF83A9] text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition">
+              <button className="bg-[#ff83a9] text-[#f9f9f9] px-6 py-2 rounded-full text-lg font-bold hover:bg-white hover:text-[#474747] transition">
                 Contact us
               </button>
             </div>
