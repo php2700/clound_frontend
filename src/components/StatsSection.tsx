@@ -17,7 +17,7 @@ const statsData = {
 const StatsSection = () => {
   return (
     <section
-      className="bg-black py-12 border-b-4 border-yellow-500"
+      className="bg-black py-12"
       aria-label="Company Statistics"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -156,13 +156,13 @@ const Growth = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto  px-4 mt-10 pt-10  md:px-6 mt-20">
-        <div className="px-6 pt-10 md:px-10">
+      <div className="container mx-auto  px-4 mt-10 pt-10 py-10  md:px-6 mt-20">
+        <div className="px-6 py-10 pt-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-gray-800 mb-3 mt-10">
+          <div className="flex items-center text-sm  mb-3 mt-10">
             <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold">Services / Growth</span>
+            <span className="mx-1 text-base font-bold">/</span>
+            <span className="text-base font-bold">Services / Growth</span>
           </div>
 
           {/* Title */}
@@ -170,7 +170,7 @@ const Growth = () => {
             <h1  className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
               For companies seeking Strategic Growth
             </h1>
-            <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="leading-tight text-[#474747] text-base md:text-2xl mt-5">
+            <p style={{  fontFamily: 'sans-serif,dm-sans', lineHeight: "1.2em",}} className="text-[#474747]  md:text-2xl mt-5">
               We offer services to maximize the value of Salesforce and align it{" "}
               <br />
               with your strategic objectives, driving sustainable growth.
@@ -219,13 +219,13 @@ const Growth = () => {
                     key={index}
                     className="bg-white  rounded-lg p-6 shadow-md min-h-[320px] flex flex-col justify-center"
                   >
-                    <div className="flex items-center">
+                    <div className="flex items-start">
                       {card.icon}
-                      <h4 className="ml-4 text-3xl md:text-4xl font-semibold text-[#008093]">
-                        {card.title}
-                      </h4>
+                      <h3 style={{fontSize:'40px',lineHeight:'1em'}} className="ml-4 font-semibold text-[#008093]">
+                        {card.title} 
+                      </h3>
                     </div>
-                    <p style={{  fontFamily: 'sans-serif,dm-sans'}} className=" mt-4 text-gray-700 text-base md:text-lg">
+                    <p   style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}} className="text-[#474747] mt-4 md:text-lg">
                       {card.description}
                     </p>
                   </div>
@@ -327,24 +327,24 @@ const Growth = () => {
           </div>
 
           {/* Other Services Section */}
-          <div className="py-16">
-            <h2 className="text-center text-4xl md:text-4xl font-bold text-[#008093] mb-12">
+          <div className="py-20">
+            <h2 style={{fontSize:'40px'}} className="text-center font-semibold text-[#008093] mb-12">
               Check our other services
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="p-6  rounded-lg shadow-md text-left bg-white">
                 <img src="/services-icon-1.svg" className="mb-4" />
-                <h3  className=" text-4xl text-[#008093] font-bold mb-2">
+                <h3 style={{fontSize:'40px'}} className="text-[#008093] font-semibold mb-2">
                   Landing Services
                 </h3>
-                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="leading-tight text-gray-700 text-lg mb-4">
+                <p style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}} className="text-[#474747] text-lg mb-4">
                   Discover cutting-edge solutions that help you stay ahead of
                   the curve.
                 </p>
                 <a
                   href="#"
-                  className="text-gray-800 font-medium relative inline-block group"
+                  className="text-[#474747] font-bold text-base relative inline-block group"
                 >
                   Learn more
                   <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -353,16 +353,16 @@ const Growth = () => {
 
               <div className="p-6 bg-white rounded-lg shadow-md text-left">
                 <img src="/services-icon-3.svg" className="mb-4" />
-                <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                <h3 style={{fontSize:'40px'}} className="text-[#008093] font-semibold mb-2">
                   Landing Services
                 </h3>
-                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
+                <p style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}} className="text-[#474747]  text-lg mb-4">
                   Supporting your first steps with Salesforce to ensure a smooth
                   and successful adoption.
                 </p>
                 <a
                   href="#"
-                  className="text-gray-800 font-medium relative inline-block group"
+                  className="text-[#474747] font-bold text-base relative inline-block group"
                 >
                   Learn more
                   <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -371,16 +371,16 @@ const Growth = () => {
 
               <div className="p-6 bg-white rounded-lg shadow-md text-left">
                 <img src="/services-icon-2.svg" className="mb-4" />
-                <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                <h3 style={{fontSize:'40px'}} className=" text-[#008093] font-semibold mb-2">
                   Optimization
                 </h3>
-                <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-gray-700 text-lg mb-4 leading-tight">
+                <p style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}} className="text-[#474747] text-lg mb-4 leading-tight">
                   Improve efficiency by streamlining operations and maximizing
                   ROI.
                 </p>
                 <a
                   href="#"
-                  className="text-gray-800 font-medium relative inline-block group"
+                  className="text-[#474747] font-bold text-base relative inline-block group"
                 >
                   Learn more
                   <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -394,12 +394,12 @@ const Growth = () => {
               className="flex items-center cursor-pointer group"
             >
               {/* Circle with Arrow */}
-              <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
+              <div className="w-14 h-14 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
                 <FaArrowLeft className="text-white text-xl" />
               </div>
 
               {/* Label */}
-              <span className="ml-4 text-lg font-medium text-[#474747] group-hover:underline">
+              <span className="ml-4 text-lg font-medium text-[#474747]">
                 Back to Services
               </span>
             </div>

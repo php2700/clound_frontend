@@ -160,10 +160,10 @@ const Optimization = () => {
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-gray-800 mt-10 mb-2">
+          <div className="flex items-center text-sm text-[#474747] mt-10 mb-2">
             <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold">
+            <span className="mx-1 text-base font-bold">/</span>
+            <span className="text-base font-bold">
               Services / Optimization
             </span>
           </div>
@@ -177,7 +177,7 @@ const Optimization = () => {
               For companies looking to Boost Salesforce
             </h1>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans" }}
+              style={{ fontFamily: "sans-serif,dm-sans",  lineHeight: "1.2em", }}
               className="text-[#474747]  md:text-2xl mt-5"
             >
               We offer services that empower and optimize its use, <br />
@@ -229,13 +229,13 @@ const Optimization = () => {
                     >
                       <div className="flex items-center">
                         {card.icon}
-                        <h4 className="ml-4 text-4xl font-bold text-[#008093]">
+                        <h4  style={{ fontSize: "40px",lineHeight:'1em' }} className="ml-4  font-semibold text-[#008093]">
                           {card.title}
                         </h4>
                       </div>
                       <p
-                        style={{ fontFamily: "sans-serif,dm-sans" }}
-                        className="mt-3 text-lg leading-tight text-gray-700"
+                        style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                        className="mt-3 text-lg  text-[#474747]"
                       >
                         {card.description}
                       </p>
@@ -336,26 +336,26 @@ const Optimization = () => {
             </div>
 
             <div className="py-16">
-              <h2 className="text-center text-4xl md:text-4xl font-bold text-[#008093] mb-12">
+              <h2 style={{fontSize:'40px'}}  className="text-center  font-semibold text-[#008093] mb-12">
                 Check our other services
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-1.svg" className="mb-4" />
-                  <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                  <h3 style={{fontSize:'40px'}} className="text-[#008093] font-semibold mb-2">
                     Landing Services
                   </h3>
                   <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                    style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    className="text-[#474747] text-lg mb-4 leading-tight"
                   >
                     Supporting your first steps with Salesforce to ensure a
                     smooth and successful adoption.
                   </p>
                   <a
                     href="#"
-                    className="text-gray-800 font-medium relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -363,19 +363,19 @@ const Optimization = () => {
                 </div>
                 <div className="p-6  rounded-lg shadow-md text-left bg-white">
                     <img src="/services-icon-3.svg" className="mb-4" />
-                    <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                    <h3 style={{fontSize:'40px'}} className="text-[#008093] font-semibold mb-2">
                     Innovation
                      </h3>
                     <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                    style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                    className="text-[#474747] text-lg mb-4 leading-tight"
                     >
                     Identifying opportunities and overcoming challenges with
                     efficient solutions.
                     </p>
                     <a
                     href="#"
-                    className="text-gray-800 font-medium relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                     >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -384,19 +384,19 @@ const Optimization = () => {
 
                 <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
-                  <h3 className="text-3xl text-[#008093] font-bold mb-2">
+                  <h3 style={{fontSize:'40px'}} className="text-[#008093] font-semibold mb-2">
                     Stragetic Growth
                   </h3>
                   <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                   style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                    className="text-[#474747] text-lg mb-4 leading-tight"
                   >
                     Aligning Salesforce with your business goals to drive
                     sustainable growth.
                   </p>
                   <a
                     href="#"
-                    className="text-gray-800 font-medium relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -409,11 +409,11 @@ const Optimization = () => {
                 onClick={() => navigate("/Services/all_services")}
                 className="flex items-center cursor-pointer group"
               >
-                <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
+                <div className="w-14 h-14 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
                   <FaArrowLeft className="text-white text-xl" />
                 </div>
 
-                <span className="ml-4 text-lg font-medium text-[#474747] group-hover:underline">
+                <span className="ml-4 text-lg font-medium text-[#474747] ">
                   Back to Services
                 </span>
               </div>

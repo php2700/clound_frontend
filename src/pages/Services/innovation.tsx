@@ -157,24 +157,24 @@ const Innovation = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto  px-4  md:px-6 mt-20">
-        <div className="px-6  md:px-10">
+      <div className="container mx-auto pt-10 px-4  md:px-6 mt-20">
+        <div className="px-6  pt-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-gray-800 mt-10 mb-3">
+          <div className="flex items-center text-sm  mt-10 mb-3">
             <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold">Services / Innovation</span>
+            <span className="mx-1 text-base font-bold">/</span>
+            <span className="text-base font-bold">Services / Innovation</span>
           </div>
 
           {/* Title */}
           <div className="mt-5">
-            <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
+            <h1 style={{lineHeight:'1em'}} className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
               For companies seeking to stay one
               <br />
               step ahead of their competitors
             </h1>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans" }}
+             style={{  fontFamily: 'sans-serif,dm-sans', lineHeight: "1.2em",}}
               className="text-[#474747] text-base md:text-2xl mt-5 leading-tight"
             >
               In a dynamic business environment, innovation and adaptability are
@@ -222,13 +222,13 @@ const Innovation = () => {
                     >
                       <div className="flex items-center">
                         {card.icon}
-                        <h4 className="ml-4 text-3xl md:text-4xl font-bold text-[#008093]">
+                        <h4 style={{fontSize:'40px'}} className="ml-4 font-semibold text-[#008093]">
                           {card.title}
                         </h4>
                       </div>
                       <p
-                        style={{ fontFamily: "sans-serif,dm-sans" }}
-                        className=" mt-2 text-gray-700 md:text-lg "
+                        style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                        className=" mt-2 text-[#474747] md:text-lg "
                       >
                         {card.description}
                       </p>
@@ -331,26 +331,26 @@ const Innovation = () => {
 
             {/* Other Services Section */}
             <div className="py-16">
-              <h2 className="text-center text-4xl md:text-4xl font-bold text-[#008093] mb-12">
+              <h2 style={{fontSize:'40px'}} className="text-center text-4xl md:text-4xl font-semibold text-[#008093] mb-12">
                 Check our other services
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-1.svg" className="mb-4" />
-                  <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                  <h3 style={{fontSize:'40px'}} className=" text-[#008093] font-semibold mb-2">
                     Landing Services
                   </h3>
                   <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                   style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    className="text-[#474747] text-lg mb-4 leading-tight"
                   >
                     Discover cutting-edge solutions that help you stay ahead of
                     the curve.
                   </p>
                   <a
                     href="#"
-                    className="text-gray-800 font-medium relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -359,19 +359,19 @@ const Innovation = () => {
 
                 <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
-                  <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                  <h3 style={{fontSize:'40px'}} className=" text-[#008093] font-semibold mb-2">
                     Strategic Growth
                   </h3>
                   <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                    style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    className="text-[#474747] text-lg mb-4 leading-tight"
                   >
                     Accelerate your business growth with focused strategic
                     initiatives.
                   </p>
                   <a
                     href="#"
-                    className="text-gray-800 font-medium relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -380,19 +380,19 @@ const Innovation = () => {
 
                 <div className="p-6 bg-white rounded-lg shadow-md text-left">
                   <img src="/services-icon-2.svg" className="mb-4" />
-                  <h3 className="text-4xl text-[#008093] font-bold mb-2">
+                  <h3 style={{fontSize:'40px'}} className="ext-[#008093] font-semibold mb-2">
                     Optimization
                   </h3>
                   <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                     style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                     className="text-[#474747]  text-lg mb-4 leading-tight"
                   >
                     Improve efficiency by streamlining operations and maximizing
                     ROI.
                   </p>
                   <a
                     href="#"
-                    className="text-gray-800 font-medium relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -407,12 +407,12 @@ const Innovation = () => {
                 className="flex items-center cursor-pointer group"
               >
                 {/* Circle with Arrow */}
-                <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
+                <div className="w-14 h-14 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
                   <FaArrowLeft className="text-white text-xl" />
                 </div>
 
                 {/* Label */}
-                <span className="ml-4 text-lg font-medium text-[#474747] group-hover:underline">
+                <span className="ml-4 text-lg  text-[#474747]">
                   Back to Services
                 </span>
               </div>

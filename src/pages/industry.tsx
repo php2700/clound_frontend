@@ -52,21 +52,24 @@ const Industries = () => {
       {/* Main Content */}
       <div className="container mx-auto mt-20 px-4 py-10 md:px-6">
         <div className="px-6 md:px-10 py-10">
-          <div className="flex items-center text-sm text-gray-800 mb-3 mt-10">
+          <div className="flex items-center text-sm text-[#474747] mb-3 mt-10">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold">Industries</span>
+            <span className="text-lg font-bold">Industries</span>
           </div>
 
           {/* Title */}
           <div className="mt-5">
-            <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
+            <h1
+              style={{ lineHeight: "1em" }}
+              className="text-2xl md:text-6xl font-bold text-[#008093] mb-4"
+            >
               We match strong industry knowledge
               <br />
               with unparalleled Salesforce expertise
             </h1>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans" }}
+              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
               className="text-[#474747] text-base md:text-2xl mt-5"
             >
               We have implemented, developed, and customized Salesforce for
@@ -117,12 +120,18 @@ const Industries = () => {
                       className="flex-1 bg-white  rounded-lg shadow-md p-6 min-h-[220px]"
                     >
                       {card.icon}
-                      <h4 className="text-4xl font-bold text-[#008093] mb-1">
+                      <h4
+                        style={{ fontSize: "40px", lineHeight: "1em" }}
+                        className="font-semibold text-[#008093] mb-1"
+                      >
                         {card.title}
                       </h4>
                       <p
-                        style={{ fontFamily: "sans-serif,dm-sans" }}
-                        className="text-[#474747] text-lg leading-tight"
+                        style={{
+                          fontFamily: "sans-serif,dm-sans",
+                          lineHeight: "1.2em",
+                        }}
+                        className="text-[#474747] text-lg "
                       >
                         {card.description}
                       </p>
@@ -163,12 +172,18 @@ const Industries = () => {
                       className="flex-1 bg-white rounded-lg shadow-md p-6 min-h-[220px]"
                     >
                       {card.icon}
-                      <h4 className="text-4xl font-bold text-[#008093] mb-1">
+                      <h4
+                        style={{ fontSize: "40px", lineHeight: "1em" }}
+                        className="font-semibold text-[#008093] mb-1"
+                      >
                         {card.title}
                       </h4>
                       <p
-                        style={{ fontFamily: "sans-serif,dm-sans" }}
-                        className="text-[#474747] text-lg leading-tight"
+                        style={{
+                          fontFamily: "sans-serif,dm-sans",
+                          lineHeight: "1.2em",
+                        }}
+                        className="text-[#474747] text-lg"
                       >
                         {card.description}
                       </p>
@@ -201,12 +216,18 @@ const Industries = () => {
                       className="flex-1 bg-white  rounded-lg shadow-md p-6 min-h-[220px]"
                     >
                       {card.icon}
-                      <h4 className="text-4xl font-bold text-[#008093] mb-1">
+                      <h4
+                        style={{ fontSize: "40px", lineHeight: "1em" }}
+                        className="font-semibold text-[#008093] mb-1"
+                      >
                         {card.title}
                       </h4>
                       <p
-                        style={{ fontFamily: "sans-serif,dm-sans" }}
-                        className="text-[#474747] text-lg leading-tight"
+                        style={{
+                          fontFamily: "sans-serif,dm-sans",
+                          lineHeight: "1.2em",
+                        }}
+                        className="text-[#474747] text-lg "
                       >
                         {card.description}
                       </p>
@@ -225,7 +246,7 @@ const Industries = () => {
         <div className="container mx-auto  px-4 py-10 md:px-6">
           <div className="px-6 md:px-10 py-10">
             <div className="text-center mt-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#474747] mt-13">
+              <h2 className="text-4xl md:text-6xl font-bold text-[#474747] mt-13">
                 Industry Expertise
               </h2>
             </div>
@@ -245,14 +266,14 @@ const Industries = () => {
         <img
           src="/industries4.png"
           alt="Salesforce Challenge"
-          className="w-full h-[400px] object-cover"
+          className="w-full h-[300px] object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-          <h2 className="text-6xl md:text-5xl font-bold mb-6">
+          <h2 className="text-6xl md:text-6xl font-bold mb-6 text-[#f9f9f9]">
             What's your <br />
             Salesforce Challenge?
           </h2>
-          <button className="bg-[#FF83A9] text-white px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-white hover:text-black">
+          <button className="bg-[#FF83A9] text-white px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-white hover:text-[#474747]">
             Contact an expert
           </button>
         </div>
