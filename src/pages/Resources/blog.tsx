@@ -58,12 +58,12 @@ export const Blog = () => {
   }, [lastScrollY]);
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
-          <div
+      <div
         className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true"
       />
-    {/* <div className="relative min-h-screen "> */}
+      {/* <div className="relative min-h-screen "> */}
       <div
         className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
           isHeaderVisible ? "translate-y-6" : "-translate-y-full"
@@ -71,16 +71,16 @@ export const Blog = () => {
       >
         <Header />
       </div>
-      <div className="container mx-auto mt-20 px-4 md:px-6">
+      <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
-          <div className="flex items-center text-sm text-gray-800 mt-8">
+          <div className="flex items-center text-sm text-gray-800 mt-10">
             <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold cursor-pointer">
+            <span className="mx-1 text-base font-bold">/</span>
+            <span className="text-base font-bold cursor-pointer">
               Resources
             </span>
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="mx-1 text-lg font-medium">Blog</span>
+            <span className="mx-1 text-base font-bold">/</span>
+            <span className="mx-1 text-base font-bold">Blog</span>
           </div>
           <h1
             className={`mt-4 text-6xl font-bold text-[#008093] transition-transform  ${
@@ -89,7 +89,10 @@ export const Blog = () => {
           >
             Check out our latest updates
           </h1>
-          <div style={{ fontFamily: "sans-serif,dm-sans" }} className="mt-5 text-2xl leading-tight text-gray-700 ">
+          <div
+            style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+            className="mt-5 text-2xl text-[#474747] "
+          >
             Stay up-to-date with the latest insights, trends, and best practices
             from the Salesforce ecosystem. Our blog features reflections,
             perspectives, and advice from our team of experts, helping you stay
@@ -127,13 +130,13 @@ export const Blog = () => {
           </div>
           <div className="mt-8">
             <div className="flex flex-wrap items-center gap-5">
-              <div className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 font-medium cursor-pointer bg-white">
+              <div className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 text-lg cursor-pointer bg-white">
                 All articles
               </div>
               {headings.map((item, index) => (
                 <div
                   key={index}
-                  className="text-gray-700 bg-white hover:text-[#008093] border border-transparent hover:border-[#008093] hover:rounded-full px-5 py-1 cursor-pointer"
+                  className="text-[#474747] text-lg bg-white hover:text-[#008093] border border-transparent hover:border-[#008093] hover:rounded-full px-5 py-1 cursor-pointer"
                 >
                   {item}
                 </div>
@@ -164,20 +167,32 @@ export const Blog = () => {
                 />
 
                 <div className="p-4 flex flex-col flex-grow">
-                  <div className="text-sm text-red-400 font-medium mb-1">
+                  <div
+                    style={{ fontSize: "12px" }}
+                    className="text-[#ff83a9] mb-1"
+                  >
                     {item?.fetchFrom}
                   </div>
-                  <div className="text-2xl font-bold text-[#008093] mb-2 cursor-pointer">
+                  <div
+                    style={{ lineHeight: "1.2em" }}
+                    className="text-2xl font-bold text-[#008093] mb-2 cursor-pointer"
+                  >
                     {item?.title}
                   </div>
-                  <div style={{ fontFamily: "sans-serif,dm-sans" }} className="text-lg text-gray-600 flex-grow leading-tight">
+                  <div
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
+                    className="text-lg text-[#474747] flex-grow "
+                  >
                     {item?.description}
                   </div>
 
                   {/* Read Article pushed to bottom */}
-                  <div className="relative mt-auto font-medium cursor-pointer group w-max">
+                  <div className="relative mt-auto font-bold text-[#474747] text-base cursor-pointer group w-max">
                     <span>Read Article</span>
-                    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-red-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
                   </div>
                 </div>
               </div>
@@ -185,7 +200,7 @@ export const Blog = () => {
           </div>
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
     // </div>
   );

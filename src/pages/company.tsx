@@ -199,7 +199,7 @@ const Company = () => {
             <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
               Experience the Cloudgaia vibe
             </h1>
-            <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-[#474747] text-base md:text-2xl mt-5 leading-tight">
+            <p  style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }} className="text-[#474747] text-xl  md:text-2xl mt-5 ">
               Our commitment to excellence and comprehensive Salesforce
               expertise
               <br />
@@ -225,10 +225,13 @@ const Company = () => {
                 <div>
                   <img src="/company-purpose-icon.svg" />{" "}
                 </div>
-                <div className="text-4xl text-[#008093] font-bold my-3">
+                <div    style={{ fontSize: "40px" }} className=" text-[#008093] font-semibold my-3">
                   Purpose
                 </div>
-                <div style={{ fontFamily: "sans-serif,dm-sans" }} className="text-lg leading-tight">
+                <div   style={{
+                          fontFamily: "sans-serif,dm-sans",
+                          lineHeight: "1.2em",
+                        }} className="text-[#474747] text-lg">
                   Empower people and companies to evolve together through
                   digital transformation.
                 </div>
@@ -237,10 +240,13 @@ const Company = () => {
                 <div>
                   <img src="/company-mission-icon.svg" />{" "}
                 </div>
-                <div className="text-4xl text-[#008093] font-bold my-3">
+                <div style={{ fontSize: "40px" }}  className="text-[#008093] font-semibold my-3">
                   Mission
                 </div>
-                <div style={{ fontFamily: "sans-serif,dm-sans" }} className="text-lg leading-tight">
+                <div  style={{
+                          fontFamily: "sans-serif,dm-sans",
+                          lineHeight: "1.2em",
+                        }} className="text-lg text-[#474747] ">
                   Help people and businesses ignite their best version through
                   innovative Salesforce solutions, creating a world-class
                   customer experience.{" "}
@@ -250,10 +256,13 @@ const Company = () => {
                 <div>
                   <img src="/company-vision-icon.svg" />
                 </div>
-                <div className="text-4xl text-[#008093] font-bold my-3">
+                <div style={{ fontSize: "40px" }} className="text-[#008093] font-semibold my-3">
                   Vision
                 </div>
-                <div style={{ fontFamily: "sans-serif,dm-sans" }} className="text-lg leading-tight">
+                <div style={{
+                          fontFamily: "sans-serif,dm-sans",
+                          lineHeight: "1.2em",
+                        }} className="text-lg text-[#474747]">
                   Be the preferred partner for cloud solutions that enable
                   organizations to achieve significant transformations, driving
                   success and innovation, and generating a positive impact on
@@ -322,21 +331,21 @@ const Company = () => {
               />
             </div>
 
-            <div className="flex justify-center mt-10">
-              <div className="flex flex-row items-start m-0 p-0 max-w-3xl w-full justify-center">
+            <div className="flex justify-center mt-10 py-10">
+              <div className="flex flex-row items-start m-0 p-0 gap-10 w-full justify-center">
                 {/* Image */}
                 <div className="shrink-0 m-0 p-0">
                   <img
                     src="https://cloudgaia.com/storage/2025/01/company-nicolas-orzabal-rounded.svg"
                     alt="Nicolás Orzabal"
-                    className="w-48 h-auto object-contain m-0 p-0"
+                    className="w-70 h-auto object-contain m-0 p-0"
                     style={{ display: "block" }}
                   />
                 </div>
 
                 {/* Text */}
-                <div className="text-left text-[#474747] m-0 p-0 leading-tight ml-2">
-                  <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-sm md:text-base m-0 p-0 text-xl">
+                <div className="text-left text-[#474747] m-0 py-3  ml-2">
+                  <p style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }} className="text-sm md:text-lg m-0 p-0 text-xl">
                     “At Cloudgaia we always say that we are not looking for
                     happy <br />
                     customers, we are looking for successful customers. I am
@@ -351,10 +360,10 @@ const Company = () => {
                     in <br />
                     transforming business challenges into growth opportunities.”
                   </p>
-                  <h3 className="md:text-2xl font-bold mt-1 mb-0 text-xl">
+                  <h3 style={{lineHeight:'1.2em'}} className="md:text-3xl mt-1 mb-0 text-xl mt-6">
                     Nicolás Orzabal
                   </h3>
-                  <p className="text-xl text-gray-600 mt-0 font-bold">
+                  <p style={{lineHeight:'1.2em'}} className="font-bold text-2xl mt-0 ">
                     Co-Founder & CEO
                   </p>
                 </div>
@@ -362,21 +371,21 @@ const Company = () => {
             </div>
 
             {/* Video Section */}
-            <div className="text-center px-4 py-16">
-              <h2 className="text-2xl md:text-5xl font-bold text-[#008093] mb-6">
+            <div className="text-center px-4 py-20">
+              <h2 className="text-2xl md:text-6xl font-bold text-[#008093] mb-6">
                 A Brand New Future awaits us
               </h2>
-              <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-[#474747] text-sm md:text-xl max-w-2xl mx-auto mb-6">
+              <p style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }} className="text-[#474747] text-sm md:text-2xl mx-auto mb-6">
                 Our new branding signals a bold future for Cloudgaia—rooted in
-                our heritage, focused on innovation, and dedicated to empowering
+                our  heritage, focused on innovation, and <br/> dedicated to empowering
                 clients with transformative Salesforce solutions.
               </p>
-              <h3 className="text-lg md:text-2xl font-bold text-[#FF83A9] mb-8">
+              <h3 className="text-lg md:text-2xl font-bold text-[#FF83A9] mb-6">
                 Together, we’re all-in for your growth
               </h3>
               <button
                 onClick={() => setShowVideoImage(true)}
-                className="px-6 py-3 rounded-full bg-yellow-400 text-[#474747] font-semibold text-base md:text-lg hover:bg-[#FF83A9] hover:text-white transition-all duration-300"
+                className="px-6 py-2 rounded-full bg-[#fcc000] text-[#474747] font-bold text-base md:text-base hover:bg-[#FF83A9] hover:text-white transition-all duration-300"
               >
                 Watch the video
               </button>
@@ -449,10 +458,10 @@ const Company = () => {
                       className="w-35 h-35 rounded-lg mx-auto object-cover mb-4"
                     />
                     <p className="text-[#008093] font-bold text-xl">in</p>
-                    <h3 className="text-gray-600 font-semibold text-lg mt-1">
+                    <h3 style={{lineHeight:'1.2em'}} className="text-[#474747] font-bold text-lg mt-1">
                       {member.name}
                     </h3>
-                    <p className="text-gray-600 text-sm">{member.title}</p>
+                    <p style={{fontSize:'12px' ,lineHeight:'1em'}} className="text-[#474747] ">{member.title}</p>
                   </div>
                 ))}
               </div>
@@ -469,10 +478,10 @@ const Company = () => {
             className="w-full h-[500px] object-cover rounded-lg"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <h2 className="text-4xl font-bold text-white mb-2">
+            <h2 style={{fontSize:'40px',lineHeight:'1em'}} className="font-semibold text-[#f9f9f9] mb-2">
               150+ AI & Data certifications
             </h2>
-            <p className="text-white text-xl px-4">
+            <p style={{lineHeight:'1.2em'}} className="text-[#f9f9f9] text-3xl px-4">
               Chosen by Salesforce as an Agentforce implementer, we continue to
               <br />
               empower ourselves to drive innovation, streamline processes and
@@ -486,7 +495,7 @@ const Company = () => {
        
 
         <div className="w-full flex flex-col items-center justify-center px-4 py-8 mt-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#474747] mb-6 text-center">
+          <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
             Salesforce Expertise
           </h2>
           <img
@@ -497,7 +506,7 @@ const Company = () => {
         </div>
 
         <div className="w-full flex flex-col items-center justify-center px-4 py-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#474747] mb-6 text-center">
+          <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
             Industry Expertise
           </h2>
           <img
@@ -564,18 +573,18 @@ const Company = () => {
 
 
         <div
-          className="mx-auto my-6 p-6 mt-20 rounded-lg shadow-lg text-center max-w-7xl"
+          className="mx-auto p-6 my-20 rounded-lg shadow-lg text-center max-w-7xl"
           style={{ backgroundColor: '#008093' }}
         >
           <img
             src="https://cloudgaia.com/storage/2025/01/logo-salesforce.svg"
             alt="Top"
-            className="mx-auto mb-6 w-32 h-32"
+            className="mx-auto  w-32 h-32"
           />
-          <h2 className="text-4xl font-bold mb-4 text-white">
+          <h2 style={{fontSize:'40px'}} className=" font-semibold mb-4 text-[#f9f9f9]">
             Empowered by Salesforce Ventures investment
           </h2>
-          <p style={{ fontFamily: "sans-serif,dm-sans" }} className="text-white text-lg leading-tight">
+          <p style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }} className=" text-lg text-[#f9f9f9] ">
             In 2024, we proudly announced an investment from Salesforce
             Ventures, marking a significant milestone in our journey <br />
             as a leading global Salesforce partner. This partnership empowers
