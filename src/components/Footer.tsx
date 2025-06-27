@@ -10,7 +10,7 @@ const Footer = () => {
           <footer className=" text-white z-10 relative">
             <div className="flex flex-col items-center justify-center mb-10">
               <div className="flex flex-col md:flex-row items-center gap-4">
-                <h1 className="text-5xl font-bold">Cloudgaia</h1>
+                <h1 className="text-5xl font-bold">Codescience</h1>
                 <div className="w-[4px] h-[50px] bg-yellow-400" />
                 <img
                   src="/footer.png"
@@ -72,7 +72,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mt-16 text-sm">
               <div>
                 <h4 className="font-semibold mb-2 text-gray-400">
-                  Cloudgaia offices around the world
+                  Codescience offices around the world
                 </h4>
                 <ul className="space-y-1 ">
                   {[
@@ -264,7 +264,7 @@ const Footer = () => {
 
               {/* Copyright */}
               <p className="text-sm text-gray-400">
-                &copy; {new Date().getFullYear()} Cloudgaia. All rights
+                &copy; {new Date().getFullYear()} Codescience. All rights
                 reserved.
               </p>
             </div>

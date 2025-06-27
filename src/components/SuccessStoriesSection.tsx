@@ -10,7 +10,7 @@ const SuccessStoriesSection = () => {
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
-        "bg-pink-400 text-white border-none hover:bg-pink-300 hover:text-pink-800",
+        "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
     },
     {
       subtitle: "Unlocking Insights",
@@ -20,7 +20,7 @@ const SuccessStoriesSection = () => {
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
-        "bg-pink-400 text-white border-none hover:bg-pink-300 hover:text-pink-800",
+        "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
     },
     {
       subtitle: "Empowering Success",
@@ -31,7 +31,7 @@ const SuccessStoriesSection = () => {
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
-        "bg-pink-400 text-white border-none hover:bg-pink-300 hover:text-pink-800",
+        "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
     },
   ];
 
@@ -45,7 +45,7 @@ const SuccessStoriesSection = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-white">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
+          <h2 className="text-3xl md:text-6xl font-bold mb-4">
             New to Salesforce?
           </h2>
           <p
@@ -54,7 +54,7 @@ const SuccessStoriesSection = () => {
           >
             Unlock its potential with us
           </p>
-          <button className="bg-pink-400 hover:bg-white hover:text-black text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+          <button className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
             Check our services
           </button>
         </div>
@@ -72,14 +72,14 @@ const SuccessStoriesSection = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 md:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 md:px-10">
             {stories.map((story, index) => (
               <div
                 key={index}
-                className={`${story.bgColor} rounded-2xl p-8 hover:bg-yellow-300 shadow-xl flex flex-col justify-between h-full transform hover:scale-105 transition-all duration-300 hover:shadow-2xl`}
+                className={`${story.bgColor} rounded-2xl p-8 hover:bg-yellow-300 shadow-xl flex flex-col justify-between h-full transform  transition-all duration-300 `}
               >
                 <div className="flex justify-between items-center">
-                  <p className="text-[13px] font-bold text-pink-500 hover:text-gray-800 mb-3  tracking-wide">
+                  <p className="text-[13px] font-bold text-[#ff83a9] hover:text-[#474747] mb-3  tracking-wide">
                     {story.subtitle}
                   </p>
 
@@ -109,7 +109,7 @@ const SuccessStoriesSection = () => {
 
                 <Button
                   variant="outline"
-                  className={`${story.buttonStyle} rounded-full font-semibold hover:bg-white hover:text-gray-700 py-3 px-6`}
+                  className={`${story.buttonStyle} rounded-full font-semibold hover:bg-white hover:text-[#474747] py-3 px-6`}
                 >
                   Discover this story
                 </Button>
@@ -120,7 +120,7 @@ const SuccessStoriesSection = () => {
           <div className="text-center">
             <Button
               variant="outline"
-              className="text-gray-800 text-[15px] border-2 border-none hover:bg-pink-400 hover:text-white rounded-full font-bold py-3 px-8 transition-all duration-300 transform hover:scale-105"
+              className="text-[#474747] text-[15px] border-2 border-none hover:bg-pink-400 hover:text-white rounded-full font-bold py-3 px-8 transition-all duration-300 transform hover:scale-105"
             >
               View all success stories
             </Button>

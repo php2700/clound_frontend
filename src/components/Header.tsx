@@ -40,7 +40,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center mr-8">
             <Link to="/">
-              <img src="/logo-color.svg" />
+              <img src="/code-science-logo.png" className="h-24" />
             </Link>
           </div>
 
@@ -48,42 +48,50 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
-              <div className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 cursor-pointer text-base font-bold py-2">
+              <div
+                style={{ fontFamily: "sans-serif,dm-sans" }}
+                className="flex items-center space-x-1 text-[#474747] hover:text-[#ff83a9] cursor-pointer text-base font-bold py-2"
+              >
                 <span>Services</span>
                 <ChevronDown className="h-4 w-4" />
               </div>
               <div className="absolute opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out delay-100 bg-white shadow-lg rounded-md mt-0 py-2 w-48 transform group-hover:translate-y-0 translate-y-[-10px] group-hover:visible invisible pointer-events-none group-hover:pointer-events-auto">
                 <Link
                   to="/Services/all_services"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold relative group/link"
+                  className="block px-4 py-2 text-sm text-[#474747] hover:bg-gray-100 font-bold relative group/link"
+                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   All Services
                   <span className="absolute left-4 bottom-0 h-0.5 bg-red-500 w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
                 </Link>
                 <Link
                   to="/Services/implementation"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold relative group/link"
+                  className="block px-4 py-2 text-sm text-[#474747] hover:bg-gray-100 font-bold relative group/link"
+                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Implementation
                   <span className="absolute left-4 bottom-0 h-0.5 bg-red-500 w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
                 </Link>
                 <Link
                   to="/Services/optimization"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold relative group/link"
+                  className="block px-4 py-2 text-sm text-[#474747] hover:bg-gray-100 font-bold relative group/link"
+                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Optimization
                   <span className="absolute left-4 bottom-0 h-0.5 bg-red-500 w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
                 </Link>
                 <Link
                   to="/Services/innovation"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold relative group/link"
+                  className="block px-4 py-2 text-sm text-[#474747] hover:bg-gray-100 font-bold relative group/link"
+                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Innovation
                   <span className="absolute left-4 bottom-0 h-0.5 bg-red-500 w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
                 </Link>
                 <Link
                   to="/Services/growth"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold relative group/link"
+                  className="block px-4 py-2 text-sm text-[#474747] hover:bg-gray-100 font-bold relative group/link"
+                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Growth
                   <span className="absolute left-4 bottom-0 h-0.5 bg-red-500 w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
@@ -94,14 +102,18 @@ const Header = () => {
             {/* Industries */}
             <Link
               to="/industries"
-              className="text-gray-700 hover:text-gray-900 text-base font-bold"
+              className="text-gray-700 hover:text-[#ff83a9] text-base font-bold"
+              style={{ fontFamily: "sans-serif,dm-sans" }}
             >
               Industries
             </Link>
 
             {/* Resources Dropdown */}
             <div className="relative group">
-              <div className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 cursor-pointer text-base font-bold py-2">
+              <div
+                style={{ fontFamily: "sans-serif,dm-sans" }}
+                className="flex items-center space-x-1 text-gray-700 hover:text-[#ff83a9] cursor-pointer text-base font-bold py-2"
+              >
                 <span>Resources</span>
                 <ChevronDown className="h-4 w-4" />
               </div>
@@ -109,6 +121,7 @@ const Header = () => {
                 <Link
                   to="/resources/blog"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold relative group/link"
+                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Blog
                   <span className="absolute left-4 bottom-0 h-0.5 bg-red-500 w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
@@ -116,6 +129,7 @@ const Header = () => {
                 <Link
                   to="/resources/customer-stories"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold relative group/link"
+                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Customer Stories
                   <span className="absolute left-4 bottom-0 h-0.5 bg-red-500 w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
@@ -126,7 +140,8 @@ const Header = () => {
             {/* Careers */}
             <Link
               to="/career"
-              className="text-gray-700 hover:text-gray-900 text-base font-bold"
+              className="text-gray-700 hover:text-[#ff83a9] text-base font-bold"
+              style={{ fontFamily: "sans-serif,dm-sans" }}
             >
               Careers
             </Link>
@@ -134,7 +149,8 @@ const Header = () => {
             {/* Company */}
             <Link
               to="/company"
-              className="text-gray-700 hover:text-gray-900 text-base font-bold"
+              className="text-gray-700 hover:text-[#ff83a9] text-base font-bold"
+              style={{ fontFamily: "sans-serif,dm-sans" }}
             >
               Company
             </Link>
@@ -143,7 +159,8 @@ const Header = () => {
             <div className="ml-8">
               <Button
                 asChild
-                className="bg-yellow-400 transition-colors duration-300 hover:bg-[#ff83a9] hover:text-white text-black font-bold px-6 py-2 rounded-full text-base"
+                className="bg-yellow-400 transition-colors duration-300 hover:bg-[#ff83a9] hover:text-white text-[#474747] font-bold px-6 py-2 rounded-full text-base"
+                style={{ fontFamily: "sans-serif,dm-sans" }}
               >
                 <Link to="/contact">Contact</Link>
               </Button>
@@ -322,10 +339,9 @@ const Header = () => {
                 )}
               </div>
 
-              {/* Contact Button (Mobile) */}
               <Button
                 asChild
-                className="bg-yellow-400 hover:bg-[#ff83a9]  hover:text-white text-black font-bold px-6 py-2 rounded-full text-base"
+                className="bg-[#fcc000] hover:bg-[#ff83a9]  hover:text-white text-black font-bold px-6 py-2 rounded-full text-base"
               >
                 <Link to="/contact" onClick={toggleMenu}>
                   Contact

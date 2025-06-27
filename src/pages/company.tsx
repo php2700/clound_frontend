@@ -189,10 +189,10 @@ const Company = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
-          <div className="flex items-center text-sm text-gray-800 mb-3">
+          <div className="flex items-center text-sm mb-3">
             <FaHome className="mr-1 text-xl" aria-hidden="true" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold">Company</span>
+            <span className="mx-1 text-base font-bold">/</span>
+            <span className="text-base font-bold">Company</span>
           </div>
 
           <div className="mx-auto mt-5">

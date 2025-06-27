@@ -52,7 +52,7 @@ const Home = () => {
           <Scroll />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 mt-6">
+        <div className="container mx-auto  px-4 md:px-6 mt-6">
           <div className="container mx-auto my-10 md:px-10 px-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               <FeatureCard
@@ -98,7 +98,7 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  <h2 className="text-5xl md:text-5xl font-bold mb-4">
                     Cloudgaia in one minute
                   </h2>
                   <button
@@ -110,6 +110,7 @@ const Home = () => {
                       className="h-6 w-6"
                       fill="currentColor"
                       viewBox="0 0 24 24"
+                      
                     >
                       <path d="M3 22v-20l18 10-18 10z" />
                     </svg>
@@ -118,7 +119,7 @@ const Home = () => {
                 </div>
               </div>
             ) : (
-              <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg">
                 <video className="w-full h-full" controls autoPlay>
                   <source src="/video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
@@ -144,11 +145,11 @@ const Home = () => {
                 description={
                   <>
                     With a
-                    <b> global presence and 15+ years as Salesforce partners</b>
+                    <strong> global presence and 15+ years as Salesforce partners</strong>
                     , we’ve dedicated ourselves exclusively to mastering the
                     Salesforce ecosystem working with
-                    <b> eading industries of all sizes.</b> Our team of industry{" "}
-                    <b> experts collaborates with clients </b> to develop solid
+                    <strong> eading industries of all sizes.</strong> Our team of industry{" "}
+                    <strong> experts collaborates with clients </strong> to develop solid
                     strategies aligned with their business objectives,
                     accelerating value delivery and adapting to their unique
                     needs.{" "}
@@ -160,12 +161,12 @@ const Home = () => {
                 title="Expert Staff"
                 description={
                   <>
-                    We stay at the <b> forefront of Salesforce technology</b>,
+                    We stay at the <strong> forefront of Salesforce technology</strong>,
                     mastering all its clouds with an unmatched level of
                     expertise and technical depth.
-                    <b> We have a global team of experts</b> that combines local
+                    <strong> We have a glostrongal team of experts</strong> that comstrongines local
                     and international knowledge to design
-                    <b> customized solutions </b> that maximize Salesforce
+                    <strong> customized solutions </strong> that maximize Salesforce
                     platforms and our clients’ roadmaps, ensuring exceptional
                     experiences for their users.
                   </>
@@ -182,10 +183,10 @@ const Home = () => {
                 description={
                   <>
                     We’re at the forefront of AI-driven transformation as{" "}
-                    <b> Agentforce implementers</b>, our expertise in artificial
+                    <strong> Agentforce implementers</strong>, our expertise in artificial
                     intelligence and innovation enables our clients{" "}
-                    <b> to focus on growing their businesses </b> while we take
-                    care of the rest. With <b> 150 AI & Data certifications</b>,
+                    <strong> to focus on growing their businesses </strong> while we take
+                    care of the rest. With <strong> 150 AI & Data certifications</strong>,
                     we architect intelligent experiences that give our clients a
                     competitive edge, combining human expertise with advanced AI
                     capabilities to deliver transformative business outcomes.
