@@ -347,7 +347,7 @@ const Innovation = () => {
                   </h3>
                   <p
                    style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
-                    className="text-[#474747] text-lg mb-4 leading-tight"
+                    className="text-[#474747] text-lg mb-4 "
                   >
                     Discover cutting-edge solutions that help you stay ahead of
                     the curve.
