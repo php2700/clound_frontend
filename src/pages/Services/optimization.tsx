@@ -356,18 +356,15 @@ const Optimization = () => {
                     Landing Services
                   </h3>
                   <p
-                    style={{
-                      fontFamily: "sans-serif,dm-sans",
-                      lineHeight: "1.2em",
-                    }}
-                    className="text-[#474747] text-xs mb-4 leading-tight"
+                    style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    className="text-[#474747] text-lg mb-4 "
                   >
                     Supporting your first steps with Salesforce to ensure a
                     smooth and successful adoption.
                   </p>
                   <a
                     href="#"
-                    className="text-[#474747] font-bold text-xs relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -382,18 +379,15 @@ const Optimization = () => {
                     Innovation
                   </h3>
                   <p
-                    style={{
-                      fontFamily: "sans-serif,dm-sans",
-                      lineHeight: "1.2em",
-                    }}
-                    className="text-[#474747] text-xs mb-4 leading-tight"
+                   style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    className="text-[#474747] text-lg mb-4 "
                   >
                     Identifying opportunities and overcoming challenges with
                     efficient solutions.
                   </p>
                   <a
                     href="#"
-                    className="text-[#474747] font-bold text-xs relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -409,18 +403,15 @@ const Optimization = () => {
                     Strategic Growth
                   </h3>
                   <p
-                    style={{
-                      fontFamily: "sans-serif,dm-sans",
-                      lineHeight: "1.2em",
-                    }}
-                    className="text-[#474747] text-xs mb-4 leading-tight"
+                 style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    className="text-[#474747] text-lg mb-4 "
                   >
                     Aligning Salesforce with your business goals to drive
                     sustainable growth.
                   </p>
                   <a
                     href="#"
-                    className="text-[#474747] font-bold text-xs relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -437,7 +428,7 @@ const Optimization = () => {
                   <FaArrowLeft className="text-white text-xl" />
                 </div>
 
-                <span className="ml-4 text-xs font-medium text-[#474747]">
+                <span className="ml-4 text-lg  text-[#474747]">
                   Back to Services
                 </span>
               </div>
