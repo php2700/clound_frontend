@@ -71,132 +71,135 @@ export const Blog = () => {
       >
         <Header />
       </div>
-      <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
-        <div className="px-6 py-10 md:px-10">
-          <div className="flex items-center text-sm text-gray-800 mt-10">
-            <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-base font-bold">/</span>
-            <span className="text-base font-bold cursor-pointer">
-              Resources
-            </span>
-            <span className="mx-1 text-base font-bold">/</span>
-            <span className="mx-1 text-base font-bold">Blog</span>
-          </div>
-          <h1
-            className={`mt-4 text-6xl font-bold text-[#008093] transition-transform  ${
-              loaded ? "translate-y-0 duration-300" : "translate-y-12"
-            } `}
-          >
-            Check out our latest updates
-          </h1>
-          <div
-            style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
-            className="mt-5 text-2xl text-[#474747] "
-          >
-            Stay up-to-date with the latest insights, trends, and best practices
-            from the Salesforce ecosystem. Our blog features reflections,
-            perspectives, and advice from our team of experts, helping you stay
-            one step ahead in your business.
-          </div>
-          <div className="mt-12 relative ">
-            <img
-              src="/BANNER-cnx-main-keynote.png"
-              alt="Banner Visual"
-              className="w-full h-[400px] object-cover "
-            />
-            <div className="absolute inset-0 bg-black/50"></div>
-            <div className="absolute bottom-0 left-0 w-full  text-white p-4 text-sm md:text-base">
-              <h2 className="font-semibold text-sm mb-1 text-yellow-500">
-                Latest - AI, Expert insights
-              </h2>
-              <h2 className="text-3xl font-bold">
-                Highlights from Keynote CNX 2025: how Agentforce is
-              </h2>
-              <h2 className="text-3xl font-bold">
-                transforming marketing with AI
-              </h2>
-              <p className="text-md mt-3">
-                Get key insights from Salesforce’s Main Keynote at CNX 2025.
-                Discover how Agentforce is
-              </p>
-              <p className="text-md mb-3">
-                transforming marketing with AI and real-time personalization.
-              </p>
-              <div className="relative font-bold cursor-pointer group w-max">
-                <span>Read story</span>
-                <span className="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+      <div className="bg-[#f9f9f9]">
+        <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
+          <div className="px-6 py-10 md:px-10">
+            <div className="flex items-center text-sm  text-[#474747] mt-10">
+              <FaHome className="mr-1 text-xl" />
+              <span className="mx-1 text-base font-bold">&nbsp;/</span>
+              <span className="text-base font-bold cursor-pointer">
+                &nbsp;Resources
+              </span>
+              <span className="mx-1 text-base font-bold">&nbsp;/</span>
+              <span className="mx-1 text-base font-bold">&nbsp; Blog</span>
+            </div>
+            <h1
+              className={`mt-4 text-6xl font-bold text-[#008093] transition-transform  ${
+                loaded ? "translate-y-0 duration-300" : "translate-y-12"
+              } `}
+            >
+              Check out our latest updates
+            </h1>
+            <div
+              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              className="mt-5 text-2xl text-[#474747] "
+            >
+              Stay up-to-date with the latest insights, trends, and best
+              practices from the Salesforce ecosystem. Our blog features
+              reflections, perspectives, and advice from our team of experts,
+              helping you stay one step ahead in your business.
+            </div>
+            <div className="mt-24  relative ">
+              <img
+                src="/BANNER-cnx-main-keynote.png"
+                alt="Banner Visual"
+                className="w-full h-[400px] object-cover rounded-xl "
+              />
+              <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
+              <div className="absolute bottom-0 left-0 w-full  text-white p-4 text-sm md:text-base">
+                <h2 className="mb-1">
+                 <span className="text-[#fcc000] font-bold text-base">Latest -  </span> 
+                 <span className="text-[12px] text-[#fcc000]">AI, Expert insights</span> 
+                </h2>
+                <h2 style={{lineHeight:'1.2em'}} className="text-3xl font-bold">
+                  Highlights from Keynote CNX 2025: how Agentforce is
+                </h2>
+                <h2 style={{lineHeight:'1.2em'}} className="text-3xl font-bold">
+                  transforming marketing with AI
+                </h2>
+                <p style={{lineHeight:'1.2em'}} className="text-lg mt-3">
+                  Get key insights from Salesforce’s Main Keynote at CNX 2025.
+                  Discover how Agentforce is
+                </p>
+                <p style={{lineHeight:'1.2em'}} className="text-lg mb-3">
+                  transforming marketing with AI and real-time personalization.
+                </p>
+                <div className="relative font-bold text-base cursor-pointer group w-max">
+                  <span>Read story</span>
+                  <span className="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mt-8">
-            <div className="flex flex-wrap items-center gap-5">
-              <div className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 text-lg cursor-pointer bg-white">
-                All articles
+            <div className="mt-8">
+              <div className="flex flex-wrap items-center gap-5">
+                <div className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 text-lg cursor-pointer bg-white">
+                  All articles
+                </div>
+                {headings.map((item, index) => (
+                  <div
+                    key={index}
+                    className="text-[#474747] text-lg bg-white hover:text-[#008093] border rounded-2xl border-transparent hover:border-[#008093] hover:rounded-full px-6 py-1 cursor-pointer"
+                  >
+                    {item}
+                  </div>
+                ))}
+                <div className="relative w-full max-w-xs">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#474747]">
+                    <FiSearch className="text-xl" />
+                  </span>
+                  <input
+                    type="search"
+                    placeholder="Search..." style={{lineHeight:'1.2em'}}
+                    className="w-full pl-10 pr-4 py-2 text-[#474747] placeholder:text-[#474747] border text-lg border-none rounded-full bg-white outline-none focus:ring-1 focus:ring-[#008093]"
+                  />
+                </div>
               </div>
-              {headings.map((item, index) => (
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
+              {data?.map((item, index) => (
                 <div
                   key={index}
-                  className="text-[#474747] text-lg bg-white hover:text-[#008093] border border-transparent hover:border-[#008093] hover:rounded-full px-5 py-1 cursor-pointer"
+                  className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col min-h-[400px]"
                 >
-                  {item}
+                  <img
+                    src={item?.img}
+                    alt={item?.title}
+                    className="w-full h-48 object-cover cursor-pointer"
+                  />
+
+                  <div className="p-4 flex flex-col flex-grow">
+                    <div
+                      style={{ fontSize: "12px" }}
+                      className="text-[#ff83a9] mb-1"
+                    >
+                      {item?.fetchFrom}
+                    </div>
+                    <div
+                      style={{ lineHeight: "1.2em" }}
+                      className="text-2xl font-bold text-[#008093] mb-2 cursor-pointer"
+                    >
+                      {item?.title}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "sans-serif,dm-sans",
+                        lineHeight: "1.2em",
+                      }}
+                      className="text-lg text-[#474747] flex-grow "
+                    >
+                      {item?.description}
+                    </div>
+
+                    {/* Read Article pushed to bottom */}
+                    <div className="relative mt-auto font-bold text-[#474747] text-base cursor-pointer group w-max">
+                      <span>Read Article</span>
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                    </div>
+                  </div>
                 </div>
               ))}
-              <div className="relative w-full max-w-xs">
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
-                  <FiSearch className="text-xl" />
-                </span>
-                <input
-                  type="search"
-                  placeholder="Search..."
-                  className="w-full pl-10 pr-4 py-1 border border-gray-300 rounded-full bg-white outline-none focus:border-teal-700 focus:ring-1 focus:ring-teal-100"
-                />
-              </div>
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
-            {data?.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col min-h-[400px]"
-              >
-                <img
-                  src={item?.img}
-                  alt={item?.title}
-                  className="w-full h-48 object-cover cursor-pointer"
-                />
-
-                <div className="p-4 flex flex-col flex-grow">
-                  <div
-                    style={{ fontSize: "12px" }}
-                    className="text-[#ff83a9] mb-1"
-                  >
-                    {item?.fetchFrom}
-                  </div>
-                  <div
-                    style={{ lineHeight: "1.2em" }}
-                    className="text-2xl font-bold text-[#008093] mb-2 cursor-pointer"
-                  >
-                    {item?.title}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "sans-serif,dm-sans",
-                      lineHeight: "1.2em",
-                    }}
-                    className="text-lg text-[#474747] flex-grow "
-                  >
-                    {item?.description}
-                  </div>
-
-                  {/* Read Article pushed to bottom */}
-                  <div className="relative mt-auto font-bold text-[#474747] text-base cursor-pointer group w-max">
-                    <span>Read Article</span>
-                    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>

@@ -226,3 +226,14 @@
 .animate-spin-slow {
   animation: spin-slow 10s linear infinite;
 }
+
+
+.custom-link {
+  color: #f9f9f9;
+
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  color: #fcc000;
+}

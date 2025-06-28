@@ -144,7 +144,7 @@ const Contact = () => {
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       <div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true"
       />
@@ -157,10 +157,10 @@ const Contact = () => {
           <Header />
         </div>
 
-        <div className="container mx-auto mt-[120px] px-4 md:px-6">
+        <div className="container mx-auto pt-[120px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-10">
             {/* Breadcrumb */}
-            <div className="flex items-center text-sm mb-4">
+            <div className="flex items-center text-sm mb-4 mt-10 text-[#474747]">
               <FaHome className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">/</span>
               <span className="text-base font-bold">Contact</span>

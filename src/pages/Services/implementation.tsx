@@ -161,16 +161,18 @@ const Implementation = () => {
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-[#474747] my-10">
+          <div className="flex items-center text-sm text-[#474747] mt-10">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-base font-bold">/</span>
-            <span className="text-base font-bold">Services / Implementation</span>
+            <span className="text-base font-bold">
+              Services / Implementation
+            </span>
           </div>
 
           {/* Title Section */}
-          <div>
+          <div className="mt-5">
             <h1
-               className="text-2xl md:text-6xl font-bold mt-4"
+              className="text-2xl md:text-6xl font-bold mb-4"
               style={{ color: "#008093" }}
             >
               For companies new to Salesforce
@@ -314,93 +316,92 @@ const Implementation = () => {
               {/* Right Side Form */}
               <div className="lg:w-[45%] w-full sticky top-10 self-start">
                 <form className="bg-[#FCC000] text-white p-8 rounded-xl space-y-6 shadow-xl">
-                  <p className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]">
-                    Complete the form and book <br /> a free consultation
-                  </p>
+                  <h2 className="text-2xl font-semibold mb-2 leading-tight">
+                        Complete the form and book
+                        <br />a free consultation
+                      </h2>
 
-                  {/* Name Fields */}
-                  <div className="flex flex-col md:flex-row gap-4">
-                    <input
-                      type="text"
-                      placeholder="First Name*"
-                      required
-                      className="flex-1 p-3 bg-white text-black rounded-md"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last Name*"
-                      required
-                      className="flex-1 p-3 bg-white text-black rounded-md"
-                    />
-                  </div>
+                      {/* First & Last Name */}
+                      <div className="flex gap-4">
+                        <input
+                          type="text"
+                          placeholder="First Name*"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
+                          required
+                        />
+                        <input
+                          type="text"
+                          placeholder="Last Name*"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
+                          required
+                        />
+                      </div>
 
-                  {/* Company + Email */}
-                  <div className="flex flex-col md:flex-row gap-4">
-                    <input
-                      type="text"
-                      placeholder="Company*"
-                      required
-                      className="flex-1 p-3 bg-white text-black rounded-md"
-                    />
-                    <input
-                      type="email"
-                      placeholder="Email*"
-                      required
-                      className="flex-1 p-3 bg-white text-black rounded-md"
-                    />
-                  </div>
+                      {/* Email & Company */}
+                      <div className="flex gap-4">
+                        <input
+                          type="email"
+                          placeholder="Email*"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
+                          required
+                        />
+                        <input
+                          type="text"
+                          placeholder="Company*"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
+                          required
+                        />
+                      </div>
 
-                  {/* Country Dropdown */}
-                  <select
-                    required
-                    className="w-full p-3 bg-white text-text-gray-700 rounded-md"
-                    defaultValue=""
-                  >
-                    <option disabled value="">
-                      Country*
-                    </option>
-                    {countries.map((country, idx) => (
-                      <option key={idx} value={country}>
-                        {country}
-                      </option>
-                    ))}
-                  </select>
+                      {/* Country Dropdown */}
+                      <select
+                        required
+                        className="w-full p-3 rounded bg-white text-black text-lg focus:outline-none"
+                        defaultValue=""
+                      >
+                        <option disabled value="">
+                          Select Country*
+                        </option>
+                        {countries.map((country, index) => (
+                          <option
+                            key={index}
+                            value={country}
+                            className="text-xs"
+                          >
+                            {country}
+                          </option>
+                        ))}
+                      </select>
 
-                  {/* Message */}
-                  <textarea
-                    placeholder="Message*"
-                    required
-                    className="w-full p-3 bg-white text-black rounded-md h-32"
-                  />
+                      {/* Message */}
+                      <textarea
+                        placeholder="Message*"
+                        className="w-full p-3 h-28 rounded bg-white text-black text-lg resize-none focus:outline-none"
+                        required
+                      ></textarea>
 
-                  <p className="text-sm font-light text-text-gray-700">
-                    By continuing, I confirm that I have read and agree to the{" "}
-                    <span className="font-semibold underline">
-                      Privacy Policy
-                    </span>
-                    .
-                  </p>
+                      {/* Checkbox */}
+                      <p className="text-xs text-gray-800">
+                        By continuing, I confirm that I have read and agree to
+                        the Privacy Policy.
+                      </p>
+                      <div className="flex items-start gap-2">
+                        <input type="checkbox" className="mt-1" required />
+                        <p className="text-xs text-gray-800">
+                          I agree to receive emails from CloudGaia with updates
+                          on services, events, and alerts. I can unsubscribe at
+                          any time.
+                        </p>
+                      </div>
 
-                  <label className="flex items-start text-sm font-light text-text-gray-700">
-                    <input
-                      type="checkbox"
-                      className="mt-1 accent-white"
-                      required
-                    />
-                    <span className="ml-2">
-                      I agree to receive emails from CloudGaia with updates on
-                      services, events, and alerts. I can unsubscribe at any
-                      time.
-                    </span>
-                  </label>
-
-                  <div className="flex justify-end">
-                    <button
-                      type="submit"
-                      className="bg-white text-[#FF83A9] font-semibold px-6 py-2 rounded-full hover:bg-black hover:text-white transition-all"
-                    >
-                      Send
-                    </button>
+                      {/* Submit */}
+                      <div className="absolute bottom-4 right-4">
+                        <button
+                          type="submit"
+                          className="bg-white text-black font-semibold py-3 px-8 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition text-lg w-26 min-h-12 mb-5"
+                        >
+                          Send
+                        </button>
                   </div>
                 </form>
               </div>
