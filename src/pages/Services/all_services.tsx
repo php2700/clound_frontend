@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header"; // Fixed import path
 import Footer from "@/components/Footer"; // Fixed import path
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaStar } from "react-icons/fa";
+import ExpertiseCollapse from "@/components/Expertise_cloud";
 
 const Services = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -21,7 +22,7 @@ const Services = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true"
       />
@@ -44,7 +45,7 @@ const Services = () => {
             </div>
 
             {/* Heading & Description */}
-            <div className="max-w-7xl mx-auto mt-8">
+            <div className="max-w-7xl mx-auto mt-5">
               <h1
                 className="text-2xl md:text-6xl font-bold"
                 style={{ color: "#008093" }}
@@ -217,28 +218,69 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Final Full-Width Image */}
-            <div className="w-full mt-20 px-6 md:px-0">
+            <div className="bg-[#474747] text-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center mt-10 w-[95%] h-[380px] md:h-[250px] mx-auto">
+              {/* Image */}
               <img
-                src="/capabilities.PNG"
-                alt="Capabilities Image"
-                className="w-full h-[250px] object-cover rounded-2xl"
+                src="https://cloudgaia.com/storage/2025/01/salesforce-partner.svg"
+                alt="Salesforce Partner"
+                className="w-[80px] md:w-[100px] h-auto object-contain mb-4 md:mb-0 ml-10 md:mr-4"
               />
-            </div>
 
+              {/* Metrics */}
+              <div className="flex flex-wrap flex-1 justify-around items-center w-full">
+                {/* Customer Satisfaction */}
+                <div className="text-center md:text-left mb-4 md:mb-0 min-w-[140px]">
+                  <h3 className="text-xl md:text-3xl font-bold mb-1">
+                    Customer Satisfaction
+                  </h3>
+                  <div className="flex items-center justify-center md:justify-start space-x-2">
+                    <div className="flex space-x-[2px]">
+                      {[...Array(5)].map((_, idx) => (
+                        <FaStar
+                          key={idx}
+                          className="text-yellow-400 text-xl md:text-base"
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xl md:text-3xl font-semibold">
+                      4.8/5 CSAT
+                    </span>
+                  </div>
+                </div>
+
+                {/* Certifications */}
+                <div className="text-center md:text-left mb-4 md:mb-0 min-w-[120px]">
+                  <h3 className="text-xl md:text-3xl font-bold mb-1">
+                    Certifications
+                  </h3>
+                  <p className="text-3xl font-bold text-yellow-400">50+</p>
+                </div>
+
+                {/* Projects */}
+                <div className="text-center md:text-left mb-4 md:mb-0 min-w-[100px]">
+                  <h3 className="text-xl md:text-3xl font-bold mb-1">
+                    Projects
+                  </h3>
+                  <p className="text-3xl font-bold text-yellow-400">120+</p>
+                </div>
+
+                {/* Experts */}
+                <div className="text-center md:text-left mb-4 md:mb-0 min-w-[100px]">
+                  <h3 className="text-xl md:text-3xl font-bold mb-1">
+                    Experts
+                  </h3>
+                  <p className="text-3xl font-bold text-yellow-400">50+</p>
+                </div>
+              </div>
+            </div>
             <div className="text-center mt-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#474747]">
                 Cloud Expertise
               </h2>
+              <ExpertiseCollapse/>
             </div>
 
-            <div className="w-full mt-20 px-6 md:px-0">
-              <img
-                src="/cloud.PNG"
-                alt="Cloud Image"
-                className="w-full h-[600px] object-cover rounded-2xl"
-              />
-            </div>
+            
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-10 mt-20 px-6">
               <div className="relative w-[200px] h-[200px] flex justify-center items-center">

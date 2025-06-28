@@ -197,7 +197,7 @@ export const Careers = () => {
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Blue Right-Angle Triangle in the Top-Right Corner */}
       <div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true" // Hides the decorative element from screen readers
       />
@@ -212,17 +212,17 @@ export const Careers = () => {
       {/* <Header /> */}
 
       {/* ... (Previous sections remain unchanged) ... */}
-      <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
-        <div className="px-6 py-10 md:px-20 ">
-          <div className="flex items-center text-sm text-gray-800 mt-8">
+      <div className="container mx-auto pt-[120px] px-4 md:px-6">
+        <div className="px-6 py-10 md:px-10">
+          <div className="flex items-center text-sm text-[#474747] mt-10">
             <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-semibold cursor-pointer">
-              Careers
+            <span className="mx-1 text-base font-bold">&nbsp;/</span>
+            <span className="text-base font-bold cursor-pointer">
+              &nbsp; Careers
             </span>
           </div>
           <div
-            className={`text-5xl font-bold text-[#008093] my-5 transition-transform
+            className={`text-6xl font-bold text-[#008093] my-5 transition-transform
                                                      ${
                                                        loaded
                                                          ? "translate-y-0  duration-300"
@@ -233,8 +233,8 @@ export const Careers = () => {
             All-in for people
           </div>
           <div
-            style={{ fontFamily: "sans-serif,dm-sans" }}
-            className="text-2xl"
+            style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+            className="mt-5 text-2xl text-[#474747] "
           >
             Join a multicultural team of Salesforce experts who elevate
             businesses through technology.
@@ -264,7 +264,10 @@ export const Careers = () => {
       <div className=" bg-[#f9f9f9]">
         <div className="container mx-auto pt-[80px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-0">
-            <div className="text-6xl font-bold text-center text-gray-700">
+            <div
+              style={{ lineHeight: "1em" }}
+              className="text-6xl font-bold text-center text-[#474747] "
+            >
               Our culture is what sets us apart
             </div>
             <div className="my-4">
@@ -279,33 +282,25 @@ export const Careers = () => {
                 <source src="/Vibe-1.mp4" type="video/mp4" />
               </video>
             </div>
-            <div className="text-center font-bold text-lg">
-              Our vibes makes the difference.
+            <div style={{lineHeight:'1.2em'}} className="text-center text-lg text-[#474747]">
+              <strong style={{ fontWeight: "bolder" }}>
+                Our vibes makes the difference.
+              </strong>
             </div>
             <div
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center leading-tight text-lg"
+              style={{ fontFamily: "sans-serif,dm-sans" ,lineHeight:'1.2em'}}
+              className="text-center  text-lg  text-[#474747]"
             >
               It’s the way we work, the way we connect, and the way we create
-              together. We’re committed to building a safe and
-            </div>
-            <div
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center leading-tight text-lg"
-            >
-              inclusive space where people come first—where you can be yourself,
-              grow, and thrive as part of a team that supports
-            </div>
-            <div
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center text-lg"
-            >
-              and inspires you.
+              together. We’re committed to building a safe and <br />
+  inclusive space where people come first—where you can be yourself,
+              grow, and thrive as part of a team that supports <br />
+  and inspires you.
             </div>
           </div>
         </div>
 
-        <div className=" container mx-auto pt-[80px] px-4 md:px-6  py-8">
+        <div className=" container mx-auto pt-[5] px-4 md:px-6  py-8">
           <div className="px-6 py-10 md:px-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
               {accordionData.map((item) => {
@@ -344,19 +339,19 @@ export const Careers = () => {
               })}
             </div>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center text-gray-600 mb-16 max-w-2xl mx-auto"
+              style={{ fontFamily: "sans-serif,dm-sans" ,lineHeight:'1.2em' }}
+              className="text-center text-[#474747] text-lg mb-16  mx-auto"
             >
               Here, it's not just about work—it's about working together to
               create something extraordinary.
             </p>
             <div className="text-center mb-12">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+              <h2 style={{lineHeight:'1.2em'}} className="text-3xl  font-bold text-[#474747] mb-6">
                 We're all-in for your professional growth
               </h2>
               <p
-                style={{ fontFamily: "sans-serif,dm-sans" }}
-                className="leading-tight max-w-4xl mx-auto text-gray-600 text-lg"
+                style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                className=" max-w-4xl mx-auto text-[#474747] text-lg"
               >
                 We're here to empower you to become the best version of yourself
                 every day, offering the flexibility to shape your work
@@ -380,10 +375,10 @@ export const Careers = () => {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <div className="text-gray-700">
+                <div className="text-[#474747]">
                   <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="list-disc list-inside space-y-3 leading-tight"
+                    style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                    className="list-disc list-inside space-y-3 "
                   >
                     <li>
                       Work from home, the office, or a coworking space—it's your
@@ -409,10 +404,10 @@ export const Careers = () => {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <div className="text-gray-700">
+                <div className="text-[#474747]">
                   <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="list-disc list-inside space-y-3 leading-tight"
+                      style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                    className="list-disc list-inside space-y-3 "
                   >
                     <li>Flexible time off and vacations</li>
                     <li>Work schedules that fit your lifestyle</li>
@@ -433,9 +428,9 @@ export const Careers = () => {
                   </video>
                   {/* <img src="/academy.png" alt="Academy logo" className="max-h-full" /> */}
                 </div>
-                <div className="text-gray-700">
+                <div className="text-[#474747]">
                   <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                      style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
                     className="list-disc list-inside space-y-3 leading-tight"
                   >
                     <li>
@@ -460,10 +455,10 @@ export const Careers = () => {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <div className="text-gray-700">
+                <div className="text-[#474747]">
                   <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="list-disc list-inside space-y-3 leading-tight"
+                        style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                    className="list-disc list-inside space-y-3 "
                   >
                     <li>A culture of care</li>
                     <li>Flexible work options</li>
@@ -479,7 +474,7 @@ export const Careers = () => {
           <div className="cpx-6 py-5 md:px-10">
             <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
               <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">
-                <blockquote className="text-2xl lg:text-3xl font-semibold leading-relaxed">
+                <blockquote style={{lineHeight:'1.2em'}} className="text-3xl  text-[#f9f9f9] ">
                   “{currentTestimonial.quote}”
                 </blockquote>
                 <div className="mt-8">
@@ -489,24 +484,24 @@ export const Careers = () => {
                       alt={`${currentTestimonial.name}'s country flag`}
                       className="w-8 h-auto rounded-sm"
                     />
-                    <span className="font-bold text-lg text-yellow-400">
+                    <span  style={{lineHeight:'1.2em'}} className="font-bold text-2xl text-[#fcc000]">
                       {currentTestimonial.name}
                     </span>
                   </div>
-                  <p className="text-gray-300 mt-1">
+                  <p style={{fontSize:'12px'}} className="text-[#f9f9f9] mt-1">
                     {currentTestimonial.title}
                   </p>
                 </div>
                 <div className="flex gap-4 mt-8">
                   <button
                     onClick={handlePrevTestimonial}
-                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors "
+                    className="-bg-[#fcc000] text-white p-3 rounded-full hover:bg-[#FF83A9] transition-colors "
                   >
                     <FaArrowLeft />
                   </button>
                   <button
                     onClick={handleNextTestimonial}
-                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors"
+                    className="bg-[#fcc000] text-white p-3 rounded-full hover:bg-[#FF83A9] transition-colors"
                   >
                     <FaArrowRight />
                   </button>
@@ -679,8 +674,8 @@ export const Careers = () => {
                     What we offer
                   </h3>
                   <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
+                    style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                    className="list-disc list-inside text-[#474747] mt-2 space-y-1 text-lg"
                   >
                     <li>A dynamic and collaborative work environment</li>
                     <li>Flexibility to work from anywhere in the world</li>
@@ -700,8 +695,8 @@ export const Careers = () => {
                     Why Join Cloudgaia?
                   </h3>
                   <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
+                     style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+                    className="list-disc list-inside text-[#474747] text-lg mt-2 space-y-1 "
                   >
                     <li>
                       Work on cutting-edge Salesforce projects with top-tier

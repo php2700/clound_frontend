@@ -37,6 +37,7 @@ const SuccessStoriesSection = () => {
 
   return (
     <div>
+      {/* Hero Section */}
       <div className="relative h-[300px] w-full overflow-hidden">
         <img
           src="/new-img.png"
@@ -60,8 +61,9 @@ const SuccessStoriesSection = () => {
         </div>
       </div>
 
+      {/* Success Stories Section */}
       <section className="bg-gradient-to-b from-[#008093] to-[#006f7a] py-20 relative overflow-hidden">
-        {/* Decorative background elements */}
+        {/* Decorative Circles */}
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-pink-300 rounded-tr-full opacity-80"></div>
         <div className="absolute bottom-0 right-0 w-64 h-32 bg-yellow-400 rounded-tl-full opacity-90"></div>
 
@@ -76,23 +78,23 @@ const SuccessStoriesSection = () => {
             {stories.map((story, index) => (
               <div
                 key={index}
-                className={`${story.bgColor} rounded-2xl p-8 hover:bg-yellow-300 shadow-xl flex flex-col justify-between h-full transform  transition-all duration-300 `}
+                className={`${story.bgColor} group rounded-2xl p-8 hover:bg-yellow-300 shadow-xl flex flex-col justify-between h-full transform transition-all duration-300`}
               >
                 <div className="flex justify-between items-center">
-                  <p className="text-[13px] font-bold text-[#ff83a9] hover:text-[#474747] mb-3  tracking-wide">
+                  <p className="text-[13px] font-bold text-[#ff83a9] group-hover:text-black mb-3 tracking-wide transition-colors">
                     {story.subtitle}
                   </p>
 
                   <div className="mb-6">
                     <div className="flex items-center gap-2">
                       <div>
-                        <div className="text-lg font-bold text-red-600 hover:text-gray-800">
+                        <div className="text-lg font-bold text-red-600 group-hover:text-black transition-colors duration-300">
                           {story.logo}
                         </div>
                         {story.logoSubtext && (
                           <div
                             style={{ fontFamily: "sans-serif,dm-sans" }}
-                            className="text-[8px] font-semibold text-red-600 hover:text-gray-800"
+                            className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300"
                           >
                             {story.logoSubtext}
                           </div>
@@ -101,8 +103,9 @@ const SuccessStoriesSection = () => {
                     </div>
                   </div>
                 </div>
+
                 <h3
-                  className={`text-3xl mb-[40px] font-bold ${story.textColor} mb-6 leading-tight`}
+                  className={`text-3xl font-bold ${story.textColor} mb-6 leading-tight`}
                 >
                   {story.title}
                 </h3>

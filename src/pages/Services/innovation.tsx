@@ -160,7 +160,7 @@ const Innovation = () => {
       <div className="container mx-auto pt-10 px-4  md:px-6 mt-20">
         <div className="px-6  pt-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm  mt-10 mb-3">
+          <div className="flex items-center text-sm text-[#474747]  mt-10 mb-3">
             <FaHome className="mr-1 text-xl" />
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">Services / Innovation</span>
@@ -239,7 +239,7 @@ const Innovation = () => {
                 {/* Right Sticky Form */}
                 <div className="lg:w-[42%] w-full">
                   <div className="lg:sticky top-28">
-                    <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[680px]">
+                    <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[660px]">
                       <h2 className="text-2xl font-semibold mb-2 leading-tight">
                         Complete the form and book
                         <br />a free consultation
@@ -250,13 +250,13 @@ const Innovation = () => {
                         <input
                           type="text"
                           placeholder="First Name*"
-                          className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
                         />
                         <input
                           type="text"
                           placeholder="Last Name*"
-                          className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
                         />
                       </div>
@@ -266,13 +266,13 @@ const Innovation = () => {
                         <input
                           type="email"
                           placeholder="Email*"
-                          className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
                         />
                         <input
                           type="text"
                           placeholder="Company*"
-                          className="w-1/2 p-3 rounded bg-white text-black focus:outline-none"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
                         />
                       </div>
@@ -280,14 +280,18 @@ const Innovation = () => {
                       {/* Country Dropdown */}
                       <select
                         required
-                        className="w-full p-3 rounded bg-white text-black focus:outline-none"
+                        className="w-full p-3 rounded bg-white text-black text-lg focus:outline-none"
                         defaultValue=""
                       >
                         <option disabled value="">
                           Select Country*
                         </option>
                         {countries.map((country, index) => (
-                          <option key={index} value={country}>
+                          <option
+                            key={index}
+                            value={country}
+                            className="text-xs"
+                          >
                             {country}
                           </option>
                         ))}
@@ -296,18 +300,18 @@ const Innovation = () => {
                       {/* Message */}
                       <textarea
                         placeholder="Message*"
-                        className="w-full p-3 h-28 rounded bg-white text-black resize-none focus:outline-none"
+                        className="w-full p-3 h-28 rounded bg-white text-black text-lg resize-none focus:outline-none"
                         required
                       ></textarea>
 
                       {/* Checkbox */}
-                      <p className="text-sm text-gray-800">
+                      <p className="text-xs text-gray-800">
                         By continuing, I confirm that I have read and agree to
                         the Privacy Policy.
                       </p>
                       <div className="flex items-start gap-2">
                         <input type="checkbox" className="mt-1" required />
-                        <p className="text-sm text-gray-800">
+                        <p className="text-xs text-gray-800">
                           I agree to receive emails from CloudGaia with updates
                           on services, events, and alerts. I can unsubscribe at
                           any time.
@@ -315,10 +319,10 @@ const Innovation = () => {
                       </div>
 
                       {/* Submit */}
-                      <div className="flex justify-end">
+                      <div className="absolute bottom-4 right-4">
                         <button
                           type="submit"
-                          className="bg-white text-black font-semibold py-2 px-6 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition"
+                          className="bg-white text-black font-semibold py-3 px-8 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition text-lg w-26 min-h-12 mb-5"
                         >
                           Send
                         </button>
@@ -380,7 +384,7 @@ const Innovation = () => {
 
                 <div className="p-6 bg-white rounded-lg shadow-md text-left">
                   <img src="/services-icon-2.svg" className="mb-4" />
-                  <h3 style={{fontSize:'40px'}} className="ext-[#008093] font-semibold mb-2">
+                  <h3 style={{fontSize:'40px'}} className="text-[#008093] font-semibold mb-2">
                     Optimization
                   </h3>
                   <p

@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { FaBinoculars, FaBullseye, FaHome, FaThumbtack } from "react-icons/fa";
 import { throttle } from "lodash";
 import ImageHoverCard from "@/components/imageHoverCard";
+import ExpertiseCollapse from "@/components/Expertise_cloud";
+import IndustryCollapse from "@/components/industry_expertise";
 
 // Define team members
 const teamMembers = [
@@ -173,23 +175,23 @@ const Company = () => {
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       {/* Blue Right-Angle Triangle in the Top-Right Corner */}
       <div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true"
       />
 
       {/* Header */}
       <div
-        className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${
-          isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
+          isHeaderVisible ? "translate-y-6" : "-translate-y-full"
         }`}
       >
         <Header />
       </div>
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
+      <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
         <div className="px-6 py-10 md:px-10">
-          <div className="flex items-center text-sm mb-3">
+          <div className="flex items-center text-sm mb-3 mt-10 text-[#474747]">
             <FaHome className="mr-1 text-xl" aria-hidden="true" />
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">Company</span>
@@ -199,7 +201,10 @@ const Company = () => {
             <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
               Experience the Cloudgaia vibe
             </h1>
-            <p  style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }} className="text-[#474747] text-xl  md:text-2xl mt-5 ">
+            <p
+              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              className="text-[#474747] text-xl  md:text-2xl mt-5 "
+            >
               Our commitment to excellence and comprehensive Salesforce
               expertise
               <br />
@@ -225,13 +230,19 @@ const Company = () => {
                 <div>
                   <img src="/company-purpose-icon.svg" />{" "}
                 </div>
-                <div    style={{ fontSize: "40px" }} className=" text-[#008093] font-semibold my-3">
+                <div
+                  style={{ fontSize: "40px" }}
+                  className=" text-[#008093] font-semibold my-3"
+                >
                   Purpose
                 </div>
-                <div   style={{
-                          fontFamily: "sans-serif,dm-sans",
-                          lineHeight: "1.2em",
-                        }} className="text-[#474747] text-lg">
+                <div
+                  style={{
+                    fontFamily: "sans-serif,dm-sans",
+                    lineHeight: "1.2em",
+                  }}
+                  className="text-[#474747] text-lg"
+                >
                   Empower people and companies to evolve together through
                   digital transformation.
                 </div>
@@ -240,13 +251,19 @@ const Company = () => {
                 <div>
                   <img src="/company-mission-icon.svg" />{" "}
                 </div>
-                <div style={{ fontSize: "40px" }}  className="text-[#008093] font-semibold my-3">
+                <div
+                  style={{ fontSize: "40px" }}
+                  className="text-[#008093] font-semibold my-3"
+                >
                   Mission
                 </div>
-                <div  style={{
-                          fontFamily: "sans-serif,dm-sans",
-                          lineHeight: "1.2em",
-                        }} className="text-lg text-[#474747] ">
+                <div
+                  style={{
+                    fontFamily: "sans-serif,dm-sans",
+                    lineHeight: "1.2em",
+                  }}
+                  className="text-lg text-[#474747] "
+                >
                   Help people and businesses ignite their best version through
                   innovative Salesforce solutions, creating a world-class
                   customer experience.{" "}
@@ -256,13 +273,19 @@ const Company = () => {
                 <div>
                   <img src="/company-vision-icon.svg" />
                 </div>
-                <div style={{ fontSize: "40px" }} className="text-[#008093] font-semibold my-3">
+                <div
+                  style={{ fontSize: "40px" }}
+                  className="text-[#008093] font-semibold my-3"
+                >
                   Vision
                 </div>
-                <div style={{
-                          fontFamily: "sans-serif,dm-sans",
-                          lineHeight: "1.2em",
-                        }} className="text-lg text-[#474747]">
+                <div
+                  style={{
+                    fontFamily: "sans-serif,dm-sans",
+                    lineHeight: "1.2em",
+                  }}
+                  className="text-lg text-[#474747]"
+                >
                   Be the preferred partner for cloud solutions that enable
                   organizations to achieve significant transformations, driving
                   success and innovation, and generating a positive impact on
@@ -345,7 +368,13 @@ const Company = () => {
 
                 {/* Text */}
                 <div className="text-left text-[#474747] m-0 py-3  ml-2">
-                  <p style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }} className="text-sm md:text-lg m-0 p-0 text-xl">
+                  <p
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
+                    className="text-sm md:text-lg m-0 p-0 text-xl"
+                  >
                     “At Cloudgaia we always say that we are not looking for
                     happy <br />
                     customers, we are looking for successful customers. I am
@@ -360,10 +389,16 @@ const Company = () => {
                     in <br />
                     transforming business challenges into growth opportunities.”
                   </p>
-                  <h3 style={{lineHeight:'1.2em'}} className="md:text-3xl mt-1 mb-0 text-xl mt-6">
+                  <h3
+                    style={{ lineHeight: "1.2em" }}
+                    className="md:text-3xl mt-1 mb-0 text-xl mt-6"
+                  >
                     Nicolás Orzabal
                   </h3>
-                  <p style={{lineHeight:'1.2em'}} className="font-bold text-2xl mt-0 ">
+                  <p
+                    style={{ lineHeight: "1.2em" }}
+                    className="font-bold text-2xl mt-0 "
+                  >
                     Co-Founder & CEO
                   </p>
                 </div>
@@ -375,10 +410,16 @@ const Company = () => {
               <h2 className="text-2xl md:text-6xl font-bold text-[#008093] mb-6">
                 A Brand New Future awaits us
               </h2>
-              <p style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }} className="text-[#474747] text-sm md:text-2xl mx-auto mb-6">
+              <p
+                style={{
+                  fontFamily: "sans-serif,dm-sans",
+                  lineHeight: "1.2em",
+                }}
+                className="text-[#474747] text-sm md:text-2xl mx-auto mb-6"
+              >
                 Our new branding signals a bold future for Cloudgaia—rooted in
-                our  heritage, focused on innovation, and <br/> dedicated to empowering
-                clients with transformative Salesforce solutions.
+                our heritage, focused on innovation, and <br /> dedicated to
+                empowering clients with transformative Salesforce solutions.
               </p>
               <h3 className="text-lg md:text-2xl font-bold text-[#FF83A9] mb-6">
                 Together, we’re all-in for your growth
@@ -458,143 +499,173 @@ const Company = () => {
                       className="w-35 h-35 rounded-lg mx-auto object-cover mb-4"
                     />
                     <p className="text-[#008093] font-bold text-xl">in</p>
-                    <h3 style={{lineHeight:'1.2em'}} className="text-[#474747] font-bold text-lg mt-1">
+                    <h3
+                      style={{ lineHeight: "1.2em" }}
+                      className="text-[#474747] font-bold text-lg mt-1"
+                    >
                       {member.name}
                     </h3>
-                    <p style={{fontSize:'12px' ,lineHeight:'1em'}} className="text-[#474747] ">{member.title}</p>
+                    <p
+                      style={{ fontSize: "12px", lineHeight: "1em" }}
+                      className="text-[#474747] "
+                    >
+                      {member.title}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-         </div>
+      </div>
 
-        {/* AI & Data Certifications Section */}
-        <div className="relative w-full ">
-          <img
-            src="laptop.png"
-            alt="AI and Data Certifications"
-            className="w-full h-[500px] object-cover rounded-lg"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <h2 style={{fontSize:'40px',lineHeight:'1em'}} className="font-semibold text-[#f9f9f9] mb-2">
-              150+ AI & Data certifications
-            </h2>
-            <p style={{lineHeight:'1.2em'}} className="text-[#f9f9f9] text-3xl px-4">
-              Chosen by Salesforce as an Agentforce implementer, we continue to
-              <br />
-              empower ourselves to drive innovation, streamline processes and
-              drive
-              <br />
-              business growth through artificial intelligence and autonomous
-              agents.
-            </p>
-          </div>
-        </div>
-       
-
-        <div className="w-full flex flex-col items-center justify-center px-4 py-8 mt-10">
-          <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
-            Salesforce Expertise
+      {/* AI & Data Certifications Section */}
+      <div className="relative w-full ">
+        <img
+          src="laptop.png"
+          alt="AI and Data Certifications"
+          className="w-full h-[500px] object-cover rounded-lg"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+          <h2
+            style={{ fontSize: "40px", lineHeight: "1em" }}
+            className="font-semibold text-[#f9f9f9] mb-2"
+          >
+            150+ AI & Data certifications
           </h2>
-          <img
-            src="salesforce.PNG"
-            alt="Salesforce Expertise"
-            className="w-full max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto rounded-lg object-cover"
-          />
+          <p
+            style={{ lineHeight: "1.2em" }}
+            className="text-[#f9f9f9] text-3xl px-4"
+          >
+            Chosen by Salesforce as an Agentforce implementer, we continue to
+            <br />
+            empower ourselves to drive innovation, streamline processes and
+            drive
+            <br />
+            business growth through artificial intelligence and autonomous
+            agents.
+          </p>
         </div>
+      </div>
 
-        <div className="w-full flex flex-col items-center justify-center px-4 py-8">
-          <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
-            Industry Expertise
+      <div className="w-full flex flex-col items-center justify-center px-4 py-8 mt-10">
+        <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
+          Salesforce Expertise
+        </h2>
+        <ExpertiseCollapse />
+      </div>
+
+      <div className="w-full flex flex-col items-center justify-center px-4 py-8">
+        <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
+          Industry Expertise
+        </h2>
+        <IndustryCollapse />
+      </div>
+
+      {/* Two Column Section */}
+      <div className="w-full flex flex-col md:flex-row mt-10">
+        {/* Left Div */}
+        <div className="w-full md:w-1/2 bg-[#008093] flex flex-col items-center justify-start px-4 py-8">
+          {/* Top Logo */}
+          <img
+            src="https://cloudgaia.com/storage/2025/05/Pledge1_Logo_Stacked_White.png"
+            className="w-[90px] h-auto mb-6"
+            alt="Pledge Logo"
+          />
+
+          <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4 text-center">
+            We Join Salesforce
+            <br />
+            Pledge 1% Commitment
           </h2>
+
+          <p className="text-white text-base md:text-lg mb-6 text-center">
+            We are committed to the Salesforce Pledge 1% by making our
+            resources, <br />
+            time and products available to support the integration & growth of
+            <br /> NGOs and organizations.
+          </p>
+
+          {/* Bottom Image */}
           <img
-            src="expertise.PNG"
-            alt="Industry Expertise"
-            className="w-full max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto rounded-lg object-cover"
+            src="https://cloudgaia.com/storage/2025/01/company-pledge-img.webp"
+            alt="Our Mission"
+            className="w-[220px] sm:w-[280px] md:w-[320px] h-auto rounded-lg object-cover mt-2"
           />
         </div>
 
-        {/* Two Column Section */}
-        <div className="w-full flex flex-col md:flex-row mt-10">
-          {/* Left Div */}
-          <div className="w-full md:w-1/2 bg-[#008093] flex flex-col items-center justify-center px-4 py-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4 text-center">
-              We Join Salesforce
-              <br />
-              Pledge 1% Commitment
-            </h2>
-            <p className="text-white text-base md:text-lg mb-6 text-center">
-              We are commited to the Salesforce Pledge 1% by making our
-              resources, <br />
-              time and products available to support the integration & growth of
-              <br /> NGOs and organizations.
-            </p>
+        {/* Right Div */}
+        <div className="w-full md:w-1/2 bg-yellow-400 flex flex-col items-center justify-start px-4 py-8">
+          {/* Top Image */}
+          <img
+            src="https://cloudgaia.com/storage/2025/01/company-un-women.webp"
+            className="w-[140px] h-auto mb-6"
+            alt="UN Women"
+          />
+
+          <h2 className="text-3xl md:text-4xl font-bold text-[#474747] mt-6 text-center">
+            We Signed the United Nations Women's <br />
+            Empowerment Principles
+          </h2>
+
+          <p className="text-[#474747] text-base md:text-lg mb-8 text-center">
+            “We are convinced of the power of diversity for organizations and
+            the
+            <br /> impact it has on their evolution and their surroundings. We
+            believe that <br />
+            through the UN WEPs, we will be able to deepen and focus our efforts{" "}
+            <br />
+            in achieving gender equality, a foundation for a sustainable
+            future.”
+          </p>
+
+          {/* Author Section */}
+          <div className="flex items-center justify-center space-x-4 mb-4">
             <img
-              src="https://cloudgaia.com/storage/2025/01/company-pledge-img.webp"
-              alt="Our Mission"
-              className="w-full max-w-sm sm:max-w-md md:max-w-lg h-auto rounded-lg object-cover"
+              src="https://cloudgaia.com/storage/2025/01/company-nicolas-circle.webp"
+              alt="Nicolás Orzabal"
+              className="w-[150px] h-[150px] rounded-full object-cover"
             />
-          </div>
-          {/* Right Div */}
-          <div className="w-full md:w-1/2 bg-yellow-400 flex flex-col items-center justify-center px-4 py-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#008093] mb-4 text-center">
-              We Signed the United Nations Women's <br />
-              Empowerment Principles
-            </h2>
-            <p className="text-gray-800 text-base md:text-lg mb-8 text-center">
-              “We are convinced of the power of diversity for organizations and
-              the
-              <br /> impact it has on their evolution and their surroundings. We
-              believe that <br />
-              through the UN WEPs, we will be able to deepen and focus our
-              efforts <br />
-              in achieving gender equality, a foundation for a sustainable
-              future.”
-            </p>
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <img
-                src="https://cloudgaia.com/storage/2025/01/company-nicolas-circle.webp"
-                alt="Nicolás Orzabal"
-                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover"
-              />
-              <div className="text-center sm:text-left">
-                <p className="text-gray-800 font-semibold text-lg">
-                  Nicolás Orzabal
-                </p>
-                <p className="text-gray-800 text-lg font-bold">
-                  Co-Founder & CEO
-                </p>
-              </div>
+            <div className="text-center sm:text-left">
+              <p className="text-gray-800 font-semibold text-lg">
+                Nicolás Orzabal
+              </p>
+              <p className="text-gray-800 text-lg font-bold">
+                Co-Founder & CEO
+              </p>
             </div>
           </div>
         </div>
+      </div>
 
-
-        <div
-          className="mx-auto p-6 my-20 rounded-lg shadow-lg text-center max-w-7xl"
-          style={{ backgroundColor: '#008093' }}
+      <div
+        className="mx-auto p-6 my-20 rounded-lg shadow-lg text-center max-w-7xl"
+        style={{ backgroundColor: "#008093" }}
+      >
+        <img
+          src="https://cloudgaia.com/storage/2025/01/logo-salesforce.svg"
+          alt="Top"
+          className="mx-auto  w-32 h-32"
+        />
+        <h2
+          style={{ fontSize: "40px" }}
+          className=" font-semibold mb-4 text-[#f9f9f9]"
         >
-          <img
-            src="https://cloudgaia.com/storage/2025/01/logo-salesforce.svg"
-            alt="Top"
-            className="mx-auto  w-32 h-32"
-          />
-          <h2 style={{fontSize:'40px'}} className=" font-semibold mb-4 text-[#f9f9f9]">
-            Empowered by Salesforce Ventures investment
-          </h2>
-          <p style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }} className=" text-lg text-[#f9f9f9] ">
-            In 2024, we proudly announced an investment from Salesforce
-            Ventures, marking a significant milestone in our journey <br />
-            as a leading global Salesforce partner. This partnership empowers
-            us to expand our reach across the Americas and <br />
-            Europe, bringing even greater innovation and expertise to help our
-            clients thrive through digital transformation.
-          </p>
-        </div>
+          Empowered by Salesforce Ventures investment
+        </h2>
+        <p
+          style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+          className=" text-lg text-[#f9f9f9] "
+        >
+          In 2024, we proudly announced an investment from Salesforce Ventures,
+          marking a significant milestone in our journey <br />
+          as a leading global Salesforce partner. This partnership empowers us
+          to expand our reach across the Americas and <br />
+          Europe, bringing even greater innovation and expertise to help our
+          clients thrive through digital transformation.
+        </p>
+      </div>
       <Footer />
-      
     </div>
   );
 };

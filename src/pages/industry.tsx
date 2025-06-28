@@ -5,13 +5,10 @@ import {
   FaBatteryFull,
   FaEnvelope,
   FaHome,
-  FaIndustry,
-  FaLeaf,
-  FaPiggyBank,
-  FaPills,
-  FaTools,
+  
 } from "react-icons/fa";
 import Scroll from "@/components/scroll";
+import IndustryCollapse from "@/components/industry_expertise";
 // import industries3 from "@/public/industries4.PNG"; // adjust path if different
 
 const Industries = () => {
@@ -35,7 +32,7 @@ const Industries = () => {
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       {/* Blue Right-Angle Triangle in the Top-Right Corner */}
       <div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true"
       />
@@ -54,12 +51,12 @@ const Industries = () => {
         <div className="px-6 md:px-10 py-10">
           <div className="flex items-center text-sm text-[#474747] mb-3 mt-10">
             <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-lg font-medium">/</span>
-            <span className="text-lg font-bold">Industries</span>
+            <span className="mx-1 text-base font-bold">/</span>
+            <span className="text-base font-bold">Industries</span>
           </div>
 
           {/* Title */}
-          <div className="mt-5">
+          <div >
             <h1
               style={{ lineHeight: "1em" }}
               className="text-2xl md:text-6xl font-bold text-[#008093] mb-4"
@@ -249,16 +246,9 @@ const Industries = () => {
               <h2 className="text-4xl md:text-6xl font-bold text-[#474747] mt-13">
                 Industry Expertise
               </h2>
+              <IndustryCollapse/>
             </div>
 
-            {/* Second Image */}
-            <div className="mt-8 flex justify-center">
-              <img
-                src="/industries2.PNG"
-                alt="Image"
-                className="w-full max-w-[1200px] h-[400px] object-cover rounded-2xl"
-              />
-            </div>
           </div>
         </div>
       </div>

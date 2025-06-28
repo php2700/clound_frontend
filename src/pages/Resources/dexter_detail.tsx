@@ -30,41 +30,48 @@ export const Dexter_Detail = () => {
         <Header />
       </div>
       <div className="bg-[#f9f9f9]">
-        <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
+        <div className="container mx-auto pt-[120px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-10 ">
-            <div className="flex items-center text-sm text-gray-700 mt-8">
+            <div className="flex items-center text-sm text-[#474747] mt-10">
               <FaHome className="mr-1 text-xl" />
-              <span className="mx-1 text-lg font-medium">/</span>
-              <span className="text-lg font-semibold cursor-pointer">
-                Resources
+              <span className="mx-1 text-base font-bold">&nbsp;/</span>
+              <span className="text-base font-bold cursor-pointer">
+                &nbsp; Resources
               </span>
-              <span className="mx-1 text-lg font-medium">/</span>
-              <span className="mx-1 text-lg font-medium">Customer Stories</span>
-              <span className="mx-1 text-lg font-medium">/</span>
-              <span className="mx-1 text-lg font-medium">Grupo Dexter</span>
+              <span className="mx-1 text-base font-bold">&nbsp;/</span>
+              <span className="mx-1 text-base font-bold">
+                &nbsp;Customer Stories
+              </span>
+              <span className="mx-1 text-base font-bold">&nbsp;/</span>
+              <span className="mx-1 text-base font-bold">
+                &nbsp;Grupo Dexter
+              </span>
             </div>
-            <div className={`text-6xl font-bold text-[#008093] mt-5 `}>
-              +57% Growth in Online Orders:
-            </div>
-            <div className={`text-6xl font-bold text-[#008093]  `}>
-              Dexter’s Success in E-Commerce
-            </div>
-            <div className={`text-6xl font-bold text-[#008093] mb-5  `}>
+            <div
+              style={{ lineHeight: "1em" }}
+              className={`text-6xl font-bold text-[#008093] my-5 `}
+            >
+              +57% Growth in Online Orders: <br />
+              Dexter’s Success in E-Commerce <br />
               Digitization with Salesforce
             </div>
             <div className="flex items-center gap-5 mb-10">
               <div>
                 <img src="/logo-salesforce.svg" />
               </div>
-              <div className="text-2xl ">
+              <div
+                style={{ lineHeight: "1.2em" }}
+                className="text-2xl text-[#474747]"
+              >
                 Commerce Cloud B2C | Service Cloud | Marketing Cloud
               </div>
             </div>
-            <div className="text-lg">
+            <div
+              style={{ lineHeight: "1.2em" }}
+              className="text-lg text-[#474747] mb-20"
+            >
               Grupo Dexter, Argentina’s leading sports retailer, transformed its
-              e-commerce experience, streamlining operations and
-            </div>
-            <div className="text-lg mb-20">
+              e-commerce experience, streamlining operations and <br />
               enhancing customer engagement to drive significant growth in
               online orders.
             </div>
@@ -78,10 +85,16 @@ export const Dexter_Detail = () => {
                     className="w-10 h-10"
                   />
                 </div>
-                <div className="text-2xl md:text-4xl font-bold text-[#008093] ">
+                <div
+                  style={{ fontSize: "40px", lineHeight: "1em" }}
+                  className="font-semibold text-[#008093] "
+                >
                   About Grupo Dexter
                 </div>
-                <div className="text-lg md:text-base leading-relaxed">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   Grupo Dexter (FKA Grupo Dabra), is a leading sporting goods
                   retailer, with more than 150 stores in Argentina, including
                   Dexter, Stock Center, Moov, Lotto and Urbo. It recently
@@ -99,7 +112,7 @@ export const Dexter_Detail = () => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-2 mt-2">
-              <div className="flex-1 flex flex-col gap-4 bg-pink-400 rounded-lg px-6 md:px-8 py-6">
+              <div className="flex-1 flex flex-col gap-4 bg-[#ff83a9] rounded-lg px-6 md:px-8 py-6">
                 <div>
                   <img
                     src="/icon-clock.svg"
@@ -107,10 +120,16 @@ export const Dexter_Detail = () => {
                     className="w-10 h-10"
                   />
                 </div>
-                <div className="text-2xl md:text-4xl font-bold text-white">
+                <div
+                  style={{ fontSize: "40px", lineHeight: "1em" }}
+                  className="font-semibold text-[#f9f9f9]"
+                >
                   The Challenge
                 </div>
-                <div className="text-white text-sm md:text-base leading-relaxed">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#f9f9f9] text-lg"
+                >
                   Grupo Dexter has a strategic focus on leveraging innovative
                   technological tools to strengthen its connection with
                   customers. They required a robust platform to support the high
@@ -133,28 +152,43 @@ export const Dexter_Detail = () => {
                     className="w-10 h-10"
                   />
                 </div>
-                <div className="text-2xl md:text-4xl font-bold text-white">
+                <div
+                  style={{ fontSize: "40px" }}
+                  className="text-[#f9f9f9] font-semibold "
+                >
                   Our All-in Solution
                 </div>
-                <div className="text-white text-lg font-bold md:text-base leading-relaxed">
-                  A multi-cloud platform that seamlessly integrates data from
-                  all of Grupo Dexter’s brands into a unified solution.
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#f9f9f9] text-lg"
+                >
+                  <strong>
+                    {" "}
+                    A multi-cloud platform that seamlessly integrates data from
+                    all of Grupo Dexter’s brands into a unified solution.
+                  </strong>
                 </div>
-                <div className="text-white text-sm md:text-base leading-relaxed">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#f9f9f9] text-lg"
+                >
                   This platform includes customized storefronts for each brand,
                   ensuring scalability and adaptability as the business grows.
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-800 py-6 px-4 mt-2 rounded-xl">
+            <div className="bg-[#474747] py-6 px-4 mt-2 rounded-xl">
               <div className=" flex items-center justify-center gap-3">
                 <img
                   src="/icon-stars-white.svg"
                   alt="Stars Icon"
                   className="w-10 h-10"
                 />
-                <h2 className="text-white text-4xl md:text-3xl font-semibold">
+                <h2
+                  style={{ lineHeight: "1.em", fontSize: "40px" }}
+                  className="text-[#f9f9f9] font-semibold"
+                >
                   Delivering exceptional results
                 </h2>
               </div>
@@ -166,8 +200,16 @@ export const Dexter_Detail = () => {
                   alt="Duplicate Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-teal-700 font-bold text-3xl">150%</div>
-                <p className="text-gray-700">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  150%
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   of growth sales soared in just one year
                 </p>
               </div>
@@ -178,8 +220,16 @@ export const Dexter_Detail = () => {
                   alt="Cart Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-[#008093] font-bold text-3xl">57%</div>
-                <p className="text-gray-700">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  57%
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   of e-commerce orders within six months
                 </p>
               </div>
@@ -190,8 +240,18 @@ export const Dexter_Detail = () => {
                   alt="Growth Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-[#008093] font-bold text-3xl">27%</div>
-                <p className="text-gray-700">average conversion rate growth</p>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  27%
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
+                  average conversion rate growth
+                </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow">
                 <img
@@ -199,8 +259,16 @@ export const Dexter_Detail = () => {
                   alt="Duplicate Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-[#008093] font-bold text-3xl">1.5M</div>
-                <p className="text-gray-700">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  1.5M
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   contacts migrated to Marketing Cloud
                 </p>
               </div>
@@ -211,8 +279,18 @@ export const Dexter_Detail = () => {
                   alt="Cart Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-[#008093] font-bold text-3xl">24M</div>
-                <p className="text-gray-700">emails sent monthly</p>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  24M
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
+                  emails sent monthly
+                </p>
               </div>
 
               <div className=" bg-white rounded-lg p-6 shadow">
@@ -221,8 +299,16 @@ export const Dexter_Detail = () => {
                   alt="Growth Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div className="text-[#008093] font-bold text-3xl">120%</div>
-                <p className="text-gray-700">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  120%
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   email sales growth during Cyber Monday
                 </p>
               </div>
@@ -237,11 +323,14 @@ export const Dexter_Detail = () => {
             alt="Descriptive Alt Text"
           />
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-white text-center px-4">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            <h2
+              style={{ fontSize: "40px", lineHeight: "1em" }}
+              className="text-[#f9f9f9] font-semibold mb-4"
+            >
               Don't get stuck in technical debt.
             </h2>
 
-            <button className="bg-pink-400 hover:bg-white hover:text-black text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+            <button className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
               Contact an expert
             </button>
           </div>
@@ -251,7 +340,10 @@ export const Dexter_Detail = () => {
           <div className="px-6 py-10 md:px-10 ">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-5 md:px-16 py-12 gap-8">
               <div className="md:w-2/3 text-center md:text-center">
-                <p className="italic text-gray-800 text-xl leading-relaxed">
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="italic text-2xl text-[#474747]"
+                >
                   “What was done was epic, and I attribute this to the good
                   chemistry, trust, of the team that was formed; and having all
                   together that common goal in which we all pushed to get the
@@ -260,7 +352,10 @@ export const Dexter_Detail = () => {
               </div>
 
               <div className="text-center md:text-center md:w-1/3">
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-3xl text-[#474747]"
+                >
                   Former CEO
                 </h3>
                 <p className=" mt-1">Innovation and product manager</p>
@@ -271,10 +366,16 @@ export const Dexter_Detail = () => {
                 <div>
                   <img src="/icon-arrows.svg" className="mx-auto" />
                 </div>
-                <div className="text-[#008093] text-2xl font-bold my-5">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] text-2xl font-bold my-5"
+                >
                   Unified ecommerce Platform
                 </div>
-                <div>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   Implemented Salesforce Commerce Cloud with storefront
                   reference architecture to optimize the user experience.
                 </div>
@@ -283,10 +384,16 @@ export const Dexter_Detail = () => {
                 <div>
                   <img src="/icon-infinite.svg" className="mx-auto" />
                 </div>
-                <div className="text-[#008093] text-2xl font-bold my-5">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] text-2xl font-bold my-5"
+                >
                   Unified ecommerce Platform
                 </div>
-                <div>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   Integrated Marketing Cloud and Service Cloud to deliver
                   personalized engagement and a unified customer database.
                 </div>
@@ -295,10 +402,16 @@ export const Dexter_Detail = () => {
                 <div>
                   <img src="/icon-chip.svg" className="mx-auto" />
                 </div>
-                <div className="text-[#008093] text-2xl font-bold my-5">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] text-2xl font-bold my-5"
+                >
                   AI-Driven insights
                 </div>
-                <div>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   Enabled Einstein Analytics for intelligent product suggestions
                   and enhanced customer interactions.
                 </div>
@@ -307,10 +420,16 @@ export const Dexter_Detail = () => {
                 <div>
                   <img src="/icon-badge-pink.svg" className="mx-auto" />
                 </div>
-                <div className="text-[#008093] text-2xl font-bold my-5">
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] text-2xl font-bold my-5"
+                >
                   Fraud prevention system
                 </div>
-                <div>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
                   Developed a custom fraud detection module on Salesforce
                   Platform to safeguard transactions.
                 </div>
@@ -321,10 +440,10 @@ export const Dexter_Detail = () => {
                 to="/resources/customer-stories"
                 className="flex gap-5 items-center justify-center group"
               >
-                <div className="p-3 bg-yellow-500 rounded-full text-white group-hover:cursor-pointer group-hover:bg-pink-400">
+                <div className="p-3 bg-[#fcc000] rounded-full text-white group-hover:cursor-pointer group-hover:bg-[#FF83A9]">
                   <FaArrowLeft />
                 </div>
-                <div className="text-lg">Back to cases</div>
+                <div className="text-lg text-[#474747]">Back to cases</div>
               </Link>
             </div>
           </div>
