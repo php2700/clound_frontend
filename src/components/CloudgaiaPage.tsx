@@ -56,7 +56,7 @@ const CloudgaiaPage = () => {
           <div className="relative bg-cover bg-center h-96 rounded-lg" style={{ backgroundImage: "url('https://via.placeholder.com/1200x600?text=People+Working')" }}>
             <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg flex items-center justify-center">
               <div className="text-center">
-                <h2 className="text-5xl font-bold text-white mb-6">Cloudgaia in one minute.</h2>
+                <h2 className="text-5xl font-bold text-white mb-6">Codescience in one minute.</h2>
                 <div className="flex justify-center">
                   <video
                     className="w-16 h-16 rounded-full cursor-pointer"

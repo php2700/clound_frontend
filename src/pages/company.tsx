@@ -6,6 +6,7 @@ import { throttle } from "lodash";
 import ImageHoverCard from "@/components/imageHoverCard";
 import ExpertiseCollapse from "@/components/Expertise_cloud";
 import IndustryCollapse from "@/components/industry_expertise";
+import { Link, useLocation } from "react-router-dom";
 
 // Define team members
 const teamMembers = [
@@ -157,6 +158,21 @@ const Company = () => {
   const [showVideoImage, setShowVideoImage] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
 
+  const location = useLocation();
+  
+    useEffect(() => {
+      // Wait for the DOM to load
+      setTimeout(() => {
+        if (location.hash) {
+          const id = location.hash.replace("#", "");
+          const section = document.getElementById(id);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }, 100); // Small delay to ensure DOM is ready
+    }, [location]);
+
   useEffect(() => {
     const handleScroll = throttle(() => {
       const current = window.scrollY;
@@ -192,14 +208,19 @@ const Company = () => {
       <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
         <div className="px-6 py-10 md:px-10">
           <div className="flex items-center text-sm mb-3 mt-10 text-[#474747]">
-            <FaHome className="mr-1 text-xl" aria-hidden="true" />
+            <Link to="/">
+              <FaHome
+                className="mr-1 text-xl cursor-pointer"
+                aria-hidden="true"
+              />
+            </Link>
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">Company</span>
           </div>
 
           <div className="mx-auto mt-5">
             <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
-              Experience the Cloudgaia vibe
+              Experience the Codescience vibe
             </h1>
             <p
               style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
@@ -222,7 +243,7 @@ const Company = () => {
         />
       </div>
 
-      <div className="bg-[#f9f9f9]">
+      <div id="our-story" className="bg-[#f9f9f9]">
         <div className="container mx-auto px-4 py-10 md:px-6 ">
           <div className="px-6 py-10 md:px-10">
             <div className="flex flex-col md:flex-row gap-2 ">
@@ -375,7 +396,7 @@ const Company = () => {
                     }}
                     className="text-sm md:text-lg m-0 p-0 text-xl"
                   >
-                    “At Cloudgaia we always say that we are not looking for
+                    “At Codescience we always say that we are not looking for
                     happy <br />
                     customers, we are looking for successful customers. I am
                     proud of our <br />
@@ -454,7 +475,7 @@ const Company = () => {
                       />
                       <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
                         <h2 className="text-white text-2xl md:text-4xl font-bold bg-black/50 px-6 py-3 rounded mb-4">
-                          Cloudgaia in one minute.
+                          Codescience in one minute.
                         </h2>
                         <button
                           onClick={() => setPlayVideo(true)}
@@ -483,7 +504,7 @@ const Company = () => {
               </div>
             )}
 
-            <div className=" mt-16">
+            <div id="meet-the-team" className=" mt-16">
               <h2 className="text-3xl md:text-6xl font-bold text-center text-[#474747] mb-10">
                 Our senior leadership team
               </h2>
@@ -638,7 +659,7 @@ const Company = () => {
         </div>
       </div>
 
-      <div
+      <div id="salesforce-ventures"
         className="mx-auto p-6 my-20 rounded-lg shadow-lg text-center max-w-7xl"
         style={{ backgroundColor: "#008093" }}
       >

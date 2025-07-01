@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { FaHome, FaRegLightbulb, FaRocket, FaInfoCircle, FaAngleUp } from "react-icons/fa";
 import {
   FaHome,
   FaRegLightbulb,
@@ -11,6 +10,12 @@ import { FaArrowLeft, FaArrowRight, FaAngleDown } from "react-icons/fa";
 import Header from "@/components/Header";
 import footer from "@/components/Footer";
 import Footer from "@/components/Footer";
+import { useRef } from "react";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
+import { toast } from "sonner";
+
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
 const images = [
   { img: "/careers-slide-1.webp" },
@@ -23,7 +28,7 @@ const images = [
 const testimonials = [
   {
     quote:
-      "Cloudgaia represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
+      "Codescience represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
     name: "Juan Pablo Herrera",
     title: "Salesforce specialist",
     flag: "/flagarg.svg",
@@ -67,27 +72,49 @@ const accordionData = [
   },
 ];
 
-// Data for Open Positions
+// Data for Open Positions - UPDATED
 const jobPositions = [
+  {
+    title: "Senior Project Manager",
+    department: "Operations",
+    type: "Remote",
+    purpose:
+      "We are looking for a Senior Project Manager. The ideal candidate will be responsible for planning, coordinating, and implementing projects within the decided-upon budget, timeline, and scope. They will also effectively monitor and present project updates to relevant stakeholders, clients, or project team members.",
+    skills: [
+      "7 to 10 years of experience in managing high-profile projects (large companies, multi-cloud environments, multiple services).",
+      "3 years of experience managing agile teams with +20 people.",
+      "Experience in multi-cloud Salesforce projects implementation (Sales, Commerce B2B, Marketing and Service Cloud).",
+      "Experience in B2B projects or ideally involved in projects targeting the mass consumer segment.",
+      "Advanced English Level.",
+      "Leadership skills and executive communication (C-level).",
+    ],
+  },
   {
     title: "Solution Engineer Executive",
     department: "Commercial",
     type: "Remote",
-  },
-  {
-    title: "Salesforce Release Manager",
-    department: "Operations",
-    type: "Remote",
-  },
-  {
-    title: "Salesforce Solution Architect – Commerce B2C",
-    department: "Operations",
-    type: "Remote",
+    purpose:
+      "Provide technical expertise and support to the sales team, create and deliver compelling product demonstrations, and design solutions that meet client needs.",
+    skills: [
+      "Proven experience as a Solution Engineer or similar role.",
+      "Strong understanding of enterprise software and sales cycles.",
+      "Excellent presentation and communication skills.",
+      "Ability to translate technical features into business benefits.",
+    ],
   },
   {
     title: "Senior Salesforce Frontend Developer (LWC Specialist)",
     department: "Operations",
     type: "Remote",
+    purpose:
+      "Design and develop high-quality, scalable, and performant user interfaces on the Salesforce platform using Lightning Web Components (LWC).",
+    skills: [
+      "Extensive experience with LWC and the Salesforce Lightning Design System (SLDS).",
+      "Proficient in JavaScript, HTML5, and CSS3.",
+      "Experience with Aura Components is a plus.",
+      "Strong understanding of front-end development best practices.",
+      "Salesforce Platform Developer I certification is required.",
+    ],
   },
 ];
 
@@ -114,9 +141,30 @@ export const Careers = () => {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("All areas");
   const [openAccordion, setOpenAccordion] = useState(null);
+  const [isRobot, setIsRobot] = useState(false);
+
   const handleAccordionClick = (title) => {
     setOpenAccordion(openAccordion === title ? null : title);
-  }; // State for job filters
+  };
+  const [openJobIndex, setOpenJobIndex] = useState(null);
+  const cloudgaierRef = useRef(null);
+  const openPositionsRef = useRef(null);
+  // State for job filters
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Wait for the DOM to load
+    setTimeout(() => {
+      if (location.hash) {
+        const id = location.hash.replace("#", "");
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }, 100); // Small delay to ensure DOM is ready
+  }, [location]);
 
   // State for the form
   const [formData, setFormData] = useState({
@@ -128,7 +176,6 @@ export const Careers = () => {
     area: "",
     linkedin: "",
     message: "",
-    agreed: false,
   });
 
   // Handler for form input changes
@@ -143,8 +190,28 @@ export const Careers = () => {
   // Handler for form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    alert("Application submitted successfully! (Check console for data)");
+    axios
+      .post(`${API_BASE_URL}api/user/career`, formData)
+      .then((res) => {
+   setFormData({
+        firstName: "",
+        lastName: "",
+        mobile: "",
+        email: "",
+        country: "",
+        area: "",
+        linkedin: "",
+        message: "",
+      });
+        setIsRobot(false);
+
+        toast.success("Details_added", {
+          position: "top-right",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {
@@ -165,6 +232,13 @@ export const Careers = () => {
     setTestimonialIndex((prev) =>
       prev === 0 ? testimonials.length - 1 : prev - 1
     );
+  };
+  const scrollToCloudgaier = () => {
+    cloudgaierRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToOpenPositions = () => {
+    openPositionsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleNextTestimonial = () => {
@@ -194,10 +268,10 @@ export const Careers = () => {
   }, [lastScrollY]);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#f9f9f9]">
       {/* Blue Right-Angle Triangle in the Top-Right Corner */}
       <div
-        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
+        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
         aria-hidden="true" // Hides the decorative element from screen readers
       />
@@ -212,17 +286,17 @@ export const Careers = () => {
       {/* <Header /> */}
 
       {/* ... (Previous sections remain unchanged) ... */}
-      <div className="container mx-auto pt-[120px] px-4 md:px-6">
-        <div className="px-6 py-10 md:px-10">
-          <div className="flex items-center text-sm text-[#474747] mt-10">
-            <FaHome className="mr-1 text-xl" />
-            <span className="mx-1 text-base font-bold">&nbsp;/</span>
-            <span className="text-base font-bold cursor-pointer">
-              &nbsp; Careers
+      <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
+        <div className="px-6 py-10 md:px-20 ">
+          <div className="flex items-center text-sm text-gray-800 mt-8">
+            <img src="bread-home.svg" className="mr-1 text-xl" />
+            <span className="mx-4 text-lg font-medium">/</span>
+            <span className="text-lg text-[#474747] text-[18px] font-semibold  cursor-pointer">
+              Careers
             </span>
           </div>
           <div
-            className={`text-6xl font-bold text-[#008093] my-5 transition-transform
+            className={`text-5xl font-bold text-[#008093] my-5 transition-transform
                                                      ${
                                                        loaded
                                                          ? "translate-y-0  duration-300"
@@ -233,11 +307,56 @@ export const Careers = () => {
             All-in for people
           </div>
           <div
-            style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
-            className="mt-5 text-2xl text-[#474747] "
+            style={{ fontFamily: "sans-serif,dm-sans" }}
+            className="text-2xl text-[#474747] text-[24px]"
           >
             Join a multicultural team of Salesforce experts who elevate
             businesses through technology.
+          </div>
+        </div>
+        <div className="bg-[#f9f9f9] py-1px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row  gap-12">
+          {/* World Map Section */}
+          <div className="relative w-full max-w-3xl px-6 py-8">
+            <img
+              src="Screenshot (187).png"
+              alt="World Map"
+              className="w-full opacity-80"
+            />
+
+            {/* Example Dots (customize positions as needed) */}
+          </div>
+
+          {/* Text Section */}
+          <div className="max-w-xl text-center lg:text-left py-20">
+            <h2 className="text-[#ff83a9] text-2xl font-bold mb-4 text-[32px] ">
+              Cloudgaiers around the world
+            </h2>
+            <p
+              style={{ fontFamily: "sans-serif,dm-sans" }}
+              className="text-[#474747] font-text text-[18px] mb-6 "
+            >
+              Together, we drive meaningful transformations with a One Team
+              approach, innovation, and a shared commitment to creating lasting
+              impact—all while having a great time.
+            </p>
+            <div
+              style={{ fontFamily: "sans-serif,dm-sans" }}
+              className="flex flex-col sm:flex-row gap-4 "
+            >
+              <button
+                onClick={scrollToCloudgaier}
+                className="bg-[#fcc000] font-semibold text-[16px]  text-[#474747] hover:bg-[#ff83a9] hover:text-[#FFFFFF] text-semibold  py-2 px-6 rounded-full"
+              >
+                Become a Cloudgaier
+              </button>
+              <button
+                onClick={scrollToOpenPositions}
+                style={{ fontFamily: "sans-serif,dm-sans" }}
+                className="bg-[#fcc000] font-semibold text-[16px]  text-[#474747] hover:bg-[#ff83a9] hover:text-[#FFFFFF]  py-2 px-6 rounded-full"
+              >
+                Explore open positions
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -261,13 +380,10 @@ export const Careers = () => {
         </div>
       </div>
 
-      <div className=" bg-[#f9f9f9]">
+      <div id="our-vibe" className=" bg-[#f9f9f9]">
         <div className="container mx-auto pt-[80px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-0">
-            <div
-              style={{ lineHeight: "1em" }}
-              className="text-6xl font-bold text-center text-[#474747] "
-            >
+            <div className="text-6xl font-bold text-center text-gray-700">
               Our culture is what sets us apart
             </div>
             <div className="my-4">
@@ -282,25 +398,33 @@ export const Careers = () => {
                 <source src="/Vibe-1.mp4" type="video/mp4" />
               </video>
             </div>
-            <div style={{lineHeight:'1.2em'}} className="text-center text-lg text-[#474747]">
-              <strong style={{ fontWeight: "bolder" }}>
-                Our vibes makes the difference.
-              </strong>
+            <div className="text-center font-bold text-lg">
+              Our vibes makes the difference.
             </div>
             <div
-              style={{ fontFamily: "sans-serif,dm-sans" ,lineHeight:'1.2em'}}
-              className="text-center  text-lg  text-[#474747]"
+              style={{ fontFamily: "sans-serif,dm-sans" }}
+              className="text-center leading-tight text-lg"
             >
               It’s the way we work, the way we connect, and the way we create
-              together. We’re committed to building a safe and <br />
-  inclusive space where people come first—where you can be yourself,
-              grow, and thrive as part of a team that supports <br />
-  and inspires you.
+              together. We’re committed to building a safe and
+            </div>
+            <div
+              style={{ fontFamily: "sans-serif,dm-sans" }}
+              className="text-center leading-tight text-lg"
+            >
+              inclusive space where people come first—where you can be yourself,
+              grow, and thrive as part of a team that supports
+            </div>
+            <div
+              style={{ fontFamily: "sans-serif,dm-sans" }}
+              className="text-center text-lg"
+            >
+              and inspires you.
             </div>
           </div>
         </div>
 
-        <div className=" container mx-auto pt-[5] px-4 md:px-6  py-8">
+        <div className=" container mx-auto pt-[80px] px-4 md:px-6  py-8">
           <div className="px-6 py-10 md:px-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
               {accordionData.map((item) => {
@@ -339,19 +463,19 @@ export const Careers = () => {
               })}
             </div>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans" ,lineHeight:'1.2em' }}
-              className="text-center text-[#474747] text-lg mb-16  mx-auto"
+              style={{ fontFamily: "sans-serif,dm-sans" }}
+              className="text-center text-gray-600 mb-16 max-w-2xl mx-auto"
             >
               Here, it's not just about work—it's about working together to
               create something extraordinary.
             </p>
             <div className="text-center mb-12">
-              <h2 style={{lineHeight:'1.2em'}} className="text-3xl  font-bold text-[#474747] mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
                 We're all-in for your professional growth
               </h2>
               <p
-                style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
-                className=" max-w-4xl mx-auto text-[#474747] text-lg"
+                style={{ fontFamily: "sans-serif,dm-sans" }}
+                className="leading-tight max-w-4xl mx-auto text-gray-600 text-lg"
               >
                 We're here to empower you to become the best version of yourself
                 every day, offering the flexibility to shape your work
@@ -360,112 +484,64 @@ export const Careers = () => {
                 for you to grow, thrive, and make an impact.
               </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto">
-              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                  {/* IMG ko VIDEO se replace kiya gaya hai */}
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="max-h-full w-auto"
-                  >
-                    <source src="/Workmy.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-1 mx-auto">
+              {[
+                {
+                  video: "/Workmy.mp4",
+                  points: [
+                    "Work from home, the office, or a coworking space—it's your choice!",
+                    "The freedom to work from anywhere in the world (1 month).",
+                  ],
+                },
+                {
+                  video: "/freetimeoffs.mp4",
+                  points: [
+                    "Flexible time off and vacations",
+                    "Work schedules that fit your lifestyle",
+                  ],
+                },
+                {
+                  video: "/academy.mp4",
+                  points: [
+                    "Free Salesforce certifications and other related certifications",
+                    "English-Spanish language classes",
+                    "Workshops and training sessions",
+                  ],
+                },
+                {
+                  video: "/wellness.mp4",
+                  points: [
+                    "A culture of care",
+                    "Flexible work options",
+                    "Comprehensive wellness programs",
+                  ],
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-[#FAFAFA] rounded-xl  p-8 flex flex-col sm:flex-row items-center gap-15"
+                >
+                  <div className="flex-shrink-0 w-80 h-24 flex items-center justify-center">
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="max-h-full w-auto"
+                    >
+                      <source src={item.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="full-h text-gray-700">
+                    <ul className="font-dm text-[16px] list-disc list-inside ml-4 space-y-4 leading-tight">
+                      {item.points.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="text-[#474747]">
-                  <ul
-                    style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
-                    className="list-disc list-inside space-y-3 "
-                  >
-                    <li>
-                      Work from home, the office, or a coworking space—it's your
-                      choice!
-                    </li>
-                    <li>
-                      The freedom to work from anywhere in the world (1 month).
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                  {/* NOTE: Is path ko apni video file se replace karein */}
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="max-h-full w-auto"
-                  >
-                    <source src="/freetimeoffs.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div className="text-[#474747]">
-                  <ul
-                      style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
-                    className="list-disc list-inside space-y-3 "
-                  >
-                    <li>Flexible time off and vacations</li>
-                    <li>Work schedules that fit your lifestyle</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="max-h-full w-auto"
-                  >
-                    <source src="/academy.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  {/* <img src="/academy.png" alt="Academy logo" className="max-h-full" /> */}
-                </div>
-                <div className="text-[#474747]">
-                  <ul
-                      style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
-                    className="list-disc list-inside space-y-3 leading-tight"
-                  >
-                    <li>
-                      Free Salesforce certifications and other related
-                      certifications
-                    </li>
-                    <li>English-Spanish language classes</li>
-                    <li>Workshops and training sessions</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col sm:flex-row items-center gap-8">
-                <div className="flex-shrink-0 w-40 h-24 flex items-center justify-center">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="max-h-full w-auto"
-                  >
-                    <source src="/wellness.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div className="text-[#474747]">
-                  <ul
-                        style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
-                    className="list-disc list-inside space-y-3 "
-                  >
-                    <li>A culture of care</li>
-                    <li>Flexible work options</li>
-                    <li>Comprehensive wellness programs</li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -474,7 +550,7 @@ export const Careers = () => {
           <div className="cpx-6 py-5 md:px-10">
             <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
               <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">
-                <blockquote style={{lineHeight:'1.2em'}} className="text-3xl  text-[#f9f9f9] ">
+                <blockquote className="text-2xl lg:text-3xl font-semibold leading-relaxed">
                   “{currentTestimonial.quote}”
                 </blockquote>
                 <div className="mt-8">
@@ -484,24 +560,24 @@ export const Careers = () => {
                       alt={`${currentTestimonial.name}'s country flag`}
                       className="w-8 h-auto rounded-sm"
                     />
-                    <span  style={{lineHeight:'1.2em'}} className="font-bold text-2xl text-[#fcc000]">
+                    <span className="font-bold text-lg text-yellow-400">
                       {currentTestimonial.name}
                     </span>
                   </div>
-                  <p style={{fontSize:'12px'}} className="text-[#f9f9f9] mt-1">
+                  <p className="text-gray-300 mt-1">
                     {currentTestimonial.title}
                   </p>
                 </div>
                 <div className="flex gap-4 mt-8">
                   <button
                     onClick={handlePrevTestimonial}
-                    className="-bg-[#fcc000] text-white p-3 rounded-full hover:bg-[#FF83A9] transition-colors "
+                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors "
                   >
                     <FaArrowLeft />
                   </button>
                   <button
                     onClick={handleNextTestimonial}
-                    className="bg-[#fcc000] text-white p-3 rounded-full hover:bg-[#FF83A9] transition-colors"
+                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors"
                   >
                     <FaArrowRight />
                   </button>
@@ -511,12 +587,11 @@ export const Careers = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full py-24">
-        <img
-          src="/careersback.webp"
-          alt="People working in an office"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+      <div
+        id="cloudgaier"
+        ref={cloudgaierRef}
+        className="relative w-full py-24"
+      >
         <div className="absolute inset-0 bg-black/75 z-0"></div>
         <div className="relative z-10 container mx-auto px-4">
           <h2 className="text-4xl lg:text-5xl font-bold text-yellow-400 text-center mb-12">
@@ -630,6 +705,9 @@ export const Careers = () => {
                     type="checkbox"
                     id="recaptcha-mock"
                     className="h-6 w-6 border-gray-300 rounded"
+                    required
+                    checked={isRobot}
+                    onChange={(e) => setIsRobot(e.target.checked)}
                   />
                   <label htmlFor="recaptcha-mock" className="text-gray-800">
                     I'm not a robot
@@ -652,8 +730,8 @@ export const Careers = () => {
         </div>
       </div>
 
-      {/* START: OPEN POSITIONS SECTION */}
-      <div className=" bg-[#f9f9f9]">
+      {/* START: OPEN POSITIONS SECTION (UPDATED) */}
+      <div ref={openPositionsRef} id="open-positions" className=" bg-[#f9f9f9]">
         <div className="container mx-auto px-4 py-20 md:px-6 ">
           <div className="px-6 py-10 md:px-10">
             <div className="text-center mb-12">
@@ -674,8 +752,8 @@ export const Careers = () => {
                     What we offer
                   </h3>
                   <ul
-                    style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
-                    className="list-disc list-inside text-[#474747] mt-2 space-y-1 text-lg"
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
                   >
                     <li>A dynamic and collaborative work environment</li>
                     <li>Flexibility to work from anywhere in the world</li>
@@ -692,11 +770,11 @@ export const Careers = () => {
                 <img src="/icon-plane.svg" className="h-6" />
                 <div>
                   <h3 className="font-bold text-lg text-pink-500">
-                    Why Join Cloudgaia?
+                    Why Join Codescience?
                   </h3>
                   <ul
-                     style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
-                    className="list-disc list-inside text-[#474747] text-lg mt-2 space-y-1 "
+                    style={{ fontFamily: "sans-serif,dm-sans" }}
+                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
                   >
                     <li>
                       Work on cutting-edge Salesforce projects with top-tier
@@ -716,19 +794,19 @@ export const Careers = () => {
 
                 <div>
                   <h3 className="font-bold text-lg text-pink-500">
-                    About Cloudgaia:
+                    About Codescience
                   </h3>
                   <p
                     className="text-gray-600 mt-2"
                     style={{ fontFamily: "sans-serif,dm-sans" }}
                   >
-                    At Cloudgaia, we are passionate about digital transformation
-                    with Salesforce. We partner with companies to drive
-                    innovation, ensuring real business impact.
+                    At Codescience, we are passionate about digital
+                    transformation with Salesforce. We partner with companies to
+                    drive innovation, ensuring real business impact.
                   </p>
                   <p className="text-gray-700 mt-4 text-xl font-semibold leading-tight">
                     Ready to take your career to the next level? <br /> Join
-                    Cloudgaia and be part of the digital evolution!
+                    Codescience and be part of the digital evolution!
                   </p>
                 </div>
               </div>
@@ -749,7 +827,7 @@ export const Careers = () => {
                 onClick={() => setActiveTab("Commercial")}
                 className={`py-2 px-6  bg-white rounded-full font-semibold transition-colors ${
                   activeTab === "Commercial"
-                    ? "border-2 border-teal-500 text-[#008093]"
+                    ? "border-2 border-teal-500 text-[#FF83A9]"
                     : "text-gray-500 hover:text-[#008093] hover:border-[#008093] border border-white"
                 }`}
               >
@@ -759,7 +837,7 @@ export const Careers = () => {
                 onClick={() => setActiveTab("Operations")}
                 className={`py-2 px-6 rounded-full  bg-white font-semibold transition-colors ${
                   activeTab === "Operations"
-                    ? "border-2 border-teal-500 text-[#008093]"
+                    ? "border-2 border-teal-500 text-[#FF83A9]"
                     : "text-gray-500 hover:text-[#008093] hover:border-[#008093] border border-white"
                 }`}
               >
@@ -767,31 +845,75 @@ export const Careers = () => {
               </button>
             </div>
 
-            <div className=" bg-white rounded-2xl shadow-lg p-4">
-              {filteredJobs.map((job, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center justify-between p-4 ${
-                    index < filteredJobs.length - 1
-                      ? "border-b border-gray-200"
-                      : ""
-                  }`}
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-yellow-400 text-white w-10 h-10 rounded-full flex items-center justify-center">
-                      <FaAngleDown />
+            {/* START: UPDATED JOB LISTING RENDER LOGIC */}
+            <div className="bg-white rounded-2xl shadow-lg">
+              <div>
+                {filteredJobs.map((job, index) => {
+                  const isOpen = openJobIndex === index;
+                  return (
+                    <div
+                      key={index}
+                      className={`transition-all duration-300 ease-in-out ${
+                        index < filteredJobs.length - 1
+                          ? "border-b border-gray-200"
+                          : ""
+                      }`}
+                    >
+                      <div
+                        className="flex items-center  p-10 cursor-pointer"
+                        onClick={() => setOpenJobIndex(isOpen ? null : index)}
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="bg-yellow-400  text-white w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                            {isOpen ? <FaAngleUp /> : <FaAngleDown />}
+                          </div>
+                          <h4 className="font-dm text-[24px] text-[#474747]">
+                            {job.title}
+                          </h4>
+                        </div>
+                        <div className=" md:flex ml-6 gap-4 text-[#ff83a9] font-semibold ">
+                          <span>{job.department}</span>
+                          <span className="text-[#ff83a9] pl-2 ml-15">
+                            {job.type}
+                          </span>
+                        </div>
+                      </div>
+
+                      {isOpen && (
+                        <div className="px-6 pb-6 text-gray-700 space-y-6">
+                          <div>
+                            <h5 className="font-bold text-lg text-[#ff83a9] mb-3 flex items-center gap-5">
+                              <img src="purpose-icon.svg"></img> Purpose of
+                              position
+                            </h5>
+                            <p className="font-dm text-[18px] text-[#474747] pl-2 ml-20">
+                              {job.purpose}
+                            </p>
+                          </div>
+                          <div>
+                            <h5 className="font-bold text-lg text-[#ff83a9] mb-3 flex items-center gap-5">
+                              <img src="skills-icon.svg"></img> Required Skills
+                              & Experience
+                            </h5>
+                            <ul className="font-dm text-[18px] text-[#474747] space-y-2   pl-2 ml-20">
+                              {job.skills.map((skill, i) => (
+                                <li key={i}>{skill}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="text-left mt-6">
+                            <button className="bg-yellow-400 text-black font-bold py-2 px-6 rounded-lg hover:bg-pink-500 transition">
+                              Apply now!
+                            </button>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                    <h4 className="font-bold text-lg text-gray-800">
-                      {job.title}
-                    </h4>
-                  </div>
-                  <div className="flex items-center gap-4 text-pink-500 font-semibold">
-                    <span>{job.department}</span>
-                    <span>{job.type}</span>
-                  </div>
-                </div>
-              ))}
+                  );
+                })}
+              </div>
             </div>
+            {/* END: UPDATED JOB LISTING RENDER LOGIC */}
 
             <div className="text-center mt-12">
               <button

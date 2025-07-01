@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const SuccessStoriesSection = () => {
   const stories = [
@@ -11,6 +12,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+      link: "/customer-stories/cona-detail",
     },
     {
       subtitle: "Unlocking Insights",
@@ -21,6 +23,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+      link: "/customer-stories/gador-detail",
     },
     {
       subtitle: "Empowering Success",
@@ -32,8 +35,10 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+      link: "/customer-stories/dexter-detail",
     },
   ];
+
 
   return (
     <div>
@@ -55,9 +60,9 @@ const SuccessStoriesSection = () => {
           >
             Unlock its potential with us
           </p>
-          <button className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+          <Link to = "/services/implementation" className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
             Check our services
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -110,23 +115,27 @@ const SuccessStoriesSection = () => {
                   {story.title}
                 </h3>
 
-                <Button
-                  variant="outline"
-                  className={`${story.buttonStyle} rounded-full font-semibold hover:bg-white hover:text-[#474747] py-3 px-6`}
-                >
-                  Discover this story
-                </Button>
+                <Link to={story.link}>
+                  <Button
+                    variant="outline"
+                    className={`${story.buttonStyle} rounded-full font-semibold hover:bg-white hover:text-[#474747] py-3 px-6`}
+                  >
+                    Discover this story
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
 
           <div className="text-center">
+            <Link to="/resources/customer-stories">
             <Button
               variant="outline"
               className="text-[#474747] text-[15px] border-2 border-none hover:bg-pink-400 hover:text-white rounded-full font-bold py-3 px-8 transition-all duration-300 transform hover:scale-105"
             >
               View all success stories
             </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -38,7 +38,7 @@ const NewCloudgaiaSection = () => {
           {/* Right Section: Text */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-4xl font-bold text-white mb-5 leading-tight">
-              <span className="text-[#ff83a9]"> A new Cloudgaia</span>
+              <span className="text-[#ff83a9]"> A new Codescience</span>
             </h2>
             <p style={{  fontFamily: 'sans-serif,dm-sans'}} className="text-2xl text-[#f9f9f9] leading-relaxed leading-tight" >
               New visual identity. New brand tagline.

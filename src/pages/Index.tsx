@@ -6,6 +6,7 @@ import SuccessStoriesSection from "@/components/SuccessStoriesSection";
 import Footer from "@/components/Footer";
 import Home from "@/components/Home";
 import { useEffect, useState } from "react";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -42,6 +43,7 @@ const Index = () => {
       >
         <Header />
       </div>
+      <ScrollToTop />
       <HeroSection />
       <StatsSection />
       <NewCloudgaiaSection />

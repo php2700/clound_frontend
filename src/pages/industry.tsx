@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import Scroll from "@/components/scroll";
 import IndustryCollapse from "@/components/industry_expertise";
+import { Link } from "react-router-dom";
+// import { Link } from "lucide-react";
 // import industries3 from "@/public/industries4.PNG"; // adjust path if different
 
 const Industries = () => {
@@ -50,7 +52,9 @@ const Industries = () => {
       <div className="container mx-auto mt-20 px-4 py-10 md:px-6">
         <div className="px-6 md:px-10 py-10">
           <div className="flex items-center text-sm text-[#474747] mb-3 mt-10">
-            <FaHome className="mr-1 text-xl" />
+            <Link to="/">
+  <FaHome className="mr-1 text-xl cursor-pointer" aria-hidden="true" />
+</Link>
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">Industries</span>
           </div>
@@ -89,7 +93,7 @@ const Industries = () => {
         <div className="container mx-auto px-4 py-20 md:px-6">
           <div className="px-6 md:px-10 py-10">
             {/* Card Grid Section */}
-            <div className="mt-16 flex justify-center">
+            <div className="flex justify-center">
               <div className="w-full flex flex-col items-center gap-2">
                 {/* Row 1 */}
                 <div className="flex gap-2 w-full">
@@ -236,7 +240,7 @@ const Industries = () => {
           </div>
         </div>
         {/* Scrolling Logos */}
-        <div className="mt-10">
+        <div>
           <Scroll />
         </div>
 
@@ -263,9 +267,9 @@ const Industries = () => {
             What's your <br />
             Salesforce Challenge?
           </h2>
-          <button className="bg-[#FF83A9] text-white px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-white hover:text-[#474747]">
+          <Link to="/contact" className="bg-[#FF83A9] text-white px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-white hover:text-[#474747]">
             Contact an expert
-          </button>
+          </Link>
         </div>
       </div>
       <Footer />

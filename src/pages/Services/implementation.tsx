@@ -11,6 +11,7 @@ import {
   FaStar,
   FaUsers,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // Country list
 const countries = [
@@ -162,7 +163,12 @@ const Implementation = () => {
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
           <div className="flex items-center text-sm text-[#474747] mt-10">
-            <FaHome className="mr-1 text-xl" />
+            <Link to="/">
+              <FaHome
+                className="mr-1 text-xl cursor-pointer"
+                aria-hidden="true"
+              />
+            </Link>
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">
               Services / Implementation
@@ -200,7 +206,7 @@ const Implementation = () => {
       <div className="bg-[#f9f9f9]">
         <div className="container mx-auto px-4 py-10 md:px-6">
           <div className="px-6 py-10 md:px-10">
-            <div className="flex flex-col lg:flex-row items-start mt-20 gap-5 ">
+            <div className="flex flex-col lg:flex-row items-start mt-5 gap-5 ">
               {/* Left Side */}
               <div className="lg:w-[55%] w-full flex flex-col gap-12">
                 <div className="p-6 bg-white rounded-lg shadow-md ">
@@ -314,94 +320,96 @@ const Implementation = () => {
               </div>
 
               {/* Right Side Form */}
+              {/* Right Side Form */}
               <div className="lg:w-[45%] w-full sticky top-10 self-start">
                 <form className="bg-[#FCC000] text-white p-8 rounded-xl space-y-6 shadow-xl">
-                  <h2 className="text-2xl font-semibold mb-2 leading-tight">
-                        Complete the form and book
-                        <br />a free consultation
-                      </h2>
+                  <p className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]">
+                    Complete the form and book <br /> a free consultation
+                  </p>
 
-                      {/* First & Last Name */}
-                      <div className="flex gap-4">
-                        <input
-                          type="text"
-                          placeholder="First Name*"
-                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
-                          required
-                        />
-                        <input
-                          type="text"
-                          placeholder="Last Name*"
-                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
-                          required
-                        />
-                      </div>
+                  {/* Name Fields */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <input
+                      type="text"
+                      placeholder="First Name*"
+                      required
+                      className="flex-1 p-3 bg-white text-black rounded-md"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last Name*"
+                      required
+                      className="flex-1 p-3 bg-white text-black rounded-md"
+                    />
+                  </div>
 
-                      {/* Email & Company */}
-                      <div className="flex gap-4">
-                        <input
-                          type="email"
-                          placeholder="Email*"
-                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
-                          required
-                        />
-                        <input
-                          type="text"
-                          placeholder="Company*"
-                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
-                          required
-                        />
-                      </div>
+                  {/* Company + Email */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <input
+                      type="text"
+                      placeholder="Company*"
+                      required
+                      className="flex-1 p-3 bg-white text-black rounded-md"
+                    />
+                    <input
+                      type="email"
+                      placeholder="Email*"
+                      required
+                      className="flex-1 p-3 bg-white text-black rounded-md"
+                    />
+                  </div>
 
-                      {/* Country Dropdown */}
-                      <select
-                        required
-                        className="w-full p-3 rounded bg-white text-black text-lg focus:outline-none"
-                        defaultValue=""
-                      >
-                        <option disabled value="">
-                          Select Country*
-                        </option>
-                        {countries.map((country, index) => (
-                          <option
-                            key={index}
-                            value={country}
-                            className="text-xs"
-                          >
-                            {country}
-                          </option>
-                        ))}
-                      </select>
+                  {/* Country Dropdown */}
+                  <select
+                    required
+                    className="w-full p-3 bg-white text-gray-700 rounded-md"
+                    defaultValue=""
+                  >
+                    <option disabled value="">
+                      Country*
+                    </option>
+                    {countries.map((country, id) => (
+                      <option key={id} value={country}>
+                        {country}
+                      </option>
+                    ))}
+                  </select>
 
-                      {/* Message */}
-                      <textarea
-                        placeholder="Message*"
-                        className="w-full p-3 h-28 rounded bg-white text-black text-lg resize-none focus:outline-none"
-                        required
-                      ></textarea>
+                  {/* Message */}
+                  <textarea
+                    placeholder="Message*"
+                    required
+                    className="w-full p-3 bg-white text-black rounded-md h-32"
+                  />
 
-                      {/* Checkbox */}
-                      <p className="text-xs text-gray-800">
-                        By continuing, I confirm that I have read and agree to
-                        the Privacy Policy.
-                      </p>
-                      <div className="flex items-start gap-2">
-                        <input type="checkbox" className="mt-1" required />
-                        <p className="text-xs text-gray-800">
-                          I agree to receive emails from CloudGaia with updates
-                          on services, events, and alerts. I can unsubscribe at
-                          any time.
-                        </p>
-                      </div>
+                  <p className="text-sm font-light text-text-gray-700">
+                    By continuing, I confirm that I have read and agree to the{" "}
+                    <span className="font-semibold underline">
+                      Privacy Policy
+                    </span>
+                    .
+                  </p>
 
-                      {/* Submit */}
-                      <div className="absolute bottom-4 right-4">
-                        <button
-                          type="submit"
-                          className="bg-white text-black font-semibold py-3 px-8 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition text-lg w-26 min-h-12 mb-5"
-                        >
-                          Send
-                        </button>
+                  <label className="flex items-start text-sm font-light text-text-gray-700">
+                    <input
+                      type="checkbox"
+                      className="mt-1 accent-white"
+                      required
+                    />
+                    <span className="ml-2">
+                      I agree to receive emails from CloudGaia with updates on
+                      services, events, and alerts. I can unsubscribe at any
+                      time.
+                    </span>
+                  </label>
+
+                  <div className="flex justify-end">
+                    <button
+                      type="submit"
+                      className="bg-white text-gray-800 font-semibold px-6 py-2 rounded-full hover:bg-[#FF83A9] hover:text-white transition-all"
+                    >
+                      Send
+                    </button>
                   </div>
                 </form>
               </div>
@@ -416,13 +424,12 @@ const Implementation = () => {
               </h2>
 
               {/* Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                {/* Card 1 */}
-                <div className="p-6 bg-white rounded-lg shadow-md text-left">
-                  <img src="/services-icon-3.svg" className="mb-4" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-6  rounded-lg shadow-md text-left bg-white">
+                  <img src="/services-icon-1.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-semibold mb-2"
+                    className=" text-[#008093] font-semibold mb-2"
                   >
                     Innovation
                   </h3>
@@ -436,21 +443,20 @@ const Implementation = () => {
                     Discover cutting-edge solutions that help you stay ahead of
                     the curve.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/innovation"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
                 </div>
 
-                {/* Card 2 */}
-                <div className="p-6 bg-white rounded-lg shadow-md text-left">
+                <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-bold mb-2"
+                    className=" text-[#008093] font-semibold mb-2"
                   >
                     Strategic Growth
                   </h3>
@@ -459,26 +465,25 @@ const Implementation = () => {
                       fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                    className="text-[#474747] text-lg mb-4 leading-tight"
                   >
                     Accelerate your business growth with focused strategic
                     initiatives.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/growth"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
                 </div>
 
-                {/* Card 3 */}
                 <div className="p-6 bg-white rounded-lg shadow-md text-left">
                   <img src="/services-icon-2.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-bold mb-2"
+                    className="text-[#008093] font-semibold mb-2"
                   >
                     Optimization
                   </h3>
@@ -487,18 +492,18 @@ const Implementation = () => {
                       fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
-                    className="text-gray-700 text-lg mb-4 leading-tight"
+                    className="text-[#474747]  text-lg mb-4 leading-tight"
                   >
                     Improve efficiency by streamlining operations and maximizing
                     ROI.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/optimization"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

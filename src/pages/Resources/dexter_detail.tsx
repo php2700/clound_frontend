@@ -33,7 +33,7 @@ export const Dexter_Detail = () => {
         <div className="container mx-auto pt-[120px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-10 ">
             <div className="flex items-center text-sm text-[#474747] mt-10">
-              <FaHome className="mr-1 text-xl" />
+              <img src='/bread-home.svg' className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
               <span className="text-base font-bold cursor-pointer">
                 &nbsp; Resources
@@ -46,6 +46,10 @@ export const Dexter_Detail = () => {
               <span className="mx-1 text-base font-bold">
                 &nbsp;Grupo Dexter
               </span>
+            </div>
+            <div className="mx-1 flex items-center text-lg font-medium mt-4" >
+              <img src="/flagarg.svg" className="w-6 h-6" alt="USA Flag" />
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Grupo Dexter</span>
             </div>
             <div
               style={{ lineHeight: "1em" }}

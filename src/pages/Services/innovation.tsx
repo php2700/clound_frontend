@@ -10,6 +10,10 @@ import {
   FaProjectDiagram,
   FaArrowLeft,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast } from "sonner";
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
 const countries = [
   "Afghanistan",
@@ -131,7 +135,13 @@ const countries = [
 
 const Innovation = () => {
   const navigate = useNavigate();
-
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [message, setMessage] = useState("");
+  const [isAgree, setIsAgree] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -144,6 +154,37 @@ const Innovation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const innovationData = {
+      firstName,
+      lastName,
+      email,
+      company,
+      country,
+      message,
+      isAgree,
+    };
+    axios
+      .post(`${API_BASE_URL}api/user/innovation`, innovationData)
+      .then((res) => {
+        console.log(res, "gg");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setCompany("");
+        setCountry("");
+        setMessage("");
+        setIsAgree(false);
+        toast.success("Details_added", {
+          position: "top-right",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
@@ -161,20 +202,28 @@ const Innovation = () => {
         <div className="px-6  pt-10 md:px-10">
           {/* Breadcrumb */}
           <div className="flex items-center text-sm text-[#474747]  mt-10 mb-3">
-            <FaHome className="mr-1 text-xl" />
+            <Link to="/">
+              <FaHome
+                className="mr-1 text-xl cursor-pointer"
+                aria-hidden="true"
+              />
+            </Link>
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">Services / Innovation</span>
           </div>
 
           {/* Title */}
           <div className="mt-5">
-            <h1 style={{lineHeight:'1em'}} className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
+            <h1
+              style={{ lineHeight: "1em" }}
+              className="text-2xl md:text-6xl font-bold text-[#008093] mb-4"
+            >
               For companies seeking to stay one
               <br />
               step ahead of their competitors
             </h1>
             <p
-             style={{  fontFamily: 'sans-serif,dm-sans', lineHeight: "1.2em",}}
+              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
               className="text-[#474747] text-base md:text-2xl mt-5 leading-tight"
             >
               In a dynamic business environment, innovation and adaptability are
@@ -185,7 +234,7 @@ const Innovation = () => {
           </div>
 
           {/* Full-width Image */}
-          <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-[150px]">
+          <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mt-[110px]">
             <img
               src="/innovation1.PNG"
               alt="Innovation visual"
@@ -198,7 +247,7 @@ const Innovation = () => {
       <div className="bg-[#f9f9f9]">
         <div className="container mx-auto  px-4 py-10 md:px-6">
           <div className="px-6 py-10 md:px-10">
-            <div className="mt-16 ">
+            <div className="mt-5">
               <div className="flex flex-col lg:flex-row gap-5 items-start">
                 {/* Left Cards */}
                 <div className="lg:w-[58%] w-full flex flex-col gap-5">
@@ -222,12 +271,18 @@ const Innovation = () => {
                     >
                       <div className="flex items-center">
                         {card.icon}
-                        <h4 style={{fontSize:'40px'}} className="ml-4 font-semibold text-[#008093]">
+                        <h4
+                          style={{ fontSize: "40px" }}
+                          className="ml-4 font-semibold text-[#008093]"
+                        >
                           {card.title}
                         </h4>
                       </div>
                       <p
-                        style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                        style={{
+                          fontFamily: "sans-serif,dm-sans",
+                          lineHeight: "1.2em",
+                        }}
                         className=" mt-2 text-[#474747] md:text-lg "
                       >
                         {card.description}
@@ -239,7 +294,10 @@ const Innovation = () => {
                 {/* Right Sticky Form */}
                 <div className="lg:w-[42%] w-full">
                   <div className="lg:sticky top-28">
-                    <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[660px]">
+                    <form
+                      onSubmit={handleSubmit}
+                      className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[660px] "
+                    >
                       <h2 className="text-2xl font-semibold mb-2 leading-tight">
                         Complete the form and book
                         <br />a free consultation
@@ -252,12 +310,16 @@ const Innovation = () => {
                           placeholder="First Name*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
                         />
                         <input
                           type="text"
                           placeholder="Last Name*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
                         />
                       </div>
 
@@ -268,12 +330,16 @@ const Innovation = () => {
                           placeholder="Email*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                         <input
                           type="text"
                           placeholder="Company*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={company}
+                          onChange={(e) => setCompany(e.target.value)}
                         />
                       </div>
 
@@ -282,6 +348,8 @@ const Innovation = () => {
                         required
                         className="w-full p-3 rounded bg-white text-black text-lg focus:outline-none"
                         defaultValue=""
+                        value={country}
+                        onChange={(e) => setCountry(e.target.value)}
                       >
                         <option disabled value="">
                           Select Country*
@@ -302,6 +370,8 @@ const Innovation = () => {
                         placeholder="Message*"
                         className="w-full p-3 h-28 rounded bg-white text-black text-lg resize-none focus:outline-none"
                         required
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
 
                       {/* Checkbox */}
@@ -310,11 +380,17 @@ const Innovation = () => {
                         the Privacy Policy.
                       </p>
                       <div className="flex items-start gap-2">
-                        <input type="checkbox" className="mt-1" required />
+                        <input
+                          type="checkbox"
+                          className="mt-1"
+                          required
+                          checked={isAgree}
+                          onChange={(e) => setIsAgree(e.target.checked)}
+                        />
                         <p className="text-xs text-gray-800">
-                          I agree to receive emails from CloudGaia with updates
-                          on services, events, and alerts. I can unsubscribe at
-                          any time.
+                          I agree to receive emails from Codescience with
+                          updates on services, events, and alerts. I can
+                          unsubscribe at any time.
                         </p>
                       </div>
 
@@ -335,72 +411,93 @@ const Innovation = () => {
 
             {/* Other Services Section */}
             <div className="py-16">
-              <h2 style={{fontSize:'40px'}} className="text-center text-4xl md:text-4xl font-semibold text-[#008093] mb-12">
+              <h2
+                style={{ fontSize: "40px" }}
+                className="text-center text-4xl md:text-4xl font-semibold text-[#008093] mb-12"
+              >
                 Check our other services
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-1.svg" className="mb-4" />
-                  <h3 style={{fontSize:'40px'}} className=" text-[#008093] font-semibold mb-2">
+                  <h3
+                    style={{ fontSize: "40px" }}
+                    className=" text-[#008093] font-semibold mb-2"
+                  >
                     Landing Services
                   </h3>
                   <p
-                   style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
                     className="text-[#474747] text-lg mb-4 "
                   >
                     Discover cutting-edge solutions that help you stay ahead of
                     the curve.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/implementation"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
-                  <h3 style={{fontSize:'40px'}} className=" text-[#008093] font-semibold mb-2">
+                  <h3
+                    style={{ fontSize: "40px" }}
+                    className=" text-[#008093] font-semibold mb-2"
+                  >
                     Strategic Growth
                   </h3>
                   <p
-                    style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
                     className="text-[#474747] text-lg mb-4 leading-tight"
                   >
                     Accelerate your business growth with focused strategic
                     initiatives.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/growth"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-md text-left">
                   <img src="/services-icon-2.svg" className="mb-4" />
-                  <h3 style={{fontSize:'40px'}} className="text-[#008093] font-semibold mb-2">
+                  <h3
+                    style={{ fontSize: "40px" }}
+                    className="text-[#008093] font-semibold mb-2"
+                  >
                     Optimization
                   </h3>
                   <p
-                     style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
-                     className="text-[#474747]  text-lg mb-4 leading-tight"
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
+                    className="text-[#474747]  text-lg mb-4 leading-tight"
                   >
                     Improve efficiency by streamlining operations and maximizing
                     ROI.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/optimization"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

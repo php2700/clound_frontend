@@ -3,6 +3,8 @@ import Header from "@/components/Header"; // Fixed import path
 import Footer from "@/components/Footer"; // Fixed import path
 import { FaHome, FaStar } from "react-icons/fa";
 import ExpertiseCollapse from "@/components/Expertise_cloud";
+import { Link } from "react-router-dom";
+// import { Link } from "lucide-react";
 
 const Services = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -39,7 +41,12 @@ const Services = () => {
           <div className="px-6 py-10 md:px-10">
             {/* Breadcrumb */}
             <div className="flex items-center text-sm  mt-10 text-[#474747]">
-              <FaHome className="mr-1 text-xl" />
+              <Link to="/">
+                <FaHome
+                  className="mr-1 text-xl cursor-pointer"
+                  aria-hidden="true"
+                />
+              </Link>
               <span className="mx-1 text-base font-bold">/</span>
               <span className="text-base font-bold">Services</span>
             </div>
@@ -98,14 +105,14 @@ const Services = () => {
                   Supporting your first steps with Salesforce to ensure a smooth
                   and successful adoption.
                 </p>
-                <a
-                  href="#"
+                <Link
+                  to="/Services/implementation"
                   className="group inline-block text-[#474747] text-base font-bold  relative"
                   style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Learn more
                   <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
@@ -123,14 +130,14 @@ const Services = () => {
                   Enhancing Salesforce by tailoring it to the specific needs of
                   your business.
                 </p>
-                <a
-                  href="#"
+                <Link
+                  to="/Services/optimization"
                   className="group inline-block font-bold text-base text-[#474747]  relative"
                   style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Learn more
                   <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
@@ -148,14 +155,14 @@ const Services = () => {
                   Identifying opportunities and overcoming challenges with
                   efficient solutions.
                 </p>
-                <a
+                <Link
                   style={{ fontFamily: "sans-serif,dm-sans" }}
-                  href="#"
+                  to="/Services/innovation"
                   className="group inline-block font-bold text-base text-[#474747] relative"
                 >
                   Learn more
                   <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
@@ -173,14 +180,14 @@ const Services = () => {
                   Aligning Salesforce with your business goals to drive
                   sustainable growth.
                 </p>
-                <a
+                <Link
                   style={{ fontFamily: "sans-serif,dm-sans" }}
-                  href="#"
+                  to="/Services/growth"
                   className="group inline-block font-bold text-base text-[#474747] relative"
                 >
                   Learn more
                   <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -277,10 +284,8 @@ const Services = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-[#474747]">
                 Cloud Expertise
               </h2>
-              <ExpertiseCollapse/>
+              <ExpertiseCollapse />
             </div>
-
-            
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-10 mt-20 px-6">
               <div className="relative w-[200px] h-[200px] flex justify-center items-center">
@@ -309,7 +314,7 @@ const Services = () => {
                   }}
                   className="text-[#474747] md:text-lg"
                 >
-                  At Cloudgaia, we <strong>venture</strong> beyond the ordinary,
+                  At Codescience, we <strong>venture</strong> beyond the ordinary,
                   aiming to be the best by challenging and redefining best
                   practices, while
                   <strong> including</strong> diverse perspectives that enrich

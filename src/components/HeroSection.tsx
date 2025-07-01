@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Header from "./Header";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const images = [
@@ -102,9 +103,12 @@ const HeroSection = () => {
             Summit Consulting Partner
           </p>
           <div className="mt-12">
-            <Button className="bg-white text-gray-900 transition-colors duration-300 hover:bg-[#ff83a9] hover:text-white px-8 py-3 text-lg font-medium rounded-full">
-              Book a free consultation
-            </Button>
+        <Link to="/contact">
+  <Button className="bg-white text-gray-600 transition-colors duration-300 hover:bg-[#ff83a9] hover:text-white px-8 py-3 text-[16px] font-bold rounded-full">
+    Book a free consultation
+  </Button>
+</Link>
+
           </div>
         </div>
       </div>

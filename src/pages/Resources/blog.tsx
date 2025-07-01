@@ -1,8 +1,12 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import axios from "axios";
+// import { Link } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
+import { Link } from "react-router-dom";
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
 export const Blog = () => {
   const [loaded, setLoaded] = useState(false);
@@ -30,14 +34,14 @@ export const Blog = () => {
       fetchFrom: "Consumer Goods, Expert insights",
       title: "CNX25: Consumer Goods Recommended Sessions",
       description:
-        "In a landscape driven by AI, automation, and connected customer experiences, Salesforce Connections 2025 is the place to be for Consumer Goods companies ready to transform and scale. At cloudgaia, we’ve curated a list of key sessions that we believe every Consumer Goods leader should attend to gain insights into smarter decision-making, seamless engagement, and future-ready growth.",
+        "In a landscape driven by AI, automation, and connected customer experiences, Salesforce Connections 2025 is the place to be for Consumer Goods companies ready to transform and scale. At codescience, we’ve curated a list of key sessions that we believe every Consumer Goods leader should attend to gain insights into smarter decision-making, seamless engagement, and future-ready growth.",
     },
     {
       img: "/CNX25-Recommended-Sessions.jpg",
       fetchFrom: "Consumer Goods, Expert insights",
       title: "CNX25: Consumer Goods Recommended Sessions",
       description:
-        "In a landscape driven by AI, automation, and connected customer experiences, Salesforce Connections 2025 is the place to be for Consumer Goods companies ready to transform and scale. At cloudgaia, we’ve curated a list of key sessions that we believe every Consumer Goods leader should attend to gain insights into smarter decision-making, seamless engagement, and future-ready growth.",
+        "In a landscape driven by AI, automation, and connected customer experiences, Salesforce Connections 2025 is the place to be for Consumer Goods companies ready to transform and scale. At codescience, we’ve curated a list of key sessions that we believe every Consumer Goods leader should attend to gain insights into smarter decision-making, seamless engagement, and future-ready growth.",
     },
   ];
   const headings = ["AI", "Consumer Goods", "Expert Insights", "News"];
@@ -56,6 +60,11 @@ export const Blog = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+//   const blogDataList=()={
+// axios.get(`${API_BASE_URL}api/user/innovation`)
+//   }
+
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       <div
@@ -75,7 +84,12 @@ export const Blog = () => {
         <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
           <div className="px-6 py-10 md:px-10">
             <div className="flex items-center text-sm  text-[#474747] mt-10">
-              <FaHome className="mr-1 text-xl" />
+              <Link to="/">
+                <img src='/bread-home.svg'
+                  className="mr-1 text-xl cursor-pointer"
+                  aria-hidden="true"
+                />
+              </Link>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
               <span className="text-base font-bold cursor-pointer">
                 &nbsp;Resources
@@ -91,7 +105,7 @@ export const Blog = () => {
               Check out our latest updates
             </h1>
             <div
-              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              style={{  lineHeight: "1.2em" }}
               className="mt-5 text-2xl text-[#474747] "
             >
               Stay up-to-date with the latest insights, trends, and best
@@ -108,20 +122,30 @@ export const Blog = () => {
               <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
               <div className="absolute bottom-0 left-0 w-full  text-white p-4 text-sm md:text-base">
                 <h2 className="mb-1">
-                 <span className="text-[#fcc000] font-bold text-base">Latest -  </span> 
-                 <span className="text-[12px] text-[#fcc000]">AI, Expert insights</span> 
+                  <span className="text-[#fcc000] font-bold text-base">
+                    Latest -{" "}
+                  </span>
+                  <span className="text-[12px] text-[#fcc000]">
+                    AI, Expert insights
+                  </span>
                 </h2>
-                <h2 style={{lineHeight:'1.2em'}} className="text-3xl font-bold">
+                <h2
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-3xl font-bold"
+                >
                   Highlights from Keynote CNX 2025: how Agentforce is
                 </h2>
-                <h2 style={{lineHeight:'1.2em'}} className="text-3xl font-bold">
+                <h2
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-3xl font-bold"
+                >
                   transforming marketing with AI
                 </h2>
-                <p style={{lineHeight:'1.2em'}} className="text-lg mt-3">
+                <p style={{ lineHeight: "1.2em" }} className="text-lg mt-3">
                   Get key insights from Salesforce’s Main Keynote at CNX 2025.
                   Discover how Agentforce is
                 </p>
-                <p style={{lineHeight:'1.2em'}} className="text-lg mb-3">
+                <p style={{ lineHeight: "1.2em" }} className="text-lg mb-3">
                   transforming marketing with AI and real-time personalization.
                 </p>
                 <div className="relative font-bold text-base cursor-pointer group w-max">
@@ -130,7 +154,7 @@ export const Blog = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-8">
+            <div className="mt-6">
               <div className="flex flex-wrap items-center gap-5">
                 <div className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 text-lg cursor-pointer bg-white">
                   All articles
@@ -149,7 +173,8 @@ export const Blog = () => {
                   </span>
                   <input
                     type="search"
-                    placeholder="Search..." style={{lineHeight:'1.2em'}}
+                    placeholder="Search..."
+                    style={{ lineHeight: "1.2em" }}
                     className="w-full pl-10 pr-4 py-2 text-[#474747] placeholder:text-[#474747] border text-lg border-none rounded-full bg-white outline-none focus:ring-1 focus:ring-[#008093]"
                   />
                 </div>
@@ -183,7 +208,6 @@ export const Blog = () => {
                     </div>
                     <div
                       style={{
-                        fontFamily: "sans-serif,dm-sans",
                         lineHeight: "1.2em",
                       }}
                       className="text-lg text-[#474747] flex-grow "

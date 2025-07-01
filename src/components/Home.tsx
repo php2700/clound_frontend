@@ -99,7 +99,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
                   <h2 className="text-5xl md:text-5xl font-bold mb-4">
-                    Cloudgaia in one minute
+                    Codescicence in one minute
                   </h2>
                   <button
                     className="flex items-center space-x-3 bg-white text-black px-6 py-3 rounded-full shadow hover:bg-gray-200 transition duration-300"
