@@ -12,6 +12,7 @@ import {
   FaHandsHelping,
   FaArrowLeft,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // Country list
 const countries = [
@@ -161,7 +162,12 @@ const Optimization = () => {
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
           <div className="flex items-center text-xs text-[#474747] mt-10 mb-2">
-            <FaHome className="mr-1 text-base" />
+            <Link to="/">
+              <FaHome
+                className="mr-1 text-xl cursor-pointer"
+                aria-hidden="true"
+              />
+            </Link>
             <span className="mx-1 text-base font-bold">/</span>
             <span className="text-base font-bold">Services / Optimization</span>
           </div>
@@ -169,16 +175,16 @@ const Optimization = () => {
           {/* Title */}
           <div className="mt-5">
             <h1
-              style={{ fontFamily: "sans-serif,dm-sans" }}
+              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
               className="text-2xl md:text-6xl font-bold text-[#008093]"
             >
               For companies looking to Boost Salesforce
             </h1>
             <p
               style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
-              className="text-[#474747] md:text-xl mt-5"
+              className="text-[#474747] text-xl md:text-2xl mt-4 "
             >
-              We offer services that empower and optimize its use, <br />
+               We offer services that empower and optimize its use, <br />
               adapting it to the changing needs of your business.
             </p>
           </div>
@@ -194,7 +200,7 @@ const Optimization = () => {
       <div className="bg-[#f9f9f9]">
         <div className="container mx-auto px-4 py-10 md:px-6">
           <div className="px-6 py-10 md:px-10">
-            <div className="mt-16">
+            <div className="mt-5">
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex flex-col lg:flex-row gap-6 w-full">
                   <div className="lg:w-3/5 w-full flex flex-col gap-3">
@@ -317,9 +323,9 @@ const Optimization = () => {
                       <div className="flex items-start gap-2">
                         <input type="checkbox" className="mt-1" required />
                         <p className="text-xs text-gray-800">
-                          I agree to receive emails from CloudGaia with updates
-                          on services, events, and alerts. I can unsubscribe at
-                          any time.
+                          I agree to receive emails from Codescience with
+                          updates on services, events, and alerts. I can
+                          unsubscribe at any time.
                         </p>
                       </div>
 
@@ -346,76 +352,86 @@ const Optimization = () => {
                 Check our other services
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div className="p-6 rounded-lg shadow-md text-left bg-white">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-1.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-semibold mb-2"
+                    className=" text-[#008093] font-semibold mb-2"
                   >
                     Landing Services
                   </h3>
                   <p
-                    style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
                     className="text-[#474747] text-lg mb-4 "
                   >
-                    Supporting your first steps with Salesforce to ensure a
-                    smooth and successful adoption.
+                    Discover cutting-edge solutions that help you stay ahead of
+                    the curve.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/implementation"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
-                </div>
-                <div className="p-6 rounded-lg shadow-md text-left bg-white">
-                  <img src="/services-icon-3.svg" className="mb-4" />
-                  <h3
-                    style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-semibold mb-2"
-                  >
-                    Innovation
-                  </h3>
-                  <p
-                   style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
-                    className="text-[#474747] text-lg mb-4 "
-                  >
-                    Identifying opportunities and overcoming challenges with
-                    efficient solutions.
-                  </p>
-                  <a
-                    href="#"
-                    className="text-[#474747] font-bold text-base relative inline-block group"
-                  >
-                    Learn more
-                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
                 </div>
 
-                <div className="p-6 rounded-lg shadow-md text-left bg-white">
+                <div className="p-6  rounded-lg shadow-md text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-semibold mb-2"
+                    className=" text-[#008093] font-semibold mb-2"
                   >
                     Strategic Growth
                   </h3>
                   <p
-                 style={{  fontFamily: 'sans-serif,dm-sans',lineHeight:'1.2em'}}
-                    className="text-[#474747] text-lg mb-4 "
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
+                    className="text-[#474747] text-lg mb-4 leading-tight"
                   >
-                    Aligning Salesforce with your business goals to drive
-                    sustainable growth.
+                    Accelerate your business growth with focused strategic
+                    initiatives.
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Services/growth"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
                     <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                  </a>
+                  </Link>
+                </div>
+
+                <div className="p-6 bg-white rounded-lg shadow-md text-left">
+                  <img src="/services-icon-2.svg" className="mb-4" />
+                  <h3
+                    style={{ fontSize: "40px" }}
+                    className="text-[#008093] font-semibold mb-2"
+                  >
+                    Optimization
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: "sans-serif,dm-sans",
+                      lineHeight: "1.2em",
+                    }}
+                    className="text-[#474747]  text-lg mb-4 leading-tight"
+                  >
+                    Improve efficiency by streamlining operations and maximizing
+                    ROI.
+                  </p>
+                  <Link
+                    to="/Services/optimization"
+                    className="text-[#474747] font-bold text-base relative inline-block group"
+                  >
+                    Learn more
+                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                  </Link>
                 </div>
               </div>
             </div>

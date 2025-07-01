@@ -26,6 +26,8 @@ import { Careers } from "./pages/Careers";
 import { Dexter_Detail } from "./pages/Resources/dexter_detail";
 import { Gador_Detail } from "./pages/Resources/gador_detail";
 import { ConaService } from "./pages/Resources/cona_detail";
+import ScrollToTop from "./components/ScrollToTop";
+import "react-toastify/dist/ReactToastify.css";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +37,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           {/* <Route path="/" element={<Layout />}> */}
   <Route index element={<Index />} />

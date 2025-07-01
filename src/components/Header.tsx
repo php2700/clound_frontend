@@ -40,7 +40,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center mr-8">
             <Link to="/">
-              <img src="/code-science-logo.png" className="h-24" />
+              <img src="/code-science-logo1.png" className="h-[110px]" />
             </Link>
           </div>
 
@@ -199,7 +199,7 @@ const Header = () => {
                 {isServicesOpen && (
                   <div className="pl-4 mt-2 space-y-2 animate-fade-in">
                     <Link
-                      to="/services/all"
+                      to="/services/all_services"
                       className="block text-sm text-gray-700 hover:bg-gray-100 px-2 py-1 rounded font-bold relative group"
                       onClick={toggleMenu}
                     >
@@ -267,19 +267,19 @@ const Header = () => {
                 {isResourcesOpen && (
                   <div className="pl-4 mt-2 space-y-2 animate-fade-in">
                     <Link
-                      to="/resources/1"
+                      to="/resources/blog"
                       className="block text-sm text-gray-700 hover:bg-gray-100 px-2 py-1 rounded font-bold relative group"
                       onClick={toggleMenu}
                     >
-                      Resource 1
+                      Blog
                       <span className="absolute left-2 bottom-0 h-0.5 bg-red-500 w-0 group-hover:w-[calc(100%-1rem)] transition-all duration-300 ease-in-out"></span>
                     </Link>
                     <Link
-                      to="/resources/2"
+                      to="/resources/customer-stories"
                       className="block text-sm text-gray-700 hover:bg-gray-100 px-2 py-1 rounded font-bold relative group"
                       onClick={toggleMenu}
                     >
-                      Resource 2
+                      Customer Stories
                       <span className="absolute left-2 bottom-0 h-0.5 bg-red-500 w-0 group-hover:w-[calc(100%-1rem)] transition-all duration-300 ease-in-out"></span>
                     </Link>
                   </div>

@@ -39,7 +39,7 @@ export const Ealde_Detail = () => {
         <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
           <div className="px-6 py-10 md:px-10 ">
             <div className="flex items-center text-sm text-[#474747] mt-10">
-              <FaHome className="mr-1 text-xl" />
+              <img src='/bread-home.svg' className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">/</span>
               <span className="text-base font-bold cursor-pointer">
                 Resources
@@ -48,6 +48,10 @@ export const Ealde_Detail = () => {
               <span className="mx-1 text-base font-bold">Customer Stories</span>
               <span className="mx-1 text-base font-bold">/</span>
               <span className="mx-1 text-base font-bold">EALDE - Spain</span>
+            </div>
+            <div className="mx-1 flex items-center text-lg font-medium mt-4" >
+              <img src="/spain.png" className="w-6 h-6" alt="USA Flag" />
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">EALDE - Spain</span>
             </div>
             <div
               style={{ lineHeight: "1em" }}
@@ -72,7 +76,7 @@ export const Ealde_Detail = () => {
               style={{ lineHeight: "1.2em" }}
               className="text-lg text-[#474747] mb-20"
             >
-              Cloudgaia partnered with EALDE Business School to implement a
+              Codescience partnered with EALDE Business School to implement a
               Salesforce-based solution that modernised its data <br />
               model, automated key processes and improved the personalisation of
               its educational offerings. The result? A more agile,
@@ -362,9 +366,9 @@ export const Ealde_Detail = () => {
               Don't get stuck in technical debt.
             </h2>
 
-            <button className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+            <Link to ="/contact" className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
               Contact an expert
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -376,7 +380,7 @@ export const Ealde_Detail = () => {
                   style={{ lineHeight: "1.2em" }}
                   className="italic text-[#474747] text-2xl"
                 >
-                  “What really stood out to me about the Cloudgaia team was
+                  “What really stood out to me about the Codescience team was
                   their deep understanding of the Salesforce ecosystem and their
                   ability to customise solutions to our specific needs. They
                   implemented all the necessary functionalities, efficiently

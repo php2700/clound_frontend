@@ -39,7 +39,7 @@ export const Customer_Stories = () => {
   const storyData = [
     {
       url: "/customer-stories/cona-detail",
-      flagImg: "/flag-arg.svg",
+      flagImg: "/flag-usa (1).svg",
       userImg: "/stories-cona.webp",
       companyImg: "/cona7.png",
       services: "B2B Commerce | Marketing Cloud | Consumer Goods Cloud +",
@@ -49,7 +49,7 @@ export const Customer_Stories = () => {
     },
     {
       url: "/customer-stories/ealde-detail",
-      flagImg: "/flag-usa.svg",
+      flagImg: "/spain.png",
       userImg: "/53587161679_f0c0a75c22_6k-scaled.jpg",
       companyImg: "/ealde-nuevo-logo-2-2048x597.png",
       services: "Sales Cloud | Experience Cloud | Marketing Cloud",
@@ -60,7 +60,7 @@ export const Customer_Stories = () => {
     },
     {
       url: "/customer-stories/gador-detail",
-      flagImg: "/flag-usa.svg",
+      flagImg: "/flagarg.svg",
       userImg: "/stories-gador.webp",
       companyImg: "/logo-gador-2.svg",
       services: "Commerce Cloud B2C | Service Cloud | Marketing Cloud",
@@ -148,8 +148,10 @@ export const Customer_Stories = () => {
         <div className="bg-[#f9f9f9]">
           <div className="container mx-auto pt-[130px] px-4 md:px-6 ">
             <div className="px-6 py-10 md:px-10 ">
-              <div className="flex items-center text-sm text-gray-800 mt-8">
-                <FaHome className="mr-1 text-xl" />
+              <div className="flex items-center text-sm text-[#474747] mt-8">
+                <Link to="/">
+  <img src='/bread-home.svg' className="mr-1 text-xl cursor-pointer" aria-hidden="true" />
+</Link>
                 <span className="mx-1 text-base font-bold">&nbsp;/</span>
                 <span className="text-base font-bold cursor-pointer">
                   &nbsp;Resources
@@ -172,7 +174,6 @@ export const Customer_Stories = () => {
               </div>
               <div
                 style={{
-                  fontFamily: "sans-serif,dm-sans",
                   lineHeight: "1.2em",
                 }}
                 className="text-2xl text-[#474747] my-4 pb-10"
@@ -189,7 +190,7 @@ export const Customer_Stories = () => {
           </div>
         </div>
 
-        <div className="text-center max-w-4xl mx-auto p-6 my-10 flex flex-col text-center min-h-[300px] ">
+        <div className="text-center max-w-4xl mx-auto py-6 my-10 flex flex-col text-center min-h-[300px] ">
           <div
             style={{ lineHeight: "1.2em" }}
             className="text-2xl text-[#474747]"
@@ -228,12 +229,12 @@ export const Customer_Stories = () => {
                 style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1em" }}
                 className={`text-4xl md:text-6xl font-bold text-[#008093]   `}
               >
-                At Cloudgaia, our dedication to customer success is driven by a
+                At Codescience, our dedication to customer success is driven by a
                 vibrant VIBE and a total commitment to Salesforce.
               </h2>
               <p
                 style={{ lineHeight: "1.2em" }}
-                className="text-lg md:text-3xl text-[#474747] mt-5 "
+                className="text-lg md:text-2xl text-[#474747] mt-5 "
               >
                 We combine our expertise with a global reach, offering unmatched
                 value through strategic pricing, the convenience of the same
@@ -297,7 +298,6 @@ export const Customer_Stories = () => {
                     </div>
                     <div
                       style={{
-                        fontFamily: "sans-serif,dm-sans",
                         lineHeight: "1.2em",
                       }}
                       className="text-[#474747] text-lg mb-4"
@@ -325,9 +325,9 @@ export const Customer_Stories = () => {
               <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9]">
                 Let's talk!
               </h2>
-              <button className="bg-[#ff83a9] text-[#f9f9f9] px-6 py-2 rounded-full text-lg font-bold hover:bg-white hover:text-[#474747] transition">
+              <Link to = "/contact" className="bg-[#ff83a9] text-[#f9f9f9] px-6 py-2 rounded-full text-lg font-bold hover:bg-white hover:text-[#474747] transition">
                 Contact us
-              </button>
+              </Link>
             </div>
           </div>
         </div>

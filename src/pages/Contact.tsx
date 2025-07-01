@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
+import axios from "axios"
+import { toast } from "sonner";
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
 const countries = [
   "Afghanistan",
@@ -123,7 +127,16 @@ const countries = [
 
 const Contact = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [message, setMessage] = useState("");
+  const [agreeToEmails, setAgreeToEmails] = useState(false);
+  const [isRobot,setIsRobot]=useState(false)
   const [lastScrollY, setLastScrollY] = useState(0);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -138,7 +151,36 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here
+
+    const contactData = {
+      firstName,
+      lastName,
+      email,
+      company,
+      country,
+      message,
+      agreeToEmails,
+    };
+
+    axios
+      .post(`${API_BASE_URL}api/user/contact`, contactData)
+      .then((res) => {
+        console.log(res, "gg");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setCompany("");
+        setCountry("");
+        setMessage("");
+        setAgreeToEmails(false);
+        setIsRobot(false)
+        toast.success("Details_added",{
+          position:'top-right'
+        })
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -161,7 +203,12 @@ const Contact = () => {
           <div className="px-6 py-10 md:px-10">
             {/* Breadcrumb */}
             <div className="flex items-center text-sm mb-4 mt-10 text-[#474747]">
-              <FaHome className="mr-1 text-xl" />
+              <Link to="/">
+                <FaHome
+                  className="mr-1 text-xl cursor-pointer"
+                  aria-hidden="true"
+                />
+              </Link>
               <span className="mx-1 text-base font-bold">/</span>
               <span className="text-base font-bold">Contact</span>
             </div>
@@ -176,12 +223,12 @@ const Contact = () => {
 
             {/* Paragraph */}
             <p
-                 style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
               className="text-[#474747] text-xl md:text-2xl mb-12 "
             >
               With our team of experts and the power of Salesforce, we're here
-              to bring <br/> your projects to life and take your business to the next
-              level.
+              to bring <br /> your projects to life and take your business to
+              the next level.
             </p>
 
             <form
@@ -197,12 +244,15 @@ const Contact = () => {
                   type="text"
                   placeholder="First Name*"
                   required
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   className="flex-1 p-3 bg-gray-100 text-black rounded-md placeholder:text-gray-600"
                 />
                 <input
                   type="text"
                   placeholder="Last Name*"
-                  required
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                   className="flex-1 p-3 bg-gray-100 text-black rounded-md placeholder:text-gray-600"
                 />
               </div>
@@ -212,12 +262,16 @@ const Contact = () => {
                   type="text"
                   placeholder="Company*"
                   required
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
                   className="flex-1 p-3 bg-gray-100 text-black rounded-md placeholder:text-gray-600"
                 />
                 <input
                   type="email"
                   placeholder="Email*"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 p-3 bg-gray-100 text-black rounded-md placeholder:text-gray-600"
                 />
               </div>
@@ -227,6 +281,8 @@ const Contact = () => {
                   required
                   className="w-full p-3 bg-gray-100 text-black rounded-md appearance-none"
                   defaultValue=""
+                  value={country}
+                  onChange={(e) => setCountry(e.target.value)}
                 >
                   <option disabled value="">
                     Country*
@@ -245,6 +301,8 @@ const Contact = () => {
               <textarea
                 placeholder="Message*"
                 required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full p-3 bg-gray-100 text-black rounded-md placeholder:text-gray-600 h-32"
               ></textarea>
 
@@ -257,10 +315,12 @@ const Contact = () => {
                 <input
                   type="checkbox"
                   className="mt-1 mr-1 accent-white"
+                  checked={agreeToEmails}
+                  onChange={(e) => setAgreeToEmails(e.target.checked)}
                   required
                 />
                 <span className="text-[12px]">
-                  I agree to receive emails from CloudGaia with updates on
+                  I agree to receive emails from Codescience with updates on
                   services, events, and alerts. I can unsubscribe at any time.
                 </span>
               </label>
@@ -271,6 +331,9 @@ const Contact = () => {
                     type="checkbox"
                     id="not-robot"
                     className="h-4 w-4 mr-2 accent-blue-600"
+                    checked={isRobot}
+                    onChange={(e) => setIsRobot(e.target.checked)}
+                    required
                   />
                   <label
                     htmlFor="not-robot"
@@ -312,9 +375,12 @@ const Contact = () => {
                     Join a multicultural team of Salesforce experts who elevate
                     businesses through technology.
                   </p>
-                  <button className="bg-pink-400 hover:bg-white hover:text-black  text-white font-semibold px-6 py-2 rounded-full transition">
+                  <Link
+                    to="/career"
+                    className="bg-pink-400 hover:bg-white hover:text-black  text-white font-semibold px-6 py-2 rounded-full transition"
+                  >
                     Become a cloudgaier
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
