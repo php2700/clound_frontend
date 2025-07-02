@@ -43,9 +43,9 @@ const Footer = () => {
             {/* Stats Section */}
             <div className="flex flex-wrap justify-center items-start gap-12 text-center">
               {[
-                { title: "Certifications", value: "+50" },
-                { title: "Projects", value: "+120" },
-                { title: "Experts", value: "+50" },
+                { title: "Certifications", value: "50+" },
+                { title: "Projects", value: "120+" },
+                { title: "Experts", value: "50+" },
               ].map(({ title, value }) => (
                 <div key={title} className="w-40">
                   <p className="text-2xl font-bold text-[#f9f9f9]">{title}</p>
