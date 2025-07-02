@@ -40,9 +40,10 @@ const Services = () => {
         <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
           <div className="px-6 py-10 md:px-10">
             {/* Breadcrumb */}
-            <div className="flex items-center text-sm  mt-10 text-[#474747]">
+            <div className="flex items-center text-base  mt-10 text-[#474747]">
               <Link to="/">
-                <FaHome
+                <img
+                  src="/bread-home.svg"
                   className="mr-1 text-xl cursor-pointer"
                   aria-hidden="true"
                 />
@@ -63,10 +64,9 @@ const Services = () => {
               </h1>
               <p
                 style={{
-                  fontFamily: "sans-serif,dm-sans",
                   lineHeight: "1.2em",
                 }}
-                className="text-[#474747] md:text-2xl mt-8"
+                className="text-[#474747] md:text-[24px] mt-6"
               >
                 We offer a variety of tailor-made services designed to meet your
                 needs and align with your level of maturity within the
@@ -98,20 +98,16 @@ const Services = () => {
                 >
                   Landing Services
                 </h3>
-                <p
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="text-[#474747] mb-4 text-lg leading-tight"
-                >
+                <p className="text-[#474747] mb-4 text-[17px] leading-tight">
                   Supporting your first steps with Salesforce to ensure a smooth
                   and successful adoption.
                 </p>
                 <Link
                   to="/Services/implementation"
                   className="group inline-block text-[#474747] text-base font-bold  relative"
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Learn more
-                  <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="block h-0.5 w-0 bg-[#ff83a9] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
 
@@ -123,20 +119,16 @@ const Services = () => {
                 >
                   Optimization
                 </h3>
-                <p
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="text-[#474747] mb-4 text-lg leading-tight"
-                >
+                <p className="text-[#474747] mb-4 text-lg leading-tight">
                   Enhancing Salesforce by tailoring it to the specific needs of
                   your business.
                 </p>
                 <Link
                   to="/Services/optimization"
                   className="group inline-block font-bold text-base text-[#474747]  relative"
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
                 >
                   Learn more
-                  <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="block h-0.5 w-0 bg-[#ff83a9] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
 
@@ -148,20 +140,16 @@ const Services = () => {
                 >
                   Innovation
                 </h3>
-                <p
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="text-[#474747] mb-4 text-lg leading-tight"
-                >
+                <p className="text-[#474747] mb-4 text-lg leading-tight">
                   Identifying opportunities and overcoming challenges with
                   efficient solutions.
                 </p>
                 <Link
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
                   to="/Services/innovation"
                   className="group inline-block font-bold text-base text-[#474747] relative"
                 >
                   Learn more
-                  <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="block h-0.5 w-0 bg-[#ff83a9] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
 
@@ -173,26 +161,22 @@ const Services = () => {
                 >
                   Strategic Growth
                 </h3>
-                <p
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
-                  className="text-[#474747] mb-4 text-lg leading-tight"
-                >
+                <p className="text-[#474747] mb-4 text-lg leading-tight">
                   Aligning Salesforce with your business goals to drive
                   sustainable growth.
                 </p>
                 <Link
-                  style={{ fontFamily: "sans-serif,dm-sans" }}
                   to="/Services/growth"
                   className="group inline-block font-bold text-base text-[#474747] relative"
                 >
                   Learn more
-                  <span className="block h-0.5 w-0 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="block h-0.5 w-0 bg-[#ff83a9] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
             </div>
 
             {/* Expand Section */}
-            <div className="flex justify-center items-center mt-20 px-6 md:px-0">
+            <div className="flex justify-center items-center mt-[100px] px-6 md:px-0">
               <div className="flex items-start items-center space-x-6 max-w-4xl">
                 <img
                   src="/services-expand-icon.svg"
@@ -211,21 +195,22 @@ const Services = () => {
                   </h2>
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
-                    className="mt-4 md:text-lg max-w-2xl text-[#474747] leading-tight"
+                    className="mt-4 md:text-lg max-w-2xl text-[#474747] "
                   >
-                    Our Salesforce experts around the world integrate seamlessly
-                    with your team, empowering your internal talents by
-                    providing support and training with a business vision that
+                    Our Salesforce experts around the world integrate <br />
+                    seamlessly with your team, empowering your internal talents
+                    <br /> by providing support and training with a business
+                    vision that
+                    <br />
                     drives your success at every stage.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#474747] text-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center mt-10 w-[95%] h-[380px] md:h-[250px] mx-auto">
+            <div className="bg-[#474747] text-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center mt-[100px] w-[99%] h-[380px] md:h-[250px] mx-auto">
               {/* Image */}
               <img
                 src="https://cloudgaia.com/storage/2025/01/salesforce-partner.svg"
@@ -242,12 +227,7 @@ const Services = () => {
                   </h3>
                   <div className="flex items-center justify-center md:justify-start space-x-2">
                     <div className="flex space-x-[2px]">
-                      {[...Array(5)].map((_, idx) => (
-                        <FaStar
-                          key={idx}
-                          className="text-yellow-400 text-xl md:text-base"
-                        />
-                      ))}
+                      <img src="/5-stars.svg" />
                     </div>
                     <span className="text-xl md:text-3xl font-semibold">
                       4.8/5 CSAT
@@ -280,7 +260,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center mt-16">
+            <div className="text-center mt-[100px]">
               <h2 className="text-4xl md:text-5xl font-bold text-[#474747]">
                 Cloud Expertise
               </h2>
@@ -309,14 +289,13 @@ const Services = () => {
                 </h2>
                 <p
                   style={{
-                    fontFamily: "sans-serif,dm-sans",
-                    lineHeight: "1.2em",
+                    lineHeight: "1.1em",
                   }}
                   className="text-[#474747] md:text-lg"
                 >
-                  At Codescience, we <strong>venture</strong> beyond the ordinary,
-                  aiming to be the best by challenging and redefining best
-                  practices, while
+                  At Codescience, we <strong>venture</strong> beyond the
+                  ordinary, aiming to be the best by challenging and redefining
+                  best practices, while
                   <strong> including</strong> diverse perspectives that enrich
                   our approach and foster meaningful collaboration. Guided by
                   our values, we
@@ -329,7 +308,6 @@ const Services = () => {
             </div>
           </div>
         </div>
-
         <Footer />
       </div>
     </div>

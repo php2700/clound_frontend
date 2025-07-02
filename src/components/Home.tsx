@@ -22,19 +22,18 @@ const Home = () => {
           <div className="container mt-6 px-6 py-10 md:px-10 ">
             <h2
               className="text-6xl font-bold text-left relative z-20"
-              style={{ color: "#008093" }}
+              style={{ color: "#008093",lineHeight:'1em' }}
             >
               We breathe, live, and harness
             </h2>
             <h2
-              className="text-6xl font-bold text-left mt-2 relative z-20"
-              style={{ color: "#FF83A9" }}
+              className="text-6xl font-bold text-left relative z-20"
+              style={{ color: "#FF83A9",lineHeight:'1em' }}
             >
               Salesforce, every day.
             </h2>
             <p
-              style={{ fontFamily: "sans-serif" }}
-              className="text-left mt-4 text-2xl text-gray-700 max-w-4xl whitespace-pre-line relative z-20 leading-tight"
+              className="text-left mt-4 text-2xl text-[#474747] max-w-4xl whitespace-pre-line relative z-20" style={{lineHeight:'1.2em'}}
             >
               We provide end-to-end Salesforce solutions, driven by Human +
               AI-powered{"\n"}
@@ -48,7 +47,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="mt-10 py-10">
+        <div className="mb-5 py-10">
           <Scroll />
         </div>
 
@@ -89,7 +88,7 @@ const Home = () => {
           </div>
 
           {/* 🎥 Cloudgaia in One Minute */}
-          <div className="container mx-auto my-16 px-10 md:px-10">
+          <div className="container mx-auto my-16 px-10 md:px-10 ">
             {!playVideo ? (
               <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg">
                 <img
@@ -130,13 +129,13 @@ const Home = () => {
 
           {/* 💡 Why Partner With Us */}
           <h2
-            className="text-6xl font-bold text-center"
+            className="text-6xl font-bold text-center mt-24"
             style={{ color: "#008093" }}
           >
             Why Partner with us?
           </h2>
         </div>
-        <div className="container mx-auto mt-12 pb-10 px-6 md:px-10">
+        <div className="container mx-auto mt-4 pb-10 px-6 md:px-10">
           <div className="px-6 py-10 md:px-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               <ImageHoverCard

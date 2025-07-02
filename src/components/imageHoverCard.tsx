@@ -8,14 +8,13 @@ const ImageHoverCard = ({ imageSrc, title, description }) => {
           className="w-full h-65 object-cover filter grayscale hover:grayscale-0 transition duration-500"
         />
       </div>
-      <h3
-        style={{ fontFamily: "sans-serif,dm-sans" }}
+      <h3 style={{lineHeight:'1.2em'}}
         className="mt-4 text-2xl font-bold text-left text-[#008093]"
       >
         {title}
       </h3>
       <p
-        style={{ fontFamily: "sans-serif,dm-sans",lineHeight:'1.2em' }}
+        style={{lineHeight:'1.2em' }}
         className="mt-2 text-[#474747]  text-left text-[18px]"
       >
         {description}

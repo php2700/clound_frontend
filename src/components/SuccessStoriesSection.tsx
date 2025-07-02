@@ -39,7 +39,6 @@ const SuccessStoriesSection = () => {
     },
   ];
 
-
   return (
     <div>
       {/* Hero Section */}
@@ -54,53 +53,53 @@ const SuccessStoriesSection = () => {
           <h2 className="text-3xl md:text-6xl font-bold mb-4">
             New to Salesforce?
           </h2>
-          <p
-            style={{ fontFamily: "sans-serif,dm-sans" }}
-            className="text-lg md:text-2xl mb-4"
-          >
+          <p className="text-lg md:text-2xl mb-4">
             Unlock its potential with us
           </p>
-          <Link to = "/services/implementation" className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+          <Link
+            to="/services/implementation"
+            className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition"
+          >
             Check our services
           </Link>
         </div>
       </div>
 
       {/* Success Stories Section */}
-      <section className="bg-gradient-to-b from-[#008093] to-[#006f7a] py-20 relative overflow-hidden">
-        {/* Decorative Circles */}
-        <div className="absolute bottom-0 left-0 w-32 h-32 bg-pink-300 rounded-tr-full opacity-80"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-32 bg-yellow-400 rounded-tl-full opacity-90"></div>
+      <section className="relative bg-gradient-to-b from-[#008093] to-[#006f7a] py-20 overflow-hidden">
+        {/* Decorative Full-Width Image */}
+        <img
+          src="https://cloudgaia.com/storage/2025/01/home-success-overlay-1.svg"
+          alt="Decorative"
+          className="absolute bottom-0 left-0 right-0 w-full z-0 pointer-events-none mb-[-20px]"
+        />
 
-        <div className="container mx-auto px-4 md:px-6 sm:px-6 md:px-10 relative z-10">
+        <div className="relative z-10 container mx-auto px-4 md:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-3xl md:text-6xl font-bold text-white mb-8 leading-tight">
               Success stories we're proud to share
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 md:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 max-w-[1250px] gap-6 mb-12 mx-auto">
             {stories.map((story, index) => (
               <div
                 key={index}
-                className={`${story.bgColor} group rounded-2xl p-8 hover:bg-yellow-300 shadow-xl flex flex-col justify-between h-full transform transition-all duration-300`}
+                className={`${story.bgColor} group rounded-2xl p-8 hover:bg-[#fcc000] shadow-xl flex flex-col justify-between h-full transform transition-all duration-300`}
               >
                 <div className="flex justify-between items-center">
-                  <p className="text-[13px] font-bold text-[#ff83a9] group-hover:text-black mb-3 tracking-wide transition-colors">
+                  <p className="text-[14px] font-bold text-[#ff83a9] group-hover:text-[#474747] mb-3 tracking-wide transition-colors">
                     {story.subtitle}
                   </p>
 
                   <div className="mb-6">
                     <div className="flex items-center gap-2">
                       <div>
-                        <div className="text-lg font-bold text-red-600 group-hover:text-black transition-colors duration-300">
+                        <div className="text-lg font-bold text-red-600 group-hover:text-[#474747] transition-colors duration-300">
                           {story.logo}
                         </div>
                         {story.logoSubtext && (
-                          <div
-                            style={{ fontFamily: "sans-serif,dm-sans" }}
-                            className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300"
-                          >
+                          <div className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300">
                             {story.logoSubtext}
                           </div>
                         )}
@@ -118,7 +117,7 @@ const SuccessStoriesSection = () => {
                 <Link to={story.link}>
                   <Button
                     variant="outline"
-                    className={`${story.buttonStyle} rounded-full font-semibold hover:bg-white hover:text-[#474747] py-3 px-6`}
+                    className={`${story.buttonStyle} rounded-full font-bold text-base hover:bg-white hover:text-[#474747] py-3 px-6`}
                   >
                     Discover this story
                   </Button>
@@ -127,14 +126,15 @@ const SuccessStoriesSection = () => {
             ))}
           </div>
 
-          <div className="text-center">
+          {/* CTA Button */}
+          <div className="text-center"  style={{marginBottom:"4%"}}>
             <Link to="/resources/customer-stories">
-            <Button
-              variant="outline"
-              className="text-[#474747] text-[15px] border-2 border-none hover:bg-pink-400 hover:text-white rounded-full font-bold py-3 px-8 transition-all duration-300 transform hover:scale-105"
-            >
-              View all success stories
-            </Button>
+              <Button
+                variant="outline"
+                className="text-[#474747] text-[16px] border-2 border-none hover:bg-pink-400 hover:text-white rounded-full font-bold py-3 px-8 transition-all duration-300 transform hover:scale-105"
+              >
+                View all success stories
+              </Button>
             </Link>
           </div>
         </div>
