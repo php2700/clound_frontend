@@ -161,30 +161,33 @@ const Optimization = () => {
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-xs text-[#474747] mt-10 mb-2">
+          <div className="flex items-center text-base text-[#474747] mt-10 mb-2">
             <Link to="/">
-              <FaHome
+              <img
+                src="/bread-home.svg"
                 className="mr-1 text-xl cursor-pointer"
                 aria-hidden="true"
               />
             </Link>
-            <span className="mx-1 text-base font-bold">/</span>
-            <span className="text-base font-bold">Services / Optimization</span>
+            <span className="mx-1 text-base font-bold">&nbsp;/</span>
+            <span className="text-base font-bold">&nbsp;Services </span>
+            <span className="text-base font-bold">&nbsp; / </span>
+            <span className="text-base font-bold">&nbsp; Optimization</span>
           </div>
 
           {/* Title */}
           <div className="mt-5">
             <h1
-              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              style={{ lineHeight: "1.2em" }}
               className="text-2xl md:text-6xl font-bold text-[#008093]"
             >
               For companies looking to Boost Salesforce
             </h1>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              style={{ lineHeight: "1.2em" }}
               className="text-[#474747] text-xl md:text-2xl mt-4 "
             >
-               We offer services that empower and optimize its use, <br />
+              We offer services that empower and optimize its use, <br />
               adapting it to the changing needs of your business.
             </p>
           </div>
@@ -239,7 +242,6 @@ const Optimization = () => {
                         </div>
                         <p
                           style={{
-                            fontFamily: "sans-serif,dm-sans",
                             lineHeight: "1.2em",
                           }}
                           className="mt-3 text-lg text-[#474747]"
@@ -316,13 +318,13 @@ const Optimization = () => {
                       ></textarea>
 
                       {/* Checkbox */}
-                      <p className="text-xs text-gray-800">
+                      <p className="text-xs text-[#474747]">
                         By continuing, I confirm that I have read and agree to
                         the Privacy Policy.
                       </p>
                       <div className="flex items-start gap-2">
                         <input type="checkbox" className="mt-1" required />
-                        <p className="text-xs text-gray-800">
+                        <p className="text-xs text-gray-[#474747]">
                           I agree to receive emails from Codescience with
                           updates on services, events, and alerts. I can
                           unsubscribe at any time.
@@ -330,10 +332,36 @@ const Optimization = () => {
                       </div>
 
                       {/* Submit */}
-                      <div className="absolute bottom-4 right-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
+                        <div className="bg-white border border-gray-300 rounded-md px-4 py-2 flex items-center w-[210px]">
+                          <input
+                            type="checkbox"
+                            id="not-robot"
+                            className="h-4 w-4 mr-2 accent-blue-600"
+                          />
+                          <label
+                            htmlFor="not-robot"
+                            className="text-[10px] text-[#474747] mr-auto"
+                          >
+                            I'm not a robot
+                          </label>
+                          <div className="flex flex-col items-center">
+                            <img
+                              src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                              alt="reCAPTCHA logo"
+                              className="h-6 mb-1"
+                            />
+                            <span className="text-[7px] text-[#474747] leading-none">
+                              reCAPTCHA
+                            </span>
+                            <span className="text-[6px] text-[#474747] cursor-pointer leading-none">
+                              Privacy – Terms
+                            </span>
+                          </div>
+                        </div>
                         <button
                           type="submit"
-                          className="bg-white text-black font-semibold py-3 px-8 rounded hover:bg-[#FF83A9] hover:text-white rounded-full transition text-lg w-26 min-h-12 mb-5"
+                          className="bg-white text-[#474747] font-semibold px-6 py-2 rounded-full hover:bg-[#FF83A9] hover:text-white transition-all"
                         >
                           Send
                         </button>
@@ -363,7 +391,6 @@ const Optimization = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
                     className="text-[#474747] text-lg mb-4 "
@@ -376,7 +403,7 @@ const Optimization = () => {
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
-                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                    <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
 
@@ -390,7 +417,6 @@ const Optimization = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
                     className="text-[#474747] text-lg mb-4 leading-tight"
@@ -403,7 +429,7 @@ const Optimization = () => {
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
-                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                    <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
 
@@ -417,7 +443,6 @@ const Optimization = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
                     className="text-[#474747]  text-lg mb-4 leading-tight"
@@ -430,7 +455,7 @@ const Optimization = () => {
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
-                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                    <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
               </div>
@@ -440,7 +465,7 @@ const Optimization = () => {
                 onClick={() => navigate("/Services/all_services")}
                 className="flex items-center cursor-pointer group"
               >
-                <div className="w-14 h-14 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
+                <div className="w-10 h-10 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
                   <FaArrowLeft className="text-white text-xl" />
                 </div>
 

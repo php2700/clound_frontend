@@ -8,6 +8,7 @@ import ExpertiseCollapse from "@/components/Expertise_cloud";
 import IndustryCollapse from "@/components/industry_expertise";
 import { Link, useLocation } from "react-router-dom";
 
+
 // Define team members
 const teamMembers = [
   {
@@ -209,13 +210,13 @@ const Company = () => {
         <div className="px-6 py-10 md:px-10">
           <div className="flex items-center text-sm mb-3 mt-10 text-[#474747]">
             <Link to="/">
-              <FaHome
+              <img src="/bread-home.svg"
                 className="mr-1 text-xl cursor-pointer"
                 aria-hidden="true"
               />
             </Link>
-            <span className="mx-1 text-base font-bold">/</span>
-            <span className="text-base font-bold">Company</span>
+            <span className="mx-1 text-base font-bold">&nbsp;/</span>
+            <span className="text-base font-bold">&nbsp;Company</span>
           </div>
 
           <div className="mx-auto mt-5">
@@ -223,7 +224,7 @@ const Company = () => {
               Experience the Codescience vibe
             </h1>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              style={{ lineHeight: "1.2em" }}
               className="text-[#474747] text-xl  md:text-2xl mt-5 "
             >
               Our commitment to excellence and comprehensive Salesforce
@@ -246,10 +247,10 @@ const Company = () => {
       <div id="our-story" className="bg-[#f9f9f9]">
         <div className="container mx-auto px-4 py-10 md:px-6 ">
           <div className="px-6 py-10 md:px-10">
-            <div className="flex flex-col md:flex-row gap-2 ">
+            <div className="flex flex-col md:flex-row gap-2 pb-10">
               <div className="flex-1  rounded px-6 py-6 shadow bg-white">
                 <div>
-                  <img src="/company-purpose-icon.svg" />{" "}
+                  <img src="/company-purpo-icon.svg" />{" "}
                 </div>
                 <div
                   style={{ fontSize: "40px" }}
@@ -259,7 +260,6 @@ const Company = () => {
                 </div>
                 <div
                   style={{
-                    fontFamily: "sans-serif,dm-sans",
                     lineHeight: "1.2em",
                   }}
                   className="text-[#474747] text-lg"
@@ -280,7 +280,6 @@ const Company = () => {
                 </div>
                 <div
                   style={{
-                    fontFamily: "sans-serif,dm-sans",
                     lineHeight: "1.2em",
                   }}
                   className="text-lg text-[#474747] "
@@ -302,7 +301,6 @@ const Company = () => {
                 </div>
                 <div
                   style={{
-                    fontFamily: "sans-serif,dm-sans",
                     lineHeight: "1.2em",
                   }}
                   className="text-lg text-[#474747]"
@@ -314,11 +312,11 @@ const Company = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center text-6xl text-[#008093] font-bold mt-20">
+            <div className="text-center text-6xl text-[#008093] font-bold pt-10 mt-14  mb-8">
               Why partner with us?
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-10">
               <ImageHoverCard
                 imageSrc="/image1.webp"
                 title="100% Salesforce"
@@ -391,7 +389,6 @@ const Company = () => {
                 <div className="text-left text-[#474747] m-0 py-3  ml-2">
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
                     className="text-sm md:text-lg m-0 p-0 text-xl"
@@ -433,7 +430,6 @@ const Company = () => {
               </h2>
               <p
                 style={{
-                  fontFamily: "sans-serif,dm-sans",
                   lineHeight: "1.2em",
                 }}
                 className="text-[#474747] text-sm md:text-2xl mx-auto mb-6"
@@ -504,7 +500,7 @@ const Company = () => {
               </div>
             )}
 
-            <div id="meet-the-team" className=" mt-16">
+            <div id="meet-the-team" className=" mt-[105px]">
               <h2 className="text-3xl md:text-6xl font-bold text-center text-[#474747] mb-10">
                 Our senior leadership team
               </h2>
@@ -548,6 +544,7 @@ const Company = () => {
           className="w-full h-[500px] object-cover rounded-lg"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+          <img src='/company-icon-ia-cert.svg' className="mb-4" />
           <h2
             style={{ fontSize: "40px", lineHeight: "1em" }}
             className="font-semibold text-[#f9f9f9] mb-2"
@@ -660,7 +657,7 @@ const Company = () => {
       </div>
 
       <div id="salesforce-ventures"
-        className="mx-auto p-6 my-20 rounded-lg shadow-lg text-center max-w-7xl"
+        className="mx-auto p-6 my-24 rounded-lg shadow-lg text-center max-w-7xl"
         style={{ backgroundColor: "#008093" }}
       >
         <img
@@ -675,7 +672,7 @@ const Company = () => {
           Empowered by Salesforce Ventures investment
         </h2>
         <p
-          style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+          style={{ lineHeight: "1.2em" }}
           className=" text-lg text-[#f9f9f9] "
         >
           In 2024, we proudly announced an investment from Salesforce Ventures,

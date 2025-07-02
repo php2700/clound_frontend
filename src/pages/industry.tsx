@@ -1,17 +1,51 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  FaBatteryFull,
-  FaEnvelope,
-  FaHome,
-  
-} from "react-icons/fa";
+import { FaBatteryFull, FaEnvelope, FaHome } from "react-icons/fa";
 import Scroll from "@/components/scroll";
 import IndustryCollapse from "@/components/industry_expertise";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
 // import { Link } from "lucide-react";
 // import industries3 from "@/public/industries4.PNG"; // adjust path if different
+
+const stories = [
+  {
+    subtitle: "Transforming Client Services",
+    logo: "CONA",
+    logoSubtext: "SERVICES LLC",
+    title: "One of the biggest B2B Commerce Lightning projects in the world",
+    bgColor: "bg-white",
+    textColor: "text-[#008093]",
+    buttonStyle:
+      "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+    link: "/customer-stories/cona-detail",
+  },
+  {
+    subtitle: "Unlocking Insights",
+    logo: "Gador",
+    logoSubtext: "",
+    title: "Transforming Experiences with a 360° Customer View",
+    bgColor: "bg-white",
+    textColor: "text-[#008093]",
+    buttonStyle:
+      "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+    link: "/customer-stories/gador-detail",
+  },
+  {
+    subtitle: "Empowering Success",
+    logo: "GRUPO DEXTER",
+    logoSubtext: "",
+    title:
+      "+57% Growth in Online Orders: Dexter's Success in E-Commerce Digitization with Salesforce",
+    bgColor: "bg-white",
+    textColor: "text-[#008093]",
+    buttonStyle:
+      "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+    link: "/customer-stories/dexter-detail",
+  },
+];
 
 const Industries = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -53,31 +87,34 @@ const Industries = () => {
         <div className="px-6 md:px-10 py-10">
           <div className="flex items-center text-sm text-[#474747] mb-3 mt-10">
             <Link to="/">
-  <FaHome className="mr-1 text-xl cursor-pointer" aria-hidden="true" />
-</Link>
-            <span className="mx-1 text-base font-bold">/</span>
-            <span className="text-base font-bold">Industries</span>
+              <img
+                src="/bread-home.svg"
+                className="mr-1 text-xl cursor-pointer"
+                aria-hidden="true"
+              />
+            </Link>
+            <span className="mx-1 text-base font-bold">&nbsp;/</span>
+            <span className="text-base font-bold">&nbsp;Industries</span>
           </div>
 
           {/* Title */}
-          <div >
+          <div>
             <h1
               style={{ lineHeight: "1em" }}
-              className="text-2xl md:text-6xl font-bold text-[#008093] mb-4"
+              className="text-2xl md:text-6xl font-bold text-[#008093] my-4"
             >
               We match strong industry knowledge
               <br />
               with unparalleled Salesforce expertise
             </h1>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              style={{ lineHeight: "1.2em" }}
               className="text-[#474747] text-base md:text-2xl mt-5"
             >
               We have implemented, developed, and customized Salesforce for
-              hundreds of companies, understanding the business
-              <br />
-              needs of each industry and addressing challenges by considering
-              their maturity within the Salesforce ecosystem.
+              hundreds of companies, understanding the business needs of each
+              industry and addressing challenges by considering their maturity
+              within the Salesforce ecosystem.
             </p>
           </div>
         </div>
@@ -129,7 +166,6 @@ const Industries = () => {
                       </h4>
                       <p
                         style={{
-                          fontFamily: "sans-serif,dm-sans",
                           lineHeight: "1.2em",
                         }}
                         className="text-[#474747] text-lg "
@@ -181,7 +217,6 @@ const Industries = () => {
                       </h4>
                       <p
                         style={{
-                          fontFamily: "sans-serif,dm-sans",
                           lineHeight: "1.2em",
                         }}
                         className="text-[#474747] text-lg"
@@ -225,7 +260,6 @@ const Industries = () => {
                       </h4>
                       <p
                         style={{
-                          fontFamily: "sans-serif,dm-sans",
                           lineHeight: "1.2em",
                         }}
                         className="text-[#474747] text-lg "
@@ -250,9 +284,8 @@ const Industries = () => {
               <h2 className="text-4xl md:text-6xl font-bold text-[#474747] mt-13">
                 Industry Expertise
               </h2>
-              <IndustryCollapse/>
+              <IndustryCollapse />
             </div>
-
           </div>
         </div>
       </div>
@@ -263,15 +296,91 @@ const Industries = () => {
           className="w-full h-[300px] object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-          <h2 className="text-6xl md:text-6xl font-bold mb-6 text-[#f9f9f9]">
+          <h2 className="text-6xl md:text-6xl font-bold mb-4 text-[#f9f9f9]" style={{lineHeight:'1em'}}>
             What's your <br />
             Salesforce Challenge?
           </h2>
-          <Link to="/contact" className="bg-[#FF83A9] text-white px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-white hover:text-[#474747]">
+          <Link
+            to="/contact"
+            className="bg-[#FF83A9] text-white px-6 py-2 rounded-full font-semibold transition duration-300 hover:bg-white hover:text-[#474747]"
+          >
             Contact an expert
           </Link>
         </div>
       </div>
+        <section className="relative bg-gradient-to-b from-[#008093] to-[#006f7a] py-20 overflow-hidden">
+        {/* Decorative Full-Width Image */}
+        <img
+          src="https://cloudgaia.com/storage/2025/01/home-success-overlay-1.svg"
+          alt="Decorative"
+          className="absolute bottom-0 left-0 right-0 w-full z-0 pointer-events-none mb-[-20px]"
+        />
+
+        <div className="relative z-10 container mx-auto px-4 md:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-6xl font-bold text-white mb-8 leading-tight">
+              Success stories we're proud to share
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 max-w-[1250px] gap-6 mb-12 mx-auto">
+            {stories.map((story, index) => (
+              <div
+                key={index}
+                className={`${story.bgColor} group rounded-2xl p-8 hover:bg-[#fcc000] shadow-xl flex flex-col justify-between h-full transform transition-all duration-300`}
+              >
+                <div className="flex justify-between items-center">
+                  <p className="text-[14px] font-bold text-[#ff83a9] group-hover:text-[#474747] mb-3 tracking-wide transition-colors">
+                    {story.subtitle}
+                  </p>
+
+                  <div className="mb-6">
+                    <div className="flex items-center gap-2">
+                      <div>
+                        <div className="text-lg font-bold text-red-600 group-hover:text-[#474747] transition-colors duration-300">
+                          {story.logo}
+                        </div>
+                        {story.logoSubtext && (
+                          <div className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300">
+                            {story.logoSubtext}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3
+                  className={`text-3xl font-bold ${story.textColor} mb-6 leading-tight`}
+                >
+                  {story.title}
+                </h3>
+
+                <Link to={story.link}>
+                  <Button
+                    variant="outline"
+                    className={`${story.buttonStyle} rounded-full font-bold text-base hover:bg-white hover:text-[#474747] py-3 px-6`}
+                  >
+                    Discover this story
+                  </Button>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center"  style={{marginBottom:"4%"}}>
+            <Link to="/resources/customer-stories">
+              <Button
+                variant="outline"
+                className="text-[#474747] text-[16px] border-2 border-none hover:bg-pink-400 hover:text-white rounded-full font-bold py-3 px-8 transition-all duration-300 transform hover:scale-105"
+              >
+                View all success stories
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );

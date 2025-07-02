@@ -162,17 +162,18 @@ const Implementation = () => {
       <div className="container mx-auto px-4 py-10 md:px-6 mt-20">
         <div className="px-6 py-10 md:px-10">
           {/* Breadcrumb */}
-          <div className="flex items-center text-sm text-[#474747] mt-10">
+          <div className="flex items-center text-base text-[#474747] mt-10">
             <Link to="/">
-              <FaHome
+              <img
+                src="/bread-home.svg"
                 className="mr-1 text-xl cursor-pointer"
                 aria-hidden="true"
               />
             </Link>
-            <span className="mx-1 text-base font-bold">/</span>
-            <span className="text-base font-bold">
-              Services / Implementation
-            </span>
+            <span className="mx-1 text-base font-bold">&nbsp;/</span>
+            <span className="text-base font-bold">&nbsp;Services</span>
+            <span className="text-base font-bold">&nbsp;/</span>
+            <span className="text-base font-bold">&nbsp;Implementation</span>
           </div>
 
           {/* Title Section */}
@@ -184,7 +185,7 @@ const Implementation = () => {
               For companies new to Salesforce
             </h1>
             <p
-              style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1.2em" }}
+              style={{ lineHeight: "1.2em" }}
               className="text-[#474747] text-xl md:text-2xl mt-4 "
             >
               We activate the first clouds and partner with them in their first
@@ -223,18 +224,12 @@ const Implementation = () => {
                   >
                     Initial Deployment
                   </h3>
-                  <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="mt-2 text-[#474747] text-lg leading-tight"
-                  >
+                  <p style={{lineHeight:'1.2em'}} className="mt-2 text-[#474747] text-lg ">
                     We take care of the configuration and activation of
                     Salesforce clouds, using standard out-of-the-box features
                     from day one.
                   </p>
-                  <p
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="mt-6 text-[#474747] text-lg leading-tight"
-                  >
+                  <p style={{lineHeight:'1.2em'}} className="mt-6 text-[#474747] text-lg ">
                     In addition, we train users on the core Salesforce features,
                     ensuring they have the basic knowledge necessary to maximize
                     their use.
@@ -261,7 +256,6 @@ const Implementation = () => {
                       </h4>
                       <p
                         style={{
-                          fontFamily: "sans-serif,dm-sans",
                           lineHeight: "1.2em",
                         }}
                         className="text-[#474747] mt-1 text-lg"
@@ -283,7 +277,6 @@ const Implementation = () => {
                       </h4>
                       <p
                         style={{
-                          fontFamily: "sans-serif,dm-sans",
                           lineHeight: "1.2em",
                         }}
                         className="text-[#474747] text-lg mt-1"
@@ -306,10 +299,9 @@ const Implementation = () => {
                       </h4>
                       <p
                         style={{
-                          fontFamily: "sans-serif,dm-sans",
                           lineHeight: "1.2em",
                         }}
-                        className="text-gray-700 text-lg mt-1"
+                        className="text-[#474747] text-lg mt-1"
                       >
                         We work together with a team of experts on a specific
                         solution customized to your needs.
@@ -323,7 +315,10 @@ const Implementation = () => {
               {/* Right Side Form */}
               <div className="lg:w-[45%] w-full sticky top-10 self-start">
                 <form className="bg-[#FCC000] text-white p-8 rounded-xl space-y-6 shadow-xl">
-                  <p className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]">
+                  <p
+                    style={{ lineHeight: "1.2em" }}
+                    className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]"
+                  >
                     Complete the form and book <br /> a free consultation
                   </p>
 
@@ -362,7 +357,7 @@ const Implementation = () => {
                   {/* Country Dropdown */}
                   <select
                     required
-                    className="w-full p-3 bg-white text-gray-700 rounded-md"
+                    className="w-full p-3 bg-white text-[#474747] rounded-md"
                     defaultValue=""
                   >
                     <option disabled value="">
@@ -382,31 +377,54 @@ const Implementation = () => {
                     className="w-full p-3 bg-white text-black rounded-md h-32"
                   />
 
-                  <p className="text-sm font-light text-text-gray-700">
+                  <p className="text-[12px] font-light text-[#474747]">
                     By continuing, I confirm that I have read and agree to the{" "}
-                    <span className="font-semibold underline">
-                      Privacy Policy
-                    </span>
-                    .
+                    <span className="font-semibold ">Privacy Policy</span>.
                   </p>
 
-                  <label className="flex items-start text-sm font-light text-text-gray-700">
+                  <label className="flex items-start text-[12px] font-light text-[#474747]">
                     <input
                       type="checkbox"
                       className="mt-1 accent-white"
                       required
                     />
-                    <span className="ml-2">
+                    <span className="ml-2 text-[#474747]">
                       I agree to receive emails from CloudGaia with updates on
                       services, events, and alerts. I can unsubscribe at any
                       time.
                     </span>
                   </label>
 
-                  <div className="flex justify-end">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
+                    <div className="bg-white border border-gray-300 rounded-md px-4 py-2 flex items-center w-[210px]">
+                      <input
+                        type="checkbox"
+                        id="not-robot"
+                        className="h-4 w-4 mr-2 accent-blue-600"
+                      />
+                      <label
+                        htmlFor="not-robot"
+                        className="text-[10px] text-[#474747] mr-auto"
+                      >
+                        I'm not a robot
+                      </label>
+                      <div className="flex flex-col items-center">
+                        <img
+                          src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                          alt="reCAPTCHA logo"
+                          className="h-6 mb-1"
+                        />
+                        <span className="text-[7px] text-[#474747] leading-none">
+                          reCAPTCHA
+                        </span>
+                        <span className="text-[6px] text-[#474747] cursor-pointer leading-none">
+                          Privacy – Terms
+                        </span>
+                      </div>
+                    </div>
                     <button
                       type="submit"
-                      className="bg-white text-gray-800 font-semibold px-6 py-2 rounded-full hover:bg-[#FF83A9] hover:text-white transition-all"
+                      className="bg-white text-[#474747] font-semibold px-6 py-2 rounded-full hover:bg-[#FF83A9] hover:text-white transition-all"
                     >
                       Send
                     </button>
@@ -417,7 +435,7 @@ const Implementation = () => {
             <div className="py-20">
               {/* Heading */}
               <h2
-                style={{ fontSize: "40px" }}
+                style={{ fontSize: "40px",lineHeight:'1em' }}
                 className="text-center font-semibold text-[#008093] mb-12"
               >
                 Check our other services
@@ -435,20 +453,19 @@ const Implementation = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
-                    className="text-[#474747] text-lg mb-4 "
+                    className="text-[#474747] text-[18px] mb-4 "
                   >
-                    Discover cutting-edge solutions that help you stay ahead of
-                    the curve.
+                    Identifying opportunities and overcoming challenges with
+                    efficient solutions.
                   </p>
                   <Link
-                    to="/Services/innovation"
+                    to="/Services/implementation"
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
-                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                    <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
 
@@ -462,10 +479,9 @@ const Implementation = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
-                    className="text-[#474747] text-lg mb-4 leading-tight"
+                    className="text-[#474747] text-[18px] mb-4 leading-tight"
                   >
                     Accelerate your business growth with focused strategic
                     initiatives.
@@ -475,7 +491,7 @@ const Implementation = () => {
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
-                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                    <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
 
@@ -489,10 +505,9 @@ const Implementation = () => {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "sans-serif,dm-sans",
                       lineHeight: "1.2em",
                     }}
-                    className="text-[#474747]  text-lg mb-4 leading-tight"
+                    className="text-[#474747]  text-[18px] mb-4 "
                   >
                     Improve efficiency by streamlining operations and maximizing
                     ROI.
@@ -502,7 +517,7 @@ const Implementation = () => {
                     className="text-[#474747] font-bold text-base relative inline-block group"
                   >
                     Learn more
-                    <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                    <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
               </div>
@@ -513,7 +528,7 @@ const Implementation = () => {
                 className="flex items-center cursor-pointer group"
               >
                 {/* Circle with Arrow */}
-                <div className="w-14 h-14 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
+                <div className="w-10 h-10 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
                   <FaArrowLeft className="text-white text-xl" />
                 </div>
 

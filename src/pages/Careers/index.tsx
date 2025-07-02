@@ -1,22 +1,12 @@
-import { useEffect, useState } from "react";
-import {
-  FaHome,
-  FaRegLightbulb,
-  FaRocket,
-  FaInfoCircle,
-  FaAngleUp,
-} from "react-icons/fa";
-import { FaArrowLeft, FaArrowRight, FaAngleDown } from "react-icons/fa";
+import { useEffect, useState, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaHome, FaRegLightbulb, FaRocket, FaInfoCircle, FaAngleUp, FaArrowLeft, FaArrowRight, FaAngleDown } from "react-icons/fa";
 import Header from "@/components/Header";
-import footer from "@/components/Footer";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+
 import Footer from "@/components/Footer";
-import { useRef } from "react";
-import { useLocation } from "react-router-dom";
-import axios from "axios";
-import { toast } from "sonner";
-
-const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
-
+ 
 const images = [
   { img: "/careers-slide-1.webp" },
   { img: "/careers-slide-4.webp" },
@@ -24,11 +14,11 @@ const images = [
   { img: "/careers-slide-8.webp" },
   { img: "/careers-slide-7.webp" },
 ];
-
+ 
 const testimonials = [
   {
     quote:
-      "Codescience represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
+      "Cloudgaia represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
     name: "Juan Pablo Herrera",
     title: "Salesforce specialist",
     flag: "/flagarg.svg",
@@ -47,13 +37,13 @@ const accordionData = [
     description:
       "We encourage you to explore new paths, take on challenges, and grow both personally and professionally.",
     bgColor: "bg-[#00838A]",
-    textColor: "text-white",
+    textColor: "text-[#f9f9f9]",
   },
   {
     title: "Include",
     description:
       "We foster a diverse and inclusive environment where every voice is heard, valued, and respected.",
-    textColor: "text-gray-800",
+    textColor: "text-[#474747]",
     bgColor: "bg-[#FFB81C]",
   },
   {
@@ -61,25 +51,24 @@ const accordionData = [
     description:
       "We're driven by the belief that our work can contribute to a better world, making a meaningful impact every day.",
     bgColor: "bg-[#E83F6F]",
-    textColor: "text-white",
+    textColor: "text-[#f9f9f9]",
   },
   {
     title: "Enjoy",
     description:
       "We celebrate the journey, finding joy in our successes, our growth, and the time we share as a team.",
     bgColor: "bg-[#4a4a4a]",
-    textColor: "text-white",
+    textColor: "text-[#f9f9f9]",
   },
 ];
-
+ 
 // Data for Open Positions - UPDATED
 const jobPositions = [
   {
     title: "Senior Project Manager",
     department: "Operations",
     type: "Remote",
-    purpose:
-      "We are looking for a Senior Project Manager. The ideal candidate will be responsible for planning, coordinating, and implementing projects within the decided-upon budget, timeline, and scope. They will also effectively monitor and present project updates to relevant stakeholders, clients, or project team members.",
+    purpose: "We are looking for a Senior Project Manager. The ideal candidate will be responsible for planning, coordinating, and implementing projects within the decided-upon budget, timeline, and scope. They will also effectively monitor and present project updates to relevant stakeholders, clients, or project team members.",
     skills: [
       "7 to 10 years of experience in managing high-profile projects (large companies, multi-cloud environments, multiple services).",
       "3 years of experience managing agile teams with +20 people.",
@@ -93,8 +82,7 @@ const jobPositions = [
     title: "Solution Engineer Executive",
     department: "Commercial",
     type: "Remote",
-    purpose:
-      "Provide technical expertise and support to the sales team, create and deliver compelling product demonstrations, and design solutions that meet client needs.",
+    purpose: "Provide technical expertise and support to the sales team, create and deliver compelling product demonstrations, and design solutions that meet client needs.",
     skills: [
       "Proven experience as a Solution Engineer or similar role.",
       "Strong understanding of enterprise software and sales cycles.",
@@ -106,8 +94,7 @@ const jobPositions = [
     title: "Senior Salesforce Frontend Developer (LWC Specialist)",
     department: "Operations",
     type: "Remote",
-    purpose:
-      "Design and develop high-quality, scalable, and performant user interfaces on the Salesforce platform using Lightning Web Components (LWC).",
+    purpose: "Design and develop high-quality, scalable, and performant user interfaces on the Salesforce platform using Lightning Web Components (LWC).",
     skills: [
       "Extensive experience with LWC and the Salesforce Lightning Design System (SLDS).",
       "Proficient in JavaScript, HTML5, and CSS3.",
@@ -117,22 +104,8 @@ const jobPositions = [
     ],
   },
 ];
-
-/*
-For the scrolling text animation, add this to your global CSS file (e.g., globals.css):
-@keyframes scroll-vertical {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50%);
-  }
-}
-.animate-scroll-vertical {
-  animation: scroll-vertical 30s linear infinite;
-}
-*/
-
+ 
+ 
 export const Careers = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -141,20 +114,16 @@ export const Careers = () => {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("All areas");
   const [openAccordion, setOpenAccordion] = useState(null);
-  const [isRobot, setIsRobot] = useState(false);
-
   const handleAccordionClick = (title) => {
     setOpenAccordion(openAccordion === title ? null : title);
   };
   const [openJobIndex, setOpenJobIndex] = useState(null);
-  const cloudgaierRef = useRef(null);
-  const openPositionsRef = useRef(null);
-  // State for job filters
-
+   const cloudgaierRef = useRef(null);
+   const openPositionsRef = useRef(null);
+ 
   const location = useLocation();
-
+ 
   useEffect(() => {
-    // Wait for the DOM to load
     setTimeout(() => {
       if (location.hash) {
         const id = location.hash.replace("#", "");
@@ -163,10 +132,9 @@ export const Careers = () => {
           section.scrollIntoView({ behavior: "smooth" });
         }
       }
-    }, 100); // Small delay to ensure DOM is ready
+    }, 100);
   }, [location]);
-
-  // State for the form
+ 
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -176,9 +144,9 @@ export const Careers = () => {
     area: "",
     linkedin: "",
     message: "",
+    agreed: false,
   });
-
-  // Handler for form input changes
+ 
   const handleFormChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -186,179 +154,127 @@ export const Careers = () => {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-
-  // Handler for form submission
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post(`${API_BASE_URL}api/user/career`, formData)
-      .then((res) => {
-   setFormData({
-        firstName: "",
-        lastName: "",
-        mobile: "",
-        email: "",
-        country: "",
-        area: "",
-        linkedin: "",
-        message: "",
-      });
-        setIsRobot(false);
-
-        toast.success("Details_added", {
-          position: "top-right",
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    console.log("Form Data Submitted:", formData);
+    alert("Application submitted successfully! (Check console for data)");
   };
-
+ 
   useEffect(() => {
     setLoaded(true);
   }, []);
-
+ 
   const handlePrevious = () => {
     setImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
-
+ 
   const handleNext = () => {
     setImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
-
+ 
   const currentImage = images[imageIndex]?.img;
-
+ 
   const handlePrevTestimonial = () => {
     setTestimonialIndex((prev) =>
       prev === 0 ? testimonials.length - 1 : prev - 1
     );
   };
-  const scrollToCloudgaier = () => {
-    cloudgaierRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToOpenPositions = () => {
-    openPositionsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
+ const scrollToCloudgaier = () => {
+  cloudgaierRef.current?.scrollIntoView({ behavior: 'smooth' });
+};
+ 
+const scrollToOpenPositions = () => {
+  openPositionsRef.current?.scrollIntoView({ behavior: 'smooth' });
+};
+ 
   const handleNextTestimonial = () => {
     setTestimonialIndex((prev) =>
       prev === testimonials.length - 1 ? 0 : prev + 1
     );
   };
-
+ 
   const currentTestimonial = testimonials[testimonialIndex];
-
+ 
   const filteredJobs = jobPositions.filter(
     (job) => activeTab === "All areas" || job.department === activeTab
   );
   const inputStyle =
     "w-full p-4 bg-gray-50 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500";
   const selectStyle = `${inputStyle} appearance-none`;
-
+ 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsHeaderVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
-
+ 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-
+ 
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[#f9f9f9]">
-      {/* Blue Right-Angle Triangle in the Top-Right Corner */}
       <div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#008093]"
+        className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
-        aria-hidden="true" // Hides the decorative element from screen readers
+        aria-hidden="true"
       />
       <div
-        className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
-          isHeaderVisible ? "translate-y-6" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${isHeaderVisible ? "translate-y-6" : "-translate-y-full"
+          }`}
       >
         <Header />
       </div>
-
-      {/* <Header /> */}
-
-      {/* ... (Previous sections remain unchanged) ... */}
-      <div className="container mx-auto pt-[80px] px-4 md:px-6 ">
-        <div className="px-6 py-10 md:px-20 ">
-          <div className="flex items-center text-sm text-gray-800 mt-8">
-            <img src="bread-home.svg" className="mr-1 text-xl" />
+ 
+      {/* ===== CHANGE HERE: pt-[80px] ko pt-[120px] kar diya gaya hai ===== */}
+      <div className="container mx-auto pt-[120px] md:px-0 ">
+        <div className="px-0 py-12 md:px-20 ">
+          <div className="flex mt-20 items-center text-sm text-gray-800 ">
+            < img src="bread-home.svg" className="mr-1 text-xl" />
             <span className="mx-4 text-lg font-medium">/</span>
-            <span className="text-lg text-[#474747] text-[18px] font-semibold  cursor-pointer">
+            <span className="text-[#474747] text-[18px] font-semibold  cursor-pointer">
               Careers
             </span>
           </div>
           <div
             className={`text-5xl font-bold text-[#008093] my-5 transition-transform
-                                                     ${
-                                                       loaded
-                                                         ? "translate-y-0  duration-300"
-                                                         : " translate-y-12"
-                                                     }
-                                                           `}
-          >
+             ${loaded ? "translate-y-0  duration-300" : " translate-y-12"}`}>
             All-in for people
           </div>
-          <div
-            style={{ fontFamily: "sans-serif,dm-sans" }}
-            className="text-2xl text-[#474747] text-[24px]"
-          >
+          <div className="text-2xl text-[#474747] text-[24px]">
             Join a multicultural team of Salesforce experts who elevate
             businesses through technology.
           </div>
         </div>
-        <div className="bg-[#f9f9f9] py-1px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row  gap-12">
-          {/* World Map Section */}
-          <div className="relative w-full max-w-3xl px-6 py-8">
-            <img
-              src="Screenshot (187).png"
-              alt="World Map"
-              className="w-full opacity-80"
-            />
-
-            {/* Example Dots (customize positions as needed) */}
-          </div>
-
-          {/* Text Section */}
-          <div className="max-w-xl text-center lg:text-left py-20">
-            <h2 className="text-[#ff83a9] text-2xl font-bold mb-4 text-[32px] ">
-              Cloudgaiers around the world
-            </h2>
-            <p
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-[#474747] font-text text-[18px] mb-6 "
-            >
-              Together, we drive meaningful transformations with a One Team
-              approach, innovation, and a shared commitment to creating lasting
-              impact—all while having a great time.
-            </p>
-            <div
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="flex flex-col sm:flex-row gap-4 "
-            >
-              <button
-                onClick={scrollToCloudgaier}
-                className="bg-[#fcc000] font-semibold text-[16px]  text-[#474747] hover:bg-[#ff83a9] hover:text-[#FFFFFF] text-semibold  py-2 px-6 rounded-full"
-              >
-                Become a Cloudgaier
-              </button>
-              <button
-                onClick={scrollToOpenPositions}
-                style={{ fontFamily: "sans-serif,dm-sans" }}
-                className="bg-[#fcc000] font-semibold text-[16px]  text-[#474747] hover:bg-[#ff83a9] hover:text-[#FFFFFF]  py-2 px-6 rounded-full"
-              >
-                Explore open positions
-              </button>
-            </div>
-          </div>
+        <div className="bg-[#f9f9f9]  sm:px-6 lg:px-12 flex flex-col lg:flex-row  gap-8">
+      <div className="relative w-full max-w-3xl px-6 py-24">
+        <img
+          src="Screenshot (187).png"
+          alt="World Map"
+          className="w-full opacity-80"
+        />
+      </div>
+      <div className="max-w-xl text-center lg:text-left py-20 pt-20">
+        <h2 className="text-[#ff83a9] text-2xl font-bold mb-4 text-[32px] pt-24 ">
+          Cloudgaiers around the world
+        </h2>
+        <p className="text-[#474747] font-text text-[18px] mb-6 ">
+          Together, we drive meaningful transformations with a One Team approach, innovation,
+          and a shared commitment to creating lasting impact—all while having a great time.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 ">
+          <button
+           onClick={scrollToCloudgaier} className="bg-[#fcc000] font-semibold text-[16px]  text-[#474747] hover:bg-[#ff83a9] hover:text-[#FFFFFF] text-semibold  py-2 px-6 rounded-full">
+            Become a Cloudgaier
+          </button>
+          <button  onClick={scrollToOpenPositions}  className="bg-[#fcc000] font-semibold text-[16px]  text-[#474747] hover:bg-[#ff83a9] hover:text-[#FFFFFF]  py-2 px-6 rounded-full">
+            Explore open positions
+          </button>
         </div>
+      </div>
+    </div>
       </div>
       <div>
         <div className="relative">
@@ -379,52 +295,47 @@ export const Careers = () => {
           </div>
         </div>
       </div>
-
+   
+ 
       <div id="our-vibe" className=" bg-[#f9f9f9]">
-        <div className="container mx-auto pt-[80px] px-4 md:px-6">
+        <div className="container mx-auto pt-[140px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-0">
-            <div className="text-6xl font-bold text-center text-gray-700">
+            <div className={`  text-[60px] font-bold text-center text-[#474747]  transition-transform  ${
+                loaded ? "translate-y-0 duration-300" : "translate-y-20"
+              }`}>
               Our culture is what sets us apart
             </div>
-            <div className="my-4">
+            <div   className="my-4 pt-0">
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="max-h-[100px] mx-auto bg-white outline-none"
-                style={{ background: "none" }}
+                className="max-h-[100px] mx-auto bg-white outline-none "
+                style={{ background: "none", }}
               >
                 <source src="/Vibe-1.mp4" type="video/mp4" />
               </video>
             </div>
-            <div className="text-center font-bold text-lg">
+            <div className="text-center font-bold text-[#474747] text-lg">
               Our vibes makes the difference.
             </div>
-            <div
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center leading-tight text-lg"
-            >
+            <div className="text-center leading-tight text-lg">
               It’s the way we work, the way we connect, and the way we create
               together. We’re committed to building a safe and
             </div>
-            <div
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center leading-tight text-lg"
-            >
+            <div className="text-center leading-tight text-lg">
               inclusive space where people come first—where you can be yourself,
               grow, and thrive as part of a team that supports
             </div>
-            <div
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center text-lg"
-            >
+            <div className="text-center text-lg">
               and inspires you.
             </div>
           </div>
-        </div>
-
-        <div className=" container mx-auto pt-[80px] px-4 md:px-6  py-8">
+ 
+ </div>
+ 
+        <div className=" container mx-auto pt-[1px] px-4 md:px-6  py-8">
           <div className="px-6 py-10 md:px-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
               {accordionData.map((item) => {
@@ -432,51 +343,32 @@ export const Careers = () => {
                 return (
                   <div
                     key={item.title}
-                    className={`
-                                        ${item.bgColor} ${item.textColor}
-                                        rounded-lg
-                                        transition-all duration-500 ease-in-out
-                                    `}
-                  >
+                    className={`${item.bgColor} ${item.textColor} rounded-lg transition-all duration-500 ease-in-out`}>
                     <button
                       onClick={() => handleAccordionClick(item.title)}
                       className="w-full font-bold text-lg p-6 flex items-center justify-between text-left"
                     >
                       <span>{item.title}</span>
-                      {isOpen ? <FaAngleUp /> : <FaAngleDown />}
+                      {isOpen ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
                     </button>
-
+ 
                     <div
-                      className={`
-                                            overflow-hidden transition-all duration-500 ease-in-out
-                                            ${
-                                              isOpen
-                                                ? "max-h-96 opacity-100"
-                                                : "max-h-0 opacity-0"
-                                            }
-                                        `}
-                    >
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
                       <p className="px-4 pb-4 text-sm">{item.description}</p>
                     </div>
                   </div>
                 );
               })}
             </div>
-            <p
-              style={{ fontFamily: "sans-serif,dm-sans" }}
-              className="text-center text-gray-600 mb-16 max-w-2xl mx-auto"
-            >
+            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
               Here, it's not just about work—it's about working together to
               create something extraordinary.
             </p>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            <div className="text-center mb-12 pt-8">
+              <h2 className="text-[30px]  font-bold text-[#474747] mb-6">
                 We're all-in for your professional growth
               </h2>
-              <p
-                style={{ fontFamily: "sans-serif,dm-sans" }}
-                className="leading-tight max-w-4xl mx-auto text-gray-600 text-lg"
-              >
+              <p className="leading-tight max-w-4xl mx-auto text-gray-600 text-lg">
                 We're here to empower you to become the best version of yourself
                 every day, offering the flexibility to shape your work
                 experience around your unique needs and goals. Whether it's how,
@@ -517,18 +409,9 @@ export const Careers = () => {
                   ],
                 },
               ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-[#FAFAFA] rounded-xl  p-8 flex flex-col sm:flex-row items-center gap-15"
-                >
+                <div key={index} className="bg-[#FAFAFA] rounded-xl  p-8 flex flex-col sm:flex-row items-center gap-15">
                   <div className="flex-shrink-0 w-80 h-24 flex items-center justify-center">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="max-h-full w-auto"
-                    >
+                    <video autoPlay loop muted playsInline className="max-h-full w-auto">
                       <source src={item.video} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
@@ -543,9 +426,10 @@ export const Careers = () => {
                 </div>
               ))}
             </div>
+ 
           </div>
         </div>
-
+ 
         <div className="container mx-auto px-4  md:px-6   ">
           <div className="cpx-6 py-5 md:px-10">
             <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
@@ -568,16 +452,16 @@ export const Careers = () => {
                     {currentTestimonial.title}
                   </p>
                 </div>
-                <div className="flex gap-4 mt-8">
+                <div className="flex gap-4 mt-4">
                   <button
                     onClick={handlePrevTestimonial}
-                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors "
+                    className="bg-yellow-400 text-white p-3 rounded-full hover:bg-[rgb(255,131,169)] transition-colors "
                   >
                     <FaArrowLeft />
                   </button>
                   <button
                     onClick={handleNextTestimonial}
-                    className="bg-yellow-400 text-gray-800 p-3 rounded-full hover:bg-pink-500 transition-colors"
+                    className="bg-yellow-400 text-white p-3 rounded-full hover:bg-[rgb(255,131,169)] transition-colors"
                   >
                     <FaArrowRight />
                   </button>
@@ -587,21 +471,17 @@ export const Careers = () => {
           </div>
         </div>
       </div>
-      <div
-        id="cloudgaier"
-        ref={cloudgaierRef}
-        className="relative w-full py-24"
-      >
+      <div id="cloudgaier" ref={cloudgaierRef} className="relative w-full py-24">
         <div className="absolute inset-0 bg-black/75 z-0"></div>
         <div className="relative z-10 container mx-auto px-4">
-          <h2 className="text-4xl lg:text-5xl font-bold text-yellow-400 text-center mb-12">
+          <h2  className="text-[40px] font-bold text-[#fcc000] text-center mb-4 ">
             Become a Cloudgaier
           </h2>
           <form
             onSubmit={handleSubmit}
             className="max-w-5xl mx-auto p-8 sm:p-10 rounded-xl shadow-2xl"
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <input
                 type="text"
                 name="firstName"
@@ -700,16 +580,13 @@ export const Careers = () => {
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
               <div className="w-full sm:w-auto border border-gray-300 rounded-md p-3 bg-gray-50 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 text-[14px]">
                   <input
                     type="checkbox"
                     id="recaptcha-mock"
                     className="h-6 w-6 border-gray-300 rounded"
-                    required
-                    checked={isRobot}
-                    onChange={(e) => setIsRobot(e.target.checked)}
                   />
-                  <label htmlFor="recaptcha-mock" className="text-gray-800">
+                  <label htmlFor="recaptcha-mock" className="text-gray-800 text-[14px]">
                     I'm not a robot
                   </label>
                 </div>
@@ -721,7 +598,7 @@ export const Careers = () => {
               </div>
               <button
                 type="submit"
-                className="w-full sm:w-auto bg-gray-200 text-gray-800 font-bold py-2 px-6 rounded-lg hover:bg-pink-500 transition-colors"
+                className="w-full sm:w-auto bg-gray-200 text-gray-800 font-bold py-2 px-6 rounded-full hover:bg-pink-500 transition-colors"
               >
                 Apply
               </button>
@@ -729,53 +606,48 @@ export const Careers = () => {
           </form>
         </div>
       </div>
-
-      {/* START: OPEN POSITIONS SECTION (UPDATED) */}
+ 
       <div ref={openPositionsRef} id="open-positions" className=" bg-[#f9f9f9]">
         <div className="container mx-auto px-4 py-20 md:px-6 ">
           <div className="px-6 py-10 md:px-10">
             <div className="text-center mb-12">
-              <h2 className="text-5xl font-bold text-[#008093]">
+              <h2 className={`text-[60px] font-bold text-[#008093] transition-transform  ${
+                loaded ? "translate-y-0 duration-300" : "translate-y-24"
+              } `}>
                 Open positions
               </h2>
-              <p className="text-gray-600 mt-4 text-2xl">
+              <p className="text-[#474747] ml-10 mt-0 text-2xl">
                 Join the team, these are our open positions.
               </p>
             </div>
-
+ 
             <div className="space-y-10 mb-16">
               <div className="flex items-start gap-4">
                 <img src="/benefits-icon.svg" className="h-6" />
-
+ 
                 <div>
-                  <h3 className="font-bold text-lg text-pink-500">
+                  <h3 className="font-bold text-lg text-[#ff83a9]">
                     What we offer
                   </h3>
-                  <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
-                  >
-                    <li>A dynamic and collaborative work environment</li>
-                    <li>Flexibility to work from anywhere in the world</li>
-                    <li>
-                      A supportive culture that values creativity and innovation
-                    </li>
-                    <li>Free certifications</li>
-                    <li>Free time-off</li>
-                    <li>English and Spanish classes</li>
+                  <ul className=" text-[#474747] text-[18px] text-semibold mt-2  leading-tight ml-4">
+                    <li >A dynamic and collaborative work environment</li>
+                    <li >Flexibility to work from anywhere in the world</li>
+                    <li > A supportive culture that values creativity and innovation
+ 
+</li >
+                    <li >Free certifications</li>
+                    <li >Free time-off</li>
+                    <li >English and Spanish classes</li>
                   </ul>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <img src="/icon-plane.svg" className="h-6" />
                 <div>
-                  <h3 className="font-bold text-lg text-pink-500">
-                    Why Join Codescience?
+                  <h3  className="font-bold text-lg text-[#ff83a9]">
+                    Why Join Cloudgaia?
                   </h3>
-                  <ul
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                    className="list-disc list-inside text-gray-600 mt-2 space-y-1 leading-tight"
-                  >
+                  <ul className=" text-[#474747] text-[18px] text-semibold mt-2  leading-tight ml-4">
                     <li>
                       Work on cutting-edge Salesforce projects with top-tier
                       clients.
@@ -789,76 +661,48 @@ export const Careers = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                {/* <FaInfoCircle className="text-pink-500 text-2xl mt-1 flex-shrink-0" /> */}
                 <img src="/2-lampara-emoji.png" className="h-6" />
-
                 <div>
-                  <h3 className="font-bold text-lg text-pink-500">
-                    About Codescience
+                  <h3 className="font-bold text-lg text-[#ff83a9]">
+                    About Cloudgaia:
                   </h3>
-                  <p
-                    className="text-gray-600 mt-2"
-                    style={{ fontFamily: "sans-serif,dm-sans" }}
-                  >
-                    At Codescience, we are passionate about digital
-                    transformation with Salesforce. We partner with companies to
-                    drive innovation, ensuring real business impact.
+                  <p className="text-[#474747] text-[18px] text-semibold mt-2 ml-4">
+                    At Cloudgaia, we are passionate about digital transformation
+                    with Salesforce. We partner with companies to drive
+                    innovation, ensuring real business impact.
                   </p>
-                  <p className="text-gray-700 mt-4 text-xl font-semibold leading-tight">
+                  <p className="text-[#474747] mt-4 text-xl font-[18px] font-semibold leading-tight ml-4">
                     Ready to take your career to the next level? <br /> Join
-                    Codescience and be part of the digital evolution!
+                    Cloudgaia and be part of the digital evolution!
                   </p>
                 </div>
               </div>
             </div>
-
+ 
             <div className="flex  items-left gap-4 mb-8">
               <button
                 onClick={() => setActiveTab("All areas")}
-                className={`py-2 px-6 rounded-full font-semibold transition-colors ${
-                  activeTab === "All areas"
-                    ? "border border-[#008093] text-[#008093]"
-                    : "text-gray-500 hover:text-[#008093]"
-                }`}
-              >
+                className={`py-2 px-6 rounded-full  transition-colors ${activeTab === "All areas" ? "border border-[#008093] text-[#008093]" : "text-[#474747] hover:text-[#008093]"}`}>
                 All areas
               </button>
               <button
                 onClick={() => setActiveTab("Commercial")}
-                className={`py-2 px-6  bg-white rounded-full font-semibold transition-colors ${
-                  activeTab === "Commercial"
-                    ? "border-2 border-teal-500 text-[#FF83A9]"
-                    : "text-gray-500 hover:text-[#008093] hover:border-[#008093] border border-white"
-                }`}
-              >
+                className={`py-2 px-6  bg-white rounded-full  transition-colors ${activeTab === "Commercial" ? "border-2 border-teal-500 text-[#FF83A9]" : "text-[#474747] hover:text-[#008093] hover:border-[#008093] border border-white"}`}>
                 Commercial
               </button>
               <button
                 onClick={() => setActiveTab("Operations")}
-                className={`py-2 px-6 rounded-full  bg-white font-semibold transition-colors ${
-                  activeTab === "Operations"
-                    ? "border-2 border-teal-500 text-[#FF83A9]"
-                    : "text-gray-500 hover:text-[#008093] hover:border-[#008093] border border-white"
-                }`}
-              >
+                className={`py-2 px-6 rounded-full  bg-white  transition-colors ${activeTab === "Operations" ? "border-2 border-teal-500 text-[#FF83A9]" : "text-[#474747] hover:text-[#008093] hover:border-[#008093] border border-white"}`}>
                 Operations
               </button>
             </div>
-
-            {/* START: UPDATED JOB LISTING RENDER LOGIC */}
-            <div className="bg-white rounded-2xl shadow-lg">
+ 
+            <div className="bg-white rounded-2xl ">
               <div>
                 {filteredJobs.map((job, index) => {
                   const isOpen = openJobIndex === index;
                   return (
-                    <div
-                      key={index}
-                      className={`transition-all duration-300 ease-in-out ${
-                        index < filteredJobs.length - 1
-                          ? "border-b border-gray-200"
-                          : ""
-                      }`}
-                    >
+                    <div key={index} className={`transition-all duration-300 ease-in-out ${index < filteredJobs.length - 1 ? "border-b border-gray-200" : ""}`}>
                       <div
                         className="flex items-center  p-10 cursor-pointer"
                         onClick={() => setOpenJobIndex(isOpen ? null : index)}
@@ -867,42 +711,34 @@ export const Careers = () => {
                           <div className="bg-yellow-400  text-white w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
                             {isOpen ? <FaAngleUp /> : <FaAngleDown />}
                           </div>
-                          <h4 className="font-dm text-[24px] text-[#474747]">
-                            {job.title}
-                          </h4>
+                          <h4 className="font-dm text-[24px] text-[#474747]">{job.title}</h4>
                         </div>
                         <div className=" md:flex ml-6 gap-4 text-[#ff83a9] font-semibold ">
                           <span>{job.department}</span>
-                          <span className="text-[#ff83a9] pl-2 ml-15">
-                            {job.type}
-                          </span>
+                          <span className="text-[#ff83a9] pl-2 ml-15">{job.type}</span>
                         </div>
                       </div>
-
+ 
                       {isOpen && (
-                        <div className="px-6 pb-6 text-gray-700 space-y-6">
+                        <div className="px-6 pb-6 text-gray-700 ">
                           <div>
                             <h5 className="font-bold text-lg text-[#ff83a9] mb-3 flex items-center gap-5">
-                              <img src="purpose-icon.svg"></img> Purpose of
-                              position
+                              <img src="purpose-icon.svg"></img> Purpose of position
                             </h5>
-                            <p className="font-dm text-[18px] text-[#474747] pl-2 ml-20">
-                              {job.purpose}
-                            </p>
+                            <p className="font-dm text-[18px] text-[#474747] pl-2 ml-20">{job.purpose}</p>
                           </div>
                           <div>
                             <h5 className="font-bold text-lg text-[#ff83a9] mb-3 flex items-center gap-5">
-                              <img src="skills-icon.svg"></img> Required Skills
-                              & Experience
+                              <img src="skills-icon.svg"></img> Required Skills & Experience
                             </h5>
-                            <ul className="font-dm text-[18px] text-[#474747] space-y-2   pl-2 ml-20">
+                            <ul className="font-dm text-[18px] text-[#474747] pl-2 ml-20">
                               {job.skills.map((skill, i) => (
                                 <li key={i}>{skill}</li>
                               ))}
                             </ul>
                           </div>
                           <div className="text-left mt-6">
-                            <button className="bg-yellow-400 text-black font-bold py-2 px-6 rounded-lg hover:bg-pink-500 transition">
+                            <button className="bg-yellow-400  font-bold py-2 px-6 text-[#474747] hover:text-white rounded-full  hover:bg-[#FF83A9] transition">
                               Apply now!
                             </button>
                           </div>
@@ -913,12 +749,11 @@ export const Careers = () => {
                 })}
               </div>
             </div>
-            {/* END: UPDATED JOB LISTING RENDER LOGIC */}
-
+ 
             <div className="text-center mt-12">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="inline-flex items-center gap-2 text-gray-700 font-semibold"
+                className="inline-flex items-center gap-2 text-[#474747] text-[18px]"
               >
                 <div className="bg-yellow-400 text-white w-10 h-10 rounded-full flex items-center justify-center">
                   <FaAngleUp />
@@ -929,9 +764,9 @@ export const Careers = () => {
           </div>
         </div>
       </div>
-      {/* END: OPEN POSITIONS SECTION */}
-
+     
       <Footer />
     </div>
   );
 };
+ 
