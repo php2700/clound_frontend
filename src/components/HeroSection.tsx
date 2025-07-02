@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import leftArrow from "/arrow-yellow-back.svg";
-import rightArrow from "/arrow-yellow-next.svg";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const HeroSection = () => {
   const images = [
@@ -232,21 +231,21 @@ const HeroSection = () => {
 
       {/* Navigation Arrows */}
       <div className="absolute bottom-8 right-8 flex space-x-2 z-10">
-        {/* <button
+        <button
           onClick={prevImage}
           className="w-10 h-10 bg-[#FACC15] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-[#ff83a9]"
           aria-label="Previous image"
         >
-          <span className="text-white font-extrabold text-2xl">🡠</span>
+          <span className="text-white "><FaArrowLeft /></span>
         </button>
         <button
           onClick={nextImage}
           className="w-10 h-10 bg-[#FACC15] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-[#ff83a9]"
           aria-label="Next image"
         >
-          <span className="text-white font-extrabold text-2xl">🡢</span>
-        </button> */}
-         <img
+          <span className="text-white "><FaArrowRight /></span>
+        </button>
+         {/* <img
                   src={leftArrow}
                   alt="Ebook"
                   onClick={prevImage}
@@ -256,8 +255,8 @@ const HeroSection = () => {
                   src={rightArrow}
                   alt="Ebook"
                   onClick={nextImage}
-                  className="w-10 h-10 bg-[#FACC15] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-[#ff83a9]"
-                />
+                  className="w-10 h-10 bg-[#FACC15] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-pink-500"
+                /> */}
       </div>
     </section>
   );
