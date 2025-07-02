@@ -132,7 +132,7 @@ const Home = () => {
             className="text-6xl font-bold text-center mt-24"
             style={{ color: "#008093" }}
           >
-            Why Partner with us?
+            Why partner with us?
           </h2>
         </div>
         <div className="container mx-auto mt-4 pb-10 px-6 md:px-10">
