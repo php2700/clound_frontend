@@ -61,9 +61,9 @@ export const Blog = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-//   const blogDataList=()={
-// axios.get(`${API_BASE_URL}api/user/innovation`)
-//   }
+  //   const blogDataList=()={
+  // axios.get(`${API_BASE_URL}api/user/innovation`)
+  //   }
 
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
@@ -85,7 +85,8 @@ export const Blog = () => {
           <div className="px-6 py-10 md:px-10">
             <div className="flex items-center text-sm  text-[#474747] mt-10">
               <Link to="/">
-                <img src='/bread-home.svg'
+                <img
+                  src="/bread-home.svg"
                   className="mr-1 text-xl cursor-pointer"
                   aria-hidden="true"
                 />
@@ -105,7 +106,7 @@ export const Blog = () => {
               Check out our latest updates
             </h1>
             <div
-              style={{  lineHeight: "1.2em" }}
+              style={{ lineHeight: "1.2em" }}
               className="mt-5 text-2xl text-[#474747] "
             >
               Stay up-to-date with the latest insights, trends, and best
@@ -224,6 +225,24 @@ export const Blog = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        <div
+          className="relative w-full h-[300px] bg-cover bg-center"
+          style={{ backgroundImage: "url('/stories-banner-back.webp')" }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+
+          <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
+            <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9]">
+              Let's talk!
+            </h2>
+            <Link
+              to="/contact"
+              className="bg-[#ff83a9] text-[#f9f9f9] px-6 py-2 rounded-full text-lg font-bold hover:bg-white hover:text-[#474747] transition"
+            >
+              Contact us
+            </Link>
           </div>
         </div>
       </div>
