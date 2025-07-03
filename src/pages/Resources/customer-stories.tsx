@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+ 
 export const Customer_Stories = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-
+ 
   const [lastScrollY, setLastScrollY] = useState(0);
-
+ 
   const data = [
     {
       description: `"Excellent results in a very short period of time ",
@@ -23,7 +23,7 @@ export const Customer_Stories = () => {
                   title: "Hernan Boykier"`,
       img: "/logo-la-caja.svg",
     },
-
+ 
     {
       description: `"What we achieved was epic, and I attribute it to the strong chemistry and trust within the team. We all shared the same goal and pushed together to reach where we wanted to be."`,
       title: "Alberto Calvo | Former CEO from Grupo Dexter (Grupo Dabra)",
@@ -35,7 +35,7 @@ export const Customer_Stories = () => {
       img: "/logo-banco-del-sol.svg",
     },
   ];
-
+ 
   const storyData = [
     {
       url: "/customer-stories/cona-detail",
@@ -81,7 +81,7 @@ export const Customer_Stories = () => {
         "Grupo Dexter, Argentina’s leading sports retailer, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders.",
     },
   ];
-
+ 
   const images = [
     "/logo-grupo-dexter.svg",
     "/uala9.png",
@@ -93,40 +93,40 @@ export const Customer_Stories = () => {
     "/mecardo4.png",
     "/idb2.png",
   ];
-
+ 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
     }, 7000);
-
+ 
     return () => clearInterval(interval);
   }, [data?.length]);
-
+ 
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? data?.length - 1 : prev - 1));
   };
-
+ 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev === data?.length - 1 ? 0 : prev + 1));
   };
-
+ 
   const item = data[currentIndex];
-
+ 
   useEffect(() => {
     setLoaded(true);
   }, []);
-
+ 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsHeaderVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
-
+ 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-
+ 
   return (
     <div>
       <div className="relative min-h-screen overflow-x-hidden">
@@ -136,7 +136,7 @@ export const Customer_Stories = () => {
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
           aria-hidden="true"
         />
-
+ 
         <div
           className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
             isHeaderVisible ? "translate-y-6" : "-translate-y-full"
@@ -144,10 +144,10 @@ export const Customer_Stories = () => {
         >
           <Header />
         </div>
-
+ 
         <div className="bg-[#f9f9f9]">
           <div className="container mx-auto pt-[130px] px-4 md:px-6 ">
-            <div className="px-6 py-10 md:px-10 ">
+            <div className="px-6 py-20 md:px-10 ">
               <div className="flex items-center text-sm text-[#474747] mt-8">
                 <Link to="/">
   <img src='/bread-home.svg' className="mr-1 text-xl cursor-pointer" aria-hidden="true" />
@@ -162,7 +162,7 @@ export const Customer_Stories = () => {
                 </span>
               </div>
               <div
-                className={`text-2xl md:text-6xl font-bold text-[#008093] my-4 transition-transform 
+                className={`text-2xl md:text-6xl racking-tight font-bold text-[#008093] my-4 transition-transform
                                     ${
                                       loaded
                                         ? "translate-y-0  duration-300"
@@ -189,7 +189,7 @@ export const Customer_Stories = () => {
             </div>
           </div>
         </div>
-
+ 
         <div className="text-center max-w-4xl mx-auto py-6 my-10 flex flex-col text-center min-h-[300px] ">
           <div
             style={{ lineHeight: "1.2em" }}
@@ -221,7 +221,7 @@ export const Customer_Stories = () => {
             </div>
           </div>
         </div>
-
+ 
         <div className="bg-[#f9f9f9]">
           <div className=" container mx-auto py-10  px-4 md:px-6">
             <div className="px-6 py-10 md:px-10 ">
@@ -242,7 +242,7 @@ export const Customer_Stories = () => {
               </p>
             </div>
           </div>
-
+ 
           <div className="overflow-hidden py-10 ">
             <div className="flex gap-20 animate-scroll whitespace-nowrap">
               {[...images, ...images].map((src, index) => (
@@ -255,7 +255,7 @@ export const Customer_Stories = () => {
               ))}
             </div>
           </div>
-
+ 
           <div className=" container mx-auto mt-[100px] px-4 md:px-6">
             <div className="px-6  md:px-10 ">
               {storyData?.map((item, index) => (
@@ -298,7 +298,8 @@ export const Customer_Stories = () => {
                     </div>
                     <div
                       style={{
-                        lineHeight: "1.2em",
+ 
+lineHeight: "1.2em",
                       }}
                       className="text-[#474747] text-lg mb-4"
                     >
@@ -314,13 +315,13 @@ export const Customer_Stories = () => {
               ))}
             </div>
           </div>
-
+ 
           <div
             className="relative w-full h-[300px] bg-cover bg-center"
             style={{ backgroundImage: "url('/stories-banner-back.webp')" }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-
+ 
             <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
               <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9]">
                 Let's talk!
@@ -336,3 +337,5 @@ export const Customer_Stories = () => {
     </div>
   );
 };
+ 
+ 

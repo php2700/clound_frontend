@@ -15,124 +15,6 @@
 // import { toast } from "sonner";
 // const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
-// const countries = [
-//   "Afghanistan",
-//   "Albania",
-//   "Algeria",
-//   "Andorra",
-//   "Angola",
-//   "Argentina",
-//   "Armenia",
-//   "Australia",
-//   "Austria",
-//   "Azerbaijan",
-//   "Bahamas",
-//   "Bahrain",
-//   "Bangladesh",
-//   "Barbados",
-//   "Belarus",
-//   "Belgium",
-//   "Bhutan",
-//   "Bolivia",
-//   "Brazil",
-//   "Bulgaria",
-//   "Cambodia",
-//   "Canada",
-//   "Chile",
-//   "China",
-//   "Colombia",
-//   "Croatia",
-//   "Cuba",
-//   "Cyprus",
-//   "Czech Republic",
-//   "Denmark",
-//   "Dominican Republic",
-//   "Ecuador",
-//   "Egypt",
-//   "Estonia",
-//   "Ethiopia",
-//   "Finland",
-//   "France",
-//   "Georgia",
-//   "Germany",
-//   "Ghana",
-//   "Greece",
-//   "Guatemala",
-//   "Honduras",
-//   "Hungary",
-//   "Iceland",
-//   "India",
-//   "Indonesia",
-//   "Iran",
-//   "Iraq",
-//   "Ireland",
-//   "Israel",
-//   "Italy",
-//   "Jamaica",
-//   "Japan",
-//   "Jordan",
-//   "Kazakhstan",
-//   "Kenya",
-//   "Kuwait",
-//   "Latvia",
-//   "Lebanon",
-//   "Lithuania",
-//   "Luxembourg",
-//   "Malaysia",
-//   "Maldives",
-//   "Mexico",
-//   "Moldova",
-//   "Monaco",
-//   "Mongolia",
-//   "Morocco",
-//   "Nepal",
-//   "Netherlands",
-//   "New Zealand",
-//   "Nigeria",
-//   "Norway",
-//   "Oman",
-//   "Pakistan",
-//   "Panama",
-//   "Peru",
-//   "Philippines",
-//   "Poland",
-//   "Portugal",
-//   "Qatar",
-//   "Romania",
-//   "Russia",
-//   "Saudi Arabia",
-//   "Serbia",
-//   "Singapore",
-//   "Slovakia",
-//   "Slovenia",
-//   "South Africa",
-//   "South Korea",
-//   "Spain",
-//   "Sri Lanka",
-//   "Sudan",
-//   "Sweden",
-//   "Switzerland",
-//   "Syria",
-//   "Taiwan",
-//   "Tajikistan",
-//   "Tanzania",
-//   "Thailand",
-//   "Tunisia",
-//   "Turkey",
-//   "Uganda",
-//   "Ukraine",
-//   "United Arab Emirates",
-//   "United Kingdom",
-//   "United States",
-//   "Uruguay",
-//   "Uzbekistan",
-//   "Venezuela",
-//   "Vietnam",
-//   "Yemen",
-//   "Zambia",
-//   "Zimbabwe",
-// ].sort();
-
 // const Growth = () => {
 //   const navigate = useNavigate();
 //     const [firstName, setFirstName] = useState("");
@@ -527,6 +409,10 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast } from "sonner";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
 const countries = [
   "Afghanistan",
@@ -650,6 +536,14 @@ const Growth = () => {
   const navigate = useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [message, setMessage] = useState("");
+  const [isAgree, setIsAgree] = useState(false);
+  const [isRobot, setIsRobot] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -660,6 +554,40 @@ const Growth = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const growthData = {
+      firstName,
+      lastName,
+      email,
+      company,
+      country,
+      message,
+      isAgree,
+    };
+
+    axios
+      .post(`${API_BASE_URL}api/user/growth`, growthData)
+      .then((res) => {
+        console.log(res, "gg");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setCompany("");
+        setCountry("");
+        setMessage("");
+        setIsAgree(false);
+        setIsRobot(false);
+        toast.success("Details_added", {
+          position: "top-right",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="relative min-h-screen bg-white">
@@ -745,7 +673,7 @@ const Growth = () => {
                   ].map((card, index) => (
                     <div
                       key={index}
-                      className="bg-white  rounded-lg p-6 shadow-md min-h-[320px] flex flex-col justify-center"
+                      className="bg-white  rounded-lg p-6  min-h-[320px] flex flex-col justify-center"
                     >
                       <div className="flex items-start">
                         {card.icon}
@@ -771,8 +699,11 @@ const Growth = () => {
                 {/* Right Sticky Form */}
                 <div className="lg:w-[42%] w-full">
                   <div className="lg:sticky top-28">
-                    <form className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg space-y-4 h-[600px]">
-                      <h2 className="text-2xl font-semibold mb-2 leading-tight">
+                    <form
+                      className="bg-[#fcc000] text-[#474747] font-semibold p-6 rounded-lg shadow-lg space-y-4 h-[600px]"
+                      onSubmit={handleSubmit}
+                    >
+                      <h2 className="text-2xl font-semibold mb-2 leading-tight tracking-tight">
                         Complete the form and book
                         <br />a free consultation
                       </h2>
@@ -784,12 +715,16 @@ const Growth = () => {
                           placeholder="First Name*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
                         />
                         <input
                           type="text"
                           placeholder="Last Name*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
                         />
                       </div>
 
@@ -800,40 +735,53 @@ const Growth = () => {
                           placeholder="Email*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                         <input
                           type="text"
                           placeholder="Company*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
                           required
+                          value={company}
+                          onChange={(e) => setCompany(e.target.value)}
                         />
                       </div>
 
                       {/* Country Dropdown */}
-                      <select
-                        required
-                        className="w-full p-3 rounded bg-white text-black text-lg focus:outline-none"
-                        defaultValue=""
-                      >
-                        <option disabled value="">
-                          Select Country*
-                        </option>
-                        {countries.map((country, index) => (
-                          <option
-                            key={index}
-                            value={country}
-                            className="text-xs"
-                          >
-                            {country}
+                      <div className="relative">
+                        <select
+                          required
+                          className="w-full p-3 rounded bg-[#f9f9f9] text-black text-lg focus:outline-none appearance-none"
+                          defaultValue=""
+                          value={country}
+                          onChange={(e) => setCountry(e.target.value)}
+                        >
+                          <option disabled value="">
+                            Country*
                           </option>
-                        ))}
-                      </select>
+                          {countries.map((country, index) => (
+                            <option
+                              key={index}
+                              value={country}
+                              className="text-xs"
+                            >
+                              {country}
+                            </option>
+                          ))}
+                        </select>
+                        <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#474747]  pointer-events-none ">
+                          <ArrowDownwardIcon sx={{ fontSize: 16 }} />
+                        </span>
+                      </div>
 
                       {/* Message */}
                       <textarea
                         placeholder="Message*"
                         className="w-full p-3 h-28 rounded bg-white text-black text-lg resize-none focus:outline-none"
                         required
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
 
                       {/* Checkbox */}
@@ -843,7 +791,13 @@ const Growth = () => {
                         <span className="font-semibold "> Privacy Policy</span>.
                       </p>
                       <div className="flex items-start gap-2">
-                        <input type="checkbox" className="mt-1" required />
+                        <input
+                          type="checkbox"
+                          className="mt-1"
+                          required
+                          checked={isAgree}
+                          onChange={(e) => setIsAgree(e.target.checked)}
+                        />
                         <p className="text-xs text-[#474747]">
                           I agree to receive emails from Codescience with
                           updates on services, events, and alerts. I can
@@ -855,9 +809,12 @@ const Growth = () => {
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
                         <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
                           <input
+                            required
                             type="checkbox"
                             id="not-robot"
                             className="h-4 w-4 mr-2 accent-blue-600"
+                            checked={isRobot}
+                            onChange={(e) => setIsRobot(e.target.checked)}
                           />
                           <label
                             htmlFor="not-robot"
@@ -896,13 +853,13 @@ const Growth = () => {
             <div className="py-20">
               <h2
                 style={{ fontSize: "40px" }}
-                className="text-center font-semibold text-[#008093] mb-10"
+                className="text-center font-semibold text-[#008093] mb-10 tracking-tight"
               >
                 Check our other services
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-6  rounded-lg shadow-md text-left bg-white">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <div className="p-6  rounded-lg text-left bg-white">
                   <img src="/services-icon-1.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
@@ -928,7 +885,7 @@ const Growth = () => {
                   </Link>
                 </div>
 
-                <div className="p-6  rounded-lg shadow-md text-left bg-white">
+                <div className="p-6  rounded-lg  text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
@@ -954,7 +911,7 @@ const Growth = () => {
                   </Link>
                 </div>
 
-                <div className="p-6 bg-white rounded-lg shadow-md text-left">
+                <div className="p-6 bg-white rounded-lg  text-left">
                   <img src="/services-icon-2.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
@@ -993,7 +950,7 @@ const Growth = () => {
 
                 {/* Label */}
                 <span className="ml-4 text-lg font-medium text-[#474747]">
-                  Back to Services
+                  Back to services
                 </span>
               </div>
             </div>

@@ -9,13 +9,13 @@ const ImageHoverCard = ({ imageSrc, title, description }) => {
         />
       </div>
       <h3 style={{lineHeight:'1.2em'}}
-        className="mt-4 text-2xl font-bold text-left text-[#008093]"
+        className="my-5 text-2xl font-bold text-left text-[#008093]"
       >
         {title}
       </h3>
       <p
         style={{lineHeight:'1.2em' }}
-        className="mt-2 text-[#474747]  text-left text-[18px]"
+        className="text-[#474747]  text-left text-[18px]"
       >
         {description}
       </p>

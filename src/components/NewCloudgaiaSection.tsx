@@ -1,12 +1,12 @@
 const NewCloudgaiaSection = () => {
   return (
     <section className="bg-[#474748] py-20 relative overflow-hidden">
-      {/* 🔺 Top Left Decorative Image */}
       <img
-  src="asset1.png"
-  alt="Decorative Overlay"
-  className="absolute  w-[150px] h-[700px] z-0 pointer-events-none mr-[22px] ml-[-35px] mb-[100px] mt-[-90px]"
-/>
+        src="asset1.png"
+        // src="/left-video.png"
+        alt="Decorative Overlay"
+        className="absolute  w-[150px] z-0 pointer-events-none mr-[22px] ml-[-35px] mb-[100px] mt-[-90px]"
+      />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 items-center">

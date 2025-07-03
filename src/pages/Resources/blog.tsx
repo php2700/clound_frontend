@@ -7,11 +7,11 @@ import { FaHome } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
-
+ 
 export const Blog = () => {
   const [loaded, setLoaded] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-
+ 
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const data = [
     {
@@ -45,26 +45,26 @@ export const Blog = () => {
     },
   ];
   const headings = ["AI", "Consumer Goods", "Expert Insights", "News"];
-
+ 
   useEffect(() => {
     setLoaded(true);
   }, []);
-
+ 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsHeaderVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
-
+ 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-
+ 
   //   const blogDataList=()={
   // axios.get(`${API_BASE_URL}api/user/innovation`)
   //   }
-
+ 
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       <div
@@ -82,7 +82,7 @@ export const Blog = () => {
       </div>
       <div className="bg-[#f9f9f9]">
         <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
-          <div className="px-6 py-10 md:px-10">
+          <div className="px-6 py-20 md:px-10">
             <div className="flex items-center text-sm  text-[#474747] mt-10">
               <Link to="/">
                 <img
@@ -92,22 +92,22 @@ export const Blog = () => {
                 />
               </Link>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="text-base font-bold cursor-pointer">
+              <span className="text-base font-bold cursor-pointer ml-1">
                 &nbsp;Resources
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
               <span className="mx-1 text-base font-bold">&nbsp; Blog</span>
             </div>
             <h1
-              className={`mt-4 text-6xl font-bold text-[#008093] transition-transform  ${
-                loaded ? "translate-y-0 duration-300" : "translate-y-12"
+              className={`mt-4 text-6xl tracking-tight font-bold text-[#008093]  transition-transform  ${
+                loaded ? "translate-y-0 duration-300" : "translate-y-12 "
               } `}
             >
               Check out our latest updates
             </h1>
             <div
               style={{ lineHeight: "1.2em" }}
-              className="mt-5 text-2xl text-[#474747] "
+              className="mt-5 text-2xl text-[#474747] tracking-tight "
             >
               Stay up-to-date with the latest insights, trends, and best
               practices from the Salesforce ecosystem. Our blog features
@@ -181,19 +181,19 @@ export const Blog = () => {
                 </div>
               </div>
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
+ 
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-8">
               {data?.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col min-h-[400px]"
+                  className="bg-white rounded-lg  overflow-hidden flex flex-col min-h-[400px]"
                 >
                   <img
                     src={item?.img}
                     alt={item?.title}
                     className="w-full h-48 object-cover cursor-pointer"
                   />
-
+ 
                   <div className="p-4 flex flex-col flex-grow">
                     <div
                       style={{ fontSize: "12px" }}
@@ -215,7 +215,7 @@ export const Blog = () => {
                     >
                       {item?.description}
                     </div>
-
+ 
                     {/* Read Article pushed to bottom */}
                     <div className="relative mt-auto font-bold text-[#474747] text-base cursor-pointer group w-max">
                       <span>Read Article</span>
@@ -232,9 +232,9 @@ export const Blog = () => {
           style={{ backgroundImage: "url('/stories-banner-back.webp')" }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-
+ 
           <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
-            <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9]">
+            <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9] tracking-tight">
               Let's talk!
             </h2>
             <Link
@@ -251,3 +251,5 @@ export const Blog = () => {
     // </div>
   );
 };
+ 
+ 
