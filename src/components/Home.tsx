@@ -147,7 +147,7 @@ const Home = () => {
                     <strong> global presence and 15+ years as Salesforce partners</strong>
                     , we’ve dedicated ourselves exclusively to mastering the
                     Salesforce ecosystem working with
-                    <strong> eading industries of all sizes.</strong> Our team of industry{" "}
+                    <strong> leading industries of all sizes.</strong> Our team of industry{" "}
                     <strong> experts collaborates with clients </strong> to develop solid
                     strategies aligned with their business objectives,
                     accelerating value delivery and adapting to their unique
@@ -163,7 +163,7 @@ const Home = () => {
                     We stay at the <strong> forefront of Salesforce technology</strong>,
                     mastering all its clouds with an unmatched level of
                     expertise and technical depth.
-                    <strong> We have a glostrongal team of experts</strong> that comstrongines local
+                    <strong> We have a global team of experts</strong> that comstrongines local
                     and international knowledge to design
                     <strong> customized solutions </strong> that maximize Salesforce
                     platforms and our clients’ roadmaps, ensuring exceptional
