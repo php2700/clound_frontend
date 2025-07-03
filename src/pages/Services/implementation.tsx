@@ -554,13 +554,15 @@
 
 // export default Implementation;
 
-
-
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { toast } from "sonner";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 import {
   FaBolt,
   FaChartLine,
@@ -570,7 +572,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
- 
+
 // Country list
 const countries = [
   "Afghanistan",
@@ -689,12 +691,20 @@ const countries = [
   "Zambia",
   "Zimbabwe",
 ].sort();
- 
+
 const Implementation = () => {
   const navigate = useNavigate();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [message, setMessage] = useState("");
+  const [isAgree, setIsAgree] = useState(false);
+  const [isRobot, setIsRobot] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
- 
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -704,7 +714,39 @@ const Implementation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
- 
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const implementationData = {
+      firstName,
+      lastName,
+      email,
+      company,
+      country,
+      message,
+      isAgree,
+    };
+    axios
+      .post(`${API_BASE_URL}api/user/implementation`, implementationData)
+      .then((res) => {
+        console.log(res, "gg");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setCompany("");
+        setCountry("");
+        setMessage("");
+        setIsAgree(false);
+        setIsRobot(false);
+        toast.success("Details_added", {
+          position: "top-right",
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="relative min-h-screen ] ">
       {/* Sticky Header */}
@@ -715,7 +757,7 @@ const Implementation = () => {
       >
         <Header />
       </div>
- 
+
       {/* Main Content */}
       <div className="container mx-auto px-4 py-20 md:px-6 mt-20 ">
         <div className="px-6 py-10 md:px-10">
@@ -733,7 +775,7 @@ const Implementation = () => {
             <span className="text-base font-bold">&nbsp;/</span>
             <span className="text-base font-bold">&nbsp;Implementation</span>
           </div>
- 
+
           {/* Title Section */}
           <div className="mt-5">
             <h1
@@ -799,14 +841,14 @@ const Implementation = () => {
                     their use.
                   </p>
                 </div>
- 
+
                 <h2
                   style={{ fontSize: "40px", lineHeight: "1em" }}
                   className="font-semibold text-[#474747] tracking-tight"
                 >
                   Blend of services to suit <br /> your business needs
                 </h2>
-                 
+
                 <div className="flex flex-col gap-6">
                   {/* Quick Starts */}
                   <div className="p-6 bg-white rounded-lg flex items-start gap-4">
@@ -828,7 +870,7 @@ const Implementation = () => {
                       </p>
                     </div>
                   </div>
- 
+
                   {/* Agile Team */}
                   <div className="p-6 bg-white rounded-lg  flex items-start gap-4">
                     <img src="/implementation-icon-2.svg" />
@@ -850,7 +892,7 @@ const Implementation = () => {
                       </p>
                     </div>
                   </div>
- 
+
                   {/* Custom E2E */}
                   <div className="p-6 bg-white rounded-lg  flex items-start gap-4">
                     <img src="/implementation-icon-3.svg" />
@@ -874,18 +916,21 @@ const Implementation = () => {
                   </div>
                 </div>
               </div>
- 
+
               {/* Right Side Form */}
               {/* Right Side Form */}
               <div className="lg:w-[45%] w-full sticky top-10 self-start">
-                <form className="bg-[#FCC000] text-white p-8 rounded-xl space-y-6 ">
+                <form
+                  className="bg-[#FCC000] text-white p-8 rounded-xl space-y-6 "
+                  onSubmit={handleSubmit}
+                >
                   <p
                     style={{ lineHeight: "1.2em" }}
                     className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]"
                   >
                     Complete the form and book <br /> a free consultation
                   </p>
- 
+
                   {/* Name Fields */}
                   <div className="flex flex-col md:flex-row gap-4">
                     <input
@@ -893,15 +938,19 @@ const Implementation = () => {
                       placeholder="First Name*"
                       required
                       className="flex-1 p-3 bg-white text-black rounded-md"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                     />
                     <input
                       type="text"
                       placeholder="Last Name*"
                       required
                       className="flex-1 p-3 bg-white text-black rounded-md"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                     />
                   </div>
- 
+
                   {/* Company + Email */}
                   <div className="flex flex-col md:flex-row gap-4">
                     <input
@@ -909,62 +958,80 @@ const Implementation = () => {
                       placeholder="Company*"
                       required
                       className="flex-1 p-3 bg-white text-black rounded-md"
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
                     />
                     <input
                       type="email"
                       placeholder="Email*"
                       required
                       className="flex-1 p-3 bg-white text-black rounded-md"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
- 
+
                   {/* Country Dropdown */}
-                  <select
-                    required
-                    className="w-full p-3 bg-white text-[#474747] rounded-md"
-                    defaultValue=""
-                  >
-                    <option disabled value="">
-                      Country*
-                    </option>
-                    {countries.map((country, id) => (
-                      <option key={id} value={country}>
-                        {country}
+                  <div className="relative">
+                    <select
+                      required
+                      className="w-full p-3 bg-white text-[#474747] rounded-md appearance-none"
+                      defaultValue=""
+                      value={country}
+                      onChange={(e) => setCountry(e.target.value)}
+                    >
+                      <option disabled value="">
+                        Country*
                       </option>
-                    ))}
-                  </select>
- 
+                      {countries.map((country, id) => (
+                        <option key={id} value={country}>
+                          {country}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#474747]  pointer-events-none ">
+                      <ArrowDownwardIcon sx={{ fontSize: 16 }} />
+                    </span>
+                  </div>
+
                   {/* Message */}
                   <textarea
                     placeholder="Message*"
                     required
                     className="w-full p-3 bg-white text-black rounded-md h-32"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
- 
+
                   <p className="text-[12px] font-light text-[#474747]">
                     By continuing, I confirm that I have read and agree to the{" "}
                     <span className="font-semibold ">Privacy Policy</span>.
                   </p>
- 
+
                   <label className="flex items-start text-[12px] font-light text-[#474747]">
                     <input
                       type="checkbox"
                       className="mt-1 accent-white"
                       required
+                      checked={isAgree}
+                      onChange={(e) => setIsAgree(e.target.checked)}
                     />
                     <span className="ml-2 text-[#474747]">
                       I agree to receive emails from CloudGaia with updates on
                       services, events, and alerts. I can unsubscribe at any
                       time.
- </span>
+                    </span>
                   </label>
- 
+
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
                     <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
                       <input
                         type="checkbox"
                         id="not-robot"
+                        required
                         className="h-4 w-4 mr-2 accent-blue-600"
+                        checked={isRobot}
+                        onChange={(e) => setIsRobot(e.target.checked)}
                       />
                       <label
                         htmlFor="not-robot"
@@ -1004,7 +1071,7 @@ const Implementation = () => {
               >
                 Check our other services
               </h2>
- 
+
               {/* Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                 <div className="p-6  rounded-lg  text-left bg-white">
@@ -1032,7 +1099,7 @@ const Implementation = () => {
                     <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
- 
+
                 <div className="p-6  rounded-lg text-left bg-white">
                   <img src="/services-icon-4.svg" className="mb-4" />
                   <h3
@@ -1058,7 +1125,7 @@ const Implementation = () => {
                     <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
- 
+
                 <div className="p-6 bg-white rounded-lg  text-left">
                   <img src="/services-icon-2.svg" className="mb-4" />
                   <h3
@@ -1095,7 +1162,7 @@ const Implementation = () => {
                 <div className="w-10 h-10 rounded-full bg-[#fcc000] flex items-center justify-center transition duration-300 group-hover:bg-[#FF83A9]">
                   <FaArrowLeft className="text-white text-xl" />
                 </div>
- 
+
                 {/* Label */}
                 <span className="ml-4 text-lg text-[#474747] ">
                   Back to services
@@ -1109,7 +1176,5 @@ const Implementation = () => {
     </div>
   );
 };
- 
+
 export default Implementation;
- 
- 
