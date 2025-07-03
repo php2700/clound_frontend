@@ -853,7 +853,7 @@ const Growth = () => {
             <div className="py-20">
               <h2
                 style={{ fontSize: "40px" }}
-                className="text-center font-semibold text-[#008093] mb-10 tracking-tight"
+                className="text-center font-semibold text-[#008093] mb-8 tracking-tight "
               >
                 Check our other services
               </h2>

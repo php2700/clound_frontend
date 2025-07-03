@@ -17,16 +17,16 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="bg-[#474747] text-white px-6 md:px-20 py-10 w-full z-10 relative">
+    <footer className="bg-[#474747] text-white px-6 md:px-20 py-10 w-full z-10 relative gap-5">
       {/* Top Section */}
       <div className="flex flex-col items-center justify-center mb-10">
         <div className="flex flex-col md:flex-row items-center gap-4 mt-[100px]">
           <h1 className="text-5xl font-bold">Codescience</h1>
-          <div className="w-[4px] h-[50px] bg-yellow-400" />
+          <div className="w-[4px] h-[50px] bg-yellow-400"  />
           <img
             src="/footer.png"
             alt="Salesforce Certified"
-            className="w-16 h-16 object-cover rounded-lg"
+            className="w-16 h-16 object-cover rounded-lg "
           />
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <p className="text-white text-2xl font-semibold">

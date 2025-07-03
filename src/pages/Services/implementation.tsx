@@ -778,13 +778,13 @@ const Implementation = () => {
                   </div>
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="font-semibold mt-4 text-[#008093] text-left"
+                    className="font-semibold mt-4 text-[#008093] text-left ml-4"
                   >
                     Initial Deployment
                   </h3>
                   <p
                     style={{ lineHeight: "1.2em" }}
-                    className="mt-2 text-[#474747] text-lg "
+                    className="mt-2 text-[#474747] text-lg ml-4 "
                   >
                     We take care of the configuration and activation of
                     Salesforce clouds, using standard out-of-the-box features
@@ -792,7 +792,7 @@ const Implementation = () => {
                   </p>
                   <p
                     style={{ lineHeight: "1.2em" }}
-                    className="mt-6 text-[#474747] text-lg "
+                    className="mt-6 text-[#474747] text-lg ml-4 "
                   >
                     In addition, we train users on the core Salesforce features,
                     ensuring they have the basic knowledge necessary to maximize
@@ -822,7 +822,7 @@ const Implementation = () => {
                         style={{
                           lineHeight: "1.2em",
                         }}
-                        className="text-[#474747] mt-1 text-lg tracking-tight"
+                        className="text-[#474747] mt-1 text-lg tracking-tight mt-3"
                       >
                         Solutions ready for use in a few weeks.
                       </p>
@@ -843,7 +843,7 @@ const Implementation = () => {
                         style={{
                           lineHeight: "1.2em",
                         }}
-                        className="text-[#474747] text-lg mt-1 tracking-tight"
+                        className="text-[#474747] text-lg mt-1 tracking-tight mt-3"
                       >
                         A team of experts with different skills adapts quickly
                         to the needs of your business.
@@ -865,7 +865,7 @@ const Implementation = () => {
                         style={{
                           lineHeight: "1.2em",
                         }}
-                        className="text-[#474747] text-lg mt-1 tracking-tight"
+                        className="text-[#474747] text-lg mt-1 tracking-tight mt-3"
                       >
                         We work together with a team of experts on a specific
                         solution customized to your needs.
@@ -878,7 +878,7 @@ const Implementation = () => {
               {/* Right Side Form */}
               {/* Right Side Form */}
               <div className="lg:w-[45%] w-full sticky top-10 self-start">
-                <form className="bg-[#FCC000] text-white p-8 rounded-xl space-y-6 ">
+                <form className="bg-[#FCC000] text-white text-bg-[#f9f9f9] p-8 rounded-xl space-y-6 ">
                   <p
                     style={{ lineHeight: "1.2em" }}
                     className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]"
@@ -887,7 +887,7 @@ const Implementation = () => {
                   </p>
  
                   {/* Name Fields */}
-                  <div className="flex flex-col md:flex-row gap-4">
+                  <div className="flex flex-col md:flex-row gap-4 bg">
                     <input
                       type="text"
                       placeholder="First Name*"
@@ -1000,7 +1000,7 @@ const Implementation = () => {
               {/* Heading */}
               <h2
                 style={{ fontSize: "40px", lineHeight: "1em" }}
-                className="text-center font-semibold text-[#008093] mb-12 tracking-tight"
+                className="text-center font-semibold text-[#008093] mb-8 tracking-tight mt-3"
               >
                 Check our other services
               </h2>

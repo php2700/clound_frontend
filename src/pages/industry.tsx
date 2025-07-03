@@ -168,7 +168,7 @@ const Industries = () => {
                         style={{
                           lineHeight: "1.2em",
                         }}
-                        className="text-[#474747] text-lg "
+                        className="text-[#474747] text-lg pt-3 "
                       >
                         {card.description}
                       </p>
@@ -219,7 +219,7 @@ const Industries = () => {
                         style={{
                           lineHeight: "1.2em",
                         }}
-                        className="text-[#474747] text-lg"
+                        className="text-[#474747] text-lg pt-3"
                       >
                         {card.description}
                       </p>
@@ -262,7 +262,7 @@ const Industries = () => {
                         style={{
                           lineHeight: "1.2em",
                         }}
-                        className="text-[#474747] text-lg "
+                        className="text-[#474747] text-lg pt-3"
                       >
                         {card.description}
                       </p>

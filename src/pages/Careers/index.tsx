@@ -293,7 +293,7 @@ export const Careers = () => {
           </div>
           <div className="max-w-xl text-center lg:text-left py-20 pt-20">
             <h2 className="text-[#ff83a9] text-2xl font-bold mb-4 text-[32px] pt-24 ">
-              Cloudgaiers around the world
+              Codescience around the world
             </h2>
             <p className="text-[#474747] font-text text-[18px] mb-6 ">
               Together, we drive meaningful transformations with a One Team
@@ -305,7 +305,7 @@ export const Careers = () => {
                 onClick={scrollToCloudgaier}
                 className="bg-[#fcc000] font-semibold text-[16px]  text-[#474747] hover:bg-[#ff83a9] hover:text-[#FFFFFF] text-semibold  py-2 px-6 rounded-full"
               >
-                Become a Cloudgaier
+                Become a codescience
               </button>
               <button
                 onClick={scrollToOpenPositions}
@@ -525,12 +525,15 @@ export const Careers = () => {
       <div
         id="cloudgaier"
         ref={cloudgaierRef}
-        className="relative w-full py-24"
+        // style={{ backgroundImage: "url('/careers-form-bacl.webp)" }}
+        style={{ backgroundImage: `url(${bgImage})` }}
+
+        className="relative w-full py-24 "
       >
         <div className="absolute inset-0 bg-black/75 z-0"></div>
         <div className="relative z-10 container mx-auto px-4">
-          <h2 className="text-[40px] font-bold text-[#fcc000] text-center mb-4 ">
-            Become a Cloudgaier
+          <h2 className="text-[40px] font-bold text-[#fcc000] text-center mb-1 mt-5">
+            Become a codescience
           </h2>
           <form
             onSubmit={handleSubmit}
@@ -722,7 +725,7 @@ export const Careers = () => {
                 <img src="/icon-plane.svg" className="h-6" />
                 <div>
                   <h3 className="font-bold text-lg text-[#ff83a9]">
-                    Why Join Cloudgaia?
+                    Why Join Codescience?
                   </h3>
                   <ul className=" text-[#474747] text-[18px] text-semibold mt-2  leading-tight ml-4">
                     <li>
@@ -741,16 +744,16 @@ export const Careers = () => {
                 <img src="/2-lampara-emoji.png" className="h-6" />
                 <div>
                   <h3 className="font-bold text-lg text-[#ff83a9]">
-                    About Cloudgaia:
+                    About  Codescience:
                   </h3>
                   <p className="text-[#474747] text-[18px] text-semibold mt-2 ml-4">
-                    At Cloudgaia, we are passionate about digital transformation
+                    At  Codescienceia, we are passionate about digital transformation
                     with Salesforce. We partner with companies to drive
                     innovation, ensuring real business impact.
                   </p>
                   <p className="text-[#474747] mt-4 text-xl font-[18px] font-semibold leading-tight ml-4">
                     Ready to take your career to the next level? <br /> Join
-                    Cloudgaia and be part of the digital evolution!
+                     Codescience and be part of the digital evolution!
                   </p>
                 </div>
               </div>

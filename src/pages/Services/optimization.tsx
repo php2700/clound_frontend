@@ -864,7 +864,7 @@ const Optimization = () => {
             <div className="py-16">
               <h2
                 style={{ fontSize: "40px" }}
-                className="text-center font-semibold text-[#008093] mb-12 tracking-tight"
+                className="text-center font-semibold text-[#008093] mb-8 tracking-tight mt-3"
               >
                 Check our other services
               </h2>

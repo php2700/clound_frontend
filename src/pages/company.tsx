@@ -549,7 +549,7 @@ const Company = () => {
             style={{ fontSize: "40px", lineHeight: "1em" }}
             className="font-semibold text-[#f9f9f9] mb-2"
           >
-            150+ AI & Data certifications
+            50+ AI & Data certifications
           </h2>
           <p
             style={{ lineHeight: "1.2em" }}
@@ -613,7 +613,7 @@ const Company = () => {
         </div>
 
         {/* Right Div */}
-        <div className="w-full md:w-1/2 bg-yellow-400 flex flex-col items-center justify-start px-4 py-8">
+        <div className="w-full md:w-1/2 bg-[#fcc000] flex flex-col items-center justify-start px-4 py-8">
           {/* Top Image */}
           <img
             src="https://cloudgaia.com/storage/2025/01/company-un-women.webp"
@@ -656,22 +656,22 @@ const Company = () => {
         </div>
       </div>
 
-      <div id="salesforce-ventures"
+      {/* <div id="salesforce-ventures"
         className="mx-auto p-6 my-24 rounded-lg shadow-lg text-center max-w-7xl"
         style={{ backgroundColor: "#008093" }}
-      >
-        <img
+      > */}
+        {/* <img
           src="https://cloudgaia.com/storage/2025/01/logo-salesforce.svg"
           alt="Top"
           className="mx-auto  w-32 h-32"
-        />
-        <h2
+        /> */}
+        {/* <h2
           style={{ fontSize: "40px" }}
           className=" font-semibold mb-2 text-[#f9f9f9] tracking-tight"
         >
           Empowered by Salesforce Ventures investment
-        </h2>
-        <p
+        </h2> */}
+        {/* <p
           style={{ lineHeight: "1.2em" }}
           className=" text-lg text-[#f9f9f9] ml-3 tracking-tight "
         >
@@ -681,8 +681,8 @@ const Company = () => {
           to expand our reach across the Americas and <br />
           Europe, bringing even greater innovation and expertise to help our
           clients thrive through digital transformation.
-        </p>
-      </div>
+        </p> */}
+      {/* </div> */}
       <Footer />
     </div>
   );
