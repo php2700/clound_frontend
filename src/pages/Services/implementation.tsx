@@ -224,12 +224,18 @@ const Implementation = () => {
                   >
                     Initial Deployment
                   </h3>
-                  <p style={{lineHeight:'1.2em'}} className="mt-2 text-[#474747] text-lg ">
+                  <p
+                    style={{ lineHeight: "1.2em" }}
+                    className="mt-2 text-[#474747] text-lg "
+                  >
                     We take care of the configuration and activation of
                     Salesforce clouds, using standard out-of-the-box features
                     from day one.
                   </p>
-                  <p style={{lineHeight:'1.2em'}} className="mt-6 text-[#474747] text-lg ">
+                  <p
+                    style={{ lineHeight: "1.2em" }}
+                    className="mt-6 text-[#474747] text-lg "
+                  >
                     In addition, we train users on the core Salesforce features,
                     ensuring they have the basic knowledge necessary to maximize
                     their use.
@@ -396,7 +402,7 @@ const Implementation = () => {
                   </label>
 
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
-                    <div className="bg-white border border-gray-300 rounded-md px-4 py-2 flex items-center w-[210px]">
+                    <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
                       <input
                         type="checkbox"
                         id="not-robot"
@@ -404,7 +410,7 @@ const Implementation = () => {
                       />
                       <label
                         htmlFor="not-robot"
-                        className="text-[10px] text-[#474747] mr-auto"
+                        className="text-[10px] text-[#000] mr-auto"
                       >
                         I'm not a robot
                       </label>
@@ -414,10 +420,10 @@ const Implementation = () => {
                           alt="reCAPTCHA logo"
                           className="h-6 mb-1"
                         />
-                        <span className="text-[7px] text-[#474747] leading-none">
+                        <span className="text-[7px] text-[#555] leading-none">
                           reCAPTCHA
                         </span>
-                        <span className="text-[6px] text-[#474747] cursor-pointer leading-none">
+                        <span className="text-[6px] text-[#000] cursor-pointer leading-none">
                           Privacy – Terms
                         </span>
                       </div>
@@ -435,7 +441,7 @@ const Implementation = () => {
             <div className="py-20">
               {/* Heading */}
               <h2
-                style={{ fontSize: "40px",lineHeight:'1em' }}
+                style={{ fontSize: "40px", lineHeight: "1em" }}
                 className="text-center font-semibold text-[#008093] mb-12"
               >
                 Check our other services

@@ -837,13 +837,14 @@ const Growth = () => {
                       ></textarea>
 
                       {/* Checkbox */}
-                      <p className="text-xs text-gray-800">
+                      <p className="text-xs text-[#474747]">
                         By continuing, I confirm that I have read and agree to
-                        the Privacy Policy.
+                        the
+                        <span className="font-semibold "> Privacy Policy</span>.
                       </p>
                       <div className="flex items-start gap-2">
                         <input type="checkbox" className="mt-1" required />
-                        <p className="text-xs text-gray-800">
+                        <p className="text-xs text-[#474747]">
                           I agree to receive emails from Codescience with
                           updates on services, events, and alerts. I can
                           unsubscribe at any time.
@@ -852,7 +853,7 @@ const Growth = () => {
 
                       {/* Submit */}
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
-                        <div className="bg-white border border-gray-300 rounded-md px-4 py-2 flex items-center w-[210px]">
+                        <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
                           <input
                             type="checkbox"
                             id="not-robot"
@@ -860,7 +861,7 @@ const Growth = () => {
                           />
                           <label
                             htmlFor="not-robot"
-                            className="text-[10px] text-[#474747] mr-auto"
+                            className="text-[10px] text-[#000] mr-auto"
                           >
                             I'm not a robot
                           </label>
@@ -870,10 +871,10 @@ const Growth = () => {
                               alt="reCAPTCHA logo"
                               className="h-6 mb-1"
                             />
-                            <span className="text-[7px] text-[#474747] leading-none">
+                            <span className="text-[7px] text-[#555] leading-none">
                               reCAPTCHA
                             </span>
-                            <span className="text-[6px] text-[#474747] cursor-pointer leading-none">
+                            <span className="text-[6px] text-[#000] cursor-pointer leading-none">
                               Privacy – Terms
                             </span>
                           </div>
