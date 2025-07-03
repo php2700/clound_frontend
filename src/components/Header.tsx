@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <header className="relative z-50">
       <div
-        className="max-w-[1250px] shadow-md mx-auto px-2 sm:px-4 lg:px-6 bg-[#F9F9F9]"
+        className="max-w-7xl shadow-md mx-auto px-2 sm:px-4 lg:px-6 bg-[#F9F9F9]"
         style={{ padding: "16px 32px", borderRadius: "10px" }}
       >
         <div className="flex justify-between items-center h-16">
