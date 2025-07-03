@@ -219,7 +219,7 @@ const Company = () => {
             <span className="text-base font-bold">&nbsp;Company</span>
           </div>
 
-          <div className="mx-auto mt-5">
+          <div className="mx-auto my-5">
             <h1 className="text-2xl md:text-6xl font-bold text-[#008093] mb-4">
               Experience the Codescience vibe
             </h1>
@@ -236,7 +236,7 @@ const Company = () => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-4">
+      <div className="w-full mt-10">
         <img
           src="company1.PNG"
           alt="AI and Data Certifications"
@@ -245,7 +245,7 @@ const Company = () => {
       </div>
 
       <div id="our-story" className="bg-[#f9f9f9]">
-        <div className="container mx-auto px-4 py-10 md:px-6 ">
+        <div className="container mx-auto px-4 pt-16 pb-10 md:px-6 ">
           <div className="px-6 py-10 md:px-10">
             <div className="flex flex-col md:flex-row gap-2 pb-10">
               <div className="flex-1  rounded px-6 py-6 shadow bg-white">
@@ -500,7 +500,7 @@ const Company = () => {
               </div>
             )}
 
-            <div id="meet-the-team" className=" mt-[105px]">
+            <div id="meet-the-team" className=" mt-[105px] mb-10">
               <h2 className="text-3xl md:text-6xl font-bold text-center text-[#474747] mb-10">
                 Our senior leadership team
               </h2>
@@ -541,7 +541,7 @@ const Company = () => {
         <img
           src="laptop.png"
           alt="AI and Data Certifications"
-          className="w-full h-[500px] object-cover rounded-lg"
+          className="w-full h-[560px] object-cover rounded-lg"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <img src='/company-icon-ia-cert.svg' className="mb-4" />
@@ -566,15 +566,15 @@ const Company = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center justify-center px-4 py-8 mt-10">
-        <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
+      <div className="w-full flex flex-col items-center justify-center px-4 py-6 mt-20">
+        <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-1 text-center">
           Salesforce Expertise
         </h2>
         <ExpertiseCollapse />
       </div>
 
-      <div className="w-full flex flex-col items-center justify-center px-4 py-8">
-        <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-6 text-center">
+      <div className="w-full flex flex-col items-center justify-center px-4 py-8 mt-4 mb-16">
+        <h2 className="text-3xl md:text-3xl font-bold text-[#474747] mb-1 text-center">
           Industry Expertise
         </h2>
         <IndustryCollapse />
@@ -667,13 +667,13 @@ const Company = () => {
         />
         <h2
           style={{ fontSize: "40px" }}
-          className=" font-semibold mb-4 text-[#f9f9f9]"
+          className=" font-semibold mb-2 text-[#f9f9f9] tracking-tight"
         >
           Empowered by Salesforce Ventures investment
         </h2>
         <p
           style={{ lineHeight: "1.2em" }}
-          className=" text-lg text-[#f9f9f9] "
+          className=" text-lg text-[#f9f9f9] ml-3 tracking-tight "
         >
           In 2024, we proudly announced an investment from Salesforce Ventures,
           marking a significant milestone in our journey <br />

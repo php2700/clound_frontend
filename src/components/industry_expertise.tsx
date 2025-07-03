@@ -88,7 +88,7 @@ const IndustryCollapse = () => {
   const secondRow = allSections.slice(6);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-10 mt-10">
+    <div className="max-w-7xl mx-auto px-4 md:px-10 mt-6">
       {/* Desktop layout */}
       <div className="hidden md:flex flex-col gap-6 items-center">
         {[firstRow, secondRow].map((row, rowIndex) => (

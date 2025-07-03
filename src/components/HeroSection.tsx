@@ -225,7 +225,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-8 text-white text-xs z-10">
+      <div className="absolute bottom-8 left-8 text-[#f9f9f9] text-[12px] z-10">
         scroll to learn more
       </div>
 
@@ -236,16 +236,20 @@ const HeroSection = () => {
           className="w-10 h-10 bg-[#FACC15] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-[#ff83a9]"
           aria-label="Previous image"
         >
-          <span className="text-white "><FaArrowLeft /></span>
+          <span className="text-white ">
+            <FaArrowLeft />
+          </span>
         </button>
         <button
           onClick={nextImage}
           className="w-10 h-10 bg-[#FACC15] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 hover:bg-[#ff83a9]"
           aria-label="Next image"
         >
-          <span className="text-white "><FaArrowRight /></span>
+          <span className="text-white ">
+            <FaArrowRight />
+          </span>
         </button>
-         {/* <img
+        {/* <img
                   src={leftArrow}
                   alt="Ebook"
                   onClick={prevImage}

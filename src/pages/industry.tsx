@@ -127,7 +127,7 @@ const Industries = () => {
         />
       </div>
       <div className="bg-[#f9f9f9]">
-        <div className="container mx-auto px-4 py-20 md:px-6">
+        <div className="container mx-auto px-4 py-16 md:px-6">
           <div className="px-6 md:px-10 py-10">
             {/* Card Grid Section */}
             <div className="flex justify-center">
@@ -296,7 +296,10 @@ const Industries = () => {
           className="w-full h-[300px] object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-          <h2 className="text-6xl md:text-6xl font-bold mb-4 text-[#f9f9f9]" style={{lineHeight:'1em'}}>
+          <h2
+            className="text-6xl md:text-6xl font-bold mb-4 text-[#f9f9f9]"
+            style={{ lineHeight: "1em" }}
+          >
             What's your <br />
             Salesforce Challenge?
           </h2>
@@ -308,7 +311,7 @@ const Industries = () => {
           </Link>
         </div>
       </div>
-        <section className="relative bg-gradient-to-b from-[#008093] to-[#006f7a] py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-[#008093] to-[#006f7a] pt-24 pb-20 overflow-hidden">
         {/* Decorative Full-Width Image */}
         <img
           src="https://cloudgaia.com/storage/2025/01/home-success-overlay-1.svg"
@@ -316,9 +319,9 @@ const Industries = () => {
           className="absolute bottom-0 left-0 right-0 w-full z-0 pointer-events-none mb-[-20px]"
         />
 
-        <div className="relative z-10 container mx-auto px-4 md:px-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-6xl font-bold text-white mb-8 leading-tight">
+        <div className="relative z-10 container mx-auto  px-4 md:px-10">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-6xl font-bold text-white mb-8 leading-tight pt-3">
               Success stories we're proud to share
             </h2>
           </div>
@@ -369,7 +372,7 @@ const Industries = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="text-center"  style={{marginBottom:"4%"}}>
+          <div className="text-center" style={{ marginBottom: "4%" }}>
             <Link to="/resources/customer-stories">
               <Button
                 variant="outline"
