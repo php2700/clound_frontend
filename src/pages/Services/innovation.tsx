@@ -293,7 +293,7 @@ const Innovation = () => {
                 <div className="lg:w-[42%] w-full">
                   <div className="lg:sticky top-28">
                     <form
-                      className="bg-[#fcc000] text-black p-6 rounded-lg shadow-lg space-y-4 h-[660px] "
+                      className="bg-[#fcc000] text-[#474747] p-6 rounded-lg shadow-lg space-y-4 h-[660px] "
                       onSubmit={handleSubmit}
                     >
                       <h2 className="text-2xl font-semibold mb-2 leading-tight">
