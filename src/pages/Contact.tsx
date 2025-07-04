@@ -387,7 +387,7 @@ const Contact = () => {
                     to="/career"
                     className="bg-[#ff83a9] hover:bg-white hover:text-[#474747]  text-white font-semibold px-6 py-2 rounded-full transition"
                   >
-                    Become a cloudgaier
+                    Become a codescience
                   </Link>
                 </div>
               </div>
