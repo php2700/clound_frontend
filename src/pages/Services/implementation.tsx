@@ -920,14 +920,7 @@ const Implementation = () => {
               {/* Right Side Form */}
               {/* Right Side Form */}
               <div className="lg:w-[45%] w-full sticky top-10 self-start">
-<<<<<<< HEAD
                 <form className="bg-[#FCC000] text-white text-bg-[#f9f9f9] p-8 rounded-xl space-y-6 ">
-=======
-                <form
-                  className="bg-[#FCC000] text-white p-8 rounded-xl space-y-6 "
-                  onSubmit={handleSubmit}
-                >
->>>>>>> 9519354ace49bce3c62b44e3658a828567f9c13b
                   <p
                     style={{ lineHeight: "1.2em" }}
                     className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]"

@@ -526,7 +526,6 @@ export const Careers = () => {
         id="cloudgaier"
         ref={cloudgaierRef}
         // style={{ backgroundImage: "url('/careers-form-bacl.webp)" }}
-        style={{ backgroundImage: `url(${bgImage})` }}
 
         className="relative w-full py-24 "
       >
