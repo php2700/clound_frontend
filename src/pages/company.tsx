@@ -326,7 +326,7 @@ const Company = () => {
                     <b> global presence and 15+ years as Salesforce partners</b>
                     , we’ve dedicated ourselves exclusively to mastering the
                     Salesforce ecosystem working with
-                    <b> eading industries of all sizes.</b> Our team of industry{" "}
+                    <b> leading and 50 industries of all sizes.</b> Our team of industry{" "}
                     <b> experts collaborates with clients </b> to develop solid
                     strategies aligned with their business objectives,
                     accelerating value delivery and adapting to their unique
@@ -364,7 +364,7 @@ const Company = () => {
                     <b> Agentforce implementers</b>, our expertise in artificial
                     intelligence and innovation enables our clients{" "}
                     <b> to focus on growing their businesses </b> while we take
-                    care of the rest. With <b> 150 AI & Data certifications</b>,
+                    care of the rest. With <b> 50 AI & Data certifications</b>,
                     we architect intelligent experiences that give our clients a
                     competitive edge, combining human expertise with advanced AI
                     capabilities to deliver transformative business outcomes.
@@ -393,7 +393,7 @@ const Company = () => {
                     }}
                     className="text-sm md:text-lg m-0 p-0 text-xl"
                   >
-                    “At Codescience we always say that we are not looking for
+                    “At codescience we always say that we are not looking for
                     happy <br />
                     customers, we are looking for successful customers. I am
                     proud of our <br />
@@ -411,7 +411,7 @@ const Company = () => {
                     style={{ lineHeight: "1.2em" }}
                     className="md:text-3xl mt-1 mb-0 text-xl mt-6"
                   >
-                    Nicolás Orzabal
+                     Kshitij Rodrigue
                   </h3>
                   <p
                     style={{ lineHeight: "1.2em" }}
@@ -434,7 +434,7 @@ const Company = () => {
                 }}
                 className="text-[#474747] text-sm md:text-2xl mx-auto mb-6"
               >
-                Our new branding signals a bold future for Cloudgaia—rooted in
+                Our new branding signals a bold future for codescience—rooted in
                 our heritage, focused on innovation, and <br /> dedicated to
                 empowering clients with transformative Salesforce solutions.
               </p>
@@ -500,7 +500,7 @@ const Company = () => {
               </div>
             )}
 
-            <div id="meet-the-team" className=" mt-[105px] mb-10">
+            {/* <div id="meet-the-team" className=" mt-[105px] mb-10">
               <h2 className="text-3xl md:text-6xl font-bold text-center text-[#474747] mb-10">
                 Our senior leadership team
               </h2>
@@ -531,7 +531,7 @@ const Company = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -605,19 +605,19 @@ const Company = () => {
           </p>
 
           {/* Bottom Image */}
-          <img
+          {/* <img
             src="https://cloudgaia.com/storage/2025/01/company-pledge-img.webp"
             alt="Our Mission"
             className="w-[220px] sm:w-[280px] md:w-[320px] h-auto rounded-lg object-cover mt-2"
-          />
+          /> */}
         </div>
 
         {/* Right Div */}
-        <div className="w-full md:w-1/2 bg-[#fcc000] flex flex-col items-center justify-start px-4 py-8">
+        <div className="w-full md:w-1/2 bg-[#fcc000] flex flex-col items-center justify-start px-5 py-8">
           {/* Top Image */}
           <img
             src="https://cloudgaia.com/storage/2025/01/company-un-women.webp"
-            className="w-[140px] h-auto mb-6"
+            className="w-[140px] h-auto mb-6 mr-40"
             alt="UN Women"
           />
 
@@ -631,7 +631,7 @@ const Company = () => {
             the
             <br /> impact it has on their evolution and their surroundings. We
             believe that <br />
-            through the UN WEPs, we will be able to deepen and focus our efforts{" "}
+            through the  WEPs, we will be able to deepen and focus our efforts{" "}
             <br />
             in achieving gender equality, a foundation for a sustainable
             future.”
@@ -646,7 +646,7 @@ const Company = () => {
             />
             <div className="text-center sm:text-left">
               <p className="text-gray-800 font-semibold text-lg">
-                Nicolás Orzabal
+                Kshitij Rodrigue
               </p>
               <p className="text-gray-800 text-lg font-bold">
                 Co-Founder & CEO
