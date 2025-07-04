@@ -700,10 +700,10 @@ const Growth = () => {
                 <div className="lg:w-[42%] w-full">
                   <div className="lg:sticky top-28">
                     <form
-                      className="bg-[#fcc000] text-[#474747] font-semibold p-6 rounded-lg shadow-lg space-y-4 h-[600px]"
+                      className="bg-[#fcc000]  p-6 rounded-lg shadow-lg space-y-4 h-[600px]"
                       onSubmit={handleSubmit}
                     >
-                      <h2 className="text-2xl font-semibold mb-2 leading-tight tracking-tight">
+                      <h2 className="text-2xl text-[#474747] font-semibold mb-2 leading-tight tracking-tight">
                         Complete the form and book
                         <br />a free consultation
                       </h2>
@@ -752,7 +752,7 @@ const Growth = () => {
                       <div className="relative">
                         <select
                           required
-                          className="w-full p-3 rounded bg-[#f9f9f9] text-black text-lg focus:outline-none appearance-none"
+                          className="w-full p-3 rounded bg-[#f9f9f9] text-[#474747] text-lg focus:outline-none appearance-none"
                           defaultValue=""
                           value={country}
                           onChange={(e) => setCountry(e.target.value)}
