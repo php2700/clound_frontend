@@ -5,11 +5,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export const Blog = () => {
+  const navigate = useNavigate();
   const [blogData, setBlogData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [perPage, setPerPage] = useState();
@@ -80,6 +81,10 @@ export const Blog = () => {
 
   const handleCategory = (category) => {
     setCategory(category);
+  };
+
+  const handleView = (data) => {
+    navigate(`/blog-detail/${data?._id}`);
   };
 
   return (
@@ -213,6 +218,7 @@ export const Blog = () => {
                     src={`${API_BASE_URL}${item.image}`}
                     alt={item?.title}
                     className="w-full h-48 object-cover cursor-pointer"
+                    onClick={() => handleView(item)}
                   />
 
                   <div className="p-4 flex flex-col flex-grow">
