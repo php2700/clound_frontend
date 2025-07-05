@@ -1,6 +1,7 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaStar, FaYoutube } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import IntegritySection from "../pages/IntegritySection"; // Assuming this is the correct path to your IntegritySection component
 
 const Footer = () => {
   const location = useLocation();
@@ -264,7 +265,9 @@ const Footer = () => {
                   <FaYoutube className="hover:text-white text-[#f9f9f9] h-[18px] cursor-pointer" />
                 </a>
                 <div className="flex items-center space-x-2">
-                   <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3u00000Qu5nNEAR">
+                   {/* <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3u00000Qu5nNEAR"> */}
+                   <a href="https://appexchange.salesforce.com/">
+
                   <img
                     src="/salesforce-app-exchange.svg"
                     alt="Salesforce Logo"
@@ -277,7 +280,7 @@ const Footer = () => {
 
               {/* Bottom Links */}
               <div className="flex text-[#f9f9f9] flex-wrap gap-6">
-                <a href="#" className="text-sm font-bold hover:text-[#fcc000]">
+                <a href="/integrity" className="text-sm font-bold hover:text-[#fcc000]">
                   Integrity line
                 </a>
                 <a href="#" className="text-sm font-bold hover:text-[#fcc000]">

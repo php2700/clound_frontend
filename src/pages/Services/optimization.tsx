@@ -940,7 +940,7 @@ const Optimization = () => {
                   <img src="/services-icon-1.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className=" text-[#008093] font-semibold mb-2"
+                    className=" text-[#008093] font-semibold mb-2 mt-6"
                   >
                     Landing Services
                   </h3>

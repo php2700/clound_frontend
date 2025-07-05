@@ -28,6 +28,8 @@ import { Gador_Detail } from "./pages/Resources/gador_detail";
 import { ConaService } from "./pages/Resources/cona_detail";
 import ScrollToTop from "./components/ScrollToTop";
 import "react-toastify/dist/ReactToastify.css";
+import IntegritySection from "./pages/IntegritySection";
+import IntegrityForm from "./pages/IntegrityForm";
 
 const queryClient = new QueryClient();
 
@@ -69,6 +71,13 @@ const App = () => (
           {/* Single Pages */}
           <Route path="/industries" element={<Industries />} />
           <Route path="/company" element={<Company />} />
+          <Route path="/integrity" element={<IntegritySection />} />
+          <Route path="/form" element={<IntegrityForm />} />
+
+          {/* Detail Pages */}
+
+          {/* Catch-all route for 404 Not Found */}
+
 
           <Route path="*" element={<NotFound />} />
         </Routes>
