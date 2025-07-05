@@ -20,11 +20,11 @@ import Footer from "@/components/Footer";
 import axios from "axios";
 
 const images = [
-  { img: "/careers-slide-1.webp" },
-  { img: "/careers-slide-4.webp" },
-  { img: "/careers-slide-2-1.webp" },
-  { img: "/careers-slide-8.webp" },
-  { img: "/careers-slide-7.webp" },
+  { img: "/Depositphotos_151402814_ds (1).jpg" },
+  { img: "/Depositphotos_365173196_L (1).jpg" },
+  { img: "/Depositphotos_81078342_ds (1).jpg" },
+  { img: "/Depositphotos_763920694_L (1).jpg" },
+  // { img: "/careers-slide-7.webp" },
 ];
 
 const testimonials = [
@@ -61,7 +61,7 @@ const accordionData = [
   {
     title: "Believe",
     description:
-      "We're driven by the belief that our work can contribute to a better world, making a meaningful impact every day.",
+      "We're driven by the belief that our work can contribute to a better world, making a meaningful impact",
     bgColor: "bg-[#E83F6F]",
     textColor: "text-[#f9f9f9]",
   },
@@ -128,10 +128,24 @@ export const Careers = () => {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [isRobot, setIsRobot] = useState(false);
   const [activeTab, setActiveTab] = useState("All areas");
-  const [openAccordion, setOpenAccordion] = useState(null);
+  // const [openAccordion, setOpenAccordion] = useState(null);
+  const [openAccordions, setOpenAccordions] = useState([]);
+
+
+  // const handleAccordionClick = (title) => {
+  //   setOpenAccordion(openAccordion === title ? null : title);
+  // };
   const handleAccordionClick = (title) => {
-    setOpenAccordion(openAccordion === title ? null : title);
-  };
+  if (openAccordions.includes(title)) {
+    // remove the title (close the accordion)
+    setOpenAccordions(openAccordions.filter((t) => t !== title));
+  } else {
+    // add the title (open the accordion)
+    setOpenAccordions([...openAccordions, title]);
+  }
+};
+
+
   const [openJobIndex, setOpenJobIndex] = useState(null);
   const cloudgaierRef = useRef(null);
   const openPositionsRef = useRef(null);
@@ -286,7 +300,8 @@ export const Careers = () => {
         <div className="bg-[#f9f9f9]  sm:px-6 lg:px-12 flex flex-col lg:flex-row  gap-8">
           <div className="relative w-full max-w-3xl px-6 py-24">
             <img
-              src="Screenshot (187).png"
+              // src="Screenshot (187).png"
+              src="/maapnew (187).jpg"
               alt="World Map"
               className="w-full opacity-80"
             />
@@ -378,7 +393,7 @@ export const Careers = () => {
           <div className="px-6 py-10 md:px-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
               {accordionData.map((item) => {
-                const isOpen = openAccordion === item.title;
+                const isOpen = openAccordions.includes(item.title);
                 return (
                   <div
                     key={item.title}

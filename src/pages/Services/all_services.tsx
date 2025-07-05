@@ -399,7 +399,8 @@ const Services = () => {
  
         <div className="w-full mt-4">
           <img
-            src="/services.PNG"
+            // src="/services.PNG"
+            src="/Depositphotos_52462445.jpg"
             alt="Services Visual"
             className="w-full h-[500px] object-cover"
           />

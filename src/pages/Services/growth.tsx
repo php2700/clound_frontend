@@ -637,7 +637,8 @@ const Growth = () => {
       {/* Full-width Image */}
       <div className="w-full mt-4">
         <img
-          src="/growth1.PNG"
+          // src="/growth1.PNG"
+          src="/growth-head-img-scaled.jpg"
           alt="growth visual"
           className="w-full h-[500px] object-cover"
         />
@@ -863,7 +864,7 @@ const Growth = () => {
                   <img src="/services-icon-1.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className=" text-[#008093] font-semibold mb-2"
+                    className=" text-[#008093] font-semibold mb-2 mt-6"
                   >
                     Landing Services
                   </h3>
