@@ -16,7 +16,8 @@ const teamMembers = [
     name: "Nicolás Orzabal",
     title: "Co-Founder & CEO",
     image:
-      "https://cloudgaia.com/storage/2025/01/company-team-nicolas-orzabal-1.webp",
+      // "Screenshot 2025-07-03 175207.jpg",
+      "Willim2025-07-03 175207.jpg",
     linkedIn: "#",
   },
   {
@@ -24,15 +25,15 @@ const teamMembers = [
     name: "Francisco Okecki",
     title: "Board Member Advisor & Co-Founder",
     image:
-      "https://cloudgaia.com/storage/2025/01/company-team-francisco-okecki-1.webp",
+      "Screenshot 2025-07-03 175141.jpg",
     linkedIn: "#",
   },
   {
     id: 3,
-    name: "Santiago Ramos Mejía",
+    name: "Santiago Ramos ",
     title: "Co-Founder & CPO",
     image:
-      "https://cloudgaia.com/storage/2025/01/company-team-santiago-ramos-mejia.webp",
+      "Copy of 1718302323184.jpg",
     linkedIn: "#",
   },
   {
@@ -40,7 +41,7 @@ const teamMembers = [
     name: "Francisco Orzabal",
     title: "Board Member Advisor & Co-Founder",
     image:
-      "https://cloudgaia.com/storage/2025/01/company-team-francisco-orzabal.webp",
+      "ChatGPT Image Jul 1, 2025, 09_21_45 PM.png",
     linkedIn: "#",
   },
   {
@@ -48,109 +49,109 @@ const teamMembers = [
     name: "Richard Arnold",
     title: "Salesforce Board Observer",
     image:
-      "https://cloudgaia.com/storage/2025/01/company-team-richard-arnold.webp",
+      "ChatGPT Image Jul 1, 2025, 09_21_50 PM.png",
     linkedIn: "#",
   },
   {
     id: 6,
     name: "Joel Kurtz",
     title: "Salesforce Board Member",
-    image: "https://cloudgaia.com/storage/2025/05/board-square-2.png",
+    image: "ChatGPT Image Jul 3, 2025, 05_54_54 PM.png",
     linkedIn: "#",
   },
-  {
-    id: 7,
-    name: "Florencia Cattelani",
-    title: "COO",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-florencia-cattelani.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 8,
-    name: "Juan José López Santiso",
-    title: "CRO",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-juan-jose-lopez-santiso.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 9,
-    name: "Francisco Salas",
-    title: "CMO",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-francisco-salas.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 10,
-    name: "Sebastián Golletti",
-    title: "CFO",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-sebastian-golletti.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 11,
-    name: "Mariano Saubidet",
-    title: "Group General Counsel",
-    image: "https://cloudgaia.com/storage/2025/02/team-mariano-saudibet.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 12,
-    name: "Becky Wright",
-    title: "EVP Growth",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-becky-wright.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 13,
-    name: "José Pereyra Iraola",
-    title: "Finance Director",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-jose-pereyra-iraola.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 14,
-    name: "Pablo Massone",
-    title: "Sales Director Indirect Channel",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-pablo-massone.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 15,
-    name: "Mariana Aro",
-    title: "Talent Director",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-mariana-aro.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 16,
-    name: "Matías Cebrian",
-    title: "Delivery Director",
-    image:
-      "https://cloudgaia.com/storage/2025/01/company-team-matias-cebrian.webp",
-    linkedIn: "#",
-  },
-  {
-    id: 17,
-    name: "Alan Gil",
-    title: "Delivery Director",
-    image: "https://cloudgaia.com/storage/2025/04/Imagen-Alan-WEB.png",
-    linkedIn: "#",
-  },
-  {
-    id: 18,
-    name: "Avery Amaya",
-    title: "RVP Sales NAM",
-    image: "https://cloudgaia.com/storage/2025/02/team-avery.webp",
-    linkedIn: "#",
-  },
+  // {
+  //   id: 7,
+  //   name: "Florencia Cattelani",
+  //   title: "COO",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-florencia-cattelani.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 8,
+  //   name: "Juan José López Santiso",
+  //   title: "CRO",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-juan-jose-lopez-santiso.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 9,
+  //   name: "Francisco Salas",
+  //   title: "CMO",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-francisco-salas.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 10,
+  //   name: "Sebastián Golletti",
+  //   title: "CFO",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-sebastian-golletti.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 11,
+  //   name: "Mariano Saubidet",
+  //   title: "Group General Counsel",
+  //   image: "https://cloudgaia.com/storage/2025/02/team-mariano-saudibet.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 12,
+  //   name: "Becky Wright",
+  //   title: "EVP Growth",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-becky-wright.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 13,
+  //   name: "José Pereyra Iraola",
+  //   title: "Finance Director",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-jose-pereyra-iraola.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 14,
+  //   name: "Pablo Massone",
+  //   title: "Sales Director Indirect Channel",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-pablo-massone.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 15,
+  //   name: "Mariana Aro",
+  //   title: "Talent Director",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-mariana-aro.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 16,
+  //   name: "Matías Cebrian",
+  //   title: "Delivery Director",
+  //   image:
+  //     "https://cloudgaia.com/storage/2025/01/company-team-matias-cebrian.webp",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 17,
+  //   name: "Alan Gil",
+  //   title: "Delivery Director",
+  //   image: "https://cloudgaia.com/storage/2025/04/Imagen-Alan-WEB.png",
+  //   linkedIn: "#",
+  // },
+  // {
+  //   id: 18,
+  //   name: "Avery Amaya",
+  //   title: "RVP Sales NAM",
+  //   image: "https://cloudgaia.com/storage/2025/02/team-avery.webp",
+  //   linkedIn: "#",
+  // },
 ];
 
 const Company = () => {
@@ -238,7 +239,8 @@ const Company = () => {
       </div>
       <div className="w-full mt-10">
         <img
-          src="company1.PNG"
+          // src="company1.PNG"
+          src="/Depositphotos_81078342_ds (1).jpg"
           alt="AI and Data Certifications"
           className="w-full h-[500px] object-cover rounded-lg"
         />
@@ -326,7 +328,7 @@ const Company = () => {
                     <b> global presence and 15+ years as Salesforce partners</b>
                     , we’ve dedicated ourselves exclusively to mastering the
                     Salesforce ecosystem working with
-                    <b> eading industries of all sizes.</b> Our team of industry{" "}
+                    <b> leading and 50 industries of all sizes.</b> Our team of industry{" "}
                     <b> experts collaborates with clients </b> to develop solid
                     strategies aligned with their business objectives,
                     accelerating value delivery and adapting to their unique
@@ -364,7 +366,7 @@ const Company = () => {
                     <b> Agentforce implementers</b>, our expertise in artificial
                     intelligence and innovation enables our clients{" "}
                     <b> to focus on growing their businesses </b> while we take
-                    care of the rest. With <b> 150 AI & Data certifications</b>,
+                    care of the rest. With <b> 50 AI & Data certifications</b>,
                     we architect intelligent experiences that give our clients a
                     competitive edge, combining human expertise with advanced AI
                     capabilities to deliver transformative business outcomes.
@@ -393,7 +395,7 @@ const Company = () => {
                     }}
                     className="text-sm md:text-lg m-0 p-0 text-xl"
                   >
-                    “At Codescience we always say that we are not looking for
+                    “At codescience we always say that we are not looking for
                     happy <br />
                     customers, we are looking for successful customers. I am
                     proud of our <br />
@@ -411,7 +413,7 @@ const Company = () => {
                     style={{ lineHeight: "1.2em" }}
                     className="md:text-3xl mt-1 mb-0 text-xl mt-6"
                   >
-                    Nicolás Orzabal
+                     Kshitij Rodrigue
                   </h3>
                   <p
                     style={{ lineHeight: "1.2em" }}
@@ -434,7 +436,7 @@ const Company = () => {
                 }}
                 className="text-[#474747] text-sm md:text-2xl mx-auto mb-6"
               >
-                Our new branding signals a bold future for Cloudgaia—rooted in
+                Our new branding signals a bold future for codescience—rooted in
                 our heritage, focused on innovation, and <br /> dedicated to
                 empowering clients with transformative Salesforce solutions.
               </p>
@@ -583,7 +585,7 @@ const Company = () => {
       {/* Two Column Section */}
       <div className="w-full flex flex-col md:flex-row mt-10">
         {/* Left Div */}
-        <div className="w-full md:w-1/2 bg-[#008093] flex flex-col items-center justify-start px-4 py-8">
+        <div className="w-full md:w-100% bg-[#008093] flex flex-col items-center justify-start px-4 py-8">
           {/* Top Logo */}
           <img
             src="https://cloudgaia.com/storage/2025/05/Pledge1_Logo_Stacked_White.png"
@@ -605,19 +607,18 @@ const Company = () => {
           </p>
 
           {/* Bottom Image */}
-          <img
+          {/* <img
             src="https://cloudgaia.com/storage/2025/01/company-pledge-img.webp"
             alt="Our Mission"
             className="w-[220px] sm:w-[280px] md:w-[320px] h-auto rounded-lg object-cover mt-2"
-          />
+          /> */}
         </div>
 
         {/* Right Div */}
-        <div className="w-full md:w-1/2 bg-[#fcc000] flex flex-col items-center justify-start px-4 py-8">
-          {/* Top Image */}
+        {/* <div className="w-full md:w-1/2 bg-[#fcc000] flex flex-col items-center justify-start px-5 py-8">
           <img
             src="https://cloudgaia.com/storage/2025/01/company-un-women.webp"
-            className="w-[140px] h-auto mb-6"
+            className="w-[140px] h-auto mb-6 mr-40"
             alt="UN Women"
           />
 
@@ -631,14 +632,14 @@ const Company = () => {
             the
             <br /> impact it has on their evolution and their surroundings. We
             believe that <br />
-            through the UN WEPs, we will be able to deepen and focus our efforts{" "}
+            through the  WEPs, we will be able to deepen and focus our efforts{" "}
             <br />
             in achieving gender equality, a foundation for a sustainable
             future.”
-          </p>
+          </p> */}
 
           {/* Author Section */}
-          <div className="flex items-center justify-center space-x-4 mb-4">
+          {/* <div className="flex items-center justify-center space-x-4 mb-4">
             <img
               src="https://cloudgaia.com/storage/2025/01/company-nicolas-circle.webp"
               alt="Nicolás Orzabal"
@@ -646,14 +647,14 @@ const Company = () => {
             />
             <div className="text-center sm:text-left">
               <p className="text-gray-800 font-semibold text-lg">
-                Nicolás Orzabal
+                Kshitij Rodrigue
               </p>
               <p className="text-gray-800 text-lg font-bold">
                 Co-Founder & CEO
               </p>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
 
       {/* <div id="salesforce-ventures"

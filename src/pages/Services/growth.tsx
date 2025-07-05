@@ -637,7 +637,8 @@ const Growth = () => {
       {/* Full-width Image */}
       <div className="w-full mt-4">
         <img
-          src="/growth1.PNG"
+          // src="/growth1.PNG"
+          src="/growth-head-img-scaled.jpg"
           alt="growth visual"
           className="w-full h-[500px] object-cover"
         />
@@ -863,7 +864,7 @@ const Growth = () => {
                   <img src="/services-icon-1.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className=" text-[#008093] font-semibold mb-2"
+                    className=" text-[#008093] font-semibold mb-2 mt-6"
                   >
                     Landing Services
                   </h3>
@@ -878,7 +879,7 @@ const Growth = () => {
                   </p>
                   <Link
                     to="/Services/implementation"
-                    className="text-[#474747] font-bold text-base relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group mt-8"
                   >
                     Learn more
                     <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
@@ -904,18 +905,18 @@ const Growth = () => {
                   </p>
                   <Link
                     to="/Services/growth"
-                    className="text-[#474747] font-bold text-base relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group mt-7"
                   >
                     Learn more
                     <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Link>
                 </div>
 
-                <div className="p-6 bg-white rounded-lg  text-left">
+                <div className="p-6 bg-white rounded-lg  text-left" >
                   <img src="/services-icon-2.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-semibold mb-2"
+                    className="text-[#008093] font-semibold mb-2 mt-6"
                   >
                     Optimization
                   </h3>
@@ -930,7 +931,7 @@ const Growth = () => {
                   </p>
                   <Link
                     to="/Services/optimization"
-                    className="text-[#474747] font-bold text-base relative inline-block group"
+                    className="text-[#474747] font-bold text-base relative inline-block group mt-8"
                   >
                     Learn more
                     <span className="block h-0.5 bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>

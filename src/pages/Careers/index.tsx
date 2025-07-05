@@ -20,17 +20,17 @@ import Footer from "@/components/Footer";
 import axios from "axios";
 
 const images = [
-  { img: "/careers-slide-1.webp" },
-  { img: "/careers-slide-4.webp" },
-  { img: "/careers-slide-2-1.webp" },
-  { img: "/careers-slide-8.webp" },
-  { img: "/careers-slide-7.webp" },
+  { img: "/Depositphotos_151402814_ds (1).jpg" },
+  { img: "/Depositphotos_365173196_L (1).jpg" },
+  { img: "/Depositphotos_81078342_ds (1).jpg" },
+  { img: "/Depositphotos_763920694_L (1).jpg" },
+  // { img: "/careers-slide-7.webp" },
 ];
 
 const testimonials = [
   {
     quote:
-      "Cloudgaia represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
+      "Codescience represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
     name: "Juan Pablo Herrera",
     title: "Salesforce specialist",
     flag: "/flagarg.svg",
@@ -61,7 +61,7 @@ const accordionData = [
   {
     title: "Believe",
     description:
-      "We're driven by the belief that our work can contribute to a better world, making a meaningful impact every day.",
+      "We're driven by the belief that our work can contribute to a better world, making a meaningful impact",
     bgColor: "bg-[#E83F6F]",
     textColor: "text-[#f9f9f9]",
   },
@@ -128,10 +128,24 @@ export const Careers = () => {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [isRobot, setIsRobot] = useState(false);
   const [activeTab, setActiveTab] = useState("All areas");
-  const [openAccordion, setOpenAccordion] = useState(null);
+  // const [openAccordion, setOpenAccordion] = useState(null);
+  const [openAccordions, setOpenAccordions] = useState([]);
+
+
+  // const handleAccordionClick = (title) => {
+  //   setOpenAccordion(openAccordion === title ? null : title);
+  // };
   const handleAccordionClick = (title) => {
-    setOpenAccordion(openAccordion === title ? null : title);
-  };
+  if (openAccordions.includes(title)) {
+    // remove the title (close the accordion)
+    setOpenAccordions(openAccordions.filter((t) => t !== title));
+  } else {
+    // add the title (open the accordion)
+    setOpenAccordions([...openAccordions, title]);
+  }
+};
+
+
   const [openJobIndex, setOpenJobIndex] = useState(null);
   const cloudgaierRef = useRef(null);
   const openPositionsRef = useRef(null);
@@ -286,7 +300,8 @@ export const Careers = () => {
         <div className="bg-[#f9f9f9]  sm:px-6 lg:px-12 flex flex-col lg:flex-row  gap-8">
           <div className="relative w-full max-w-3xl px-6 py-24">
             <img
-              src="Screenshot (187).png"
+              // src="Screenshot (187).png"
+              src="/maapnew (187).jpg"
               alt="World Map"
               className="w-full opacity-80"
             />
@@ -374,21 +389,21 @@ export const Careers = () => {
           </div>
         </div>
 
-        <div className=" container mx-auto pt-[1px] px-4 md:px-6  py-8">
+        <div className=" container mx-auto pt-[1px] px-4 md:px-6  py-8 ">
           <div className="px-6 py-10 md:px-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start gap-2 mb-10">
               {accordionData.map((item) => {
-                const isOpen = openAccordion === item.title;
+                const isOpen = openAccordions.includes(item.title);
                 return (
                   <div
                     key={item.title}
-                    className={`${item.bgColor} ${item.textColor} rounded-lg transition-all duration-500 ease-in-out`}
+                    className={`${item.bgColor} ${item.textColor} rounded-lg px-6 text-[24px] pt-6 pb-2  transition-all duration-500 ease-in-out`}
                   >
                     <button
                       onClick={() => handleAccordionClick(item.title)}
-                      className="w-full font-bold text-lg p-6 flex items-center justify-between text-left"
+                      className="w-full text-bold p-6 px-6 pt-2 text-[24px] pb-2 flex items-center justify-between text-left"
                     >
-                      <span>{item.title}</span>
+                      <span>  {item.title}</span>
                       {isOpen ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
                     </button>
 
@@ -527,7 +542,7 @@ export const Careers = () => {
         ref={cloudgaierRef}
         // style={{ backgroundImage: "url('/careers-form-bacl.webp)" }}
 
-        className="relative w-full py-24 "
+        className="relative w-full py-24 bg-[url('/careers-form-bacl.webp')] bg-cover bg-center "
       >
         <div className="absolute inset-0 bg-black/75 z-0"></div>
         <div className="relative z-10 container mx-auto px-4">
@@ -746,7 +761,7 @@ export const Careers = () => {
                     About  Codescience:
                   </h3>
                   <p className="text-[#474747] text-[18px] text-semibold mt-2 ml-4">
-                    At  Codescienceia, we are passionate about digital transformation
+                    At  Codescience, we are passionate about digital transformation
                     with Salesforce. We partner with companies to drive
                     innovation, ensuring real business impact.
                   </p>

@@ -84,6 +84,52 @@ const Home = () => {
                 title="Integrations Cloud"
                 description="Maximize your data with Tableau, streamline integrations via MuleSoft, and enhance collaboration with Slack. We’ve got all your Salesforce needs covered."
               />
+               <FeatureCard
+                imageName="/home-icon-1.webp"
+                title="Sales Cloud"
+                description="Boost engagement and productivity, accelerate deal closures, and increase revenue with AI-driven insights for smarter, faster sales from one dynamic platform."
+              />
+              <FeatureCard
+                imageName="/home-icon-2.webp"
+                title="Service Cloud"
+                description="Elevate efficiency and enhance customer satisfaction across all touchpoints with the power of AI and data."
+              />
+              <FeatureCard
+                imageName="/home-icon-3.webp"
+                title="Marketing Cloud"
+                description="Leverage data quickly with unified analytics and profiles. Execute effective campaigns with trusted AI and tailor offers at every customer interaction."
+              />
+               <FeatureCard
+                imageName="/home-icon-4.webp"
+                title="Experience Cloud"
+                description="Deliver tailored, connected digital experiences across any channel—whether you’re a global corporation or a regional SME."
+              />
+              <FeatureCard
+                imageName="/home-icon-5.webp"
+                title="Commerce Cloud"
+                description="Boost your e-commerce on the leading platform, Einstein 1. Easily link commerce to top sales, service, and marketing apps, activating data from any source to enhance customer interactions and sales."
+              />
+              <FeatureCard
+                imageName="/home-icon-6.webp"
+                title="Integrations Cloud"
+                description="Maximize your data with Tableau, streamline integrations via MuleSoft, and enhance collaboration with Slack. We’ve got all your Salesforce needs covered."
+              />
+               <FeatureCard
+                imageName="/home-icon-1.webp"
+                title="Sales Cloud"
+                description="Boost engagement and productivity, accelerate deal closures, and increase revenue with AI-driven insights for smarter, faster sales from one dynamic platform."
+              />
+              <FeatureCard
+                imageName="/home-icon-2.webp"
+                title="Service Cloud"
+                description="Elevate efficiency and enhance customer satisfaction across all touchpoints with the power of AI and data."
+              />
+              <FeatureCard
+                imageName="/home-icon-3.webp"
+                title="Marketing Cloud"
+                description="Leverage data quickly with unified analytics and profiles. Execute effective campaigns with trusted AI and tailor offers at every customer interaction."
+              />
+            
             </div>
           </div>
 
@@ -98,7 +144,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
                   <h2 className="text-5xl md:text-5xl font-bold mb-4">
-                    Codescicence in one minute
+                    Codescience in one minute
                   </h2>
                   <button
                     className="flex items-center space-x-3 bg-white text-black px-6 py-3 rounded-full shadow hover:bg-gray-200 transition duration-300"
@@ -147,7 +193,7 @@ const Home = () => {
                     <strong> global presence and 15+ years as Salesforce partners</strong>
                     , we’ve dedicated ourselves exclusively to mastering the
                     Salesforce ecosystem working with
-                    <strong> leading industries of all sizes.</strong> Our team of industry{" "}
+                    <strong> Leading and 50 industries of all sizes.</strong> Our team of industry{" "}
                     <strong> experts collaborates with clients </strong> to develop solid
                     strategies aligned with their business objectives,
                     accelerating value delivery and adapting to their unique
@@ -185,7 +231,7 @@ const Home = () => {
                     <strong> Agentforce implementers</strong>, our expertise in artificial
                     intelligence and innovation enables our clients{" "}
                     <strong> to focus on growing their businesses </strong> while we take
-                    care of the rest. With <strong> 150 AI & Data certifications</strong>,
+                    care of the rest. With <strong> 50 AI & Data certifications</strong>,
                     we architect intelligent experiences that give our clients a
                     competitive edge, combining human expertise with advanced AI
                     capabilities to deliver transformative business outcomes.

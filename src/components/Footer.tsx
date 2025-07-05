@@ -1,6 +1,7 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaStar, FaYoutube } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import IntegritySection from "../pages/IntegritySection"; // Assuming this is the correct path to your IntegritySection component
 
 const Footer = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ const Footer = () => {
             {/* Top section with logo, title, stars */}
             <div className="flex flex-col items-center justify-center mb-10">
               <div className="flex flex-col md:flex-row items-center gap-4">
-                <img src="/code-science-white.png" className="h-10" />
+                <img src="/code-science-white.png" className="h-10 px-3" />
                 <div>
                   <img src="/line-yellow.svg" />
                 </div>
@@ -84,11 +85,8 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-3">
                   {[
+                    "India",
                     "United States",
-                    "United Kingdom",
-                    "Spain",
-                    "Argentina",
-                    "Colombia",
                   ].map((label) => (
                     <li key={label}>
                       <a
@@ -257,7 +255,7 @@ const Footer = () => {
             <div className="mt-12 border-t border-gray-700 pt-6 text-sm text-gray-400 flex flex-col items-start space-y-4">
               {/* Social Icons */}
               <div className="flex space-x-6 items-center">
-                <a href="#">
+                <a href="https://www.linkedin.com/company/code-science/">
                   <FaLinkedin className="hover:text-white text-[#f9f9f9] h-[18px] cursor-pointer" />
                 </a>
                 <a href="#">
@@ -267,17 +265,22 @@ const Footer = () => {
                   <FaYoutube className="hover:text-white text-[#f9f9f9] h-[18px] cursor-pointer" />
                 </a>
                 <div className="flex items-center space-x-2">
+                   {/* <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3u00000Qu5nNEAR"> */}
+                   <a href="https://appexchange.salesforce.com/">
+
                   <img
                     src="/salesforce-app-exchange.svg"
                     alt="Salesforce Logo"
                     className="h-[18px] w-auto"
                   />
+                  </a>
+                
                 </div>
               </div>
 
               {/* Bottom Links */}
               <div className="flex text-[#f9f9f9] flex-wrap gap-6">
-                <a href="#" className="text-sm font-bold hover:text-[#fcc000]">
+                <a href="/integrity" className="text-sm font-bold hover:text-[#fcc000]">
                   Integrity line
                 </a>
                 <a href="#" className="text-sm font-bold hover:text-[#fcc000]">
