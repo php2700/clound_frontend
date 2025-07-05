@@ -28,6 +28,7 @@ import { Gador_Detail } from "./pages/Resources/gador_detail";
 import { ConaService } from "./pages/Resources/cona_detail";
 import ScrollToTop from "./components/ScrollToTop";
 import "react-toastify/dist/ReactToastify.css";
+import { Blog_Detail } from "./pages/Resources/blog_detail";
 
 const queryClient = new QueryClient();
 
@@ -60,7 +61,7 @@ const App = () => (
          <Route path="/customer-stories/gador-detail" element={< Gador_Detail/>} />
          <Route path="/customer-stories/cona-detail" element={<ConaService />} />
          <Route path="/customer-stories" element={< Customer_Stories/>} />
-
+          <Route path="/blog-detail/:_id" element={< Blog_Detail/>} />
 
          {/* Career */}
          <Route path="/career" element={< Careers/>} />
