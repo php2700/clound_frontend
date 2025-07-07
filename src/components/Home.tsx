@@ -85,51 +85,36 @@ const Home = () => {
                 description="Maximize your data with Tableau, streamline integrations via MuleSoft, and enhance collaboration with Slack. We’ve got all your Salesforce needs covered."
               />
                <FeatureCard
-                imageName="/home-icon-1.webp"
+                imageName="/undefined.webp"
                 title="Sales Cloud"
                 description="Boost engagement and productivity, accelerate deal closures, and increase revenue with AI-driven insights for smarter, faster sales from one dynamic platform."
               />
               <FeatureCard
-                imageName="/home-icon-2.webp"
+                imageName="/undefined (1).webp"
                 title="Service Cloud"
                 description="Elevate efficiency and enhance customer satisfaction across all touchpoints with the power of AI and data."
               />
               <FeatureCard
-                imageName="/home-icon-3.webp"
+                imageName="/undefined (2).webp"
                 title="Marketing Cloud"
                 description="Leverage data quickly with unified analytics and profiles. Execute effective campaigns with trusted AI and tailor offers at every customer interaction."
               />
                <FeatureCard
-                imageName="/home-icon-4.webp"
+                imageName="/undefined (1).png"
                 title="Experience Cloud"
                 description="Deliver tailored, connected digital experiences across any channel—whether you’re a global corporation or a regional SME."
               />
               <FeatureCard
-                imageName="/home-icon-5.webp"
+                imageName="/undefined.png"
                 title="Commerce Cloud"
                 description="Boost your e-commerce on the leading platform, Einstein 1. Easily link commerce to top sales, service, and marketing apps, activating data from any source to enhance customer interactions and sales."
               />
               <FeatureCard
-                imageName="/home-icon-6.webp"
+                imageName="/undefined (2).png"
                 title="Integrations Cloud"
                 description="Maximize your data with Tableau, streamline integrations via MuleSoft, and enhance collaboration with Slack. We’ve got all your Salesforce needs covered."
               />
-               <FeatureCard
-                imageName="/home-icon-1.webp"
-                title="Sales Cloud"
-                description="Boost engagement and productivity, accelerate deal closures, and increase revenue with AI-driven insights for smarter, faster sales from one dynamic platform."
-              />
-              <FeatureCard
-                imageName="/home-icon-2.webp"
-                title="Service Cloud"
-                description="Elevate efficiency and enhance customer satisfaction across all touchpoints with the power of AI and data."
-              />
-              <FeatureCard
-                imageName="/home-icon-3.webp"
-                title="Marketing Cloud"
-                description="Leverage data quickly with unified analytics and profiles. Execute effective campaigns with trusted AI and tailor offers at every customer interaction."
-              />
-            
+          
             </div>
           </div>
 

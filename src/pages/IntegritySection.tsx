@@ -147,6 +147,18 @@ import IntegrityForm from "../pages/IntegrityForm"; // If used on a different ro
 
 const IntegritySection = () => {
     const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+      const [lastScrollY, setLastScrollY] = useState(0);
+      useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsHeaderVisible(currentScrollY < lastScrollY || currentScrollY < 10);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
 
     // ✅ useNavigate must be used inside component
     const navigate = useNavigate();
@@ -156,7 +168,7 @@ const IntegritySection = () => {
     };
 
     return (
-        <div className="bg-white overflow-x-hidden">
+        <div className="relative min-h-screen bg-white overflow-x-hidden">
             <div
                 className="absolute top-0 right-0 w-72 h-72 bg-[#008093]"
                 style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}

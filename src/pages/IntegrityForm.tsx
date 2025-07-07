@@ -21,25 +21,27 @@ const IntegrityForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#e8f3f4] flex flex-col items-center justify-start py-10 px-4">
+    <div className="min-h-screen bg-[#e8f3f4] flex flex-col items-center justify-start py-10 px-20">
       {/* Header Image */}
-      <div className="mb-6">
+      <div className="mb-6 ">
         <img
-          src="/integrity-banner.png" // Update with your path
+          src="/integrityform.png" // Update with your path
           alt="Integrity Line Banner"
           className="max-w-md w-full"
         />
       </div>
-
-      {/* Form Container */}
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white w-full max-w-lg shadow-md rounded p-6"
-      >
-        <h2 className="text-2xl font-semibold mb-1 text-[#333]">
+       <div className="bg-white w-full max-w-lg  rounded p-6 px-90">
+        <h2 className=" text-2xl font-semibold mb-1 text-[#333]">
           Integrity Line
         </h2>
         <p className="text-sm text-gray-500 mb-4">Línea de Integridad</p>
+        </div>
+
+      {/* Form Container */}
+      <form onSubmit={handleSubmit}
+        className=" w-full max-w-lg shadow-md rounded p-6 px-90"> 
+        <div>
+       
 
         {/* Email */}
         <div className="mb-5">
@@ -59,7 +61,7 @@ const IntegrityForm = () => {
 
         {/* Language */}
         <div className="mb-5">
-          <label className="block font-medium text-sm mb-2">
+          <label className="block font-medium text-sm mb-2 mt-4">
             Your Language: <span className="text-red-500">*</span>
           </label>
           <div className="space-y-2">
@@ -95,6 +97,7 @@ const IntegrityForm = () => {
         >
           Next
         </button>
+        </div>
       </form>
     </div>
   );

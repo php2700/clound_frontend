@@ -31,6 +31,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Blog_Detail } from "./pages/Resources/blog_detail";
 import IntegritySection from "./pages/IntegritySection";
 import IntegrityForm from "./pages/IntegrityForm";
+import Privacypolicy from "./pages/Privacypolicy";
 
 const queryClient = new QueryClient();
 
@@ -74,6 +75,9 @@ const App = () => (
           <Route path="/company" element={<Company />} />
           <Route path="/integrity" element={<IntegritySection />} />
           <Route path="/form" element={<IntegrityForm />} />
+          {/* <Route path="/security" element={< privacy />} /> */}
+          <Route path="/security" element={< Privacypolicy />} />
+
 
           {/* Detail Pages */}
 
