@@ -109,7 +109,7 @@ const Footer = () => {
                       href="mailto:hello@codescience.com"
                       className="relative text-[#fcc000] font-bold group text-sm inline-block transition-colors duration-300 hover:text-[#ff83a9]"
                     >
-                      hello@codescience.com
+                     hello@code-science.com
                       <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FF83A9] transition-all duration-300 group-hover:w-full"></span>
                     </a>
                   </li>

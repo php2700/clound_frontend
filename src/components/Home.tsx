@@ -170,7 +170,7 @@ const Home = () => {
           <div className="px-6 py-10 md:px-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               <ImageHoverCard
-                imageSrc="/image1.webp"
+                imageSrc="/FRAME C.jpg"
                 title="100% Salesforce"
                 description={
                   <>
@@ -187,7 +187,7 @@ const Home = () => {
                 }
               />
               <ImageHoverCard
-                imageSrc="/image2.webp"
+                imageSrc="/FRAME O.jpg"
                 title="Expert Staff"
                 description={
                   <>
@@ -203,7 +203,7 @@ const Home = () => {
                 }
               />
               <ImageHoverCard
-                imageSrc="/image3.webp"
+                imageSrc="/Frame D.jpg"
                 title="One Team"
                 description="Seamlessly integrating with your teams and Salesforce to create a unified force for innovation. Our collaborative model means we’re deeply invested in your success, working side-by-side to drive meaningful transformation and measurable business impact."
               />
