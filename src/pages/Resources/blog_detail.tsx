@@ -160,96 +160,93 @@ export const Blog_Detail = () => {
         />
       </div>
 
-      <div className="px-6 py-10 flex flex-col items-end">
-        <button
-          onClick={handleComment}
-          className="text-gray-600 hover:text-gray-900 self-end mb-4"
-        >
-          <CommentIcon fontSize="large" />
-        </button>
-
-        {commentOpen && (
-          <div className="w-full max-w-md space-y-6">
-            {commentData.length > 0 ? (
-              commentData
-                .slice((page - 1) * pageSize, page * pageSize)
-                .map((ele, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start space-x-4 border-b"
-                  >
-                    <div className="text-md text-[#474747]">
-                      <span className="font-semibold">{ele.name}:</span>{" "}
-                      {ele.comment}
-                    </div>
-                  </div>
-                ))
-            ) : (
-              <p className="text-right text-gray-500">No comments yet.</p>
-            )}
-            {commentData.length > pageSize && (
-              <div className="flex justify-end space-x-2">
-                <button
-                  onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-                  disabled={page === 1}
-                  className="px-3 py-1 bg-gray-200 rounded-lg disabled:opacity-50"
-                >
-                  Prev
-                </button>
-                <button
-                  onClick={() =>
-                    setPage((prev) =>
-                      prev < Math.ceil(commentData.length / pageSize)
-                        ? prev + 1
-                        : prev
-                    )
-                  }
-                  disabled={page >= Math.ceil(commentData.length / pageSize)}
-                  className="px-3 py-1 bg-gray-200 rounded-lg disabled:opacity-50"
-                >
-                  Next
-                </button>
-              </div>
-            )}
-
-            {/* Comment Form */}
-            <form onSubmit={handlesubmit} className="space-y-4">
-              <input
-                type="text"
-                required
-                placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full border border-[#474747] rounded-md p-3  "
-              />
-              <input
-                required
-                placeholder="Comment"
-                value={comment}
-                onChange={(e) => {
-                  const comment = e.target.value;
-                  if (comment?.length < 40) {
-                    setComment(e.target.value);
-                  }
-                }}
-                className="w-full border border-[#474747] rounded-md p-3 resize-none"
-              />
-              <div className="text-right">
-                <button
-                  type="submit"
-                  className="bg-[#008093] text-white px-6 py-2 rounded-md hover:bg-[#006f7d] transition-colors"
-                >
-                  Post Comment
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
-      </div>
-
       <div className="container mx-auto pt-[10px] max-w-5xl px-10 md:px-10 ">
         <div className="px-10 py-10 md:px-10">
           <div dangerouslySetInnerHTML={{ __html: blogData?.content || "" }} />
+        </div>
+      </div>
+
+      <div className="container mx-auto pt-[10px] max-w-5xl px-10 md:px-10">
+        <div className="px-10 py-10 md:px-10">
+          <div className="my-5 text-2xl font-semibold text-[#474747]">
+            Comments
+          </div>
+          <form onSubmit={handlesubmit} className="space-y-4">
+            <input
+              type="text"
+              required
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full border border-[#474747] rounded-md p-3  "
+            />
+            <input
+              required
+              placeholder="Comment"
+              value={comment}
+              onChange={(e) => {
+                const comment = e.target.value;
+                if (comment?.length < 100) {
+                  setComment(e.target.value);
+                }
+              }}
+              className="w-full border border-[#474747] rounded-md p-3 resize-none"
+            />
+            <div className="text-right">
+              <button
+                type="submit"
+                className="bg-[#008093] text-white px-6 py-2 rounded-md hover:bg-[#006f7d] transition-colors"
+              >
+                Post Comment
+              </button>
+            </div>
+          </form>
+          {commentData.length > 0 ? (
+            commentData
+              .slice((page - 1) * pageSize, page * pageSize)
+              .map((ele, idx) => (
+                <div key={idx} className="flex items-start space-x-4  my-5">
+                  <div className="text-md text-[#474747]">
+                    <div className="font-semibold text-md  text-[#008093]">
+                      {ele.name}
+                    </div>
+                    <div
+                      style={{ lineHeight: "1em" }}
+                      className="text-#474747] text-md"
+                    >
+                      {" "}
+                      {ele.comment}
+                    </div>
+                  </div>
+                </div>
+              ))
+          ) : (
+            <p className="text-right text-[#474747]">No comments yet.</p>
+          )}
+          {commentData?.length > pageSize && (
+            <div className="flex justify-end space-x-2">
+              <button
+                onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+                disabled={page === 1}
+                className="px-3 py-1 bg-gray-200 rounded-lg disabled:opacity-50"
+              >
+                Prev
+              </button>
+              <button
+                onClick={() =>
+                  setPage((prev) =>
+                    prev < Math.ceil(commentData.length / pageSize)
+                      ? prev + 1
+                      : prev
+                  )
+                }
+                disabled={page >= Math.ceil(commentData.length / pageSize)}
+                className="px-3 py-1 bg-gray-200 rounded-lg disabled:opacity-50"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
