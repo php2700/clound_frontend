@@ -28,17 +28,17 @@ const HeroSection = () => {
       buttonText: "Read about AI Expert Insights",
       buttonLink: "/resources/blog",
       imageRight:
-        "https://cloudgaia.com/storage/elementor/thumbs/PNG-AGENTFORCE-CARROUSEL-r7vqlsma9mbm1a8wi5hm7menkf81biqh6vd6g2xiww.png",
+        "PNG-AGENTFORCE-CARROUSEL-r7vqlsma9mbm1a8wi5hm7menkf81biqh6vd6g2xiww.png",
     },
-    {
-      url: "/home-hero1.jpeg",
-      imageLeft:
-        "https://cloudgaia.com/storage/2025/07/PNG-en-ingles-e1751395670583.png",
-      paragraph:
-        "Real challenges. Real solutions. This E-book is your roadmap to<br/>evolving your Consumer Goods strat —powered by Cloudgaia <br/>and Salesforce.",
-      buttonText: "Download",
-      buttonLink: "/download",
-    },
+    // {
+    //   url: "/home-hero1.jpeg",
+    //   imageLeft:
+    //     "https://cloudgaia.com/storage/2025/07/PNG-en-ingles-e1751395670583.png",
+    //   paragraph:
+    //     "Real challenges. Real solutions. This E-book is your roadmap to<br/>evolving your Consumer Goods strat —powered by Cloudgaia <br/>and Salesforce.",
+    //   buttonText: "Download",
+    //   buttonLink: "/download",
+    // },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

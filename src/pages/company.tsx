@@ -376,14 +376,16 @@ const Company = () => {
             </div>
 
             <div className="flex justify-center mt-10 py-10">
-              <div className="flex flex-row items-start m-0 p-0 gap-10 w-full justify-center">
+              <div className="flex flex-row items-start m-0 p-0 gap-10 w-full justify-center ">
                 {/* Image */}
-                <div className="shrink-0 m-0 p-0">
+                <div className="shrink-0 m-0 p-0 " 
+                >
                   <img
-                    src="https://cloudgaia.com/storage/2025/01/company-nicolas-orzabal-rounded.svg"
+                    // src="https://cloudgaia.com/storage/2025/01/company-nicolas-orzabal-rounded.svg"
+                    src="/Copy of 1718302323184.jpg"
                     alt="Nicolás Orzabal"
-                    className="w-70 h-auto object-contain m-0 p-0"
-                    style={{ display: "block" }}
+                    className="w-60 h-auto object-contain rounded-full m-0 p-0 bg-yellow-300 "
+                    style={{ display: "block" ,width: "300px", height: "300px"}}
                   />
                 </div>
 
@@ -515,7 +517,7 @@ const Company = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-35 h-35 rounded-lg mx-auto object-cover mb-4"
+                      className="w-full h-[180px]  rounded-lg mx-auto object-cover mb-4"
                     />
                     <p className="text-[#008093] font-bold text-xl">in</p>
                     <h3

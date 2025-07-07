@@ -1014,7 +1014,7 @@ const Implementation = () => {
                       onChange={(e) => setIsAgree(e.target.checked)}
                     />
                     <span className="ml-2 text-[#474747]">
-                      I agree to receive emails from CloudGaia with updates on
+                      I agree to receive emails from Codescience with updates on
                       services, events, and alerts. I can unsubscribe at any
                       time.
                     </span>

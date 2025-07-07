@@ -63,12 +63,18 @@ const Footer = () => {
                     Expert in Consumer Goods in
                   </span>
                 </p>
-                <div className="flex items-center justify-center gap-3">
-                  <img
-                    src="/salesforce-app-exchange.svg"
-                    alt="Invisory Badge"
-                    className=" h-auto"
-                  />
+                <div className="flex items-center justify-center gap-3 cursor-pointer">
+                  <a href="https://appexchange.salesforce.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+
+                    <img
+                      src="/salesforce-app-exchange.svg"
+                      alt="Invisory Badge"
+                      className=" h-auto"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -208,7 +214,7 @@ const Footer = () => {
                   {[
                     { label: "our-vibe", to: "/career#our-vibe" },
                     { label: "Open Positions", to: "/career#open-positions" },
-                    { label: "Become a cloudgaier", to: "/career#cloudgaier" },
+                    { label: "Become a codescience", to: "/career#cloudgaier" },
                   ].map(({ label, to }) => (
                     <li key={label}>
                       <Link
@@ -265,16 +271,18 @@ const Footer = () => {
                   <FaYoutube className="hover:text-white text-[#f9f9f9] h-[18px] cursor-pointer" />
                 </a>
                 <div className="flex items-center space-x-2">
-                   {/* <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3u00000Qu5nNEAR"> */}
-                   <a href="https://appexchange.salesforce.com/">
+                  {/* <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3u00000Qu5nNEAR"> */}
+                  <a href="https://appexchange.salesforce.com/"
+                   target="_blank"
+                    rel="noopener noreferrer">
 
-                  <img
-                    src="/salesforce-app-exchange.svg"
-                    alt="Salesforce Logo"
-                    className="h-[18px] w-auto"
-                  />
+                    <img
+                      src="/salesforce-app-exchange.svg"
+                      alt="Salesforce Logo"
+                      className="h-[18px] w-auto"
+                    />
                   </a>
-                
+
                 </div>
               </div>
 
@@ -283,10 +291,8 @@ const Footer = () => {
                 <a href="/integrity" className="text-sm font-bold hover:text-[#fcc000]">
                   Integrity line
                 </a>
-                <a href="#" className="text-sm font-bold hover:text-[#fcc000]">
-                  Sitemap
-                </a>
-                <a href="#" className="text-sm font-bold hover:text-[#fcc000]">
+
+                <a href="/security" className="text-sm font-bold hover:text-[#fcc000]">
                   Privacy Policy
                 </a>
                 <a href="#" className="text-sm font-bold hover:text-[#fcc000]">

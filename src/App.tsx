@@ -30,6 +30,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "react-toastify/dist/ReactToastify.css";
 import IntegritySection from "./pages/IntegritySection";
 import IntegrityForm from "./pages/IntegrityForm";
+import Privacypolicy from "./pages/Privacypolicy";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ const App = () => (
          <Route path="/customer-stories/gador-detail" element={< Gador_Detail/>} />
          <Route path="/customer-stories/cona-detail" element={<ConaService />} />
          <Route path="/customer-stories" element={< Customer_Stories/>} />
+         
 
 
          {/* Career */}
@@ -73,6 +75,9 @@ const App = () => (
           <Route path="/company" element={<Company />} />
           <Route path="/integrity" element={<IntegritySection />} />
           <Route path="/form" element={<IntegrityForm />} />
+          {/* <Route path="/security" element={< privacy />} /> */}
+          <Route path="/security" element={< Privacypolicy />} />
+
 
           {/* Detail Pages */}
 
