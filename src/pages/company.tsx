@@ -320,7 +320,7 @@ const Company = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-10">
               <ImageHoverCard
-                imageSrc="/image1.webp"
+                imageSrc="/FRAME C.jpg" 
                 title="100% Salesforce"
                 description={
                   <>
@@ -337,7 +337,7 @@ const Company = () => {
                 }
               />
               <ImageHoverCard
-                imageSrc="/image2.webp"
+                imageSrc="/FRAME O.jpg"
                 title="Expert Staff"
                 description={
                   <>
@@ -353,7 +353,7 @@ const Company = () => {
                 }
               />
               <ImageHoverCard
-                imageSrc="/image3.webp"
+                imageSrc="/Frame D.jpg"
                 title="One Team"
                 description="Seamlessly integrating with your teams and Salesforce to create a unified force for innovation. Our collaborative model means we’re deeply invested in your success, working side-by-side to drive meaningful transformation and measurable business impact."
               />
@@ -382,7 +382,7 @@ const Company = () => {
                 >
                   <img
                     // src="https://cloudgaia.com/storage/2025/01/company-nicolas-orzabal-rounded.svg"
-                    src="/Copy of 1718302323184.jpg"
+                    src="/MAN.png"
                     alt="Nicolás Orzabal"
                     className="w-60 h-auto object-contain rounded-full m-0 p-0 bg-yellow-300 "
                     style={{ display: "block" ,width: "300px", height: "300px"}}

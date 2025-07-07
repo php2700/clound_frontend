@@ -5,7 +5,7 @@ const ImageHoverCard = ({ imageSrc, title, description }) => {
         <img
           src={imageSrc}
           alt={title}
-          className="w-full h-65 object-cover filter grayscale hover:grayscale-0 transition duration-500"
+          className="w-full h-[310px] object-cover filter grayscale hover:grayscale-0 transition duration-500"
         />
       </div>
       <h3 style={{lineHeight:'1.2em'}}
