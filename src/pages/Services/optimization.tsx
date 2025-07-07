@@ -830,13 +830,13 @@ const Optimization = () => {
                       <div className="relative">
                         <select
                           required
-                          className="w-full p-3 rounded bg-white text-black text-lg focus:outline-none appearance-none "
+                          className="w-full p-3 rounded bg-white text-[#474747] text-lg focus:outline-none appearance-none "
                           defaultValue=""
                           value={country}
                           onChange={(e) => setCountry(e.target.value)}
                         >
                           <option disabled value="">
-                            Select Country*
+                            Country*
                           </option>
                           {countries.map((country, index) => (
                             <option

@@ -5,66 +5,88 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
- 
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 export const Blog = () => {
+  const navigate = useNavigate();
+  const [blogData, setBlogData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage, setPerPage] = useState();
+  const [totalcount, setTotalCount] = useState();
+  const [totalPages, setTotalPages] = useState(1);
   const [loaded, setLoaded] = useState(false);
+  const [category, setCategory] = useState("");
   const [lastScrollY, setLastScrollY] = useState(0);
- 
+
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const data = [
-    {
-      img: "/BANNER-cnx-main-keynote.png",
-      fetchFrom: "AI, Expert insights",
-      title:
-        "Highlights from Keynote CNX 2025: how Agentforce is transforming marketing with AI",
-      description:
-        "Get key insights from Salesforce’s Main Keynote at CNX 2025. Discover how Agentforce is transforming marketing with AI and real-time personalization.",
-    },
-    {
-      img: "/BLOG-POST-ARTICULO-2-JC.jpg",
-      fetchFrom: "Consumer Goods, Expert insights",
-      title: "Consumer Goods Success: The Foundational Phase",
-      description:
-        "In this article, we’ll explore the key components of the Foundational Phase of Salesforce Consumer Goods Cloud, ensuring that you have the necessary tools and processes in place to drive success from the very start.",
-    },
-    {
-      img: "/CNX25-Recommended-Sessions.jpg",
-      fetchFrom: "Consumer Goods, Expert insights",
-      title: "CNX25: Consumer Goods Recommended Sessions",
-      description:
-        "In a landscape driven by AI, automation, and connected customer experiences, Salesforce Connections 2025 is the place to be for Consumer Goods companies ready to transform and scale. At codescience, we’ve curated a list of key sessions that we believe every Consumer Goods leader should attend to gain insights into smarter decision-making, seamless engagement, and future-ready growth.",
-    },
-    {
-      img: "/CNX25-Recommended-Sessions.jpg",
-      fetchFrom: "Consumer Goods, Expert insights",
-      title: "CNX25: Consumer Goods Recommended Sessions",
-      description:
-        "In a landscape driven by AI, automation, and connected customer experiences, Salesforce Connections 2025 is the place to be for Consumer Goods companies ready to transform and scale. At codescience, we’ve curated a list of key sessions that we believe every Consumer Goods leader should attend to gain insights into smarter decision-making, seamless engagement, and future-ready growth.",
-    },
-  ];
+
   const headings = ["AI", "Consumer Goods", "Expert Insights", "News"];
- 
+
   useEffect(() => {
     setLoaded(true);
   }, []);
- 
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsHeaderVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
- 
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
- 
-  //   const blogDataList=()={
-  // axios.get(`${API_BASE_URL}api/user/innovation`)
-  //   }
- 
+
+  const blogDataList = () => {
+    axios
+      .get(`${API_BASE_URL}api/user/blog-list`, {
+        params: {
+          page: currentPage,
+          category: category,
+        },
+      })
+
+      .then((res) => {
+        setCurrentPage(res?.data?.blogData?.current_page);
+        setPerPage(res?.data?.blogData?.per_page);
+        setTotalCount(res?.data?.blogData?.total);
+        setTotalPages(res?.data?.blogData?.totalPages);
+
+        setBlogData(res?.data?.blogData?.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    blogDataList();
+  }, [currentPage, category]);
+
+  const handlePrev = () => {
+    if (currentPage > 1) {
+      const newPage = currentPage - 1;
+      setCurrentPage(newPage);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      const newPage = currentPage + 1;
+      setCurrentPage(newPage);
+    }
+  };
+
+  const handleCategory = (category) => {
+    setCategory(category);
+  };
+
+  const handleView = (data) => {
+    navigate(`/blog-detail/${data?._id}`);
+  };
+
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       <div
@@ -157,13 +179,17 @@ export const Blog = () => {
             </div>
             <div className="mt-6">
               <div className="flex flex-wrap items-center gap-5">
-                <div className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 text-lg cursor-pointer bg-white">
+                <div
+                  className="text-[#008093] border border-[#008093] rounded-full px-5 py-1 text-lg cursor-pointer bg-white"
+                  onClick={() => handleCategory("")}
+                >
                   All articles
                 </div>
                 {headings.map((item, index) => (
                   <div
                     key={index}
                     className="text-[#474747] text-lg bg-white hover:text-[#008093] border rounded-2xl border-transparent hover:border-[#008093] hover:rounded-full px-6 py-1 cursor-pointer"
+                    onClick={() => handleCategory(item)}
                   >
                     {item}
                   </div>
@@ -181,25 +207,26 @@ export const Blog = () => {
                 </div>
               </div>
             </div>
- 
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-8">
-              {data?.map((item, index) => (
+              {blogData?.map((item, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-lg  overflow-hidden flex flex-col min-h-[400px]"
                 >
                   <img
-                    src={item?.img}
+                    src={`${API_BASE_URL}${item.image}`}
                     alt={item?.title}
                     className="w-full h-48 object-cover cursor-pointer"
+                    onClick={() => handleView(item)}
                   />
- 
+
                   <div className="p-4 flex flex-col flex-grow">
                     <div
                       style={{ fontSize: "12px" }}
                       className="text-[#ff83a9] mb-1"
                     >
-                      {item?.fetchFrom}
+                      {item?.category}
                     </div>
                     <div
                       style={{ lineHeight: "1.2em" }}
@@ -215,7 +242,7 @@ export const Blog = () => {
                     >
                       {item?.description}
                     </div>
- 
+
                     {/* Read Article pushed to bottom */}
                     <div className="relative mt-auto font-bold text-[#474747] text-base cursor-pointer group w-max">
                       <span>Read Article</span>
@@ -225,6 +252,29 @@ export const Blog = () => {
                 </div>
               ))}
             </div>
+
+            <div className="flex gap-4 mt-4  justify-end">
+              <button
+                onClick={handlePrev}
+                disabled={currentPage === 1}
+                className={`bg-yellow-400 text-white p-3 rounded-full transition-colors ${
+                  currentPage === 1 ? " cursor-mouse" : "cursor-pointer"
+                }`}
+              >
+                <FaArrowLeft />
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={currentPage === totalPages}
+                className={`bg-yellow-400 text-white p-3 rounded-full transition-colors ${
+                  currentPage === totalPages
+                    ? " cursor-mouse"
+                    : "cursor-pointer"
+                }`}
+              >
+                <FaArrowRight />
+              </button>
+            </div>
           </div>
         </div>
         <div
@@ -232,7 +282,7 @@ export const Blog = () => {
           style={{ backgroundImage: "url('/stories-banner-back.webp')" }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
- 
+
           <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
             <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9] tracking-tight">
               Let's talk!
@@ -251,5 +301,3 @@ export const Blog = () => {
     // </div>
   );
 };
- 
- 
