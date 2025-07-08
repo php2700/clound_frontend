@@ -40,9 +40,9 @@ const Home = () => {
               innovation—from consulting and implementation to staff
               augmentation and{"\n"}
               ongoing support, ensuring seamless success for companies like
-              Coca-Cola,{"\n"}
-              Diageo, Schroders, Danone, Mercado Libre, The Walt Disney Company
-              and{"\n"}
+              Schneider electric,
+              Samsara, HDFC Bank, Kaplan, Rapid7, Doordash, DHL, Kotak Bank,ABSA Bank,
+              and
               countless SMEs.
             </p>
           </div>
