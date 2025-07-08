@@ -432,7 +432,7 @@ export const Careers = () => {
                 for you to grow, thrive, and make an impact.
               </p>
             </div>
-            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-1 mx-auto">
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-1 mx-auto ">
               {[
                 {
                   video: "/Workmy.mp4",
@@ -545,7 +545,7 @@ export const Careers = () => {
         <div className="absolute inset-0 bg-black/75 z-0"></div>
         <div className="relative z-10 container mx-auto px-4">
           <h2 className="text-[40px] font-bold text-[#fcc000] text-center mb-1 mt-5">
-            Become a codescience
+            Become a Codescience
           </h2>
           <form
             onSubmit={handleSubmit}
