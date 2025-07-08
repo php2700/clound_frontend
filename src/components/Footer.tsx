@@ -221,7 +221,7 @@ const Footer = () => {
                   {[
                     { label: "our-vibe", to: "/career#our-vibe" },
                     { label: "Open Positions", to: "/career#open-positions" },
-                    { label: "Become a codescience", to: "/career#cloudgaier" },
+                    { label: "Become a Codescience", to: "/career#cloudgaier" },
                   ].map(({ label, to }) => (
                     <li key={label}>
                       <Link

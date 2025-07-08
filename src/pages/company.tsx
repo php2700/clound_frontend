@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Santiago Ramos ",
+    name: " Kshitij Rodrigue",
     title: "Co-Founder & CPO",
     image:
       "/MAN.png",
