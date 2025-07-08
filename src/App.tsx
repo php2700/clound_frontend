@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css'
+import "./App.css";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -41,11 +41,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-      <ScrollToTop />
+        <ScrollToTop />
         <Routes>
           {/* <Route path="/" element={<Layout />}> */}
-  <Route index element={<Index />} />
-{/* </Route> */}
+          <Route index element={<Index />} />
+          {/* </Route> */}
 
           <Route path="/contact" element={<Contact />} />
 
@@ -57,18 +57,32 @@ const App = () => (
           <Route path="/services/growth" element={<Growth />} />
 
           {/* {Resources} */}
-         <Route path="/resources/blog" element={<Blog/>} />
-         <Route path="/resources/customer-stories" element={< Customer_Stories/>} />
-         <Route path="/customer-stories/ealde-detail" element={< Ealde_Detail/>} />
-         <Route path="/customer-stories/dexter-detail" element={< Dexter_Detail/>} />
-         <Route path="/customer-stories/gador-detail" element={< Gador_Detail/>} />
-         <Route path="/customer-stories/cona-detail" element={<ConaService />} />
-         <Route path="/customer-stories" element={< Customer_Stories/>} />
-          <Route path="/blog-detail/:_id" element={< Blog_Detail/>} />
+          <Route path="/resources/blog" element={<Blog />} />
+          <Route
+            path="/resources/customer-stories"
+            element={<Customer_Stories />}
+          />
+          <Route
+            path="/customer-stories/ealde-detail"
+            element={<Ealde_Detail />}
+          />
+          <Route
+            path="/customer-stories/dexter-detail"
+            element={<Dexter_Detail />}
+          />
+          <Route
+            path="/customer-stories/gador-detail"
+            element={<Gador_Detail />}
+          />
+          <Route
+            path="/customer-stories/cona-detail"
+            element={<ConaService />}
+          />
+          <Route path="/customer-stories" element={<Customer_Stories />} />
+          <Route path="/blog-detail/:_id" element={<Blog_Detail />} />
 
-         {/* Career */}
-         <Route path="/career" element={< Careers/>} />
-
+          {/* Career */}
+          <Route path="/career" element={<Careers />} />
 
           {/* Single Pages */}
           <Route path="/industries" element={<Industries />} />
@@ -76,13 +90,9 @@ const App = () => (
           <Route path="/integrity" element={<IntegritySection />} />
           <Route path="/form" element={<IntegrityForm />} />
           {/* <Route path="/security" element={< privacy />} /> */}
-          <Route path="/security" element={< Privacypolicy />} />
-
+          <Route path="/security" element={<Privacypolicy />} />
 
           {/* Detail Pages */}
-
-          {/* Catch-all route for 404 Not Found */}
-
 
           <Route path="*" element={<NotFound />} />
         </Routes>

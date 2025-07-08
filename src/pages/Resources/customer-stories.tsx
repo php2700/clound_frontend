@@ -4,39 +4,38 @@ import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
- 
+
 export const Customer_Stories = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
- 
+
   const [lastScrollY, setLastScrollY] = useState(0);
- 
+
   const data = [
     {
-      description: `"Excellent results in a very short period of time ",
-                  title: "Federico Garay"`,
-      img: "/logo-johnson-johnson.svg",
+      description: `"Implementing Salesforce with our global teams has been a game changer. It brought much-needed visibility across sales, service, and partner operations. The integration streamlined our customer journey from lead to delivery, and empowered our teams with real-time insights."`,
+      title: "Marc Pertios, Global VP Sales Operations, Schneider Electric",
+      img: "/electric.png",
     },
     {
-      description: `"They work very well as a team, understanding the whole process.The deliverables were very clear",
-                  title: "Hernan Boykier"`,
-      img: "/logo-la-caja.svg",
-    },
- 
-    {
-      description: `"Implementing Salesforce with our global teams has been a game changer. It brought much-needed visibility across sales, service, and partner operations. The integration streamlined our customer journey from lead to delivery, and empowered our teams with real-time insights."
-."`,
-      title: "— Marc Pertios, Global VP Sales Operations, Schneider Electric",
-      img: "/electric-schneider.png" ,
+      description: `"Salesforce B2B Commerce Cloud has transformed how we manage our bulk school and institutional partnerships. With a single source of truth for pricing, inventory, and custom bundles, our sales cycle has never been more efficient."`,
+      title: "Rohit Sharma, Head of Strategic Partnerships, WhiteHat Jr",
+      img: "/whitehat.png",
     },
     {
-      description: `"Quality, innovation, teamwork, support, schedule, responsible "`,
-      title: "Manuel Naon",
-      img: "/logo-banco-del-sol.svg",
+      description: `"Salesforce Nonprofit Cloud has brought a new level of transparency and efficiency to our operations. We can now manage stakeholder engagement, case records, and compliance reviews in one centralized system."`,
+      title: "Amanda Crowley, Director – Operations, ACNC",
+      img: "/ACNC.jpg",
+    },
+
+    {
+      description: `"Salesforce has completely redefined how we manage our restaurant and merchant onboarding pipeline. With automated lead routing, real-time visibility, and smart analytics, our sales teams are closing faster and smarter."`,
+      title: "Sophia Lin, Director of SMB Sales, DoorDash",
+      img: "/doordash.png",
     },
   ];
- 
+
   const storyData = [
     {
       url: "/customer-stories/cona-detail",
@@ -82,7 +81,7 @@ export const Customer_Stories = () => {
         "Grupo Dexter, Argentina’s leading sports retailer, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders.",
     },
   ];
- 
+
   const images = [
     "/logo-grupo-dexter.svg",
     "/uala9.png",
@@ -94,40 +93,40 @@ export const Customer_Stories = () => {
     "/mecardo4.png",
     "/idb2.png",
   ];
- 
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
     }, 7000);
- 
+
     return () => clearInterval(interval);
   }, [data?.length]);
- 
+
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? data?.length - 1 : prev - 1));
   };
- 
+
   const handleNext = () => {
     setCurrentIndex((prev) => (prev === data?.length - 1 ? 0 : prev + 1));
   };
- 
+
   const item = data[currentIndex];
- 
+
   useEffect(() => {
     setLoaded(true);
   }, []);
- 
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsHeaderVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
- 
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
- 
+
   return (
     <div>
       <div className="relative min-h-screen overflow-x-hidden">
@@ -137,7 +136,7 @@ export const Customer_Stories = () => {
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
           aria-hidden="true"
         />
- 
+
         <div
           className={`fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out z-50 ${
             isHeaderVisible ? "translate-y-6" : "-translate-y-full"
@@ -145,14 +144,18 @@ export const Customer_Stories = () => {
         >
           <Header />
         </div>
- 
+
         <div className="bg-[#f9f9f9]">
           <div className="container mx-auto pt-[130px] px-4 md:px-6 ">
             <div className="px-6 py-20 md:px-10 ">
               <div className="flex items-center text-sm text-[#474747] mt-8">
                 <Link to="/">
-  <img src='/bread-home.svg' className="mr-1 text-xl cursor-pointer" aria-hidden="true" />
-</Link>
+                  <img
+                    src="/bread-home.svg"
+                    className="mr-1 text-xl cursor-pointer"
+                    aria-hidden="true"
+                  />
+                </Link>
                 <span className="mx-1 text-base font-bold">&nbsp;/</span>
                 <span className="text-base font-bold cursor-pointer">
                   &nbsp;Resources
@@ -190,8 +193,8 @@ export const Customer_Stories = () => {
             </div>
           </div>
         </div>
- 
-        <div className="text-center max-w-4xl mx-auto py-6 my-10 flex flex-col text-center min-h-[300px] ">
+
+        <div className="text-center max-w-4xl mx-auto py-6 my-10 flex flex-col text-center min-h-[350px] ">
           <div
             style={{ lineHeight: "1.2em" }}
             className="text-2xl text-[#474747]"
@@ -205,9 +208,9 @@ export const Customer_Stories = () => {
             {item?.title}
           </div>
           <div className="mx-auto max-h-20">
-            <img style={{ height: "150px", width: "130px" }} src={item?.img} className="block " />
+            <img src={item?.img} className="block h-20" />
           </div>
-          <div className="flex justify-center gap-4 items-center mt-auto pt-6">
+          <div className="flex justify-center gap-4 items-center mt-auto pt-4">
             <div
               onClick={handlePrevious}
               className="p-3 bg-[#fcc000] text-white rounded-3xl cursor-pointer hover:bg-[#FF83A9]"
@@ -222,7 +225,7 @@ export const Customer_Stories = () => {
             </div>
           </div>
         </div>
- 
+
         <div className="bg-[#f9f9f9]">
           <div className=" container mx-auto py-10  px-4 md:px-6">
             <div className="px-6 py-10 md:px-10 ">
@@ -230,8 +233,8 @@ export const Customer_Stories = () => {
                 style={{ fontFamily: "sans-serif,dm-sans", lineHeight: "1em" }}
                 className={`text-4xl md:text-6xl font-bold text-[#008093]   `}
               >
-                At Codescience, our dedication to customer success is driven by a
-                vibrant VIBE and a total commitment to Salesforce.
+                At Codescience, our dedication to customer success is driven by
+                a vibrant VIBE and a total commitment to Salesforce.
               </h2>
               <p
                 style={{ lineHeight: "1.2em" }}
@@ -243,7 +246,7 @@ export const Customer_Stories = () => {
               </p>
             </div>
           </div>
- 
+
           <div className="overflow-hidden py-10 ">
             <div className="flex gap-20 animate-scroll whitespace-nowrap">
               {[...images, ...images].map((src, index) => (
@@ -256,7 +259,7 @@ export const Customer_Stories = () => {
               ))}
             </div>
           </div>
- 
+
           <div className=" container mx-auto mt-[100px] px-4 md:px-6">
             <div className="px-6  md:px-10 ">
               {storyData?.map((item, index) => (
@@ -299,8 +302,7 @@ export const Customer_Stories = () => {
                     </div>
                     <div
                       style={{
- 
-lineHeight: "1.2em",
+                        lineHeight: "1.2em",
                       }}
                       className="text-[#474747] text-lg mb-4"
                     >
@@ -316,18 +318,21 @@ lineHeight: "1.2em",
               ))}
             </div>
           </div>
- 
+
           <div
             className="relative w-full h-[300px] bg-cover bg-center"
             style={{ backgroundImage: "url('/stories-banner-back.webp')" }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-30"></div>
- 
+
             <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
               <h2 className="text-3xl md:text-6xl font-bold mb-4 text-[#f9f9f9]">
                 Let's talk!
               </h2>
-              <Link to = "/contact" className="bg-[#ff83a9] text-[#f9f9f9] px-6 py-2 rounded-full text-lg font-bold hover:bg-white hover:text-[#474747] transition">
+              <Link
+                to="/contact"
+                className="bg-[#ff83a9] text-[#f9f9f9] px-6 py-2 rounded-full text-lg font-bold hover:bg-white hover:text-[#474747] transition"
+              >
                 Contact us
               </Link>
             </div>
@@ -338,5 +343,3 @@ lineHeight: "1.2em",
     </div>
   );
 };
- 
- 

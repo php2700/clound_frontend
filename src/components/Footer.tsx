@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaInstagram, FaLinkedin, FaStar, FaYoutube } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import IntegritySection from "../pages/IntegritySection"; // Assuming this is the correct path to your IntegritySection component
+import { CookieSetting } from "@/pages/cookieSetting";
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleModel = () => {
+    setShowModal(true);
+  };
+
+  const handleclose = () => {
+    setShowModal(false);
+  };
 
   return (
     <div className="bg-[#474747]">
@@ -64,11 +74,11 @@ const Footer = () => {
                   </span>
                 </p>
                 <div className="flex items-center justify-center gap-3 cursor-pointer">
-                  <a href="https://appexchange.salesforce.com/"
+                  <a
+                    href="https://appexchange.salesforce.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-
                     <img
                       src="/salesforce-app-exchange.svg"
                       alt="Invisory Badge"
@@ -90,10 +100,7 @@ const Footer = () => {
                   Codescience offices around the world
                 </h4>
                 <ul className="space-y-3">
-                  {[
-                    "India",
-                    "United States",
-                  ].map((label) => (
+                  {["India", "United States"].map((label) => (
                     <li key={label}>
                       <a
                         href="mailto:hello@codescience.com"
@@ -109,7 +116,7 @@ const Footer = () => {
                       href="mailto:hello@codescience.com"
                       className="relative text-[#fcc000] font-bold group text-sm inline-block transition-colors duration-300 hover:text-[#ff83a9]"
                     >
-                     hello@code-science.com
+                      hello@code-science.com
                       <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FF83A9] transition-all duration-300 group-hover:w-full"></span>
                     </a>
                   </li>
@@ -272,30 +279,39 @@ const Footer = () => {
                 </a>
                 <div className="flex items-center space-x-2">
                   {/* <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3u00000Qu5nNEAR"> */}
-                  <a href="https://appexchange.salesforce.com/"
-                   target="_blank"
-                    rel="noopener noreferrer">
-
+                  <a
+                    href="https://appexchange.salesforce.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="/salesforce-app-exchange.svg"
                       alt="Salesforce Logo"
                       className="h-[18px] w-auto"
                     />
                   </a>
-
                 </div>
               </div>
 
               {/* Bottom Links */}
               <div className="flex text-[#f9f9f9] flex-wrap gap-6">
-                <a href="/integrity" className="text-sm font-bold hover:text-[#fcc000]">
+                <a
+                  href="/integrity"
+                  className="text-sm font-bold hover:text-[#fcc000]"
+                >
                   Integrity line
                 </a>
 
-                <a href="/security" className="text-sm font-bold hover:text-[#fcc000]">
+                <a
+                  href="/security"
+                  className="text-sm font-bold hover:text-[#fcc000]"
+                >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-sm font-bold hover:text-[#fcc000]">
+                <a
+                  onClick={handleModel}
+                  className="text-sm font-bold hover:text-[#fcc000] cursor-pointer"
+                >
                   Cookie settings
                 </a>
                 <span style={{ fontSize: "12px" }} className="text-[#f9f9f9]">
@@ -306,6 +322,7 @@ const Footer = () => {
           </footer>
         </div>
       </div>
+      {showModal && <CookieSetting closeModel={handleclose} />}
     </div>
   );
 };
