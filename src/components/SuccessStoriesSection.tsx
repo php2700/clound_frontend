@@ -98,11 +98,11 @@ const SuccessStoriesSection = () => {
                         <div className="text-lg font-bold text-red-600 group-hover:text-[#474747] transition-colors duration-300">
                            <img src={story.logo} style={{ width: "190px", height: "90px" }} />
                         </div>
-                        {story.logoSubtext && (
+                        {/* {story.logoSubtext && (
                           <div className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300">
                             {story.logoSubtext}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                   </div>

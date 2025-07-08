@@ -83,15 +83,21 @@ export const Customer_Stories = () => {
   ];
 
   const images = [
-    "/logo-grupo-dexter.svg",
-    "/uala9.png",
-    "/ypf6.png",
-    "/diageo1.png",
-    "/cona7.png",
-    "/cocacola12.png",
-    "/logo-gador-2.svg",
-    "/mecardo4.png",
-    "/idb2.png",
+    "/20220309083632!Parle_Products_logo.svg",
+    "/Absa_logoe.png",
+    "/Blue Cross IDHO.png",
+    "/capgemini.png",
+    "/Coinbase.svg.png",
+    "/DHL_Logo.svg.png",
+    "/DoorDash-logo.png",
+    "/samsara.png",
+    "/Ecolab-logo.webp",
+    "/HDFCBank.jpg.png",
+    "/ICFF Logo.jpg",
+    "/Kaplan (1).png",
+    "/Kotak_Mahindra_Bank_logo.png",
+    "/Migros-Logo.wine.svg",
+    "/Rapid7_logo_-_transparent_PNG.png",
   ];
 
   useEffect(() => {
@@ -247,14 +253,14 @@ export const Customer_Stories = () => {
             </div>
           </div>
 
-          <div className="overflow-hidden py-10 ">
-            <div className="flex gap-20 animate-scroll whitespace-nowrap">
+          <div className="overflow-hidden py-10 scrolling-wrapper">
+            <div className="flex gap-20 animate-scroll whitespace-nowrap scrolling-track">
               {[...images, ...images].map((src, index) => (
                 <img
                   key={index} // Added key for list items
                   src={src}
                   alt={`logo-${index}`}
-                  className="h-10 w-auto object-contain"
+                  className="h-10 w-auto object-contain scrolling-image"
                 />
               ))}
             </div>
@@ -271,7 +277,7 @@ export const Customer_Stories = () => {
                                          rounded-xl overflow-hidden my-8`}
                 >
                   <div className="lg:w-1/2 w-full h-64 lg:h-auto">
-                    <img 
+                    <img
                       src={item?.userImg}
                       alt="story"
                       className="w-full h-full object-cover"
@@ -279,8 +285,9 @@ export const Customer_Stories = () => {
                   </div>
                   <div className="lg:w-1/2 w-full p-6 flex flex-col justify-between">
                     <div className="flex items-center gap-3 mb-4">
-                      <img 
-                        src={item?.companyImg} style={{ width: "150px", height: "70px" }}
+                      <img
+                        src={item?.companyImg}
+                        style={{ width: "150px", height: "70px" }}
                         alt="company"
                         className="h-6"
                       />

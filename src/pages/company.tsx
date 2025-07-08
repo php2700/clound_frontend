@@ -31,7 +31,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Santiago Ramos ",
-    title: "Co-Founder & CPO",
+    title: "Co-Founder & CO",
     image:
       "Copy of 1718302323184.jpg",
     linkedIn: "#",
