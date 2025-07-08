@@ -5,9 +5,9 @@ const SuccessStoriesSection = () => {
   const stories = [
     {
       subtitle: "Transforming Client Services",
-      logo: "CONA",
+      logo: "/wgite..png",
       logoSubtext: "SERVICES LLC",
-      title: "One of the biggest B2B Commerce Lightning projects in the world",
+      title: "One of the biggest B2B Commerce Lightning projects ",
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
@@ -16,7 +16,7 @@ const SuccessStoriesSection = () => {
     },
     {
       subtitle: "Unlocking Insights",
-      logo: "Gador",
+      logo: "/electric-schneider.png",
       logoSubtext: "",
       title: "Transforming Experiences with a 360° Customer View",
       bgColor: "bg-white",
@@ -26,11 +26,11 @@ const SuccessStoriesSection = () => {
       link: "/customer-stories/gador-detail",
     },
     {
-      subtitle: "Empowering Success",
-      logo: "GRUPO DEXTER",
+      subtitle: "Non Profit",
+      logo: "/doordash.png",
       logoSubtext: "",
       title:
-        "+57% Growth in Online Orders: Dexter's Success in E-Commerce Digitization with Salesforce",
+        "Helps mission-driven organizations manage fundraising, programs, outreach,grant marking and donor relationships with powerful CRM tools, automation, and real-time insights—all in one platform",
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
@@ -81,7 +81,7 @@ const SuccessStoriesSection = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl gap-6 mb-12 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl gap-6 mb-12 mx-auto">
             {stories.map((story, index) => (
               <div
                 key={index}
@@ -96,7 +96,7 @@ const SuccessStoriesSection = () => {
                     <div className="flex items-center gap-2">
                       <div>
                         <div className="text-lg font-bold text-red-600 group-hover:text-[#474747] transition-colors duration-300">
-                          {story.logo}
+                           <img src={story.logo} style={{ width: "190px", height: "90px" }} />
                         </div>
                         {story.logoSubtext && (
                           <div className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300">

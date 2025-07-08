@@ -86,33 +86,33 @@ const Home = () => {
               />
                <FeatureCard
                 imageName="/undefined.webp"
-                title="Sales Cloud"
-                description="Boost engagement and productivity, accelerate deal closures, and increase revenue with AI-driven insights for smarter, faster sales from one dynamic platform."
+                title="Non Profit Cloud"
+                description="Helps mission-driven organizations manage fundraising, programs, outreach,grant marking and donor relationships with powerful CRM tools, automation, and real-time insights—all in one platform"
               />
               <FeatureCard
                 imageName="/undefined (1).webp"
-                title="Service Cloud"
-                description="Elevate efficiency and enhance customer satisfaction across all touchpoints with the power of AI and data."
+                title="Health Cloud"
+                description="Patient-centric CRM platform that connects providers, patients, and payers to streamline care coordination, manage health data securely, and improve patient engagement and outcomes"
               />
               <FeatureCard
                 imageName="/undefined (2).webp"
-                title="Marketing Cloud"
-                description="Leverage data quickly with unified analytics and profiles. Execute effective campaigns with trusted AI and tailor offers at every customer interaction."
+                title="Retail and Consumer Cloud "
+                description="A unified platform that empowers retail and consumer goods brands to deliver personalized shopping experiences, optimize supply chains, manage in-store operations, and boost customer loyalty at scale."
               />
                <FeatureCard
                 imageName="/undefined (1).png"
-                title="Experience Cloud"
-                description="Deliver tailored, connected digital experiences across any channel—whether you’re a global corporation or a regional SME."
+                title="Financial Services Cloud"
+                description="A purpose-built CRM for banks, insurers, and wealth managers to deliver personalized financial advice, unify client data, automate processes, ensure compliance, and deepen customer relationships."
               />
               <FeatureCard
                 imageName="/undefined.png"
-                title="Commerce Cloud"
-                description="Boost your e-commerce on the leading platform, Einstein 1. Easily link commerce to top sales, service, and marketing apps, activating data from any source to enhance customer interactions and sales."
+                title="Manufacturing Cloud"
+                description="Purpose-built CRM that unifies sales and operations, provides real-time visibility into forecasts, integrates account-based planning, streamlines partner collaboration, improves demand accuracy, and drives smarter production planning—helping manufacturers boost efficiency, reduce costs, and accelerate growth in a competitive market.."
               />
               <FeatureCard
                 imageName="/undefined (2).png"
-                title="Integrations Cloud"
-                description="Maximize your data with Tableau, streamline integrations via MuleSoft, and enhance collaboration with Slack. We’ve got all your Salesforce needs covered."
+                title="Public Sector Cloud"
+                description="A secure, scalable platform designed for government agencies to modernize services, manage cases, automate workflows, enhance citizen engagement, and ensure transparency and regulatory compliance."
               />
           
             </div>
