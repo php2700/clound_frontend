@@ -131,20 +131,18 @@ export const Careers = () => {
   // const [openAccordion, setOpenAccordion] = useState(null);
   const [openAccordions, setOpenAccordions] = useState([]);
 
-
   // const handleAccordionClick = (title) => {
   //   setOpenAccordion(openAccordion === title ? null : title);
   // };
   const handleAccordionClick = (title) => {
-  if (openAccordions.includes(title)) {
-    // remove the title (close the accordion)
-    setOpenAccordions(openAccordions.filter((t) => t !== title));
-  } else {
-    // add the title (open the accordion)
-    setOpenAccordions([...openAccordions, title]);
-  }
-};
-
+    if (openAccordions.includes(title)) {
+      // remove the title (close the accordion)
+      setOpenAccordions(openAccordions.filter((t) => t !== title));
+    } else {
+      // add the title (open the accordion)
+      setOpenAccordions([...openAccordions, title]);
+    }
+  };
 
   const [openJobIndex, setOpenJobIndex] = useState(null);
   const cloudgaierRef = useRef(null);
@@ -403,7 +401,7 @@ export const Careers = () => {
                       onClick={() => handleAccordionClick(item.title)}
                       className="w-full text-bold p-6 px-6 pt-2 text-[24px] pb-2 flex items-center justify-between text-left"
                     >
-                      <span>  {item.title}</span>
+                      <span> {item.title}</span>
                       {isOpen ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
                     </button>
 
@@ -759,16 +757,16 @@ export const Careers = () => {
                 <img src="/2-lampara-emoji.png" className="h-6" />
                 <div>
                   <h3 className="font-bold text-lg text-[#ff83a9]">
-                    About  Codescience:
+                    About Codescience:
                   </h3>
                   <p className="text-[#474747] text-[18px] text-semibold mt-2 ml-4">
-                    At  Codescience, we are passionate about digital transformation
-                    with Salesforce. We partner with companies to drive
-                    innovation, ensuring real business impact.
+                    At Codescience, we are passionate about digital
+                    transformation with Salesforce. We partner with companies to
+                    drive innovation, ensuring real business impact.
                   </p>
                   <p className="text-[#474747] mt-4 text-xl font-[18px] font-semibold leading-tight ml-4">
                     Ready to take your career to the next level? <br /> Join
-                     Codescience and be part of the digital evolution!
+                    Codescience and be part of the digital evolution!
                   </p>
                 </div>
               </div>
