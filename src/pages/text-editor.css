@@ -1,0 +1,19 @@
+.quill-content h1 {
+  font-size: 2rem;
+}
+
+.quill-content h2 {
+  font-size: 1.75rem;
+}
+
+.quill-content h3 {
+  font-size: 1.5rem;
+}
+
+.quill-content p {
+  font-size: 1rem;
+}
+
+.quill-content strong {
+  font-weight: bold;
+}
