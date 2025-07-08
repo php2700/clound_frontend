@@ -17,7 +17,7 @@ const teamMembers = [
     title: "Co-Founder & CEO",
     image:
       // "Screenshot 2025-07-03 175207.jpg",
-      "Willim2025-07-03 175207.jpg",
+      "image (3).webp",
     linkedIn: "#",
   },
   {
@@ -25,15 +25,15 @@ const teamMembers = [
     name: "Francisco Okecki",
     title: "Board Member Advisor & Co-Founder",
     image:
-      "Screenshot 2025-07-03 175141.jpg",
+      "image (4).png",
     linkedIn: "#",
   },
   {
     id: 3,
-    name: "Santiago Ramos ",
+    name: " Kshitij Rodrigue",
     title: "Co-Founder & CPO",
     image:
-      "Copy of 1718302323184.jpg",
+      "/MAN.png",
     linkedIn: "#",
   },
   {

@@ -40,8 +40,8 @@ export const Customer_Stories = () => {
     {
       url: "/customer-stories/cona-detail",
       // flagImg: "/flag-usa (1).svg",
-      userImg: "/stories-cona.webp",
-      companyImg: "/Kaplan.png",
+      userImg: "/students.png",
+      companyImg: "/kalpan.png",
       services: "B2B Commerce | Marketing Cloud | Consumer Goods Cloud +",
       title: "A Scalable Engagement Platform to Power B2B Commerce Growth",
       description:
@@ -50,7 +50,8 @@ export const Customer_Stories = () => {
     {
       url: "/customer-stories/ealde-detail",
       // flagImg: "/spain.png",
-      userImg: "/53587161679_f0c0a75c22_6k-scaled.jpg",
+      // userImg: "/53587161679_f0c0a75c22_6k-scaled.jpg",
+      userImg: "/Ai image laptop people.png",
       companyImg: "/doordash.png",
       services: "Sales Cloud | Experience Cloud | Marketing Cloud",
       title:
@@ -274,7 +275,7 @@ export const Customer_Stories = () => {
                     <img 
                       src={item?.userImg}
                       alt="story"
-                      className="w-full h-full object-cover"
+                      className="w-full h-[45vh] object-cover"
                     />
                   </div>
                   <div className="lg:w-1/2 w-full p-6 flex flex-col justify-between">
