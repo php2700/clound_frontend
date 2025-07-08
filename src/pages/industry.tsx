@@ -13,9 +13,10 @@ import { Button } from "@/components/ui/button";
 const stories = [
   {
     subtitle: "Transforming Client Services",
-    logo: "CONA",
-    logoSubtext: "SERVICES LLC",
-    title: "One of the biggest B2B Commerce Lightning projects in the world",
+    logo: "/wgite..png",
+    // logoSubtext: "SERVICES LLC",
+    
+    title: "One of the biggest B2B Commerce Lightning projects ",
     bgColor: "bg-white",
     textColor: "text-[#008093]",
     buttonStyle:
@@ -24,7 +25,7 @@ const stories = [
   },
   {
     subtitle: "Unlocking Insights",
-    logo: "Gador",
+    logo: "/electric-schneider.png",
     logoSubtext: "",
     title: "Transforming Experiences with a 360° Customer View",
     bgColor: "bg-white",
@@ -34,11 +35,11 @@ const stories = [
     link: "/customer-stories/gador-detail",
   },
   {
-    subtitle: "Empowering Success",
-    logo: "GRUPO DEXTER",
+    subtitle: "Non Profit",
+    logo: "/doordash.png",
     logoSubtext: "",
     title:
-      "+57% Growth in Online Orders: Dexter's Success in E-Commerce Digitization with Salesforce",
+      "Helps mission-driven organizations manage fundraising, programs, outreach,grant marking and donor relationships with powerful CRM tools, automation, and real-time insights—all in one platform",
     bgColor: "bg-white",
     textColor: "text-[#008093]",
     buttonStyle:
@@ -175,6 +176,47 @@ const Industries = () => {
                     </div>
                   ))}
                 </div>
+                <div className="flex gap-2 w-full">
+                  {[
+                    {
+                      icon: (
+                        <img src="/industries-icon-6.svg" className="mb-2" />
+                      ),
+                      title: "Manufacturing & Automotive",
+                      description:
+                        "Our Salesforce solutions help manufacturing and automotive industries boost productivity, improve supply chain management, and enhance customer satisfaction at every stage.",
+                    },
+                    {
+                      icon: (
+                        <img src="/industries-icon-7.svg" className="mb-2" />
+                      ),
+                      title: "Energy",
+                      description:
+                        "We support energy companies in managing complex operations and optimizing customer relationships by implementing robust, scalable Salesforce solutions.",
+                    },
+                  ].map((card, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 bg-white  rounded-lg shadow-md p-6 min-h-[220px]"
+                    >
+                      {card.icon}
+                      <h4
+                        style={{ fontSize: "40px", lineHeight: "1em" }}
+                        className="font-semibold text-[#008093] mb-1"
+                      >
+                        {card.title}
+                      </h4>
+                      <p
+                        style={{
+                          lineHeight: "1.2em",
+                        }}
+                        className="text-[#474747] text-lg pt-3"
+                      >
+                        {card.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
 
                 {/* Row 2 */}
                 <div className="flex gap-2 w-full">
@@ -228,47 +270,7 @@ const Industries = () => {
                 </div>
 
                 {/* Row 3 */}
-                <div className="flex gap-2 w-full">
-                  {[
-                    {
-                      icon: (
-                        <img src="/industries-icon-6.svg" className="mb-2" />
-                      ),
-                      title: "Manufacturing & Automotive",
-                      description:
-                        "Our Salesforce solutions help manufacturing and automotive industries boost productivity, improve supply chain management, and enhance customer satisfaction at every stage.",
-                    },
-                    {
-                      icon: (
-                        <img src="/industries-icon-7.svg" className="mb-2" />
-                      ),
-                      title: "Energy",
-                      description:
-                        "We support energy companies in managing complex operations and optimizing customer relationships by implementing robust, scalable Salesforce solutions.",
-                    },
-                  ].map((card, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 bg-white  rounded-lg shadow-md p-6 min-h-[220px]"
-                    >
-                      {card.icon}
-                      <h4
-                        style={{ fontSize: "40px", lineHeight: "1em" }}
-                        className="font-semibold text-[#008093] mb-1"
-                      >
-                        {card.title}
-                      </h4>
-                      <p
-                        style={{
-                          lineHeight: "1.2em",
-                        }}
-                        className="text-[#474747] text-lg pt-3"
-                      >
-                        {card.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                
               </div>
             </div>
           </div>
@@ -326,7 +328,7 @@ const Industries = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl gap-6 mb-12 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl gap-6 mb-12 mx-auto">
             {stories.map((story, index) => (
               <div
                 key={index}
@@ -341,7 +343,8 @@ const Industries = () => {
                     <div className="flex items-center gap-2">
                       <div>
                         <div className="text-lg font-bold text-red-600 group-hover:text-[#474747] transition-colors duration-300">
-                          {story.logo}
+                        <img src={story.logo} style={{ width: "190px", height: "90px" }} />
+
                         </div>
                         {story.logoSubtext && (
                           <div className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300">

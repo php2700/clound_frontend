@@ -31,14 +31,14 @@ const testimonials = [
   {
     quote:
       "Codescience represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
-    name: "Juan Pablo Herrera",
+    name: "Vipin Patel",
     title: "Salesforce specialist",
     flag: "/flagarg.svg",
   },
   {
     quote:
       "The culture here is incredible. I feel supported and empowered to do my best work every single day. The opportunities for growth are endless.",
-    name: "Jane Smith",
+    name: "Jane Dsouza",
     title: "Lead Developer",
     flag: "/flag1.svg",
   },
