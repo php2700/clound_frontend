@@ -25,9 +25,10 @@ export const Customer_Stories = () => {
     },
  
     {
-      description: `"What we achieved was epic, and I attribute it to the strong chemistry and trust within the team. We all shared the same goal and pushed together to reach where we wanted to be."`,
-      title: "Alberto Calvo | Former CEO from Grupo Dexter (Grupo Dabra)",
-      img: "/logo-grupo-dexter.svg",
+      description: `"Implementing Salesforce with our global teams has been a game changer. It brought much-needed visibility across sales, service, and partner operations. The integration streamlined our customer journey from lead to delivery, and empowered our teams with real-time insights."
+."`,
+      title: "— Marc Pertios, Global VP Sales Operations, Schneider Electric",
+      img: "/electric-schneider.png" ,
     },
     {
       description: `"Quality, innovation, teamwork, support, schedule, responsible "`,
@@ -39,30 +40,30 @@ export const Customer_Stories = () => {
   const storyData = [
     {
       url: "/customer-stories/cona-detail",
-      flagImg: "/flag-usa (1).svg",
+      // flagImg: "/flag-usa (1).svg",
       userImg: "/stories-cona.webp",
-      companyImg: "/cona7.png",
+      companyImg: "/Kaplan.png",
       services: "B2B Commerce | Marketing Cloud | Consumer Goods Cloud +",
       title: "A Scalable Engagement Platform to Power B2B Commerce Growth",
       description:
-        "CONA Services transformed its customer engagement platform to help Coca-Cola bottlers deliver a more personalized, connected, and efficient B2B commerce experience — driving growth, automation, and smarter commerce at scale.",
+        " Kaplan International transformed its global student and partner engagement platform to deliver a more personalized, connected, and efficient B2B commerce experience — driving growth, automation, and smarter commerce at scale.",
     },
     {
       url: "/customer-stories/ealde-detail",
-      flagImg: "/spain.png",
+      // flagImg: "/spain.png",
       userImg: "/53587161679_f0c0a75c22_6k-scaled.jpg",
-      companyImg: "/ealde-nuevo-logo-2-2048x597.png",
+      companyImg: "/doordash.png",
       services: "Sales Cloud | Experience Cloud | Marketing Cloud",
       title:
-        "Automation and Scalability: How EALDE Optimized Its Operations with Salesforce",
+        "Automation and Scalability: How Optimized Its Operations with Salesforce",
       description:
-        "EALDE modernized its data model and automated key processes with Salesforce, improving operational efficiency and enhancing the personalization of its educational offering. The result: a more agile, scalable operation ready for the future.",
+        "DoorDash modernized its data infrastructure and automated critical workflows with Salesforce, boosting operational efficiency and enabling more personalized merchant and customer experiences. The result: a more agile, scalable platform built for high-growth, real-time commerce.",
     },
     {
       url: "/customer-stories/gador-detail",
-      flagImg: "/flagarg.svg",
+      // flagImg: "/flagarg.svg",
       userImg: "/stories-gador.webp",
-      companyImg: "/logo-gador-2.svg",
+      companyImg: "/electric-schneider.png",
       services: "Commerce Cloud B2C | Service Cloud | Marketing Cloud",
       title:
         "+57% Growth in Online Orders: Dexter’s Success in E-Commerce Digitization with Salesforce",
@@ -204,7 +205,7 @@ export const Customer_Stories = () => {
             {item?.title}
           </div>
           <div className="mx-auto max-h-20">
-            <img src={item?.img} className="block " />
+            <img style={{ height: "150px", width: "130px" }} src={item?.img} className="block " />
           </div>
           <div className="flex justify-center gap-4 items-center mt-auto pt-6">
             <div
@@ -267,7 +268,7 @@ export const Customer_Stories = () => {
                                          rounded-xl overflow-hidden my-8`}
                 >
                   <div className="lg:w-1/2 w-full h-64 lg:h-auto">
-                    <img
+                    <img 
                       src={item?.userImg}
                       alt="story"
                       className="w-full h-full object-cover"
@@ -275,8 +276,8 @@ export const Customer_Stories = () => {
                   </div>
                   <div className="lg:w-1/2 w-full p-6 flex flex-col justify-between">
                     <div className="flex items-center gap-3 mb-4">
-                      <img
-                        src={item?.companyImg}
+                      <img 
+                        src={item?.companyImg} style={{ width: "150px", height: "70px" }}
                         alt="company"
                         className="h-6"
                       />
