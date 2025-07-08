@@ -1,22 +1,25 @@
 const Scroll = () => {
   const images = [
-    "/diageo1.png",
-    "/idb2.png",
-    "/gadorimage.png",
-    "/mecardo4.png",
-    "/schroders5.png",
-    "/ypf6.png",
-    "/cona7.png",
-    "/download.jpg",
-    "/uala9.png",
-    "/philip10.png",
-    "/disney11.png",
-    "/cocacola12.png",
+    "/20220309083632!Parle_Products_logo.svg",
+    "/Absa_logoe.png",
+    "/Blue Cross IDHO.png",
+    "/capgemini.png",
+    "/Coinbase.svg.png",
+    "/DHL_Logo.svg.png",
+    "/DoorDash-logo.png",
+    "/samsara.png",
+    "/Ecolab-logo.webp",
+    "/HDFCBank.jpg.png",
+    "/ICFF Logo.jpg",
+    "/Kaplan (1).png",
+    "/Kotak_Mahindra_Bank_logo.png",
+    "/Migros-Logo.wine.svg",
+    "/Rapid7_logo_-_transparent_PNG.png",
   ];
 
   return (
     <div className="scrolling-wrapper ">
-      <div className="scrolling-track">
+      <div className="scrolling-track flex gap-20">
         {[...images, ...images].map((src, idx) => (
           <img
             key={idx}
