@@ -261,7 +261,9 @@ const Footer = () => {
             <div className="mt-12 border-t border-gray-700 pt-6 text-sm text-gray-400 flex flex-col items-start space-y-4">
               {/* Social Icons */}
               <div className="flex space-x-6 items-center">
-                <a href="https://www.linkedin.com/company/code-science/">
+                <a href="https://www.linkedin.com/company/code-science/"
+                 target="_blank"
+                    rel="noopener noreferrer">
                   <FaLinkedin className="hover:text-white text-[#f9f9f9] h-[18px] cursor-pointer" />
                 </a>
                 <a href="#">
