@@ -500,6 +500,7 @@ export const Careers = () => {
           <div className="cpx-6 py-5 md:px-10">
             <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
               <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">
+                
                 <blockquote className="text-2xl lg:text-3xl font-semibold leading-relaxed">
                   “{currentTestimonial.quote}”
                 </blockquote>
