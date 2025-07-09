@@ -186,9 +186,8 @@ const Innovation = () => {
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       {/* Sticky Header */}
       <div
-        className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${
-          isHeaderVisible ? "translate-y-6" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${isHeaderVisible ? "translate-y-6" : "-translate-y-full"
+          }`}
       >
         <Header />
       </div>
@@ -213,9 +212,17 @@ const Innovation = () => {
 
           {/* Title */}
           <div className="mt-5">
-            <h1
+            {/* <h1
               style={{ lineHeight: "1em" }}
               className="text-2xl md:text-6xl font-bold text-[#008093] mb-4 tracking-tight"
+            >
+              For companies seeking to stay one
+              <br />
+              step ahead of their competitors
+            </h1> */}
+            <h1
+              style={{ lineHeight: "1em" }}
+              className="text-center md:text-left text-2xl md:text-6xl font-bold text-[#008093] mb-4 tracking-tight"
             >
               For companies seeking to stay one
               <br />
@@ -323,14 +330,7 @@ const Innovation = () => {
 
                       {/* Email & Company */}
                       <div className="flex gap-4">
-                        <input
-                          type="email"
-                          placeholder="Email*"
-                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
-                          required
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
+
                         <input
                           type="text"
                           placeholder="Company*"
@@ -338,6 +338,14 @@ const Innovation = () => {
                           required
                           value={company}
                           onChange={(e) => setCompany(e.target.value)}
+                        />
+                        <input
+                          type="email"
+                          placeholder="Email*"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
+                          required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </div>
 
@@ -380,7 +388,11 @@ const Innovation = () => {
                       <p className="text-xs text-[#474747]">
                         By continuing, I confirm that I have read and agree to
                         the
-                        <span className="font-semibold "> Privacy Policy</span>.
+                        <a href="/privacycona" target="_blank" rel="noopener noreferrer">
+                          <span className="font-semibold  cursor-pointer ">
+                            Privacy Policy
+                          </span>
+                        </a>
                       </p>
                       <div className="flex items-start gap-2">
                         <input

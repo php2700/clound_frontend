@@ -120,14 +120,14 @@ const Footer = () => {
                       <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FF83A9] transition-all duration-300 group-hover:w-full"></span>
                     </a>
                   </li>
-                  <li className="pt-5">
-                    <Link
-                      to="/contact"
-                      className="bg-[#f9f9f9] text-[#474747] hover:bg-[#ff83a9] hover:text-[#f9f9f9] px-5 py-2 px-3 rounded-full mt-2 text-base font-bold"
-                    >
-                      Contact Info
-                    </Link>
-                  </li>
+                 <li className="pt-5">
+  <Link
+    to="/contact"
+    className="whitespace-nowrap bg-[#f9f9f9] text-[#474747] hover:bg-[#ff83a9] hover:text-[#f9f9f9] py-2 px-3 rounded-full mt-2 text-base font-bold"
+  >
+    Contact Info
+  </Link>
+</li>
                 </ul>
               </div>
 

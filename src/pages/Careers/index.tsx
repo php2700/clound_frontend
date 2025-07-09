@@ -652,8 +652,13 @@ export const Careers = () => {
             </div>
             <div className="mb-6">
               <p className="text-[12px] text-[#f9f9f9]">
-                By continuing, I confirm that I have read and agree to the
-                <span className="font-semibold"> Privacy Policy</span>.
+                By continuing, I confirm that I have read and agree to the 
+                
+                <a href="/privacycona" target="_blank" rel="noopener noreferrer">
+                      <span className="font-semibold  cursor-pointer ">
+                        Privacy Policy
+                      </span>
+                    </a>
               </p>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6">

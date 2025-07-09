@@ -70,12 +70,14 @@ const StatsSection = () => {
 
             {/* Line 2 */}
             <div className="flex items-center space-x-2 mt-1">
-              <img
-                src="/salesforce-app-exchange.svg"
-                alt="Salesforce Logo"
-                className="h-6 w-auto pl-10"
-                loading="lazy"
-              />
+              <a href="https://appexchange.salesforce.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/salesforce-app-exchange.svg"
+                  alt="Salesforce Logo"
+                  className="h-6 w-auto pl-10"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
         </div>

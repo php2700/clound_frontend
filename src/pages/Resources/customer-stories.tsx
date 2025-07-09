@@ -41,7 +41,7 @@ export const Customer_Stories = () => {
       url: "/customer-stories/cona-detail",
       // flagImg: "/flag-usa (1).svg",
       userImg: "/students.png",
-      companyImg: "/kalpan.png",
+      companyImg: "/Kaplan (1).png",
       services: "B2B Commerce | Marketing Cloud | Consumer Goods Cloud +",
       title: "A Scalable Engagement Platform to Power B2B Commerce Growth",
       description:
@@ -281,14 +281,14 @@ export const Customer_Stories = () => {
                     <img
                       src={item?.userImg}
                       alt="story"
-                      className="w-full h-[45vh] object-cover"
+                      className="w-full h-[55vh] object-cover"
                     />
                   </div>
                   <div className="lg:w-1/2 w-full p-6 flex flex-col justify-between">
                     <div className="flex items-center gap-3 mb-4">
                       <img
                         src={item?.companyImg}
-                        style={{ width: "150px", height: "70px" }}
+                        style={{ width: "150px", height: "100px" }}
                         alt="company"
                         className="h-6"
                       />
