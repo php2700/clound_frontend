@@ -13,7 +13,7 @@ import { Link, useLocation } from "react-router-dom";
 const teamMembers = [
   {
     id: 1,
-    name: "Nicolás Orzabal",
+    name: "Walson Dmello",
     title: "Co-Founder & CEO",
     image:
       // "Screenshot 2025-07-03 175207.jpg",
@@ -22,8 +22,8 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Francisco Okecki",
-    title: "Board Member Advisor & Co-Founder",
+    name: "Joyson Tuscano",
+    title: "Co-Founder & CTO",
     image:
       "image (4).png",
     linkedIn: "#",
@@ -31,31 +31,31 @@ const teamMembers = [
   {
     id: 3,
     name: " Kshitij Rodrigue",
-    title: "Co-Founder & CO",
+    title: "Co-Founder & COO",
     image:
       "/MAN.png",
     linkedIn: "#",
   },
   {
     id: 4,
-    name: "Francisco Orzabal",
-    title: "Board Member Advisor & Co-Founder",
+    name: "Kabir Shah",
+    title: "Salesforce Architect",
     image:
       "ChatGPT Image Jul 1, 2025, 09_21_45 PM.png",
     linkedIn: "#",
   },
   {
     id: 5,
-    name: "Richard Arnold",
-    title: "Salesforce Board Observer",
+    name: "Sam La Banco",
+    title: "Board Member & Advisor",
     image:
       "ChatGPT Image Jul 1, 2025, 09_21_50 PM.png",
     linkedIn: "#",
   },
   {
     id: 6,
-    name: "Joel Kurtz",
-    title: "Salesforce Board Member",
+    name: "Mateja Sharp",
+    title: "Head of Sales",
     image: "ChatGPT Image Jul 3, 2025, 05_54_54 PM.png",
     linkedIn: "#",
   },

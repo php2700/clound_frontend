@@ -11,6 +11,7 @@ import {
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { text } from "stream/consumers";
 
 const ProductsIcon = () => (
   <svg
@@ -506,17 +507,19 @@ export const ConaService = () => {
               alt="Abstract background"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/70"></div>
-          </div>
-          <div className="relative z-10 max-w-4xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2
-                className="text-4xl md:text-5xl font-bold
- "
-              >
+            <div className="absolute inset-0 bg-black/90 bg-[url('/stories-cona-banner-back.webp')] bg-cover bg-center">
+            <h2
+                className="inline-block text-[40px] font-bold ml-[220px] mt-10 tracking-tight whitespace-nowrap  mr]" 
+ 
+              > 
                 Want to see how we can help you scale your B2B commerce?
-              </h2>
-              <p className="text-4xl md:text-5xl font-bold">Let's talk.</p>
+              </h2></div>
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-4  ">
+            
+            <div   className="text-center mb-12   ">
+              
+              <p className="text-4xl md:text-5xl font-bold mt-1">Let's talk.</p>
             </div>
             <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -581,7 +584,8 @@ export const ConaService = () => {
               </div>
               <div className="mt-6 text-xs text-gray-300">
                 By continuing, I confirm that I have read and agree to the{" "}
-                <a href="/privacy" className="underline hover:text-white">
+                <a href="/privacycona " target="_blank"
+                    rel="noopener noreferrer" className="underline hover:text-white cursor-pointer">
                   Privacy Policy
                 </a>
                 .

@@ -56,6 +56,7 @@ const App = () => (
           <Route path="/services/innovation" element={<Innovation />} />
           <Route path="/services/growth" element={<Growth />} />
 
+
           {/* {Resources} */}
           <Route path="/resources/blog" element={<Blog />} />
           <Route
@@ -91,6 +92,7 @@ const App = () => (
           <Route path="/form" element={<IntegrityForm />} />
           {/* <Route path="/security" element={< privacy />} /> */}
           <Route path="/security" element={<Privacypolicy />} />
+          <Route path="/privacycona" element={<Privacypolicy />} />
 
           {/* Detail Pages */}
 

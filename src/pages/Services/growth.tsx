@@ -731,14 +731,7 @@ const Growth = () => {
 
                       {/* Email & Company */}
                       <div className="flex gap-4">
-                        <input
-                          type="email"
-                          placeholder="Email*"
-                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
-                          required
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
+                        
                         <input
                           type="text"
                           placeholder="Company*"
@@ -746,6 +739,14 @@ const Growth = () => {
                           required
                           value={company}
                           onChange={(e) => setCompany(e.target.value)}
+                        />
+                        <input
+                          type="email"
+                          placeholder="Email*"
+                          className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
+                          required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </div>
 
@@ -789,7 +790,11 @@ const Growth = () => {
                       <p className="text-xs text-[#474747]">
                         By continuing, I confirm that I have read and agree to
                         the
-                        <span className="font-semibold "> Privacy Policy</span>.
+                        <a href="/privacycona" target="_blank" rel="noopener noreferrer">
+                      <span className="font-semibold  cursor-pointer ">
+                       Privacy Policy
+                      </span>
+                    </a>
                       </p>
                       <div className="flex items-start gap-2">
                         <input

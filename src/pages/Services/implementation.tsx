@@ -751,9 +751,8 @@ const Implementation = () => {
     <div className="relative min-h-screen ] ">
       {/* Sticky Header */}
       <div
-        className={`fixed top-0 left-0 w-full  transition-transform duration-300 ease-in-out z-50 ${
-          isHeaderVisible ? "translate-y-6" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full  transition-transform duration-300 ease-in-out z-50 ${isHeaderVisible ? "translate-y-6" : "-translate-y-full"
+          }`}
       >
         <Header />
       </div>
@@ -920,7 +919,7 @@ const Implementation = () => {
               {/* Right Side Form */}
               {/* Right Side Form */}
               <div className="lg:w-[45%] w-full sticky top-10 self-start">
-                <form className="bg-[#FCC000] text-white text-bg-[#f9f9f9] p-8 rounded-xl space-y-6 ">
+                <form className="bg-[#FCC000] text-white text-bg-[#f9f9f9] p-8 rounded-xl space-y-6 " onSubmit={handleSubmit}>
                   <p
                     style={{ lineHeight: "1.2em" }}
                     className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]"
@@ -1002,7 +1001,12 @@ const Implementation = () => {
 
                   <p className="text-[12px] font-light text-[#474747]">
                     By continuing, I confirm that I have read and agree to the{" "}
-                    <span className="font-semibold ">Privacy Policy</span>.
+                    <a href="/privacycona" target="_blank" rel="noopener noreferrer">
+                      <span className="font-semibold  cursor-pointer ">
+                       Privacy Policy
+                      </span>
+                    </a>
+                    {/* <span className=""></span>. */}
                   </p>
 
                   <label className="flex items-start text-[12px] font-light text-[#474747]">
@@ -1036,7 +1040,7 @@ const Implementation = () => {
                       >
                         I'm not a robot
                       </label>
-                      <div className="flex flex-col items-center">
+                      <div className="flex flex-col items-center cursor-pointer">
                         <img
                           src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
                           alt="reCAPTCHA logo"
@@ -1047,6 +1051,7 @@ const Implementation = () => {
                         </span>
                         <span className="text-[6px] text-[#000] cursor-pointer leading-none">
                           Privacy – Terms
+
                         </span>
                       </div>
                     </div>
@@ -1089,7 +1094,7 @@ const Implementation = () => {
                     efficient solutions.
                   </p>
                   <Link
-                    to="/Services/implementation"
+                    to="/Services/innovation"
                     className="text-[#474747] font-bold text-base relative inline-block group mt-8"
                   >
                     Learn more
