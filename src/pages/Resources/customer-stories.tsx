@@ -48,7 +48,9 @@ export const Customer_Stories = () => {
         " Kaplan International transformed its global student and partner engagement platform to deliver a more personalized, connected, and efficient B2B commerce experience — driving growth, automation, and smarter commerce at scale.",
     },
     {
-      url: "/customer-stories/ealde-detail",
+      // url: "/customer-stories/ealde-detail",
+      url: "/customer-stories/education-cloud",
+
       // flagImg: "/spain.png",
       // userImg: "/53587161679_f0c0a75c22_6k-scaled.jpg",
       userImg: "/Ai image laptop people.png",
@@ -60,7 +62,7 @@ export const Customer_Stories = () => {
         "DoorDash modernized its data infrastructure and automated critical workflows with Salesforce, boosting operational efficiency and enabling more personalized merchant and customer experiences. The result: a more agile, scalable platform built for high-growth, real-time commerce.",
     },
     {
-      url: "/customer-stories/gador-detail",
+      url: "/customer-stories/blue-cross",
       // flagImg: "/flagarg.svg",
       userImg: "/stories-gador.webp",
       companyImg: "/electric-schneider.png",
@@ -71,7 +73,7 @@ export const Customer_Stories = () => {
         "Grupo Dexter, Argentina’s leading sports retailer, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders.",
     },
     {
-      url: "/customer-stories/dexter-detail",
+      url: "/customer-stories/schneider-electric",
       flagImg: "/flag-arg.svg",
       userImg: "/stories-dexter.webp",
       companyImg: "/logo-grupo-dexter.svg",

@@ -64,15 +64,15 @@ const App = () => (
             element={<Customer_Stories />}
           />
           <Route
-            path="/customer-stories/ealde-detail"
+            path="/customer-stories/education-cloud"
             element={<Ealde_Detail />}
           />
           <Route
-            path="/customer-stories/dexter-detail"
+            path="/customer-stories/schneider-electric"
             element={<Dexter_Detail />}
           />
           <Route
-            path="/customer-stories/gador-detail"
+            path="/customer-stories/blue-cross"
             element={<Gador_Detail />}
           />
           <Route

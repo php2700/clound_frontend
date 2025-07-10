@@ -214,6 +214,7 @@ const Company = () => {
               <img src="/bread-home.svg"
                 className="mr-1 text-xl cursor-pointer"
                 aria-hidden="true"
+                
               />
             </Link>
             <span className="mx-1 text-base font-bold">&nbsp;/</span>

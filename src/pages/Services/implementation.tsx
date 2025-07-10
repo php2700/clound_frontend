@@ -798,7 +798,7 @@ const Implementation = () => {
       {/* Full Width Image */}
       <div className="w-full mt-4 ">
         <img
-          src="/implementation1.PNG"
+          src="/newimp.jpg"
           alt="img.visual"
           className="w-full h-[500px] object-cover"
         />

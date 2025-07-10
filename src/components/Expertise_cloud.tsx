@@ -14,12 +14,7 @@ type ExpertiseSection = {
 // Grouped into 3 rows: [3 sections], [5 sections], [rest]
 const expertiseData: ExpertiseSection[][] = [
   [
-    {
-      title: "B2C Commerce",
-      items: [
-        { label: "B2C Commerce", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-specialist-I.svg" },
-      ],
-    },
+
     {
       title: "Experience Cloud",
       items: [
@@ -37,6 +32,12 @@ const expertiseData: ExpertiseSection[][] = [
         { label: "Mobile", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-expert.svg" },
         { label: "Process Automation", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-expert.svg" },
         { label: "Security & Privacy", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-expert.svg" },
+      ],
+    },
+       {
+      title: "Non Profit",
+      items: [
+        { label: "Non Profit", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-specialist-I.svg" },
       ],
     },
   ],
@@ -111,6 +112,7 @@ const expertiseData: ExpertiseSection[][] = [
         { label: "B2B Commerce", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-specialist-I.svg" },
       ],
     },
+     
   ],
 ];
 

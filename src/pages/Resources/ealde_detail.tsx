@@ -47,17 +47,17 @@ export const Ealde_Detail = () => {
               <span className="mx-1 text-base font-bold">/</span>
               <span className="mx-1 text-base font-bold">Customer Stories</span>
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="mx-1 text-base font-bold">EALDE - Spain</span>
+              <span className="mx-1 text-base font-bold">EALDE - Spain </span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4" >
-              <img src="/spain.png" className="w-6 h-6" alt="USA Flag" />
-              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">EALDE - Spain</span>
+              <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Kaplan - USA</span>
             </div>
             <div
               style={{ lineHeight: "1em" }}
               className={`text-6xl font-bold text-[#008093] my-5`}
             >
-              Automation and Scalability: How EALDE Optimized Its Operations
+              Automation and Scalability: How Kaplan Optimized Its Operations
               with Salesforce
             </div>
             <div className="flex items-center gap-5 mb-10">
@@ -76,7 +76,7 @@ export const Ealde_Detail = () => {
               style={{ lineHeight: "1.2em" }}
               className="text-lg text-[#474747] mb-20"
             >
-              Codescience partnered with EALDE Business School to implement a
+              Codescience partnered with Kaplan to implement a
               Salesforce-based solution that modernised its data <br />
               model, automated key processes and improved the personalisation of
               its educational offerings. The result? A more agile,
@@ -90,13 +90,13 @@ export const Ealde_Detail = () => {
                 style={{ lineHeight: "1.2em" }}
                 className="font-semibold text-[#008093] text-[40px] my-5"
               >
-                About EALDE Business School
+                About Kaplan Business School
               </div>
               <div
                 style={{ lineHeight: "1.2em" }}
                 className="text-[#474747] text-lg"
               >
-                EALDE Business School is a leading business school in the
+              Kaplan Business School is a leading business school in the
                 e-learning sector in Spain, specialised in executive training
                 programmes in areas such as Compliance, Sustainability or Risk
                 Management. Risk Management. Its focus is on academic
@@ -126,7 +126,7 @@ export const Ealde_Detail = () => {
                   className="text-[#f9f9f9] text-lg"
                 >
                   With sustained growth and an expanding academic offering,
-                  EALDE sought to strengthen its commercial and operational
+                 Kaplan sought to strengthen its commercial and operational
                   management. To ensure efficient administration of its
                   programs, business opportunities, and enrollment processes, it
                   was crucial to have a unified data structure and agile,
@@ -212,7 +212,7 @@ export const Ealde_Detail = () => {
                     className="text-[#474747] text-lg"
                   >
                     We built a flexible and adaptable infrastructure, enabling
-                    EALDE to continue growing with a robust system that
+                    Kaplan to continue growing with a robust system that
                     optimizes both commercial and academic management.
                   </p>
                 </div>
@@ -344,7 +344,7 @@ export const Ealde_Detail = () => {
                   style={{ lineHeight: "1.2em" }}
                   className="middle-description text-[#474747] text-lg"
                 >
-                  A flexible and optimized infrastructure that allows EALDE to
+                  A flexible and optimized infrastructure that allows Kaplan to
                   continue growing with efficient and sustainable processes.
                 </span>
               </div>
@@ -397,7 +397,7 @@ export const Ealde_Detail = () => {
                   style={{ lineHeight: "1.2em" }}
                   className="text-3xl text-[#474747]"
                 >
-                  Karen Gonçalves
+                Kaplan
                 </h3>
                 <p
                   style={{ lineHeight: "1.2em" }}

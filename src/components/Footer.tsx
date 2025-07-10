@@ -100,7 +100,7 @@ const Footer = () => {
                   Codescience offices around the world
                 </h4>
                 <ul className="space-y-3">
-                  {["India", "United States"].map((label) => (
+                  {["India", "United States","Australia"].map((label) => (
                     <li key={label}>
                       <a
                         href="mailto:hello@codescience.com"

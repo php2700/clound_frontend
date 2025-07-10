@@ -167,16 +167,16 @@ export const ConaService = () => {
   };
   const testimonialsData = [
     {
-      name: "Samantha Mitchell",
+      name: " Kimberly Mitchell",
       title: "Chief Digital Officer",
-      logoSrc: "/cona7.png",
+      logoSrc: "/Kaplan (1).png",
       quote: `"From the very beginning, we had a one team approach. Cloudgaia brought a strategic vision that helped us plan for success, achieve our goals and support our North American Bottling System and Customers commercial growth plans."`,
     },
     {
-      name: "Felippe Ramos",
+      name: "Walson Dmello",
       title: "Salesforce Specialist",
       logoSrc: "/code-science-logo.svg",
-      quote: `"We love tackling tough challenges, and CONA Services presented us with an exciting one. We delved into every aspect of their business and worked closely to understand their specific needs. We are proud to say that together we designed a strategy that is transforming the shopping experience for all bottlers."`,
+      quote: `"We love tackling tough challenges, and Code Science Services presented us with an exciting one. We delved into every aspect of their business and worked closely to understand their specific needs. We are proud to say that together we designed a strategy that is transforming the shopping experience for all bottlers."`,
     },
   ];
   const benefitIcons = {
@@ -249,13 +249,13 @@ export const ConaService = () => {
               </span>
               <span className="mx-1 text-lg font-semibold ml-2">/</span>
               <span className="mx-1 text-lg font-semibold ml-2">
-                CONA Services
+                 commerce-cloud-implemation
               </span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4">
               <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
               <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
-                CONA Services - US
+               Kaplan International 
               </span>
             </div>
             {/* <div className="font-medium text-gray-800 mb-2.5"><img src="/flag-usa (1).svg" /><span> CONA Services - US</span></div> */}
@@ -271,9 +271,9 @@ export const ConaService = () => {
               </span>
             </div>
             <p className="text-lg text-gray-600 max-w-4xl text-[18px] text-[#474747]">
-              Unlocking the potential of Salesforce by refreshing myCoke, a
-              scalable and digital platform designed to keep B2B customers
-              stocked with a variety of iconic Coca-Cola products.
+              Unlocking the potential of Salesforce by Doordash, a scalable and 
+            digital platform designed to keep B2B customers stocked with a variety 
+            of iconic products.
             </p>
           </header>
           {/* Main Content Grid */}
@@ -283,7 +283,7 @@ export const ConaService = () => {
                 <img src="/icon-info (13).svg"></img>{" "}
               </span>
               <h2 className="text-3xl font-bold  mb-4 text-[#008093] text-[40px]">
-                About CONA Services
+                About Doordash Services
               </h2>
               <p
                 className="text-[#f9f9f9] leading-relaxed mb-4"
@@ -298,10 +298,10 @@ export const ConaService = () => {
               </p>
               <p className="text-gray-600 leading-relaxed">
                 {" "}
-                We partnered with the CONA Digital Office (CDO), an
-                interdisciplinary and inter-agency team of product and
-                engineering specialists, to work as one team and upgrade their
-                B2B eCommerce platform with a focus on customer experience.
+                We partnered with the Doordash Digital Office (KDO), an 
+                interdisciplinary and inter-agency team of product and engineering 
+                specialists, to work as one team and upgrade their B2B eCommerce 
+                platform with a focus on customer experience.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
@@ -340,7 +340,7 @@ export const ConaService = () => {
                 className="text-[#f9f9f9] leading-relaxed mb-4 text-[18px] "
                 style={{ fontFamily: "sans-serif,dm-sans" }}
               >
-                Together with Cloudgaala and Salesforce, CONA Services enhanced
+                Together with Codescience and Salesforce, CONA Services enhanced
                 its B2B Commerce strategy through myCoke — one of the world's
                 largest implementations of Salesforce B2B Commerce on Lightning.
               </p>
@@ -490,7 +490,7 @@ export const ConaService = () => {
                     <img
                       src={testimonial.logoSrc}
                       alt={`${testimonial.name}'s company logo`}
-                      className="mt-4 h-8"
+                      className="mt-4 " style={{ width: "", height: "60px"   }}
                     />
                   </div>
                 </div>
@@ -509,7 +509,7 @@ export const ConaService = () => {
             />
             <div className="absolute inset-0 bg-black/90 bg-[url('/stories-cona-banner-back.webp')] bg-cover bg-center">
             <h2
-                className="inline-block text-[40px] font-bold ml-[220px] mt-10 tracking-tight whitespace-nowrap  mr]" 
+                className="inline-block text-[35px] font-bold ml-[285px] mt-12 tracking-tight whitespace-nowrap  mr]" 
  
               > 
                 Want to see how we can help you scale your B2B commerce?
@@ -519,7 +519,7 @@ export const ConaService = () => {
             
             <div   className="text-center mb-12   ">
               
-              <p className="text-4xl md:text-5xl font-bold mt-1">Let's talk.</p>
+              <p className="text-[40px] font-bold mt-1 ml-1">Let's talk.</p>
             </div>
             <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -603,7 +603,7 @@ export const ConaService = () => {
                   htmlFor="agreeToEmails"
                   className="ml-2 text-sm text-gray-300"
                 >
-                  I agree to receive emails from CloudGaia with updates on
+                  I agree to receive emails from Codescience with updates on
                   services, events, and alerts. I can unsubscribe at any time.
                 </label>
               </div>
