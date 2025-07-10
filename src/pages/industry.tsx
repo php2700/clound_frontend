@@ -122,7 +122,7 @@ const Industries = () => {
       </div>
       <div className="w-full mt-4">
         <img
-          src="industries1.PNG"
+          src="newimp.jpg"
           alt="visual"
           className="w-full h-[500px] object-cover"
         />

@@ -44,19 +44,19 @@ export const Dexter_Detail = () => {
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
               <span className="mx-1 text-base font-bold">
-                &nbsp;Grupo Dexter
+                &nbsp;Schneider Electric’s
               </span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4" >
               <img src="/flagarg.svg" className="w-6 h-6" alt="USA Flag" />
-              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Grupo Dexter</span>
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Schneider Electric’s</span>
             </div>
             <div
               style={{ lineHeight: "1em" }}
               className={`text-6xl font-bold text-[#008093] my-5 `}
             >
               +57% Growth in Online Orders: <br />
-              Dexter’s Success in E-Commerce <br />
+              Schneider Electric’s Success in E-Commerce <br />
               Digitization with Salesforce
             </div>
             <div className="flex items-center gap-5 mb-10">
@@ -74,7 +74,7 @@ export const Dexter_Detail = () => {
               style={{ lineHeight: "1.2em" }}
               className="text-lg text-[#474747] mb-20"
             >
-              Grupo Dexter, Argentina’s leading sports retailer, transformed its
+              Schneider Electric’s Europe’s leading provider of energy and industrial automation, , transformed its
               e-commerce experience, streamlining operations and <br />
               enhancing customer engagement to drive significant growth in
               online orders.
@@ -93,18 +93,16 @@ export const Dexter_Detail = () => {
                   style={{ fontSize: "40px", lineHeight: "1em" }}
                   className="font-semibold text-[#008093] "
                 >
-                  About Grupo Dexter
+                  About Schneider Electric
                 </div>
                 <div
                   style={{ lineHeight: "1.2em" }}
                   className="text-lg text-[#474747]"
                 >
-                  Grupo Dexter (FKA Grupo Dabra), is a leading sporting goods
-                  retailer, with more than 150 stores in Argentina, including
-                  Dexter, Stock Center, Moov, Lotto and Urbo. It recently
-                  acquired Netshoes, an e-commerce company specializing in the
-                  sale of sportswear and tennis shoes in Brazil, Mexico and
-                  Argentina.
+                 Schneider Electric is a global leader in energy management and 
+                 automation, providing digital solutions for efficiency and 
+                 sustainability across homes, buildings, data centers, and 
+                 industries.
                 </div>
               </div>
               <div className="lg:w-1/2 w-full h-64 lg:h-auto">

@@ -33,14 +33,17 @@ const testimonials = [
       "Codescience represents the perfect combination of flexibility and challenge. It allows me to work with international clients,.",
     name: "Vipin Patel",
     title: "Salesforce specialist",
-    flag: "/flagarg.svg",
+    // flag: "/flagarg.svg",
+    flag: "/india.png",
+
+    
   },
   {
     quote:
       "The culture here is incredible. I feel supported and empowered to do my best work every single day. The opportunities for growth are endless.",
     name: "Jane Dsouza",
     title: "Lead Developer",
-    flag: "/flag1.svg",
+    flag: "/usa.png",
   },
 ];
 const accordionData = [

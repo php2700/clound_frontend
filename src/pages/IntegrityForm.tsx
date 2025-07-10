@@ -39,7 +39,7 @@ const IntegrityForm = () => {
       {/* Optional: Header Banner Image */}
       <div className="w-full max-w-2xl mb-4">
         <img
-          src="/integrityform.png" // Using a placeholder that looks similar
+          src="/integrityform.PNG" // Using a placeholder that looks similar
           alt="Integrity Line Banner"
           className="w-full rounded-lg border border-gray-300"
         />

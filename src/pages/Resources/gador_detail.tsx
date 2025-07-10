@@ -52,7 +52,7 @@ export const Gador_Detail = () => {
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4" >
               <img src="/flagarg.svg" className="w-6 h-6" alt="USA Flag" />
-              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Gador</span>
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Blue Cross Idaho</span>
             </div>
             <div
               style={{ lineHeight: "1em" }}
@@ -78,7 +78,7 @@ export const Gador_Detail = () => {
               style={{ lineHeight: "1.2em" }}
               className="text-lg text-[#474747] mb-20"
             >
-              We transformed Gador's customer engagement strategy by
+              We transformed Blue Cross Idaho customer engagement strategy by
               implementing an end-to-end solution based on Salesforce,
               <br /> delivering personalized experiences tailored to each
               segment and touchpoint.
@@ -95,7 +95,7 @@ export const Gador_Detail = () => {
                 The Challenge
               </div>
               <div style={{ lineHeight: "1em" }} className="text-lg ">
-                Gador is undergoing a bold digital transformation rooted in two
+                Blue Cross Idaho is undergoing a bold digital transformation rooted in two
                 strategic pillars: embracing digital transformation and evolving
                 into a data-driven organization. Our partnership focuses on
                 elevating the user experience while creating powerful metrics to
