@@ -14,7 +14,12 @@ type ExpertiseSection = {
 // Grouped into 3 rows: [3 sections], [5 sections], [rest]
 const expertiseData: ExpertiseSection[][] = [
   [
-
+  {
+      title: "B2C Commerce",
+      items: [
+        { label: "Non Profit", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-specialist-I.svg" },
+      ],
+    },
     {
       title: "Experience Cloud",
       items: [

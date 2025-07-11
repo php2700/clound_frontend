@@ -70,7 +70,7 @@ const Footer = () => {
                   <span className="text-[#FCC000] font-bold">Top 10</span>
                   <span className="text-[#f9f9f9]">
                     {" "}
-                    Expert in Consumer Goods in
+                    Expert in Consumer Goods & Non Profit in
                   </span>
                 </p>
                 <div className="flex items-center justify-center gap-3 cursor-pointer">

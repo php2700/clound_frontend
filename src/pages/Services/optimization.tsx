@@ -670,9 +670,11 @@ const Optimization = () => {
         setMessage("");
         setIsAgree(false);
         setIsRobot(false);
-        toast.success("Details_added", {
-          position: "top-right",
-        });
+        // toast.success("Details_added", {
+        //   position: "top-right",
+        // });
+        navigate('/thank-you')
+
       })
       .catch((error) => {
         console.log(error);

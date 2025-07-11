@@ -26,11 +26,11 @@ const SuccessStoriesSection = () => {
       link: "/customer-stories/gador-detail",
     },
     {
-      subtitle: "Non Profit",
+      subtitle: "Empowering Success",
       logo: "/doordash.png",
       logoSubtext: "",
       title:
-        "Helps mission-driven organizations manage fundraising, programs, outreach,grant marking and donor relationships with powerful CRM tools, automation, and real-time insights—all in one platform",
+        "+57% Growth in Online Orders: Doordash's Success in E-Commerce Digitization with Salesforce",
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
@@ -81,7 +81,7 @@ const SuccessStoriesSection = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl gap-6 mb-12 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl gap-6 mb-12 mx-auto">
             {stories.map((story, index) => (
               <div
                 key={index}
@@ -96,7 +96,10 @@ const SuccessStoriesSection = () => {
                     <div className="flex items-center gap-2">
                       <div>
                         <div className="text-lg font-bold text-red-600 group-hover:text-[#474747] transition-colors duration-300">
-                           <img src={story.logo} style={{ width: "190px", height: "90px" }} />
+                          <img
+                            src={story.logo}
+                            style={{ width: "190px", height: "90px" }}
+                          />
                         </div>
                         {/* {story.logoSubtext && (
                           <div className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300">

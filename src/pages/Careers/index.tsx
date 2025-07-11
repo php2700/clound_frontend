@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   FaHome,
   FaRegLightbulb,
@@ -35,8 +35,6 @@ const testimonials = [
     title: "Salesforce specialist",
     // flag: "/flagarg.svg",
     flag: "/india.png",
-
-    
   },
   {
     quote:
@@ -124,6 +122,7 @@ const jobPositions = [
 ];
 
 export const Careers = () => {
+  const navigate = useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -200,9 +199,10 @@ export const Careers = () => {
           message: "",
         });
         setIsRobot(false);
-        toast.success("Details_added", {
-          position: "top-right",
-        });
+        // toast.success("Details_added", {
+        //   position: "top-right",
+        // });
+        navigate("/thank-you");
       })
       .catch((error) => {
         console.log(error);
@@ -501,7 +501,6 @@ export const Careers = () => {
           <div className="cpx-6 py-5 md:px-10">
             <div className="relative bg-[#4a4a4a] text-white p-12 md:p-10 rounded-2xl overflow-hidden">
               <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10">
-                
                 <blockquote className="text-2xl lg:text-3xl font-semibold leading-relaxed">
                   “{currentTestimonial.quote}”
                 </blockquote>
@@ -655,13 +654,16 @@ export const Careers = () => {
             </div>
             <div className="mb-6">
               <p className="text-[12px] text-[#f9f9f9]">
-                By continuing, I confirm that I have read and agree to the 
-                
-                <a href="/privacycona" target="_blank" rel="noopener noreferrer">
-                      <span className="font-semibold  cursor-pointer ">
-                        Privacy Policy
-                      </span>
-                    </a>
+                By continuing, I confirm that I have read and agree to the
+                <a
+                  href="/privacycona"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="font-semibold  cursor-pointer ">
+                    Privacy Policy
+                  </span>
+                </a>
               </p>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
