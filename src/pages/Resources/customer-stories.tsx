@@ -39,7 +39,7 @@ export const Customer_Stories = () => {
 
   const storyData = [
     {
-      url: "/customer-stories/commerce-cloud",
+      url: "/customer-stories/commerce-cloud-implementation",
       flagImg: "/flag-usa (1).svg",
       userImg: "/Ai image laptop people.png",
       companyImg: "/doordash-logo-1.png",

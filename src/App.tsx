@@ -77,7 +77,7 @@ const App = () => (
             element={<Gador_Detail />}
           />
           <Route
-            path="/customer-stories/commerce-cloud"
+            path="/customer-stories/commerce-cloud-implementation"
             element={<ConaService />}
           />
           <Route path="/customer-stories" element={<Customer_Stories />} />

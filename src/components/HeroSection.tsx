@@ -137,7 +137,7 @@ const HeroSection = () => {
               />
               <p className="text-xl md:text-2xl mt-6 max-w-2xl mx-auto text-white font-semibold">
                 We are a <span className="text-[#FF83A9]">100% Salesforce</span>{" "}
-                summit consulting partner
+                premium consulting partner
               </p>
             </>
           )}

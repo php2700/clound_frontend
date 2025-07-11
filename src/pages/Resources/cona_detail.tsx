@@ -220,13 +220,13 @@ export const ConaService = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const handlePage=(e)=>{
-    navigate("/resources/customer-stories")
-  }
+  const handlePage = (e) => {
+    navigate("/resources/customer-stories");
+  };
 
-  const handleHome=()=>{
-    navigate("/")
-  }
+  const handleHome = () => {
+    navigate("/");
+  };
 
   return (
     // Top-level wrapper
@@ -248,11 +248,17 @@ export const ConaService = () => {
             <div className="flex items-center text-sm text-gray-700 mt-8">
               <img src="/bread-home.svg" className="mr-1 text-xl ml-2" />
               <span className="mx-1 text-lg font-medium">/</span>
-              <span className="text-lg font-semibold cursor-pointer" onClick={handleHome}>
+              <span
+                className="text-lg font-semibold cursor-pointer"
+                onClick={handleHome}
+              >
                 Resources
               </span>
               <span className="mx-1 text-lg font-medium ml-2">/</span>
-              <span className="mx-1 text-lg font-semibold ml-2 cursor-pointer" onClick={handlePage}>
+              <span
+                className="mx-1 text-lg font-semibold ml-2 cursor-pointer"
+                onClick={handlePage}
+              >
                 Customer Stories
               </span>
               <span className="mx-1 text-lg font-semibold ml-2">/</span>
@@ -348,9 +354,9 @@ export const ConaService = () => {
                 className="text-[#f9f9f9] leading-relaxed mb-4 text-[18px] "
                 style={{ fontFamily: "sans-serif,dm-sans" }}
               >
-                Together with Codescience and Salesforce, CONA Services enhanced
-                its B2B Commerce strategy through myCoke — one of the world's
-                largest implementations of Salesforce B2B Commerce on Lightning.
+                Together with Code Science and Salesforce, Doordash Services
+                enhanced its B2B Commerce strategy — one of the largest
+                implementations of Salesforce B2B Commerce on Lightning.
               </p>
               <p className="text-[#f9f9f9] leading-relaxed mb-4">
                 Built with scalability, automation, and data-driven insights at
@@ -498,7 +504,7 @@ export const ConaService = () => {
                     <img
                       src={testimonial.logoSrc}
                       alt={`${testimonial.name}'s company logo`}
-                      className="mt-4 "
+                      className="mt-2 "
                       style={{ width: "", height: "80px" }}
                     />
                   </div>
@@ -517,7 +523,7 @@ export const ConaService = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/90 bg-[url('/stories-cona-banner-back.webp')] bg-cover bg-center">
-              <h2 className="inline-block text-[35px] font-bold ml-[285px] mt-12 tracking-tight whitespace-nowrap  mr]">
+              <h2 className=" text-[35px] text-center font-bold mt-12 tracking-tight whitespace-nowrap  mr]">
                 Want to see how we can help you scale your B2B commerce?
               </h2>
             </div>
