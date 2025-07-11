@@ -17,7 +17,7 @@ const expertiseData: ExpertiseSection[][] = [
   {
       title: "B2C Commerce",
       items: [
-        { label: "Non Profit", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-specialist-I.svg" },
+        { label: "B2C Commerce", image: "https://cloudgaia.com/storage/2025/01/logo-salesforce-specialist-I.svg" },
       ],
     },
     {

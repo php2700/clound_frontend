@@ -271,7 +271,7 @@ const Industries = () => {
                       icon: (
                         <img src="/industries-icon-5.svg" className="mb-2" />
                       ),
-                      title: "Health & Life Science", 
+                      title: "Health & Life Science",
                       description:
                         "Our solutions for health and life sciences integrate Salesforce to improve patient experiences, streamline workflows, and drive innovation in healthcare.",
                     },
