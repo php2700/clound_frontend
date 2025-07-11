@@ -169,8 +169,8 @@ export const ConaService = () => {
     {
       name: " Kimberly Mitchell",
       title: "Chief Digital Officer",
-      logoSrc: "/Kaplan (1).png",
-      quote: `"From the very beginning, we had a one team approach. Cloudgaia brought a strategic vision that helped us plan for success, achieve our goals and support our North American Bottling System and Customers commercial growth plans."`,
+      logoSrc: "/doordash.png",
+      quote: `"From the very beginning, we had a one team approach. Code Science brought a strategic vision that helped us plan for success, achieve our goals and support our Customers commercial growth plans."`,
     },
     {
       name: "Walson Dmello",
@@ -220,6 +220,14 @@ export const ConaService = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  const handlePage=(e)=>{
+    navigate("/resources/customer-stories")
+  }
+
+  const handleHome=()=>{
+    navigate("/")
+  }
+
   return (
     // Top-level wrapper
     <>
@@ -240,22 +248,22 @@ export const ConaService = () => {
             <div className="flex items-center text-sm text-gray-700 mt-8">
               <img src="/bread-home.svg" className="mr-1 text-xl ml-2" />
               <span className="mx-1 text-lg font-medium">/</span>
-              <span className="text-lg font-semibold cursor-pointer">
+              <span className="text-lg font-semibold cursor-pointer" onClick={handleHome}>
                 Resources
               </span>
               <span className="mx-1 text-lg font-medium ml-2">/</span>
-              <span className="mx-1 text-lg font-semibold ml-2">
+              <span className="mx-1 text-lg font-semibold ml-2 cursor-pointer" onClick={handlePage}>
                 Customer Stories
               </span>
               <span className="mx-1 text-lg font-semibold ml-2">/</span>
               <span className="mx-1 text-lg font-semibold ml-2">
-                 commerce-cloud-implemation
+                commerce-cloud-implemation
               </span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4">
               <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
               <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
-               Kaplan International 
+                commerce-cloud-implemation
               </span>
             </div>
             {/* <div className="font-medium text-gray-800 mb-2.5"><img src="/flag-usa (1).svg" /><span> CONA Services - US</span></div> */}
@@ -271,9 +279,9 @@ export const ConaService = () => {
               </span>
             </div>
             <p className="text-lg text-gray-600 max-w-4xl text-[18px] text-[#474747]">
-              Unlocking the potential of Salesforce by Doordash, a scalable and 
-            digital platform designed to keep B2B customers stocked with a variety 
-            of iconic products.
+              Unlocking the potential of Salesforce by Doordash, a scalable and
+              digital platform designed to keep B2B customers stocked with a
+              variety of iconic products.
             </p>
           </header>
           {/* Main Content Grid */}
@@ -298,15 +306,15 @@ export const ConaService = () => {
               </p>
               <p className="text-gray-600 leading-relaxed">
                 {" "}
-                We partnered with the Doordash Digital Office (KDO), an 
-                interdisciplinary and inter-agency team of product and engineering 
-                specialists, to work as one team and upgrade their B2B eCommerce 
-                platform with a focus on customer experience.
+                We partnered with the Doordash Digital Office (KDO), an
+                interdisciplinary and inter-agency team of product and
+                engineering specialists, to work as one team and upgrade their
+                B2B eCommerce platform with a focus on customer experience.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/stories-cona.webp"
+                src="/Ai image laptop people.png"
                 alt="Store owners with a tablet"
                 className="w-full h-full object-cover"
               />
@@ -322,11 +330,11 @@ export const ConaService = () => {
                 className="text-[#f9f9f9] leading-relaxed text-[18px] text-[#474747] cursor-pointer"
                 style={{ fontFamily: "sans-serif,dm-sans" }}
               >
-                CONA Services set out to transform its customer engagement
+                Doordash Services set out to transform its customer engagement
                 platform through Salesforce technology. The goal: deliver a
                 seamless, hyper-personalized buying experience for the 11
-                largest Coca-Cola bottlers, enabling them to streamline
-                operations, boost loyalty, and drive growth across the region.
+                largest products, enabling them to streamline operations, boost
+                loyalty, and drive growth across the region.
               </p>
             </div>
             <div className="bg-[#008093] text-[f9f9f9] text-white p-8 rounded-lg">
@@ -350,7 +358,7 @@ export const ConaService = () => {
                 business.
               </p>
               <p className=" leading-relaxed text-[#f9f9f9]">
-                myCoke: a scalable platform includes multiple storefronts,
+                Doordash: a scalable platform includes multiple storefronts,
                 hyper-personalized experiences, automated recurring orders,
                 optimized reporting, and more.
               </p>
@@ -390,7 +398,7 @@ export const ConaService = () => {
             </div>
           </section>
           {/* Coca-Cola Video Section */}
-          <section className="mt-12">
+          {/* <section className="mt-12">
             <div className="relative rounded-lg shadow-xl overflow-hidden">
               <div
                 className="relative w-full"
@@ -413,11 +421,11 @@ export const ConaService = () => {
                 />
               </div>
             </div>
-          </section>
+          </section> */}
           {/* Solutions and Benefits Section */}
           <section className="mt-16 ">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8  ">
-              <div
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8  ">
+              {/* <div
                 className="relative w-full rounded-lg overflow-hidden shadow-lg bg-[#008093]"
                 style={{ paddingBottom: "56.25%" }}
               >
@@ -431,7 +439,7 @@ export const ConaService = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-              </div>
+              </div> */}
               <div className="bg-[#008093] text-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-3xl font-bold ">
                   {solutionsAndBenefitsData.solutionsTitle}
@@ -490,7 +498,8 @@ export const ConaService = () => {
                     <img
                       src={testimonial.logoSrc}
                       alt={`${testimonial.name}'s company logo`}
-                      className="mt-4 " style={{ width: "", height: "60px"   }}
+                      className="mt-4 "
+                      style={{ width: "", height: "80px" }}
                     />
                   </div>
                 </div>
@@ -508,17 +517,13 @@ export const ConaService = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/90 bg-[url('/stories-cona-banner-back.webp')] bg-cover bg-center">
-            <h2
-                className="inline-block text-[35px] font-bold ml-[285px] mt-12 tracking-tight whitespace-nowrap  mr]" 
- 
-              > 
+              <h2 className="inline-block text-[35px] font-bold ml-[285px] mt-12 tracking-tight whitespace-nowrap  mr]">
                 Want to see how we can help you scale your B2B commerce?
-              </h2></div>
+              </h2>
+            </div>
           </div>
           <div className="relative z-10 max-w-4xl mx-auto px-4  ">
-            
-            <div   className="text-center mb-12   ">
-              
+            <div className="text-center mb-12   ">
               <p className="text-[40px] font-bold mt-1 ml-1">Let's talk.</p>
             </div>
             <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto">
@@ -584,8 +589,12 @@ export const ConaService = () => {
               </div>
               <div className="mt-6 text-xs text-gray-300">
                 By continuing, I confirm that I have read and agree to the{" "}
-                <a href="/privacycona " target="_blank"
-                    rel="noopener noreferrer" className="underline hover:text-white cursor-pointer">
+                <a
+                  href="/privacycona "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" hover:text-white cursor-pointer"
+                >
                   Privacy Policy
                 </a>
                 .

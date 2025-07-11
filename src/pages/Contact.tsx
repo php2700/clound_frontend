@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "sonner";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
@@ -126,6 +126,7 @@ const countries = [
 ].sort();
 
 const Contact = () => {
+  const navigate=useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [firstName, setFirstName] = useState("");
@@ -173,9 +174,10 @@ const Contact = () => {
         setMessage("");
         setAgreeToEmails(false);
         setIsRobot(false);
-        toast.success("Details_added", {
-          position: "top-right",
-        });
+        // toast.success("Details_added", {
+        //   position: "top-right",
+        // });
+        navigate('/thank-you')
       })
       .catch((error) => {
         console.log(error);

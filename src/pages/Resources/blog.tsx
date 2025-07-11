@@ -87,6 +87,10 @@ export const Blog = () => {
     navigate(`/blog-detail/${data?._id}`);
   };
 
+   const handlePage=(e)=>{
+    navigate("/")
+  }
+
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
       <div
@@ -114,7 +118,7 @@ export const Blog = () => {
                 />
               </Link>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="text-base font-bold cursor-pointer ml-1">
+              <span className="text-base font-bold cursor-pointer ml-1 " onClick={handlePage}>
                 &nbsp;Resources
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>

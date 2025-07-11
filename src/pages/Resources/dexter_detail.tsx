@@ -3,9 +3,10 @@ import Header from "@/components/Header";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Dexter_Detail = () => {
+  const navigate=useNavigate()
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -20,6 +21,14 @@ export const Dexter_Detail = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+ const handlePage=(e)=>{
+    navigate("/resources/customer-stories")
+  }
+
+  const handleHome=()=>{
+    navigate("/")
+  }
+
   return (
     <div className="relative min-h-screen">
       <div
@@ -33,31 +42,33 @@ export const Dexter_Detail = () => {
         <div className="container mx-auto pt-[120px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-10 ">
             <div className="flex items-center text-sm text-[#474747] mt-10">
-              <img src='/bread-home.svg' className="mr-1 text-xl" />
+              <img src="/bread-home.svg" className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="text-base font-bold cursor-pointer">
+              <span className="text-base font-bold cursor-pointer" onClick={handleHome}>
                 &nbsp; Resources
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="mx-1 text-base font-bold">
+              <span className="mx-1 text-base font-bold cursor-pointer" onClick={handlePage}>
                 &nbsp;Customer Stories
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
               <span className="mx-1 text-base font-bold">
-                &nbsp;Schneider Electric’s
+                &nbsp;Schneider Electric
               </span>
             </div>
-            <div className="mx-1 flex items-center text-lg font-medium mt-4" >
-              <img src="/flagarg.svg" className="w-6 h-6" alt="USA Flag" />
-              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Schneider Electric’s</span>
+            <div className="mx-1 flex items-center text-lg font-medium mt-4">
+              <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
+                Schneider Electric
+              </span>
             </div>
             <div
               style={{ lineHeight: "1em" }}
               className={`text-6xl font-bold text-[#008093] my-5 `}
             >
               +57% Growth in Online Orders: <br />
-              Schneider Electric’s Success in E-Commerce <br />
-              Digitization with Salesforce
+              Schneider Electric’s Success in E-Commerce Digitization with
+              Salesforce
             </div>
             <div className="flex items-center gap-5 mb-10">
               <div>
@@ -74,10 +85,10 @@ export const Dexter_Detail = () => {
               style={{ lineHeight: "1.2em" }}
               className="text-lg text-[#474747] mb-20"
             >
-              Schneider Electric’s Europe’s leading provider of energy and industrial automation, , transformed its
-              e-commerce experience, streamlining operations and <br />
-              enhancing customer engagement to drive significant growth in
-              online orders.
+              Schneider Electric’s Europe’s leading provider of energy and
+              industrial automation, , transformed its e-commerce experience,
+              streamlining operations and enhancing customer engagement to drive
+              significant growth in online orders.
             </div>
 
             <div className="flex flex-col md:flex-row gap-2 mt-8">
@@ -99,10 +110,10 @@ export const Dexter_Detail = () => {
                   style={{ lineHeight: "1.2em" }}
                   className="text-lg text-[#474747]"
                 >
-                 Schneider Electric is a global leader in energy management and 
-                 automation, providing digital solutions for efficiency and 
-                 sustainability across homes, buildings, data centers, and 
-                 industries.
+                  Schneider Electric is a global leader in energy management and
+                  automation, providing digital solutions for efficiency and
+                  sustainability across homes, buildings, data centers, and
+                  industries.
                 </div>
               </div>
               <div className="lg:w-1/2 w-full h-64 lg:h-auto">

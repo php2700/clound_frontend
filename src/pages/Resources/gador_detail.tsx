@@ -3,9 +3,10 @@ import Header from "@/components/Header";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Gador_Detail = () => {
+  const navigate = useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -19,6 +20,14 @@ export const Gador_Detail = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  const handlePage = (e) => {
+    navigate("/resources/customer-stories");
+  };
+
+  const handleHome = () => {
+    navigate("/");
+  };
 
   return (
     <div className="relative min-h-screen">
@@ -38,27 +47,41 @@ export const Gador_Detail = () => {
         <div className="container mx-auto pt-[120px] px-4 md:px-6">
           <div className="px-6 py-10 md:px-10 ">
             <div className="flex items-center text-sm text-[#474747] mt-10">
-              <img src='/bread-home.svg' className="mr-1 text-xl" />
+              <img src="/bread-home.svg" className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="text-base font-bold cursor-pointer">
+              <span
+                className="text-base font-bold cursor-pointer"
+                onClick={handleHome}
+              >
                 Resources
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="mx-1 text-base font-bold">
+              <span
+                className="mx-1 text-base font-bold cursor-pointer"
+                onClick={handlePage}
+              >
                 &nbsp;Customer Stories
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="mx-1 text-base font-bold">&nbsp;Gador</span>
+              <span className="mx-1 text-base font-bold">
+                &nbsp;Blue Cross Idaho
+              </span>
             </div>
-            <div className="mx-1 flex items-center text-lg font-medium mt-4" >
-              <img src="/flagarg.svg" className="w-6 h-6" alt="USA Flag" />
-              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Blue Cross Idaho</span>
+            <div className="mx-1 flex items-center text-lg font-medium mt-4">
+              <img
+                src="/europion_union.png"
+                className="w-6 h-6"
+                alt="USA Flag"
+              />
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
+                Blue Cross Idaho
+              </span>
             </div>
             <div
               style={{ lineHeight: "1em" }}
               className={`text-6xl font-bold text-[#008093] my-5      `}
             >
-              Transforming Experiences with <br />a 360° Customer ViewT
+              Transforming Experiences with <br />a 360° Customer View
             </div>
 
             <div className="flex items-center gap-5 mb-10">
@@ -95,13 +118,13 @@ export const Gador_Detail = () => {
                 The Challenge
               </div>
               <div style={{ lineHeight: "1em" }} className="text-lg ">
-                Blue Cross Idaho is undergoing a bold digital transformation rooted in two
-                strategic pillars: embracing digital transformation and evolving
-                into a data-driven organization. Our partnership focuses on
-                elevating the user experience while creating powerful metrics to
-                monitor and optimize business performance. Together, we’re
-                reshaping processes and unlocking untapped potential for growth
-                and innovation.
+                Blue Cross Idaho is undergoing a bold digital transformation
+                rooted in two strategic pillars: embracing digital
+                transformation and evolving into a data-driven organization. Our
+                partnership focuses on elevating the user experience while
+                creating powerful metrics to monitor and optimize business
+                performance. Together, we’re reshaping processes and unlocking
+                untapped potential for growth and innovation.
               </div>
             </div>
 
@@ -170,7 +193,10 @@ export const Gador_Detail = () => {
                   alt="Stars Icon"
                   className="w-10 h-10"
                 />
-                <h2 style={{fontSize:'40px',lineHeight:'1em'}} className="text-[#f9f9f9]  font-semibold">
+                <h2
+                  style={{ fontSize: "40px", lineHeight: "1em" }}
+                  className="text-[#f9f9f9]  font-semibold"
+                >
                   Delivering exceptional results
                 </h2>
               </div>
@@ -182,8 +208,18 @@ export const Gador_Detail = () => {
                   alt="Duplicate Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div style={{lineHeight:'1.2em'}} className="text-[#008093] font-bold text-3xl mb-2">70,000+</div>
-                <p style={{lineHeight:'1.2em'}} className="text-lg text-[#474747]">orders per year</p>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  70,000+
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
+                  orders per year
+                </p>
               </div>
 
               <div className="flex-1 bg-white rounded-lg p-6 shadow">
@@ -192,8 +228,18 @@ export const Gador_Detail = () => {
                   alt="Cart Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div style={{lineHeight:'1.2em'}} className="text-[#008093] font-bold text-3xl mb-2">35%-</div>
-                <p style={{lineHeight:'1.2em'}} className="text-lg text-[#474747]">case resolution time</p>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  35%-
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
+                  case resolution time
+                </p>
               </div>
 
               <div className="flex-1 bg-white rounded-lg p-6 shadow">
@@ -202,8 +248,18 @@ export const Gador_Detail = () => {
                   alt="Growth Icon"
                   className="mx-auto mb-4 w-10 h-10 text-pink-400"
                 />
-                <div style={{lineHeight:'1.2em'}} className="text-[#008093] font-bold text-3xl mb-2">42%+</div>
-                <p style={{lineHeight:'1.2em'}} className="text-lg text-[#474747]">monthly medical file visits </p>
+                <div
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#008093] font-bold text-3xl mb-2"
+                >
+                  42%+
+                </div>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]"
+                >
+                  monthly medical file visits{" "}
+                </p>
               </div>
             </div>
           </div>
@@ -216,7 +272,10 @@ export const Gador_Detail = () => {
             alt="Descriptive Alt Text"
           />
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-white text-center px-4">
-            <h2 style={{fontSize:'40px',lineHeight:'1em'}} className="text-[#f9f9f9] font-semibold mb-4">
+            <h2
+              style={{ fontSize: "40px", lineHeight: "1em" }}
+              className="text-[#f9f9f9] font-semibold mb-4"
+            >
               Don't get stuck in technical debt.
             </h2>
 
@@ -230,21 +289,26 @@ export const Gador_Detail = () => {
           <div className="px-6 py-10 md:px-20 ">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-5 md:px-16 py-12 gap-8">
               <div className="md:w-2/3 text-center md:text-center">
-                <p  style={{ lineHeight: "1.2em" }}
-                  className="italic text-[#474747] text-2xl">
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="italic text-[#474747] text-2xl"
+                >
                   “We formed a team between the commercial, transformation and
-                  technology areas, along with our strategic partner, Codescience.
-                  Undoubtedly, the success of this transformation process is
-                  achieved by making the best team. That is a reliable, dynamic
-                  and agile team.”
+                  technology areas, along with our strategic partner,
+                  Codescience. Undoubtedly, the success of this transformation
+                  process is achieved by making the best team. That is a
+                  reliable, dynamic and agile team.”
                 </p>
               </div>
 
               <div className="text-center md:text-center md:w-1/3">
-                <h3   className="text-3xl  text-[#474747]">
-                  Juan Beade
-                </h3>
-                <p style={{lineHeight:'1.2em'}} className="text-lg text-[#474747]  mt-1">Transformation & Technology Master</p>
+                <h3 className="text-3xl  text-[#474747]">Tamara Cook</h3>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-lg text-[#474747]  mt-1"
+                >
+                  Transformation & Technology Master
+                </p>
               </div>
             </div>
             <div>

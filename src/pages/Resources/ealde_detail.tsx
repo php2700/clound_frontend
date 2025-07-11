@@ -3,10 +3,11 @@ import Header from "@/components/Header";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./resource.css";
 
 export const Ealde_Detail = () => {
+  const navigate=useNavigate()
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -20,6 +21,14 @@ export const Ealde_Detail = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+   const handlePage=(e)=>{
+    navigate("/resources/customer-stories")
+  }
+
+  const handleHome=()=>{
+    navigate("/")
+  }
 
   return (
     <div className="relative min-h-screen">
@@ -41,13 +50,13 @@ export const Ealde_Detail = () => {
             <div className="flex items-center text-sm text-[#474747] mt-10">
               <img src='/bread-home.svg' className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="text-base font-bold cursor-pointer">
+              <span className="text-base font-bold cursor-pointer" onClick={handleHome}>
                 Resources
               </span>
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="mx-1 text-base font-bold">Customer Stories</span>
+              <span className="mx-1 text-base font-bold cursor-pointer" onClick={handlePage}>Customer Stories</span>
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="mx-1 text-base font-bold">EALDE - Spain </span>
+              <span className="mx-1 text-base font-bold">Kaplan - USA</span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4" >
               <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
@@ -397,7 +406,7 @@ export const Ealde_Detail = () => {
                   style={{ lineHeight: "1.2em" }}
                   className="text-3xl text-[#474747]"
                 >
-                Kaplan
+                Priyanka Taunk
                 </h3>
                 <p
                   style={{ lineHeight: "1.2em" }}

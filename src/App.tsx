@@ -32,6 +32,7 @@ import { Blog_Detail } from "./pages/Resources/blog_detail";
 import IntegritySection from "./pages/IntegritySection";
 import IntegrityForm from "./pages/IntegrityForm";
 import Privacypolicy from "./pages/Privacypolicy";
+import { Thankyou } from "./pages/thankyou";
 
 const queryClient = new QueryClient();
 
@@ -76,7 +77,7 @@ const App = () => (
             element={<Gador_Detail />}
           />
           <Route
-            path="/customer-stories/cona-detail"
+            path="/customer-stories/commerce-cloud"
             element={<ConaService />}
           />
           <Route path="/customer-stories" element={<Customer_Stories />} />
@@ -95,6 +96,7 @@ const App = () => (
           <Route path="/privacycona" element={<Privacypolicy />} />
 
           {/* Detail Pages */}
+          <Route path="/thank-you" element={<Thankyou/>} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

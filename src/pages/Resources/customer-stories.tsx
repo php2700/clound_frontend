@@ -3,9 +3,10 @@ import Header from "@/components/Header";
 import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Customer_Stories = () => {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -38,55 +39,54 @@ export const Customer_Stories = () => {
 
   const storyData = [
     {
-      url: "/customer-stories/cona-detail",
-      // flagImg: "/flag-usa (1).svg",
-      userImg: "/students.png",
-      companyImg: "/Kaplan (1).png",
+      url: "/customer-stories/commerce-cloud",
+      flagImg: "/flag-usa (1).svg",
+      userImg: "/Ai image laptop people.png",
+      companyImg: "/doordash-logo-1.png",
       services: "B2B Commerce | Marketing Cloud | Consumer Goods Cloud +",
       title: "A Scalable Engagement Platform to Power B2B Commerce Growth",
       description:
-        " Kaplan International transformed its global student and partner engagement platform to deliver a more personalized, connected, and efficient B2B commerce experience — driving growth, automation, and smarter commerce at scale.",
+        "Doordash transformed its global student and partner engagement platform to deliver a more personalized, connected, and efficient B2B commerce experience — driving growth, automation, and smarter commerce at scale. ",
     },
     {
       // url: "/customer-stories/ealde-detail",
       url: "/customer-stories/education-cloud",
-
-      // flagImg: "/spain.png",
+      flagImg: "/flag-usa (1).svg",
       // userImg: "/53587161679_f0c0a75c22_6k-scaled.jpg",
-      userImg: "/Ai image laptop people.png",
-      companyImg: "/doordash.png",
+      userImg: "/students.png",
+      companyImg: "/Kaplan-logo.png",
       services: "Sales Cloud | Experience Cloud | Marketing Cloud",
       title:
         "Automation and Scalability: How Optimized Its Operations with Salesforce",
       description:
-        "DoorDash modernized its data infrastructure and automated critical workflows with Salesforce, boosting operational efficiency and enabling more personalized merchant and customer experiences. The result: a more agile, scalable platform built for high-growth, real-time commerce.",
+        " Kaplan modernized its data infrastructure and automated critical workflows with Salesforce, boosting operational efficiency and enabling more personalized merchant and customer experiences. The result: a more agile, scalable platform built for high-growth, real-time commerce.",
     },
     {
       url: "/customer-stories/blue-cross",
-      // flagImg: "/flagarg.svg",
+      flagImg: "/europion_union.png",
       userImg: "/stories-gador.webp",
-      companyImg: "/electric-schneider.png",
+      companyImg: "/electric-logo.png",
       services: "Commerce Cloud B2C | Service Cloud | Marketing Cloud",
       title:
-        "+57% Growth in Online Orders: Dexter’s Success in E-Commerce Digitization with Salesforce",
+        "+57% Growth in Online Orders: Schinder Electric Success in E-Commerce Digitization with Salesforce",
       description:
-        "Grupo Dexter, Argentina’s leading sports retailer, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders.",
+        "Schinder Electric , Europe’s leading provider of energy and industrial automation, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders",
     },
     {
       url: "/customer-stories/schneider-electric",
-      flagImg: "/flag-arg.svg",
+      flagImg: "/europion_union.png",
       userImg: "/stories-dexter.webp",
       companyImg: "/logo-grupo-dexter.svg",
       services: "Commerce Cloud B2C | Service Cloud | Marketing Cloud",
       title:
-        "+57% Growth in Online Orders: Dexter’s Success in E-Commerce Digitization with Salesforce",
+        "+57% Growth in Online Orders: Schinder Success in E-Commerce Digitization with Salesforce",
       description:
         "Grupo Dexter, Argentina’s leading sports retailer, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders.",
     },
   ];
 
   const images = [
-    "/20220309083632!Parle_Products_logo.svg",
+    "/20220309083632!Parle_Products_logo.png",
     "/Absa_logoe.png",
     "/Blue Cross IDHO.png",
     "/capgemini.png",
@@ -99,7 +99,7 @@ export const Customer_Stories = () => {
     "/ICFF Logo.jpg",
     "/Kaplan (1).png",
     "/Kotak_Mahindra_Bank_logo.png",
-    "/Migros-Logo.wine.svg",
+    "/Migros-Logo.wine.png",
     "/Rapid7_logo_-_transparent_PNG.png",
   ];
 
@@ -136,6 +136,10 @@ export const Customer_Stories = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  const handlePage = (e) => {
+    navigate("/");
+  };
+
   return (
     <div>
       <div className="relative min-h-screen overflow-x-hidden">
@@ -166,7 +170,10 @@ export const Customer_Stories = () => {
                   />
                 </Link>
                 <span className="mx-1 text-base font-bold">&nbsp;/</span>
-                <span className="text-base font-bold cursor-pointer">
+                <span
+                  className="text-base font-bold cursor-pointer"
+                  onClick={handlePage}
+                >
                   &nbsp;Resources
                 </span>
                 <span className="mx-1 text-base font-bold">&nbsp; /</span>
@@ -283,14 +290,14 @@ export const Customer_Stories = () => {
                     <img
                       src={item?.userImg}
                       alt="story"
-                      className="w-full h-[55vh] object-cover"
+                      className="w-full h-[40vh] object-cover"
                     />
                   </div>
-                  <div className="lg:w-1/2 w-full p-6 flex flex-col justify-between">
-                    <div className="flex items-center gap-3 mb-4">
+                  <div className="lg:w-1/2 w-full py-2 px-6 flex flex-col justify-between">
+                    <div className="flex items-center gap-3 mb-2">
                       <img
                         src={item?.companyImg}
-                        style={{ width: "150px", height: "100px" }}
+                        style={{ width: "150px", height: "30px" }}
                         alt="company"
                         className="h-6"
                       />

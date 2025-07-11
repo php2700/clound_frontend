@@ -7,7 +7,7 @@ const statsData = {
   experts: "50+",
   topExpert: {
     title: "Top 10",
-    subtitle: "Expert in Consumer Goods in",
+    subtitle: "Expert in Consumer Goods & Non Profit in",
     platform: "AppExchange",
   },
   salesforceLogo: "/footer2.webp",
