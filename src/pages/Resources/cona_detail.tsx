@@ -352,18 +352,17 @@ export const ConaService = () => {
               </h2>
               <p
                 className="text-[#f9f9f9] leading-relaxed mb-4 text-[18px] "
-                style={{ fontFamily: "sans-serif,dm-sans" }}
               >
                 Together with Code Science and Salesforce, Doordash Services
                 enhanced its B2B Commerce strategy — one of the largest
                 implementations of Salesforce B2B Commerce on Lightning.
               </p>
-              <p className="text-[#f9f9f9] leading-relaxed mb-4">
+              <p className="text-[#f9f9f9] leading-relaxed mb-4 text-[18px]">
                 Built with scalability, automation, and data-driven insights at
                 its core, the platform redefined how bottlers and customers do
                 business.
               </p>
-              <p className=" leading-relaxed text-[#f9f9f9]">
+              <p className=" leading-relaxed text-[#f9f9f9] text-[18px]">
                 Doordash: a scalable platform includes multiple storefronts,
                 hyper-personalized experiences, automated recurring orders,
                 optimized reporting, and more.
