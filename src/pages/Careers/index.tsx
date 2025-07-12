@@ -20,10 +20,18 @@ import Footer from "@/components/Footer";
 import axios from "axios";
 
 const images = [
-  { img: "/Depositphotos_151402814_ds (1).jpg" },
-  { img: "/Depositphotos_365173196_L (1).jpg" },
-  { img: "/Depositphotos_81078342_ds (1).jpg" },
-  { img: "/Depositphotos_763920694_L (1).jpg" },
+  // { img: "/Depositphotos_151402814_ds (1).jpg" },
+  
+  { img: "/careersnews.jpg" },
+
+  { img: "/career2.jpg" },
+
+  // { img: "/Depositphotos_365173196_L (1).jpg" },
+  // { img: "/Depositphotos_81078342_ds (1).jpg" },
+  // { img: "/Depositphotos_763920694_L (1).jpg" },
+  { img: "/career3.jpg" },
+
+ 
   // { img: "/careers-slide-7.webp" },
 ];
 

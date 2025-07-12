@@ -23,7 +23,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-      link: "/customer-stories/blue-cross",
+      link: "/customer-stories/schneider-electric",
     },
     {
       subtitle: "Empowering Success",
@@ -35,7 +35,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-      link: "/customer-stories/schneider-electric",
+      link: "/customer-stories/commerce-cloud-implementation",
     },
   ];
 
