@@ -247,22 +247,22 @@ export const ConaService = () => {
           <header className="pb-8  pt-2">
             <div className="flex items-center text-sm text-gray-700 mt-8">
               <img src="/bread-home.svg" className="mr-1 text-xl ml-2" />
-              <span className="mx-1 text-lg font-medium">/</span>
+              <span className="mx-1 text-base font-bold">/</span>
               <span
-                className="text-lg font-semibold cursor-pointer"
+                className="text-base font-bold cursor-pointer"
                 onClick={handleHome}
               >
                 Resources
               </span>
-              <span className="mx-1 text-lg font-medium ml-2">/</span>
+              <span className="mx-1 text-base font-bold">/</span>
               <span
-                className="mx-1 text-lg font-semibold ml-2 cursor-pointer"
+                className="mx-1 text-base font-bold cursor-pointer"
                 onClick={handlePage}
               >
                 Customer Stories
               </span>
-              <span className="mx-1 text-lg font-semibold ml-2">/</span>
-              <span className="mx-1 text-lg font-semibold ml-2">
+              <span className="mx-1 text-base font-bold">/</span>
+              <span className="mx-1 text-base font-bold">
                 commerce-cloud-implemation
               </span>
             </div>
@@ -273,21 +273,30 @@ export const ConaService = () => {
               </span>
             </div>
             {/* <div className="font-medium text-gray-800 mb-2.5"><img src="/flag-usa (1).svg" /><span> CONA Services - US</span></div> */}
-            <h1 className="text-4xl md:text-5xl font-bold text-[#008093] leading-tight mt-5 mb-5">
+            <h1
+              className="text-4xl md:text-6xl font-bold text-[#008093]  mt-5 mb-2"
+              style={{ lineHeight: "1em" }}
+            >
               Empowering customer engagement with a scalable B2B Commerce
               platform
             </h1>
-            <div className="flex items-center gap-3 mb-5 text-[24px] text-[#474747]">
+            <div className="flex items-center gap-3 mb-4 text-[24px] text-[#474747]">
               {" "}
               <img src="/logo-salesforce.svg" />{" "}
-              <span className="text-gray-700 font-medium">
+              <span
+                style={{ lineHeight: "1.2em" }}
+                className="text-2xl text-[#474747]"
+              >
                 B2B Commerce | Marketing Cloud
               </span>
             </div>
-            <p className="text-lg text-gray-600 max-w-4xl text-[18px] text-[#474747]">
+            <p
+              style={{ lineHeight: "1.2em" }}
+              className="text-lg text-lg mb-10 text-[#474747]"
+            >
               Unlocking the potential of Salesforce by Doordash, a scalable and
-              digital platform designed to keep B2B customers stocked with a
-              variety of iconic products.
+              digital platform designed to keep B2B
+              <br /> customers stocked with a variety of iconic products.
             </p>
           </header>
           {/* Main Content Grid */}
@@ -296,12 +305,15 @@ export const ConaService = () => {
               <span className="text-3xl mb-4">
                 <img src="/icon-info (13).svg"></img>{" "}
               </span>
-              <h2 className="text-3xl font-bold  mb-4 text-[#008093] text-[40px]">
+              <h2
+                style={{ lineHeight: "1.2em" }}
+                className="font-semibold text-[#008093] text-[40px]  mb-4"
+              >
                 About Doordash Services
               </h2>
               <p
                 className="text-[#f9f9f9] leading-relaxed mb-4"
-                style={{ fontFamily: "sans-serif,dm-sans" }}
+                style={{ lineHeight: "1.2em" }}
               >
                 CONA Services is the leading IT support organization for the{" "}
                 <strong className="font-semibold text-[#f9f9f9]">
@@ -310,7 +322,10 @@ export const ConaService = () => {
                 They provide solutions for bottlers to optimally manage their
                 day-to-day business and refresh the world.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#474747] text-lg"
+              >
                 {" "}
                 We partnered with the Doordash Digital Office (KDO), an
                 interdisciplinary and inter-agency team of product and
@@ -329,12 +344,15 @@ export const ConaService = () => {
               <span className="text-3xl mb-4">
                 <img src="/icon-clock (17).svg" />
               </span>
-              <h2 className="text-3xl font-bold text-[#f9f9f9] text-[40px] mb-4 mt-[20px]">
+              <h2
+                style={{ fontSize: "40px", lineHeight: "1em" }}
+                className="font-semibold text-[#F9F9F9] mb-4 mt-[20px]"
+              >
                 The Challenge
               </h2>
               <p
-                className="text-[#f9f9f9] leading-relaxed text-[18px] text-[#474747] cursor-pointer"
-                style={{ fontFamily: "sans-serif,dm-sans" }}
+                className="text-[#f9f9f9] text-lg "
+                style={{ lineHeight: "1.2em" }}
               >
                 Doordash Services set out to transform its customer engagement
                 platform through Salesforce technology. The goal: deliver a
@@ -347,22 +365,29 @@ export const ConaService = () => {
               <span className="text-3xl mb-4">
                 <img src="/icon-solution.svg" />
               </span>
-              <h2 className="text-3xl font-bold mb-4 mt-[20px] text-[40px]  text-[#f9f9f9] ">
+              <h2 className="text-[#f9f9f9] text-[40px] font-semibold">
                 The Solution
               </h2>
               <p
-                className="text-[#f9f9f9] leading-relaxed mb-4 text-[18px] "
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#f9f9f9] text-lg mb-4"
               >
                 Together with Code Science and Salesforce, Doordash Services
                 enhanced its B2B Commerce strategy — one of the largest
                 implementations of Salesforce B2B Commerce on Lightning.
               </p>
-              <p className="text-[#f9f9f9] leading-relaxed mb-4 text-[18px]">
+              <p
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#f9f9f9] text-lg mb-4"
+              >
                 Built with scalability, automation, and data-driven insights at
                 its core, the platform redefined how bottlers and customers do
                 business.
               </p>
-              <p className=" leading-relaxed text-[#f9f9f9] text-[18px]">
+              <p
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#f9f9f9] text-lg mb-4"
+              >
                 Doordash: a scalable platform includes multiple storefronts,
                 hyper-personalized experiences, automated recurring orders,
                 optimized reporting, and more.
@@ -382,7 +407,7 @@ export const ConaService = () => {
                 {resultsData.title}
               </h2>
             </div>
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-2">
               {resultsData.stats.map((stat) => {
                 const Icon = iconComponents[stat.icon];
                 return (
@@ -391,7 +416,7 @@ export const ConaService = () => {
                     className="bg-white border border-gray-200 rounded-lg p-6 text-center flex flex-col items-center justify-start shadow-sm hover:shadow-lg transition-shadow"
                   >
                     {Icon && <Icon />}
-                    <p className="mt-4 text-2xl md:text-3xl font-bold text-teal-600">
+                    <p className="mt-4 text-2xl md:text-3xl font-bold text-[#008093]">
                       {stat.value}
                     </p>
                     <p className="mt-1 text-sm md:text-base text-gray-500">

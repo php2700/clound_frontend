@@ -82,7 +82,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 overflow-hidden font-sans">
+    <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 overflow-hidden ">
       {/* Header Placeholder */}
       <div className="absolute top-0 left-0 w-full h-16 bg-gray-800 z-30 flex items-center justify-between px-4" />
 
