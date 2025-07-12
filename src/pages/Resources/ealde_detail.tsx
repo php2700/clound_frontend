@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./resource.css";
 
 export const Ealde_Detail = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -22,13 +22,13 @@ export const Ealde_Detail = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-   const handlePage=(e)=>{
-    navigate("/resources/customer-stories")
-  }
+  const handlePage = (e) => {
+    navigate("/resources/customer-stories");
+  };
 
-  const handleHome=()=>{
-    navigate("/")
-  }
+  const handleHome = () => {
+    navigate("/");
+  };
 
   return (
     <div className="relative min-h-screen">
@@ -48,19 +48,29 @@ export const Ealde_Detail = () => {
         <div className="container mx-auto pt-[120px] px-4 md:px-6 ">
           <div className="px-6 py-10 md:px-10 ">
             <div className="flex items-center text-sm text-[#474747] mt-10">
-              <img src='/bread-home.svg' className="mr-1 text-xl" />
+              <img src="/bread-home.svg" className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="text-base font-bold cursor-pointer" onClick={handleHome}>
+              <span
+                className="text-base font-bold cursor-pointer"
+                onClick={handleHome}
+              >
                 Resources
               </span>
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="mx-1 text-base font-bold cursor-pointer" onClick={handlePage}>Customer Stories</span>
+              <span
+                className="mx-1 text-base font-bold cursor-pointer"
+                onClick={handlePage}
+              >
+                Customer Stories
+              </span>
               <span className="mx-1 text-base font-bold">/</span>
               <span className="mx-1 text-base font-bold">Kaplan - USA</span>
             </div>
-            <div className="mx-1 flex items-center text-lg font-medium mt-4" >
-              <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
-              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">Kaplan - USA</span>
+            <div className="mx-1 flex items-center text-lg font-medium mt-4">
+              <img src="/flag-usa (1).svg" className="w-5 h-5" alt="USA Flag" />
+              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
+                Kaplan - USA
+              </span>
             </div>
             <div
               style={{ lineHeight: "1em" }}
@@ -85,8 +95,8 @@ export const Ealde_Detail = () => {
               style={{ lineHeight: "1.2em" }}
               className="text-lg text-[#474747] mb-20"
             >
-              Codescience partnered with Kaplan to implement a
-              Salesforce-based solution that modernised its data <br />
+              Codescience partnered with Kaplan to implement a Salesforce-based
+              solution that modernised its data <br />
               model, automated key processes and improved the personalisation of
               its educational offerings. The result? A more agile,
               <br /> efficient and scalable operation, ready for the future.
@@ -105,13 +115,12 @@ export const Ealde_Detail = () => {
                 style={{ lineHeight: "1.2em" }}
                 className="text-[#474747] text-lg"
               >
-              Kaplan Business School is a leading business school in the
-                e-learning sector in Spain, specialised in executive training
-                programmes in areas such as Compliance, Sustainability or Risk
-                Management. Risk Management. Its focus is on academic
-                excellence, agility and digital innovation to offer a high-level
-                educational experience. offer a high-level educational
-                experience.
+                Kaplan is a leading business school in the e-learning sector in
+                Spain, specialised in executive training programmes in areas
+                such as Compliance, Sustainability or Risk Management. Risk
+                Management. Its focus is on academic excellence, agility and
+                digital innovation to offer a high-level educational experience.
+                offer a high-level educational experience.
               </div>
             </div>
 
@@ -135,7 +144,7 @@ export const Ealde_Detail = () => {
                   className="text-[#f9f9f9] text-lg"
                 >
                   With sustained growth and an expanding academic offering,
-                 Kaplan sought to strengthen its commercial and operational
+                  Kaplan sought to strengthen its commercial and operational
                   management. To ensure efficient administration of its
                   programs, business opportunities, and enrollment processes, it
                   was crucial to have a unified data structure and agile,
@@ -375,7 +384,10 @@ export const Ealde_Detail = () => {
               Don't get stuck in technical debt.
             </h2>
 
-            <Link to ="/contact" className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+            <Link
+              to="/contact"
+              className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition"
+            >
               Contact an expert
             </Link>
           </div>
@@ -406,7 +418,7 @@ export const Ealde_Detail = () => {
                   style={{ lineHeight: "1.2em" }}
                   className="text-3xl text-[#474747]"
                 >
-                Priyanka Taunk
+                  Priyanka Taunk
                 </h3>
                 <p
                   style={{ lineHeight: "1.2em" }}

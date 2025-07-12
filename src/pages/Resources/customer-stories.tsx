@@ -77,11 +77,11 @@ export const Customer_Stories = () => {
       flagImg: "/europion_union.png",
       userImg: "/stories-dexter.webp",
       companyImg: "/logo-grupo-dexter.svg",
-      services: "Commerce Cloud B2C | Service Cloud | Marketing Cloud",
-      title:
-        "+57% Growth in Online Orders: Schinder Success in E-Commerce Digitization with Salesforce",
-      description:
-        "Grupo Dexter, Argentina’s leading sports retailer, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders.",
+      services:
+        "Service Cloud | Sales Cloud | Marketing Cloud | Consumer Goods Cloud | Platform | Commerce Cloud",
+      title: "Transforming Experiences with a 360° Customer View",
+      description: `We transformed Blue Cross Idaho customer engagement strategy by implementing an end-to-end solution based on Salesforce,
+delivering personalized experiences tailored to each segment and touchpoint.`,
     },
   ];
 

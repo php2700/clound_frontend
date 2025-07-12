@@ -29,6 +29,10 @@ export const Gador_Detail = () => {
     navigate("/");
   };
 
+  const handleurl = (e) => {
+    navigate("/contact");
+  };
+
   return (
     <div className="relative min-h-screen">
       <div
@@ -70,7 +74,7 @@ export const Gador_Detail = () => {
             <div className="mx-1 flex items-center text-lg font-medium mt-4">
               <img
                 src="/europion_union.png"
-                className="w-6 h-6"
+                className="w-5 h-5"
                 alt="USA Flag"
               />
               <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
@@ -279,7 +283,10 @@ export const Gador_Detail = () => {
               Don't get stuck in technical debt.
             </h2>
 
-            <button className="bg-[#ff83a9] hover:bg-[#f9f9f9] hover:text-[#474747] text-[#f9f9f9] text-base font-bold px-6 py-2 rounded-full shadow-md transition">
+            <button
+              onClick={handleurl}
+              className="bg-[#ff83a9] hover:bg-[#f9f9f9] hover:text-[#474747] text-[#f9f9f9] text-base font-bold px-6 py-2 rounded-full shadow-md transition"
+            >
               Contact an expert
             </button>
           </div>

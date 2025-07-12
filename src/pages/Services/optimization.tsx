@@ -673,8 +673,7 @@ const Optimization = () => {
         // toast.success("Details_added", {
         //   position: "top-right",
         // });
-        navigate('/thank-you')
-
+        navigate("/thank-you");
       })
       .catch((error) => {
         console.log(error);
@@ -782,7 +781,10 @@ const Optimization = () => {
                     ))}
                   </div>
                   <div className="lg:w-2/5 w-full flex flex-col justify-between lg:sticky top-28">
-                    <form className="bg-[#fcc000] text-[#474747] p-6 rounded-lg  space-y-4 flex-grow relative" onSubmit={handleSubmit}>
+                    <form
+                      className="bg-[#fcc000] text-[#474747] p-6 rounded-lg  space-y-4 flex-grow relative"
+                      onSubmit={handleSubmit}
+                    >
                       <h2 className="text-2xl font-semibold mb-2 leading-tight">
                         Complete the form and book
                         <br />a free consultation
@@ -810,7 +812,6 @@ const Optimization = () => {
 
                       {/* Email & Company */}
                       <div className="flex gap-4">
-                       
                         <input
                           type="text"
                           placeholder="Company*"
@@ -819,7 +820,7 @@ const Optimization = () => {
                           value={company}
                           onChange={(e) => setCompany(e.target.value)}
                         />
-                         <input
+                        <input
                           type="email"
                           placeholder="Email*"
                           className="w-1/2 p-3 rounded bg-white text-black text-lg focus:outline-none"
@@ -868,12 +869,16 @@ const Optimization = () => {
                       {/* Checkbox */}
                       <p className="text-xs text-[#474747]">
                         By continuing, I confirm that I have read and agree to
-                        the
-                        <a href="/privacycona" target="_blank" rel="noopener noreferrer">
-                      <span className="font-semibold  cursor-pointer ">
-                       Privacy Policy
-                      </span>
-                    </a>
+                        the &nbsp;
+                        <a
+                          href="/privacycona"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span className="font-semibold  cursor-pointer ">
+                            Privacy Policy
+                          </span>
+                        </a>
                       </p>
                       <div className="flex items-start gap-2">
                         <input
