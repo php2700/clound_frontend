@@ -76,7 +76,7 @@ export const Customer_Stories = () => {
       url: "/customer-stories/blue-cross",
       flagImg: "/europion_union.png",
       userImg: "/stories-dexter.webp",
-      companyImg: "/logo-grupo-dexter.svg",
+      companyImg: "/Blue Cross IDHO.png",
       services:
         "Service Cloud | Sales Cloud | Marketing Cloud | Consumer Goods Cloud | Platform | Commerce Cloud",
       title: "Transforming Experiences with a 360° Customer View",
