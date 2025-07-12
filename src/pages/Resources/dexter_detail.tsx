@@ -29,6 +29,10 @@ export const Dexter_Detail = () => {
     navigate("/");
   };
 
+  const handleContact = () => {
+    navigate("/contact");
+  };
+
   return (
     <div className="relative min-h-screen">
       <div
@@ -354,7 +358,10 @@ export const Dexter_Detail = () => {
               Don't get stuck in technical debt.
             </h2>
 
-            <button className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition">
+            <button
+              onClick={handleContact}
+              className="bg-[#ff83a9] hover:bg-white hover:text-[#474747] text-white font-semibold px-6 py-2 rounded-full shadow-md transition"
+            >
               Contact an expert
             </button>
           </div>
