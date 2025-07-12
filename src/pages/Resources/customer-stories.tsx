@@ -62,7 +62,7 @@ export const Customer_Stories = () => {
         " Kaplan modernized its data infrastructure and automated critical workflows with Salesforce, boosting operational efficiency and enabling more personalized merchant and customer experiences. The result: a more agile, scalable platform built for high-growth, real-time commerce.",
     },
     {
-      url: "/customer-stories/blue-cross",
+      url: "/customer-stories/schneider-electric",
       flagImg: "/europion_union.png",
       userImg: "/stories-gador.webp",
       companyImg: "/electric-logo.png",
@@ -73,7 +73,7 @@ export const Customer_Stories = () => {
         "Schinder Electric , Europe’s leading provider of energy and industrial automation, transformed its e-commerce experience, streamlining operations and enhancing customer engagement to drive significant growth in online orders",
     },
     {
-      url: "/customer-stories/schneider-electric",
+      url: "/customer-stories/blue-cross",
       flagImg: "/europion_union.png",
       userImg: "/stories-dexter.webp",
       companyImg: "/logo-grupo-dexter.svg",
