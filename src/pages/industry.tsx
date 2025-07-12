@@ -21,7 +21,7 @@ const stories = [
     textColor: "text-[#008093]",
     buttonStyle:
       "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-    link: "/customer-stories/cona-detail",
+    link: "/customer-stories/commerce-cloud-implementation",
   },
   {
     subtitle: "Unlocking Insights",
@@ -32,7 +32,7 @@ const stories = [
     textColor: "text-[#008093]",
     buttonStyle:
       "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-    link: "/customer-stories/gador-detail",
+    link: "/customer-stories/blue-cross",
   },
   {
     subtitle: "Empowering Success",
@@ -44,7 +44,7 @@ const stories = [
     textColor: "text-[#008093]",
     buttonStyle:
       "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-    link: "/customer-stories/dexter-detail",
+    link: "/customer-stories/schneider-electric",
   },
 ];
 

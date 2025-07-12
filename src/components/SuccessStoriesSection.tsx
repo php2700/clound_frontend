@@ -12,7 +12,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-      link: "/customer-stories/cona-detail",
+      link: "/customer-stories/commerce-cloud-implementation",
     },
     {
       subtitle: "Unlocking Insights",
@@ -23,7 +23,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-      link: "/customer-stories/gador-detail",
+      link: "/customer-stories/blue-cross",
     },
     {
       subtitle: "Empowering Success",
@@ -35,7 +35,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-      link: "/customer-stories/dexter-detail",
+      link: "/customer-stories/schneider-electric",
     },
   ];
 
@@ -71,7 +71,7 @@ const SuccessStoriesSection = () => {
         <img
           src="https://cloudgaia.com/storage/2025/01/home-success-overlay-1.svg"
           alt="Decorative"
-          className="absolute bottom-0 left-0 right-0 w-full z-0 pointer-events-none mb-[-20px]"
+          className="absolute bottom-0 left-0 right-0 w-full z-0  mb-[-20px]"
         />
 
         <div className="relative z-10 container mx-auto  px-4 md:px-10">
