@@ -6,7 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Dexter_Detail = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -21,13 +21,13 @@ export const Dexter_Detail = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
- const handlePage=(e)=>{
-    navigate("/resources/customer-stories")
-  }
+  const handlePage = (e) => {
+    navigate("/resources/customer-stories");
+  };
 
-  const handleHome=()=>{
-    navigate("/")
-  }
+  const handleHome = () => {
+    navigate("/");
+  };
 
   return (
     <div className="relative min-h-screen">
@@ -44,11 +44,17 @@ export const Dexter_Detail = () => {
             <div className="flex items-center text-sm text-[#474747] mt-10">
               <img src="/bread-home.svg" className="mr-1 text-xl" />
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="text-base font-bold cursor-pointer" onClick={handleHome}>
+              <span
+                className="text-base font-bold cursor-pointer"
+                onClick={handleHome}
+              >
                 &nbsp; Resources
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
-              <span className="mx-1 text-base font-bold cursor-pointer" onClick={handlePage}>
+              <span
+                className="mx-1 text-base font-bold cursor-pointer"
+                onClick={handlePage}
+              >
                 &nbsp;Customer Stories
               </span>
               <span className="mx-1 text-base font-bold">&nbsp;/</span>
@@ -57,7 +63,11 @@ export const Dexter_Detail = () => {
               </span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4">
-              <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
+              <img
+                src="/europion_union.png"
+                className="w-5 h-5"
+                alt="USA Flag"
+              />
               <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
                 Schneider Electric
               </span>
@@ -86,7 +96,7 @@ export const Dexter_Detail = () => {
               className="text-lg text-[#474747] mb-20"
             >
               Schneider Electric’s Europe’s leading provider of energy and
-              industrial automation, , transformed its e-commerce experience,
+              industrial automation , transformed its e-commerce experience,
               streamlining operations and enhancing customer engagement to drive
               significant growth in online orders.
             </div>
@@ -143,17 +153,18 @@ export const Dexter_Detail = () => {
                   style={{ lineHeight: "1.2em" }}
                   className="text-[#f9f9f9] text-lg"
                 >
-                  Grupo Dexter has a strategic focus on leveraging innovative
-                  technological tools to strengthen its connection with
-                  customers. They required a robust platform to support the high
-                  operational demands of Netshoes Argentina, ensuring seamless
-                  management of large transaction volumes. The solution also
-                  needed to be highly flexible to swiftly implement diverse
-                  promotional strategies and business initiatives. Additionally,
-                  it was essential to gain a 360° customer view by integrating
-                  data across multiple platforms, enabling a more unified and
-                  customer-focused retail experience that drives business
-                  growth.
+                  Schneider Electric has a strategic focus on leveraging
+                  cutting-edge digital technologies to deepen its engagement
+                  with customers. The company required a scalable and resilient
+                  platform to support the complex operational needs of its
+                  global energy management and automation business, ensuring
+                  seamless handling of high-volume transactions across regions.
+                  The solution also needed to offer the agility to rapidly
+                  deploy diverse service models and innovation-driven business
+                  initiatives. Equally critical was the ability to unify
+                  customer data from multiple systems, enabling a 360° customer
+                  view that enhances decision-making, improves service delivery,
+                  and drives sustainable growth.
                 </div>
               </div>
 
@@ -178,7 +189,7 @@ export const Dexter_Detail = () => {
                   <strong>
                     {" "}
                     A multi-cloud platform that seamlessly integrates data from
-                    all of Grupo Dexter’s brands into a unified solution.
+                    all of Schneider Electric brands into a unified solution.
                   </strong>
                 </div>
                 <div

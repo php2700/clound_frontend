@@ -12,6 +12,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { text } from "stream/consumers";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const ProductsIcon = () => (
   <svg
@@ -267,7 +268,7 @@ export const ConaService = () => {
               </span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4">
-              <img src="/flag-usa (1).svg" className="w-6 h-6" alt="USA Flag" />
+              <img src="/flag-usa (1).svg" className="w-5 h-5" alt="USA Flag" />
               <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
                 commerce-cloud-implemation
               </span>
@@ -292,7 +293,7 @@ export const ConaService = () => {
             </div>
             <p
               style={{ lineHeight: "1.2em" }}
-              className="text-lg text-lg mb-10 text-[#474747]"
+              className="text-lg text-lg my-10 text-[#474747]"
             >
               Unlocking the potential of Salesforce by Doordash, a scalable and
               digital platform designed to keep B2B
@@ -301,7 +302,7 @@ export const ConaService = () => {
           </header>
           {/* Main Content Grid */}
           <main className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-            <div className="bg-white text-[#008093] p-8 rounded-lg border border-gray-200 flex flex-col justify-center">
+            <div className="bg-white text-[#008093] p-8 rounded-lg border border-gray-200 flex flex-col justify-start">
               <span className="text-3xl mb-4">
                 <img src="/icon-info (13).svg"></img>{" "}
               </span>
@@ -311,7 +312,7 @@ export const ConaService = () => {
               >
                 About Doordash Services
               </h2>
-              <p
+              {/* <p
                 className="text-[#f9f9f9] leading-relaxed mb-4"
                 style={{ lineHeight: "1.2em" }}
               >
@@ -321,7 +322,7 @@ export const ConaService = () => {
                 </strong>{" "}
                 They provide solutions for bottlers to optimally manage their
                 day-to-day business and refresh the world.
-              </p>
+              </p> */}
               <p
                 style={{ lineHeight: "1.2em" }}
                 className="text-[#474747] text-lg"
@@ -397,10 +398,7 @@ export const ConaService = () => {
           {/* Results Section */}
           <section className="mt-12">
             <div className="bg-[#474747] text-[#f9f9f9] text-center p-6 rounded-lg shadow-lg text-[40px]">
-              <h2
-                className=" text-[40px]  font-medium flex items-center justify-center gap-4"
-                style={{ fontFamily: "sans-serif,dm-sans" }}
-              >
+              <h2 className=" text-[40px]  font-semibold flex items-center justify-center gap-4">
                 <span>
                   <img src="/icon-stars-white.svg"></img>
                 </span>
@@ -471,18 +469,20 @@ export const ConaService = () => {
                 ></iframe>
               </div> */}
               <div className="bg-[#008093] text-white p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-bold ">
+                <h2 style={{ fontSize: "40px" }} className=" font-semibold ">
                   {solutionsAndBenefitsData.solutionsTitle}
                 </h2>
                 <ul className="mt-6 space-y-3">
                   {solutionsAndBenefitsData.solutionItems.map((item) => (
-                    <li key={item.text} className="flex items-center text-lg">
+                    <li key={item.text} className="flex items-center text-lg ">
                       {item.checked ? (
-                        <FaCheck className="mr-3 text-white flex-shrink-0" />
+                        <FaCheck className="mr-3 text-[#474747] flex-shrink-0" />
                       ) : (
                         <div className="w-[14px] mr-3 flex-shrink-0"></div>
                       )}
-                      <span>{item.text}</span>
+                      <span style={{ lineHeight: "1em" }} className="text-lg">
+                        {item.text}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -500,10 +500,18 @@ export const ConaService = () => {
                     className="h-12 w-12 mb-5"
                     loading="lazy"
                   />
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3
+                    style={{ lineHeight: "1.2em" }}
+                    className="text-2xl font-bold text-white mb-3"
+                  >
                     {card.title}
                   </h3>
-                  <p className="leading-relaxed">{card.description}</p>
+                  <p
+                    style={{ lineHeight: "1.2em" }}
+                    className="leading-relaxed text-lg"
+                  >
+                    {card.description}
+                  </p>
                 </div>
               ))}
               {/* {solutionsAndBenefitsData.benefitCards.map((card) => { const Icon = benefitIcons[card.imgSrc]; return (<div key={card.title} className="bg-[#474747] text-[#f9f9f9] p-8 rounded-lg shadow-lg">{Icon && <Icon className="text-[#f9f9f9] text-4xl mb-5" />}<h3 className="text-2xl font-bold text-white mb-3">{card.title}</h3><p className="leading-relaxed">{card.description}</p></div>); })} */}
@@ -517,18 +525,17 @@ export const ConaService = () => {
                   key={index}
                   className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
                 >
-                  <blockquote className="md:col-span-2 text-gray-600 text-lg md:text-xl leading-relaxed">
+                  <blockquote className="md:col-span-2 text-[#474747] text-lg md:text-xl leading-relaxed">
                     <p>{testimonial.quote}</p>
                   </blockquote>
-                  <div className="md:col-span-1 md:pl-8">
-                    <div className="font-bold text-xl text-gray-800">
+                  <div className="md:col-span-1 md:px-8">
+                    <div className="font-bold text-xl text-[#474747]">
                       {testimonial.name}
                     </div>
-                    <div className="text-gray-500">{testimonial.title}</div>
+                    <div className="text-[#474747]">{testimonial.title}</div>
                     <img
                       src={testimonial.logoSrc}
                       alt={`${testimonial.name}'s company logo`}
-                      className="mt-2 "
                       style={{ width: "", height: "80px" }}
                     />
                   </div>
@@ -594,12 +601,13 @@ export const ConaService = () => {
                   required
                   className="bg-white/90 text-gray-900 p-3 rounded-md border-none focus:ring-2 focus:ring-pink-500"
                 />
+                {/* <div className="relative"> */}
                 <select
                   name="country"
                   value={formData.country}
                   onChange={handleFormChange}
                   required
-                  className="md:col-span-2 bg-white/90 text-gray-900 p-3 rounded-md border-none focus:ring-2 focus:ring-pink-500"
+                  className="w-full md:col-span-2 p-3 rounded bg-white/90 text-[#474747] text-lg focus:outline-none appearance-none"
                 >
                   <option value="">Country*</option>
                   <option value="US">United States</option>
@@ -607,6 +615,10 @@ export const ConaService = () => {
                   <option value="IN">India</option>
                   <option value="Other">Other</option>
                 </select>
+                <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#474747]  pointer-events-none ">
+                  <ArrowDownwardIcon sx={{ fontSize: 16 }} />
+                </span>
+                {/* </div> */}
                 <textarea
                   name="message"
                   placeholder="Message*"
@@ -617,19 +629,11 @@ export const ConaService = () => {
                   className="md:col-span-2 bg-white/90 text-gray-900 p-3 rounded-md border-none focus:ring-2 focus:ring-pink-500"
                 ></textarea>
               </div>
-              <div className="mt-6 text-xs text-gray-300">
+              <div className="mt-6 text-xs text-[#f9f9f9]">
                 By continuing, I confirm that I have read and agree to the{" "}
-                <a
-                  href="/privacycona "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" hover:text-white cursor-pointer"
-                >
-                  Privacy Policy
-                </a>
-                .
+                <strong className="cursor-pointer">Privacy Policy</strong>
               </div>
-              <div className="mt-4 flex items-center">
+              <div className="mt-4 flex">
                 <input
                   type="checkbox"
                   id="agreeToEmails"
@@ -640,32 +644,45 @@ export const ConaService = () => {
                 />
                 <label
                   htmlFor="agreeToEmails"
-                  className="ml-2 text-sm text-gray-300"
+                  className="ml-2 text-xs text-[#f9f9f9]"
                 >
                   I agree to receive emails from Codescience with updates on
                   services, events, and alerts. I can unsubscribe at any time.
                 </label>
               </div>
-              <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="bg-gray-100 p-2 border border-gray-300 rounded-sm w-full md:w-auto">
-                  <div className="flex items-center gap-4">
-                    <input type="checkbox" id="recaptcha" className="h-6 w-6" />
-                    <label
-                      htmlFor="recaptcha"
-                      className="text-gray-800 text-[14px]"
-                    >
-                      I'm not a robot
-                    </label>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
+                <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
+                  <input
+                    type="checkbox"
+                    id="not-robot"
+                    className="h-4 w-4 mr-2 accent-blue-600"
+                    required
+                    // checked={isRobot}
+                    // onChange={(e) => setIsRobot(e.target.checked)}
+                  />
+                  <label
+                    htmlFor="not-robot"
+                    className="text-[10px] text-[#000] mr-auto"
+                  >
+                    I'm not a robot
+                  </label>
+                  <div className="flex flex-col items-center">
                     <img
                       src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
                       alt="reCAPTCHA logo"
-                      className="h-8"
+                      className="h-6 mb-1"
                     />
+                    <span className="text-[7px] text-[#555] leading-none">
+                      reCAPTCHA
+                    </span>
+                    <span className="text-[6px] text-[#000] cursor-pointer leading-none">
+                      Privacy – Terms
+                    </span>
                   </div>
                 </div>
                 <button
                   type="submit"
-                  className="bg-[#FF83A9] text-white font-bold py-3 px-10 rounded-full  transition-colors w-full md:w-auto"
+                  className="bg-[#FF83A9] text-[#f9f9f9] font-semibold px-6 py-2 rounded-full transition-all"
                 >
                   Send
                 </button>
@@ -674,16 +691,15 @@ export const ConaService = () => {
           </div>
         </section>
 
-        {/* --- CENTERED Back to Cases Link --- */}
-        <div className="text-center my-20 bg-white">
+        <div className="my-20">
           <Link
-            to="/customer-stories"
-            className="inline-flex hover: bg-[ff83a9] items-center gap-3 text-[#474747] bg-[ff83a9]"
+            to="/resources/customer-stories"
+            className="flex gap-5 items-center justify-center group"
           >
-            <span className="bg-yellow-400 text-white h-12 w-12 rounded-full flex items-center justify-center  hover:bg-[#ff83a9]">
-              <FaArrowLeftLong />
-            </span>
-            Back to cases
+            <div className="p-3 bg-[#fcc000] rounded-full  text-white group-hover:cursor-pointer group-hover:bg-[#FF83A9]">
+              <FaArrowLeft />
+            </div>
+            <div className="text-lg text-[#474747]">Back to cases</div>
           </Link>
         </div>
 

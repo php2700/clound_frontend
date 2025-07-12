@@ -32,7 +32,10 @@ const Header = () => {
   };
 
   return (
-    <header className="relative z-50">
+    <header
+      className="relative z-50 "
+      style={{ marginLeft: "10", marginRight: "10px" }}
+    >
       <div
         className="max-w-7xl shadow-md mx-auto px-2 sm:px-4 lg:px-6 bg-[#F9F9F9]"
         style={{ padding: "16px 32px", borderRadius: "10px" }}
