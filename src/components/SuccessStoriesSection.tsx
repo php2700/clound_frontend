@@ -17,7 +17,9 @@ const SuccessStoriesSection = () => {
     },
     {
       subtitle: "Transforming Client Services",
-      logo: "/wgite..png",
+      // logo: "/wgite..png",
+      logo: "/Blue Cross IDHO.png",
+
       logoSubtext: "SERVICES LLC",
       title: "One of the biggest B2B Commerce Lightning projects ",
       bgColor: "bg-white",
