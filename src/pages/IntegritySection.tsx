@@ -146,6 +146,7 @@ import Footer from "@/components/Footer";
 import IntegrityForm from "../pages/IntegrityForm"; // If used on a different route
 
 const IntegritySection = () => {
+     const pdfUrl = "/storages/Codescience pdf";
     const [isHeaderVisible, setIsHeaderVisible] = useState(true);
       const [lastScrollY, setLastScrollY] = useState(0);
       useEffect(() => {
@@ -217,7 +218,7 @@ const IntegritySection = () => {
 
                             <div className="mt-10">
                                 <a
-                                    href="Codescience pdf"
+                                    href={pdfUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block"
