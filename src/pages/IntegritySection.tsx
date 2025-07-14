@@ -143,10 +143,10 @@ import { useNavigate } from "react-router-dom";
 import { Home } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import IntegrityForm from "../pages/IntegrityForm"; // If used on a different route
 
 const IntegritySection = () => {
      const pdfUrl = "/storages/Codescience pdf";
+//   const pdfUrl = `${process.env.PUBLIC_URL}/storages/Codescience pdf`;
     const [isHeaderVisible, setIsHeaderVisible] = useState(true);
       const [lastScrollY, setLastScrollY] = useState(0);
       useEffect(() => {
@@ -167,6 +167,10 @@ const IntegritySection = () => {
     const handleClick = () => {
         navigate('/contact'); // 👈 make sure this route exists in your App.js or Router
     };
+      const handleOpenPdf = () => {
+    window.open(pdfUrl, "_blank");
+   };
+
 
     return (
         <div className="relative min-h-screen bg-white overflow-x-hidden">
@@ -223,7 +227,9 @@ const IntegritySection = () => {
                                     rel="noopener noreferrer"
                                     className="inline-block"
                                 >
-                                    <button className="bg-yellow-400 font-semibold text-[#474747] px-7 py-4 rounded-full hover:bg-[#ff83A0] hover:text-[#f9f9f9] transition-all">
+                                    <button 
+                                     onClick={handleOpenPdf}
+                                    className="bg-yellow-400 font-semibold text-[#474747] px-7 py-4 rounded-full hover:bg-[#ff83A0] hover:text-[#f9f9f9] transition-all">
                                         Read our Code of Conduct and Ethics
                                     </button>
                                 </a>
