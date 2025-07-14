@@ -21,7 +21,7 @@ const HeroSection = () => {
       subtitle: "CONA Services",
       extraDescription: "B2B Commerce | Marketing Cloud",
       buttonText: "Read the success story",
-      buttonLink: "/customer-stories/cona-detail",
+      buttonLink: "/customer-stories/commerce-cloud-implementation",
     },
     {
       url: "agent.webp",
