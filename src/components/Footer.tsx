@@ -70,22 +70,21 @@ const Footer = () => {
                   <span className="text-[#FCC000] font-bold">Top 10</span>
                   <span className="text-[#f9f9f9]">
                     {" "}
-                    Expert in Consumer Goods & Non Profit in
+                    Expert in Consumer Goods 
                   </span>
+                   <div className="flex justify-center items-center space-x-2 mt-1 ml-5"> & Non Profit  in</div>
+               <div className="flex items-center justify-center space-x-2 mt-1">
+              <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N4V00000ISJrLUAX&legacy=true" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/salesforce-app-exchange.svg"
+                  alt="Salesforce Logo"
+                  className="h-6 w-auto pl-10 mr-5"
+                  loading="lazy"
+                />
+              </a>
+            </div>
                 </p>
-                <div className="flex items-center justify-center gap-3 cursor-pointer">
-                  <a
-                    href="https://appexchange.salesforce.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/salesforce-app-exchange.svg"
-                      alt="Invisory Badge"
-                      className=" h-auto"
-                    />
-                  </a>
-                </div>
+             
               </div>
             </div>
 
@@ -282,7 +281,7 @@ const Footer = () => {
                 <div className="flex items-center space-x-2">
                   {/* <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N3u00000Qu5nNEAR"> */}
                   <a
-                    href="https://appexchange.salesforce.com/"
+                    href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N4V00000ISJrLUAX&legacy=true"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

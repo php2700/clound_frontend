@@ -4,6 +4,18 @@ import { Link } from "react-router-dom";
 const SuccessStoriesSection = () => {
   const stories = [
     {
+      subtitle: "Empowering Success",
+      logo: "/doordash.png",
+      logoSubtext: "",
+      title:
+        "+57% Growth in Online Orders: Doordash's Success in E-Commerce Digitization with Salesforce",
+      bgColor: "bg-white",
+      textColor: "text-[#008093]",
+      buttonStyle:
+        "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+      link: "/customer-stories/commerce-cloud-implementation",
+    },
+    {
       subtitle: "Transforming Client Services",
       logo: "/wgite..png",
       logoSubtext: "SERVICES LLC",
@@ -12,7 +24,7 @@ const SuccessStoriesSection = () => {
       textColor: "text-[#008093]",
       buttonStyle:
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-      link: "/customer-stories/commerce-cloud-implementation",
+      link: "/customer-stories/blue-cross",
     },
     {
       subtitle: "Unlocking Insights",
@@ -25,18 +37,7 @@ const SuccessStoriesSection = () => {
         "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
       link: "/customer-stories/schneider-electric",
     },
-    {
-      subtitle: "Empowering Success",
-      logo: "/doordash.png",
-      logoSubtext: "",
-      title:
-        "+57% Growth in Online Orders: Doordash's Success in E-Commerce Digitization with Salesforce",
-      bgColor: "bg-white",
-      textColor: "text-[#008093]",
-      buttonStyle:
-        "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
-      link: "/customer-stories/commerce-cloud-implementation",
-    },
+    
   ];
 
   return (

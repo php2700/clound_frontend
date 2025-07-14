@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: " Kshitij Rodrigue",
+    name: " Kshitij Rodrigues",
     title: "Co-Founder & COO",
     image:
       "/MAN.png",
@@ -383,7 +383,7 @@ const Company = () => {
                 >
                   <img
                     // src="https://cloudgaia.com/storage/2025/01/company-nicolas-orzabal-rounded.svg"
-                    src="/MAN.png"
+                    src="/image (4).png"
                     alt="Nicolás Orzabal"
                     className="w-60 h-auto object-contain rounded-full m-0 p-0 bg-yellow-300 "
                     style={{ display: "block" ,width: "300px", height: "300px"}}
@@ -416,13 +416,13 @@ const Company = () => {
                     style={{ lineHeight: "1.2em" }}
                     className="md:text-3xl mt-1 mb-0 text-xl mt-6"
                   >
-                     Kshitij Rodrigue
+                     Joyson Tuscano
                   </h3>
                   <p
                     style={{ lineHeight: "1.2em" }}
                     className="font-bold text-2xl mt-0 "
                   >
-                    Co-Founder & CEO
+                    Co-Founder & CTO
                   </p>
                 </div>
               </div>
