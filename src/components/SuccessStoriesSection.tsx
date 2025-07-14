@@ -8,7 +8,7 @@ const SuccessStoriesSection = () => {
       logo: "/doordash.png",
       logoSubtext: "",
       title:
-        "+57% Growth in Online Orders: Doordash's Success in E-Commerce Digitization with Salesforce",
+        "One of the biggest B2B Commerce Lightning projects",
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
@@ -21,7 +21,7 @@ const SuccessStoriesSection = () => {
       logo: "/Blue Cross IDHO.png",
 
       logoSubtext: "SERVICES LLC",
-      title: "One of the biggest B2B Commerce Lightning projects ",
+      title: " Transforming Experiences with a 360° Customer View ",
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
@@ -32,7 +32,7 @@ const SuccessStoriesSection = () => {
       subtitle: "Unlocking Insights",
       logo: "/electric-schneider.png",
       logoSubtext: "",
-      title: "Transforming Experiences with a 360° Customer View",
+      title: " +57% Growth in Online Orders: Doordash's Success in E-Commerce Digitization with Salesforce",
       bgColor: "bg-white",
       textColor: "text-[#008093]",
       buttonStyle:
