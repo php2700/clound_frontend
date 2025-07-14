@@ -65,20 +65,24 @@ const StatsSection = () => {
             {/* Line 1 */}
             <h3 className="text-xl">
               <span className="text-[#FACC15] font-semibold">Top 10</span>{" "}
-              <span>Expert in Consumer Goods & Non Profit  in</span>
-            </h3>
-
-            {/* Line 2 */}
-            <div className="flex items-center justify-center space-x-2 mt-1">
-              <a href="https://appexchange.salesforce.com/" target="_blank" rel="noopener noreferrer">
+              <span>Expert in Consumer Goods </span>
+              <div className="flex justify-center items-center space-x-2 mt-1 ml-5"> & Non Profit  in</div>
+               <div className="flex items-center justify-center space-x-2 mt-1">
+              <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=a0N4V00000ISJrLUAX&legacy=true" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/salesforce-app-exchange.svg"
                   alt="Salesforce Logo"
-                  className="h-6 w-auto pl-10"
+                  className="h-6 w-auto pl-10 mr-5"
                   loading="lazy"
                 />
               </a>
             </div>
+
+              
+            </h3>
+
+            {/* Line 2 */}
+           
           </div>
         </div>
       </div>

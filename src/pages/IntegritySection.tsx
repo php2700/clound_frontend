@@ -164,7 +164,7 @@ const IntegritySection = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/form'); // 👈 make sure this route exists in your App.js or Router
+        navigate('/contact'); // 👈 make sure this route exists in your App.js or Router
     };
 
     return (
@@ -217,7 +217,7 @@ const IntegritySection = () => {
 
                             <div className="mt-10">
                                 <a
-                                    href="https://cloudgaia.com/storage/2025/01/Conduct-and-Ethics-Code.pdf"
+                                    href="Codescience pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block"
@@ -262,7 +262,7 @@ const IntegritySection = () => {
                             href="mailto:integrity@cloudgaia.com"
                             className="text-[#008093] text-[18px] font-semibold hover:underline"
                         >
-                            integrity@codescience.com
+                            integrity@code-science.com
                         </a>
                     </p>
                 </section>
