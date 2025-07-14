@@ -145,7 +145,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const IntegritySection = () => {
-     const pdfUrl = "/storages/Codescience pdf";
+     const pdfUrl = "/storages/Codesciencenew.pdf";
 //   const pdfUrl = `${process.env.PUBLIC_URL}/storages/Codescience pdf`;
     const [isHeaderVisible, setIsHeaderVisible] = useState(true);
       const [lastScrollY, setLastScrollY] = useState(0);
@@ -240,9 +240,9 @@ const IntegritySection = () => {
 
                 <div className="w-full mt-[120px]">
                     <img
-                        src="/integrityimg.webp"
+                        src="/integrity-imgnew.png"
                         alt="img.visual"
-                        className="w-full h-[500px] object-cover"
+                        className="w-full h-full object-cover"
                     />
                 </div>
 
