@@ -15,21 +15,21 @@ const HeroSection = () => {
       buttonLink: "/contact",
     },
     {
-      url: "/image (8).png",
-      title: "One of the biggest B2B Commerce Lightning projects in the world.",
+      url: "/image (8).jpg",
+      title: "One of the biggest Non Profit Cloud Lightning projects in the world.",
       logo: "https://cloudgaia.com/storage/2025/01/logo-salesforce.svg",
-      subtitle: "CONA Services",
-      extraDescription: "B2B Commerce | Marketing Cloud",
+      subtitle: "DonatePlus Services",
+      extraDescription: "Non Profit Cloud | Marketing Cloud",
       buttonText: "Read the success story",
-      buttonLink: "/customer-stories/commerce-cloud-implementation",
+      buttonLink: "/customer-stories/non-profit-cloud",
     },
-    {
-      url: "agent.webp",
-      buttonText: "Read about AI Expert Insights",
-      buttonLink: "/resources/blog",
-      imageRight:
-        "PNG-AGENTFORCE-CARROUSEL-r7vqlsma9mbm1a8wi5hm7menkf81biqh6vd6g2xiww.png",
-    },
+    // {
+    //   url: "agent.webp",
+    //   buttonText: "Read about AI Expert Insights",
+    //   buttonLink: "/resources/blog",
+    //   imageRight:
+    //     "PNG-AGENTFORCE-CARROUSEL-r7vqlsma9mbm1a8wi5hm7menkf81biqh6vd6g2xiww.png",
+    // },
     // {
     //   url: "/home-hero1.jpeg",
     //   imageLeft:

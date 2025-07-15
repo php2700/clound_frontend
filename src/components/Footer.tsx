@@ -162,7 +162,7 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-3">
                   {[
-                    "Retail & Consumer Goods",
+                    "Retail & Non Profit & Consumer Goods",
                     "Financial Services",
                     "Agriculture & Mining",
                     "Communications, Media & Telco",
