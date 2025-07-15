@@ -10,13 +10,49 @@ import { Button } from "@/components/ui/button";
 // import { Link } from "lucide-react";
 // import industries3 from "@/public/industries4.PNG"; // adjust path if different
 
+// const stories = [
+//   {
+//     subtitle: "Transforming Client Services",
+//     logo: "/wgite..png",
+//     // logoSubtext: "SERVICES LLC",
+
+//     title: "One of the biggest B2B Commerce Lightning projects ",
+//     bgColor: "bg-white",
+//     textColor: "text-[#008093]",
+//     buttonStyle:
+//       "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+//     link: "/customer-stories/commerce-cloud-implementation",
+//   },
+//   {
+//     subtitle: "Unlocking Insights",
+//     logo: "/electric-schneider.png",
+//     logoSubtext: "",
+//     title: "Transforming Experiences with a 360° Customer View",
+//     bgColor: "bg-white",
+//     textColor: "text-[#008093]",
+//     buttonStyle:
+//       "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+//     link: "/customer-stories/blue-cross",
+//   },
+//   {
+//     subtitle: "Empowering Success",
+//     logo: "/doordash.png",
+//     logoSubtext: "",
+//     title:
+//       "+57% Growth in Online Orders: Doordash's Success in E-Commerce Digitization with Salesforce",
+//     bgColor: "bg-white",
+//     textColor: "text-[#008093]",
+//     buttonStyle:
+//       "bg-[#ff83a9] text-white border-none hover:bg-pink-300 hover:text-pink-800",
+//     link: "/customer-stories/schneider-electric",
+//   },
+// ];
 const stories = [
   {
-    subtitle: "Transforming Client Services",
-    logo: "/wgite..png",
-    // logoSubtext: "SERVICES LLC",
-
-    title: "One of the biggest B2B Commerce Lightning projects ",
+    subtitle: "Empowering Success",
+    logo: "/doordash.png",
+    logoSubtext: "",
+    title: "One of the biggest B2B Commerce Lightning projects",
     bgColor: "bg-white",
     textColor: "text-[#008093]",
     buttonStyle:
@@ -24,10 +60,12 @@ const stories = [
     link: "/customer-stories/commerce-cloud-implementation",
   },
   {
-    subtitle: "Unlocking Insights",
-    logo: "/electric-schneider.png",
-    logoSubtext: "",
-    title: "Transforming Experiences with a 360° Customer View",
+    subtitle: "Transforming Client Services",
+    // logo: "/wgite..png",
+    logo: "/blue-cross.png",
+
+    // logoSubtext: "SERVICES LLC",
+    title: " Transforming Experiences with a 360° Customer View ",
     bgColor: "bg-white",
     textColor: "text-[#008093]",
     buttonStyle:
@@ -35,11 +73,11 @@ const stories = [
     link: "/customer-stories/blue-cross",
   },
   {
-    subtitle: "Empowering Success",
-    logo: "/doordash.png",
+    subtitle: "Unlocking Insights",
+    logo: "/electric-schneider.png",
     logoSubtext: "",
     title:
-      "+57% Growth in Online Orders: Doordash's Success in E-Commerce Digitization with Salesforce",
+      "+57% Growth in Online Orders: Schinder Electric Success in E-Commerce Digitization with Salesforce",
     bgColor: "bg-white",
     textColor: "text-[#008093]",
     buttonStyle:
@@ -367,7 +405,7 @@ const Industries = () => {
             {stories.map((story, index) => (
               <div
                 key={index}
-                className={`${story.bgColor} group rounded-2xl p-8 hover:bg-[#fcc000] shadow-xl flex flex-col justify-between h-full transform transition-all duration-300`}
+                className={`${story.bgColor} group rounded-2xl p-8 hover:bg-[#fcc000] shadow-xl flex flex-col h-full transform transition-all duration-300`}
               >
                 <div className="flex justify-between items-center">
                   <p className="text-[14px] font-bold text-[#ff83a9] group-hover:text-[#474747] mb-3 tracking-wide transition-colors">
@@ -375,13 +413,10 @@ const Industries = () => {
                   </p>
 
                   <div className="mb-6">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center  gap-2">
                       <div>
                         <div className="text-lg font-bold text-red-600 group-hover:text-[#474747] transition-colors duration-300">
-                          <img
-                            src={story.logo}
-                            style={{ width: "190px", height: "90px" }}
-                          />
+                          <img src={story.logo} style={{ height: "90px" }} />
                         </div>
                         {story.logoSubtext && (
                           <div className="text-[8px] font-semibold text-red-600 group-hover:text-black transition-colors duration-300">
@@ -393,20 +428,22 @@ const Industries = () => {
                   </div>
                 </div>
 
-                <h3
-                  className={`text-3xl font-bold ${story.textColor} mb-6 leading-tight`}
-                >
-                  {story.title}
-                </h3>
-
-                <Link to={story.link}>
-                  <Button
-                    variant="outline"
-                    className={`${story.buttonStyle} rounded-full font-bold text-base hover:bg-white hover:text-[#474747] py-3 px-6`}
+                <div className="flex flex-col h-full justify-between">
+                  <h3
+                    className={`text-3xl font-bold ${story.textColor} mb-6 leading-tight`}
                   >
-                    Discover this story
-                  </Button>
-                </Link>
+                    {story.title}
+                  </h3>
+
+                  <Link to={story.link}>
+                    <Button
+                      variant="outline"
+                      className={`${story.buttonStyle} rounded-full font-bold text-base hover:bg-white hover:text-[#474747] py-3 px-6`}
+                    >
+                      Discover this story
+                    </Button>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
