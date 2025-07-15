@@ -65,9 +65,8 @@ export const Customer_Stories = () => {
       url: "/customer-stories/schneider-electric",
       flagImg: "/europion_union.png",
       // userImg: "/stories-gador.webp",
-      userImg: "/frontelectric.jpeg",
+      userImg: "/schelinder-user.jpg",
 
-      
       companyImg: "/electric-logo.png",
       services: "Commerce Cloud B2C | Service Cloud | Marketing Cloud",
       title:
@@ -81,7 +80,6 @@ export const Customer_Stories = () => {
       // userImg: "/stories-dexter.webp",
       userImg: "/frontelectric.jpeg",
 
-      
       companyImg: "/Blue Cross IDHO.png",
       services:
         "Service Cloud | Sales Cloud | Marketing Cloud | Consumer Goods Cloud | Platform | Commerce Cloud",

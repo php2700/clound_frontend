@@ -11,8 +11,16 @@ import { Link, useLocation } from "react-router-dom";
 
 // Define team members
 const teamMembers = [
-  {
+   {
     id: 1,
+    name: "Joyson Tuscano",
+    title: "Co-Founder & CTO",
+    image:
+      "image (4).png",
+    linkedIn: "#",
+  },
+  {
+    id: 2,
     name: "Walson Dmello",
     title: "Co-Founder & CEO",
     image:
@@ -20,14 +28,7 @@ const teamMembers = [
       "image (3).webp",
     linkedIn: "#",
   },
-  {
-    id: 2,
-    name: "Joyson Tuscano",
-    title: "Co-Founder & CTO",
-    image:
-      "image (4).png",
-    linkedIn: "#",
-  },
+ 
   {
     id: 3,
     name: " Kshitij Rodrigues",
@@ -38,25 +39,34 @@ const teamMembers = [
   },
   {
     id: 4,
+    name: "Ashwin Sankaran",
+    title: "Board Member",
+    image:
+      "/ashwin.png",
+    linkedIn: "#",
+  },
+
+  {
+    id: 5,
+    name: "Mateja Sharp",
+    title: "Head of Sales",
+    image: "ChatGPT Image Jul 3, 2025, 05_54_54 PM.png",
+    linkedIn: "#",
+  },
+   {
+    id: 6,
     name: "Kabir Shah",
     title: "Salesforce Architect",
     image:
       "ChatGPT Image Jul 1, 2025, 09_21_45 PM.png",
     linkedIn: "#",
   },
-  {
-    id: 5,
+   {
+    id: 7,
     name: "Sam La Banco",
     title: "Board Member & Advisor",
     image:
       "ChatGPT Image Jul 1, 2025, 09_21_50 PM.png",
-    linkedIn: "#",
-  },
-  {
-    id: 6,
-    name: "Mateja Sharp",
-    title: "Head of Sales",
-    image: "ChatGPT Image Jul 3, 2025, 05_54_54 PM.png",
     linkedIn: "#",
   },
   // {
@@ -422,7 +432,7 @@ const Company = () => {
                     style={{ lineHeight: "1.2em" }}
                     className="font-bold text-2xl mt-0 "
                   >
-                    Co-Founder & CTO
+                    Co-Founder & CEO
                   </p>
                 </div>
               </div>
@@ -509,7 +519,7 @@ const Company = () => {
               <h2 className="text-3xl md:text-6xl font-bold text-center text-[#474747] mb-10">
                 Our senior leadership team
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
                 {teamMembers.map((member) => (
                   <div
                     key={member.id}

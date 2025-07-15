@@ -132,7 +132,7 @@ const allSections: ExpertiseSection[] = [
     title: "Non Profit",
     items: [
       {
-        label: "Mass Merchants,Dept Stores,& e-Retail",
+        label: "Non Profit & Fundraising",
         image:
           "https://cloudgaia.com/storage/2025/01/logo-salesforce-specialist-I.svg",
       },

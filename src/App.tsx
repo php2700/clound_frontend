@@ -33,6 +33,7 @@ import IntegritySection from "./pages/IntegritySection";
 import IntegrityForm from "./pages/IntegrityForm";
 import Privacypolicy from "./pages/Privacypolicy";
 import { Thankyou } from "./pages/thankyou";
+import { NonProfit } from "./pages/Resources/non_profit";
 
 const queryClient = new QueryClient();
 
@@ -79,6 +80,10 @@ const App = () => (
           <Route
             path="/customer-stories/commerce-cloud-implementation"
             element={<ConaService />}
+          />
+          <Route
+            path="/customer-stories/non-profit-cloud"
+            element={<NonProfit />}
           />
           <Route path="/customer-stories" element={<Customer_Stories />} />
           <Route path="/blog-detail/:_id" element={<Blog_Detail />} />

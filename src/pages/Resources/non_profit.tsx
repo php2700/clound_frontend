@@ -84,17 +84,8 @@ const iconComponents = {
   users: UsersIcon,
   orders: OrdersIcon,
 };
-const SalesforceLogo = () => (
-  <svg className="h-8" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-    {" "}
-    <path
-      fill="#00A1E0"
-      d="M99.8,26.5c-0.5-2.8-2-5.3-4.4-7.2c-2.4-1.9-5.4-2.9-8.5-2.9c-3.1,0-6,0.9-8.5,2.8c-2.5,1.9-4.2,4.6-4.9,7.8 C71,21,67.5,17.9,63.2,16c-4.4-1.9-9.2-2.3-13.8-1.2c-4.6,1.1-8.7,3.6-11.8,7.3c-3.1,3.7-4.9,8.4-4.9,13.3c0,3,0.5,5.8,1.6,8.5 c1.1,2.7,2.7,5,4.8,6.8c2.1,1.8,4.6,3.1,7.4,3.7c2.8,0.6,5.6,0.6,8.4,0c2.8-0.6,5.3-1.9,7.4-3.7c1.9-1.6,3.3-3.6,4.3-5.9 c0.9-2.3,1.4-4.7,1.4-7.3c0-0.8-0.1-1.6-0.1-2.5c2.6,2.3,5.8,3.5,9.3,3.5c3.2,0,6.1-1,8.5-2.9c2.4-1.9,4-4.5,4.4-7.5 C100,28.2,99.9,27.3,99.8,26.5z"
-    />{" "}
-  </svg>
-);
 
-export const ConaService = () => {
+export const NonProfit = () => {
   const navigate = useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
@@ -127,9 +118,17 @@ export const ConaService = () => {
   const resultsData = {
     title: "Delivering exceptional results",
     stats: [
-      { icon: "products", value: "100,000,000+", label: "Products sold" },
-      { icon: "conversion", value: ">50%", label: "Daily conversion rate" },
-      { icon: "users", value: "120,000+", label: "Active users" },
+      { icon: "products", value: "35%", label: "Increase in Donor Retention" },
+      {
+        icon: "conversion",
+        value: "<70%",
+        label: " Reduction in Manual Reporting Time",
+      },
+      {
+        icon: "users",
+        value: "120,000+",
+        label: "Improved Volunteer Engagement",
+      },
       { icon: "orders", value: "65,000+", label: "Orders per week" },
     ],
   };
@@ -137,8 +136,7 @@ export const ConaService = () => {
     youtubeVideoId: "XyfRqxt5aK0",
     solutionsTitle: "Salesforce solutions",
     solutionItems: [
-      { text: "Commerce Cloud", checked: true },
-      { text: "Consumer Goods Cloud", checked: true },
+      { text: "Nonprofit Cloud", checked: true },
       { text: "Marketing Cloud", checked: true },
       { text: "Service Cloud", checked: true },
       { text: "Service Lightning", checked: true },
@@ -148,15 +146,15 @@ export const ConaService = () => {
     benefitCards: [
       {
         imgSrc: "/industries-icon-7.svg",
-        title: "Driving higher conversions with modern user experience",
+        title: "35% Increase in Donor Retention",
         description:
-          "Provides a unified product catalog with hyper-personalized content for each customer segment.",
+          "Personalized, timely engagement driven by better segmentation and automation led to a significant improvement in donor loyalty.",
       },
       {
         imgSrc: "/icon-clock-pink.svg",
-        title: "Increased revenue generation",
+        title: "Increased Transparency",
         description:
-          "Automation of recurring orders simplifies inventory management, while enhanced real-time business insights increase data visibility and improve decision making.",
+          "Stakeholders could now clearly visualize the link between funding and outcomes, building trust and fueling future giving.",
       },
       {
         imgSrc: "/icon-global.svg",
@@ -168,10 +166,10 @@ export const ConaService = () => {
   };
   const testimonialsData = [
     {
-      name: " Kimberly Mitchell",
-      title: "Chief Digital Officer",
-      logoSrc: "/doordash.png",
-      quote: `"From the very beginning, we had a one team approach. Code Science brought a strategic vision that helped us plan for success, achieve our goals and support our Customers commercial growth plans."`,
+      name: "Emma Hayes",
+      title: "Director of Programs, DonatePlus",
+      //   logoSrc: "/doordash.png",
+      quote: `"Salesforce Nonprofit Cloud has transformed how we operate. We’re more connected, more efficient, and more impactful. Our supporters now feel like true partners in our mission."`,
     },
     {
       name: "Walson Dmello",
@@ -263,14 +261,12 @@ export const ConaService = () => {
                 Customer Stories
               </span>
               <span className="mx-1 text-base font-bold">/</span>
-              <span className="mx-1 text-base font-bold">
-                Doordash
-              </span>
+              <span className="mx-1 text-base font-bold">DonatePlus</span>
             </div>
             <div className="mx-1 flex items-center text-lg font-medium mt-4">
               <img src="/flag-usa (1).svg" className="w-5 h-5" alt="USA Flag" />
               <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
-                 Doordash
+                DonatePlus
               </span>
             </div>
             {/* <div className="font-medium text-gray-800 mb-2.5"><img src="/flag-usa (1).svg" /><span> CONA Services - US</span></div> */}
@@ -278,8 +274,8 @@ export const ConaService = () => {
               className="text-4xl md:text-6xl font-bold text-[#008093]  mt-5 mb-2"
               style={{ lineHeight: "1em" }}
             >
-              Empowering customer engagement with a scalable B2B Commerce
-              platform
+              Empowering growth and transparency with an intelligent nonprofit
+              engagement system
             </h1>
             <div className="flex items-center gap-3 mb-4 text-[24px] text-[#474747]">
               {" "}
@@ -288,16 +284,16 @@ export const ConaService = () => {
                 style={{ lineHeight: "1.2em" }}
                 className="text-2xl text-[#474747]"
               >
-                B2B Commerce | Marketing Cloud
+                Nonprofit Cloud | Marketing Cloud
               </span>
             </div>
             <p
               style={{ lineHeight: "1.2em" }}
               className="text-lg text-lg my-10 text-[#474747]"
             >
-              Unlocking the potential of Salesforce by Doordash, a scalable and
-              digital platform designed to keep B2B
-              <br /> customers stocked with a variety of iconic products.
+              Empowering nonprofit innovation with Salesforce — DonatePlus
+              scales donor relationships, impact tracking, and volunteer
+              engagement through a unified digital solution.
             </p>
           </header>
           {/* Main Content Grid */}
@@ -310,7 +306,7 @@ export const ConaService = () => {
                 style={{ lineHeight: "1.2em" }}
                 className="font-semibold text-[#008093] text-[40px]  mb-4"
               >
-                About Doordash Services
+                About DonatePlus Services
               </h2>
               {/* <p
                 className="text-[#f9f9f9] leading-relaxed mb-4"
@@ -328,15 +324,25 @@ export const ConaService = () => {
                 className="text-[#474747] text-lg"
               >
                 {" "}
-                We partnered with the Doordash Digital Office (KDO), an
-                interdisciplinary and inter-agency team of product and
-                engineering specialists, to work as one team and upgrade their
-                B2B eCommerce platform with a focus on customer experience.
+                DonatePlus is a dynamic nonprofit organization based in the
+                U.S., focused on connecting donors, volunteers, and grassroots
+                organizations to maximize impact in underserved communities.
+                With programs ranging from education and healthcare to
+                sustainable livelihoods, their mission is to ensure every dollar
+                and every volunteer hour counts
+              </p>
+              <p
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#474747] text-lg mt-4"
+              >
+                As their operations scaled, the team at DonatePlus realized
+                their existing systems couldn’t support the growing complexity
+                of donor management, volunteer tracking, and impact reporting.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
               <img
-                src="/Ai image laptop people.png"
+                src="/image (8).jpg"
                 alt="Store owners with a tablet"
                 className="w-full h-full object-cover"
               />
@@ -355,11 +361,35 @@ export const ConaService = () => {
                 className="text-[#f9f9f9] text-lg "
                 style={{ lineHeight: "1.2em" }}
               >
-                Doordash Services set out to transform its customer engagement
-                platform through Salesforce technology. The goal: deliver a
-                seamless, hyper-personalized buying experience for the 11
-                largest products, enabling them to streamline operations, boost
-                loyalty, and drive growth across the region.
+                DonatePlus faced several limitations in their legacy systems:
+              </p>
+              <ul className="list-disc list-inside text-[#f9f9f9] text-base my-4">
+                <li>
+                  Fragmented donor and volunteer databases across spreadsheets
+                  and disconnected platforms.
+                </li>
+                <li>
+                  No unified view of constituent relationships, leading to
+                  inconsistent communication and missed engagement
+                  opportunities.
+                </li>
+                <li>
+                  Manual donation tracking and reporting, which drained
+                  resources and caused delays in transparency to donors and
+                  grant providers.
+                </li>
+                <li>
+                  Difficulty in capturing program outcomes and showcasing
+                  measurable impact.
+                </li>
+              </ul>
+              <p
+                className="text-[#f9f9f9] text-lg "
+                style={{ lineHeight: "1.2em" }}
+              >
+                Their leadership sought a robust platform that could centralize
+                operations, enhance transparency, and provide data-driven
+                insights into fundraising and program delivery.
               </p>
             </div>
             <div className="bg-[#008093] text-[f9f9f9] text-white p-8 rounded-lg">
@@ -373,25 +403,58 @@ export const ConaService = () => {
                 style={{ lineHeight: "1.2em" }}
                 className="text-[#f9f9f9] text-lg mb-4"
               >
-                Together with Code Science and Salesforce, Doordash Services
-                enhanced its B2B Commerce strategy — one of the largest
-                implementations of Salesforce B2B Commerce on Lightning.
+                Working closely with the DonatePlus leadership, our team led the
+                end-to-end implementation of Salesforce Nonprofit Cloud tailored
+                to their mission-driven needs. Key milestones included:
               </p>
               <p
                 style={{ lineHeight: "1.2em" }}
                 className="text-[#f9f9f9] text-lg mb-4"
               >
-                Built with scalability, automation, and data-driven insights at
-                its core, the platform redefined how bottlers and customers do
-                business.
+                <strong>Constituent 360</strong>
+                <br /> We unified donor, volunteer, and partner data using the
+                Nonprofit Success Pack (NPSP). The result was a holistic view of
+                every supporter’s engagement, from donations to event attendance
+                and volunteer hours.
               </p>
               <p
                 style={{ lineHeight: "1.2em" }}
                 className="text-[#f9f9f9] text-lg mb-4"
               >
-                Doordash: a scalable platform includes multiple storefronts,
-                hyper-personalized experiences, automated recurring orders,
-                optimized reporting, and more.
+                <strong> Donation Management Automation</strong>
+                <br /> Recurring and one-time donations were streamlined using
+                customizable gift entry templates, payment processor
+                integrations, and automation via Salesforce Flow. Real-time
+                dashboards gave the team immediate visibility into campaign
+                performance.
+              </p>
+              <p
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#f9f9f9] text-lg mb-4"
+              >
+                <strong>Volunteer & Grant Tracking </strong> <br />
+                We set up custom volunteer tracking and grant lifecycle
+                management, enabling program managers to monitor participation
+                and funding milestones with precision.
+              </p>
+              <p
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#f9f9f9] text-lg mb-4"
+              >
+                <strong> Experience Cloud Portal </strong>
+                <br /> A self-service portal was developed using Experience
+                Cloud, allowing donors and volunteers to view their activity
+                history, download receipts, update preferences, and explore
+                impact stories.
+              </p>
+              <p
+                style={{ lineHeight: "1.2em" }}
+                className="text-[#f9f9f9] text-lg mb-4"
+              >
+                <strong> Impact Reporting </strong>
+                <br /> Program impact metrics were digitized and tied directly
+                to donations, offering rich, real-time impact reports to
+                internal stakeholders and external donors alike.
               </p>
             </div>
           </main>
@@ -555,7 +618,7 @@ export const ConaService = () => {
             />
             <div className="absolute inset-0 bg-black/90 bg-[url('/stories-cona-banner-back.webp')] bg-cover bg-center">
               <h2 className=" text-[35px] text-center font-bold mt-12 tracking-tight whitespace-nowrap  mr]">
-                Want to see how we can help you scale your B2B commerce?
+                Want to see how we can help you scale your Non Profit Cloud ?
               </h2>
             </div>
           </div>
