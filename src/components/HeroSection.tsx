@@ -112,8 +112,8 @@ const HeroSection = () => {
               style={{ backgroundImage: `url('${image.url}')` }}
               aria-hidden={index !== currentImageIndex}
             >
-              {(index === 2 || index === 3) && (
-                <div className="absolute inset-0 bg-[#1f1f25] opacity-90"></div>
+              {(index === 1 || index === 2) && (
+                <div className="absolute inset-0 bg-[#1f1f25] opacity-60"></div>
               )}
             </div>
           ))}
@@ -149,13 +149,13 @@ const HeroSection = () => {
                 <img
                   src={images[1].logo}
                   alt="Salesforce Logo"
-                  className="h-16 mr-4"
+                  className="h-16 mr-4 "
                 />
-                <p className="text-lg md:text-xl text-white">
+                <p className="text-lg md:text-xl  text-[#f9f9f9]">
                   {images[1].extraDescription}
                 </p>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-[#FACC15] mb-4">
                 {images[1].title}
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">

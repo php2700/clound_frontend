@@ -596,11 +596,13 @@ export const NonProfit = () => {
                       {testimonial.name}
                     </div>
                     <div className="text-[#474747]">{testimonial.title}</div>
-                    <img
-                      src={testimonial.logoSrc}
-                      alt={`${testimonial.name}'s company logo`}
-                      style={{ width: "", height: "80px" }}
-                    />
+                    {testimonial?.logoSrc && (
+                      <img
+                        src={testimonial.logoSrc}
+                        alt={`${testimonial.name}'s company logo`}
+                        style={{ width: "", height: "80px" }}
+                      />
+                    )}
                   </div>
                 </div>
               ))}

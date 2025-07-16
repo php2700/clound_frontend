@@ -8,15 +8,13 @@ import ExpertiseCollapse from "@/components/Expertise_cloud";
 import IndustryCollapse from "@/components/industry_expertise";
 import { Link, useLocation } from "react-router-dom";
 
-
 // Define team members
 const teamMembers = [
-   {
+  {
     id: 1,
     name: "Joyson Tuscano",
     title: "Co-Founder & CEO",
-    image:
-      "image (4).png",
+    image: "/joyson.jpg",
     linkedIn: "#",
   },
   {
@@ -25,24 +23,22 @@ const teamMembers = [
     title: "Co-Founder & CTO",
     image:
       // "Screenshot 2025-07-03 175207.jpg",
-      "image (3).webp",
+      "/walson.jpg",
     linkedIn: "#",
   },
- 
+
   {
     id: 3,
     name: " Kshitij Rodrigues",
     title: "Co-Founder & CSO",
-    image:
-      "/MAN.png",
+    image: "/MAN.png",
     linkedIn: "#",
   },
   {
     id: 4,
     name: "Ashwin Sankaran",
     title: "Board Member",
-    image:
-      "/ashwin.png",
+    image: "/ashwin.png",
     linkedIn: "#",
   },
 
@@ -53,23 +49,21 @@ const teamMembers = [
     image: "ChatGPT Image Jul 3, 2025, 05_54_54 PM.png",
     linkedIn: "#",
   },
-    {
+  {
     id: 6,
     name: "Sam La Banco",
     title: "Board Member & Advisor",
-    image:
-      "ChatGPT Image Jul 1, 2025, 09_21_50 PM.png",
+    image: "ChatGPT Image Jul 1, 2025, 09_21_50 PM.png",
     linkedIn: "#",
   },
-   {
+  {
     id: 7,
     name: "Kabir Shah",
     title: "Salesforce Architect",
-    image:
-      "ChatGPT Image Jul 1, 2025, 09_21_45 PM.png",
+    image: "/kabir.jpg",
     linkedIn: "#",
   },
- 
+
   // {
   //   id: 7,
   //   name: "Florencia Cattelani",
@@ -86,83 +80,6 @@ const teamMembers = [
   //     "https://cloudgaia.com/storage/2025/01/company-team-juan-jose-lopez-santiso.webp",
   //   linkedIn: "#",
   // },
-  // {
-  //   id: 9,
-  //   name: "Francisco Salas",
-  //   title: "CMO",
-  //   image:
-  //     "https://cloudgaia.com/storage/2025/01/company-team-francisco-salas.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 10,
-  //   name: "Sebastián Golletti",
-  //   title: "CFO",
-  //   image:
-  //     "https://cloudgaia.com/storage/2025/01/company-team-sebastian-golletti.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 11,
-  //   name: "Mariano Saubidet",
-  //   title: "Group General Counsel",
-  //   image: "https://cloudgaia.com/storage/2025/02/team-mariano-saudibet.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 12,
-  //   name: "Becky Wright",
-  //   title: "EVP Growth",
-  //   image:
-  //     "https://cloudgaia.com/storage/2025/01/company-team-becky-wright.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 13,
-  //   name: "José Pereyra Iraola",
-  //   title: "Finance Director",
-  //   image:
-  //     "https://cloudgaia.com/storage/2025/01/company-team-jose-pereyra-iraola.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 14,
-  //   name: "Pablo Massone",
-  //   title: "Sales Director Indirect Channel",
-  //   image:
-  //     "https://cloudgaia.com/storage/2025/01/company-team-pablo-massone.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 15,
-  //   name: "Mariana Aro",
-  //   title: "Talent Director",
-  //   image:
-  //     "https://cloudgaia.com/storage/2025/01/company-team-mariana-aro.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 16,
-  //   name: "Matías Cebrian",
-  //   title: "Delivery Director",
-  //   image:
-  //     "https://cloudgaia.com/storage/2025/01/company-team-matias-cebrian.webp",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 17,
-  //   name: "Alan Gil",
-  //   title: "Delivery Director",
-  //   image: "https://cloudgaia.com/storage/2025/04/Imagen-Alan-WEB.png",
-  //   linkedIn: "#",
-  // },
-  // {
-  //   id: 18,
-  //   name: "Avery Amaya",
-  //   title: "RVP Sales NAM",
-  //   image: "https://cloudgaia.com/storage/2025/02/team-avery.webp",
-  //   linkedIn: "#",
-  // },
 ];
 
 const Company = () => {
@@ -172,19 +89,19 @@ const Company = () => {
   const [playVideo, setPlayVideo] = useState(false);
 
   const location = useLocation();
-  
-    useEffect(() => {
-      // Wait for the DOM to load
-      setTimeout(() => {
-        if (location.hash) {
-          const id = location.hash.replace("#", "");
-          const section = document.getElementById(id);
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-          }
+
+  useEffect(() => {
+    // Wait for the DOM to load
+    setTimeout(() => {
+      if (location.hash) {
+        const id = location.hash.replace("#", "");
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100); // Small delay to ensure DOM is ready
-    }, [location]);
+      }
+    }, 100); // Small delay to ensure DOM is ready
+  }, [location]);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -199,6 +116,11 @@ const Company = () => {
       handleScroll.cancel();
     };
   }, [lastScrollY]);
+
+  const fullRowSize = 5;
+  const fullRows = Math.floor(teamMembers.length / fullRowSize) * fullRowSize;
+  const fullRowMembers = teamMembers.slice(0, fullRows);
+  const lastRowMembers = teamMembers.slice(fullRows);
 
   return (
     <div className="relative min-h-screen bg-white overflow-x-hidden">
@@ -222,10 +144,10 @@ const Company = () => {
         <div className="px-6 py-10 md:px-10">
           <div className="flex items-center text-sm mb-3 mt-10 text-[#474747]">
             <Link to="/">
-              <img src="/bread-home.svg"
+              <img
+                src="/bread-home.svg"
                 className="mr-1 text-xl cursor-pointer"
                 aria-hidden="true"
-                
               />
             </Link>
             <span className="mx-1 text-base font-bold">&nbsp;/</span>
@@ -332,7 +254,7 @@ const Company = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-10">
               <ImageHoverCard
-                imageSrc="/FRAME C.jpg" 
+                imageSrc="/FRAME C.jpg"
                 title="100% Salesforce"
                 description={
                   <>
@@ -340,11 +262,11 @@ const Company = () => {
                     <b> global presence and 15+ years as Salesforce partners</b>
                     , we’ve dedicated ourselves exclusively to mastering the
                     Salesforce ecosystem working with
-                    <b> leading and 50 industries of all sizes.</b> Our team of industry{" "}
-                    <b> experts collaborates with clients </b> to develop solid
-                    strategies aligned with their business objectives,
-                    accelerating value delivery and adapting to their unique
-                    needs.{" "}
+                    <b> leading and 50 industries of all sizes.</b> Our team of
+                    industry <b> experts collaborates with clients </b> to
+                    develop solid strategies aligned with their business
+                    objectives, accelerating value delivery and adapting to
+                    their unique needs.{" "}
                   </>
                 }
               />
@@ -390,14 +312,17 @@ const Company = () => {
             <div className="flex justify-center mt-10 py-10">
               <div className="flex flex-row items-start m-0 p-0 gap-10 w-full justify-center ">
                 {/* Image */}
-                <div className="shrink-0 m-0 p-0 " 
-                >
+                <div className="shrink-0 m-0 p-0 ">
                   <img
                     // src="https://cloudgaia.com/storage/2025/01/company-nicolas-orzabal-rounded.svg"
                     src="/image (4).png"
                     alt="Nicolás Orzabal"
                     className="w-60 h-auto object-contain rounded-full m-0 p-0 bg-yellow-300 "
-                    style={{ display: "block" ,width: "300px", height: "300px"}}
+                    style={{
+                      display: "block",
+                      width: "300px",
+                      height: "300px",
+                    }}
                   />
                 </div>
 
@@ -427,7 +352,7 @@ const Company = () => {
                     style={{ lineHeight: "1.2em" }}
                     className="md:text-3xl mt-1 mb-0 text-xl mt-6"
                   >
-                     Joyson Tuscano
+                    Joyson Tuscano
                   </h3>
                   <p
                     style={{ lineHeight: "1.2em" }}
@@ -457,16 +382,16 @@ const Company = () => {
               <h3 className="text-lg md:text-2xl font-bold text-[#FF83A9] mb-6">
                 Together, we’re all-in for your growth
               </h3>
-              <button
+              {/* <button
                 onClick={() => setShowVideoImage(true)}
                 className="px-6 py-2 rounded-full bg-[#fcc000] text-[#474747] font-bold text-base md:text-base hover:bg-[#FF83A9] hover:text-white transition-all duration-300"
               >
                 Watch the video
-              </button>
+              </button> */}
             </div>
 
             {/* Video Modal */}
-            {showVideoImage && (
+            {/* {showVideoImage && (
               <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-4">
                 <button
                   onClick={() => {
@@ -514,24 +439,40 @@ const Company = () => {
                   )}
                 </div>
               </div>
-            )}
+            )} */}
 
-            <div id="meet-the-team" className=" mt-[105px] mb-10">
+            <div id="meet-the-team" className="mt-[15px] mb-10 px-4">
               <h2 className="text-3xl md:text-6xl font-bold text-center text-[#474747] mb-10">
                 Our senior leadership team
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+
+              {/* --- MODIFIED CONTAINER --- */}
+              {/* We use flex, flex-wrap, and justify-center to achieve the centered last row */}
+              <div className="flex flex-wrap justify-center gap-6">
                 {teamMembers.map((member) => (
+                  // --- MODIFIED CARD ---
+                  // We set the width of each card to control the "columns"
+                  // w-full on mobile, then specific widths for larger screens.
+                  // The basis-[value] classes are ideal for setting flex item sizes.
                   <div
                     key={member.id}
-                    className="bg-white border rounded-lg shadow p-4 text-center"
+                    className="bg-white border rounded-lg shadow p-4 text-center w-full max-w-[280px] sm:w-auto sm:basis-[calc(50%-1.5rem)] md:basis-[calc(33.33%-1.5rem)] lg:basis-[calc(25%-1.5rem)] xl:basis-[calc(20%-1.5rem)]"
                   >
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-[180px]  rounded-lg mx-auto object-cover mb-4"
+                      className="w-full h-[180px] rounded-lg mx-auto object-cover mb-4"
                     />
-                    <p className="text-[#008093] font-bold text-xl">in</p>
+                    {/* Assuming this is a LinkedIn icon link */}
+                    <a
+                      href={member.linkedIn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p className="text-[#0077b5] font-bold text-xl hover:text-[#005582] transition-colors">
+                        in
+                      </p>
+                    </a>
                     <h3
                       style={{ lineHeight: "1.2em" }}
                       className="text-[#474747] font-bold text-lg mt-1"
@@ -539,8 +480,8 @@ const Company = () => {
                       {member.name}
                     </h3>
                     <p
-                      style={{ fontSize: "12px", lineHeight: "1em" }}
-                      className="text-[#474747] "
+                      style={{ fontSize: "12px", lineHeight: "1.2em" }}
+                      className="text-[#474747] mt-1"
                     >
                       {member.title}
                     </p>
@@ -560,7 +501,7 @@ const Company = () => {
           className="w-full h-[560px] object-cover rounded-lg"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <img src='/company-icon-ia-cert.svg' className="mb-4" />
+          <img src="/company-icon-ia-cert.svg" className="mb-4" />
           <h2
             style={{ fontSize: "40px", lineHeight: "1em" }}
             className="font-semibold text-[#f9f9f9] mb-2"
@@ -652,8 +593,8 @@ const Company = () => {
             future.”
           </p> */}
 
-          {/* Author Section */}
-          {/* <div className="flex items-center justify-center space-x-4 mb-4">
+        {/* Author Section */}
+        {/* <div className="flex items-center justify-center space-x-4 mb-4">
             <img
               src="https://cloudgaia.com/storage/2025/01/company-nicolas-circle.webp"
               alt="Nicolás Orzabal"
@@ -675,18 +616,18 @@ const Company = () => {
         className="mx-auto p-6 my-24 rounded-lg shadow-lg text-center max-w-7xl"
         style={{ backgroundColor: "#008093" }}
       > */}
-        {/* <img
+      {/* <img
           src="https://cloudgaia.com/storage/2025/01/logo-salesforce.svg"
           alt="Top"
           className="mx-auto  w-32 h-32"
         /> */}
-        {/* <h2
+      {/* <h2
           style={{ fontSize: "40px" }}
           className=" font-semibold mb-2 text-[#f9f9f9] tracking-tight"
         >
           Empowered by Salesforce Ventures investment
         </h2> */}
-        {/* <p
+      {/* <p
           style={{ lineHeight: "1.2em" }}
           className=" text-lg text-[#f9f9f9] ml-3 tracking-tight "
         >
