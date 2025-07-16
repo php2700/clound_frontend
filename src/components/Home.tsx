@@ -119,7 +119,7 @@ const Home = () => {
           </div>
 
           {/* 🎥 Cloudgaia in One Minute */}
-          <div className="container mx-auto my-16 pt-10 px-10 md:px-10 ">
+          {/* <div className="container mx-auto my-16 pt-10 px-10 md:px-10 ">
             {!playVideo ? (
               <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg">
                 <img
@@ -156,7 +156,7 @@ const Home = () => {
                 </video>
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* 💡 Why Partner With Us */}
           <h2
