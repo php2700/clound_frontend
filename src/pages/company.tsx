@@ -14,7 +14,7 @@ const teamMembers = [
    {
     id: 1,
     name: "Joyson Tuscano",
-    title: "Co-Founder & CTO",
+    title: "Co-Founder & CEO",
     image:
       "image (4).png",
     linkedIn: "#",
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Walson Dmello",
-    title: "Co-Founder & CEO",
+    title: "Co-Founder & CTO",
     image:
       // "Screenshot 2025-07-03 175207.jpg",
       "image (3).webp",
@@ -32,7 +32,7 @@ const teamMembers = [
   {
     id: 3,
     name: " Kshitij Rodrigues",
-    title: "Co-Founder & COO",
+    title: "Co-Founder & CSO",
     image:
       "/MAN.png",
     linkedIn: "#",
@@ -53,22 +53,23 @@ const teamMembers = [
     image: "ChatGPT Image Jul 3, 2025, 05_54_54 PM.png",
     linkedIn: "#",
   },
-   {
+    {
     id: 6,
-    name: "Kabir Shah",
-    title: "Salesforce Architect",
-    image:
-      "ChatGPT Image Jul 1, 2025, 09_21_45 PM.png",
-    linkedIn: "#",
-  },
-   {
-    id: 7,
     name: "Sam La Banco",
     title: "Board Member & Advisor",
     image:
       "ChatGPT Image Jul 1, 2025, 09_21_50 PM.png",
     linkedIn: "#",
   },
+   {
+    id: 7,
+    name: "Kabir Shah",
+    title: "Salesforce Architect",
+    image:
+      "ChatGPT Image Jul 1, 2025, 09_21_45 PM.png",
+    linkedIn: "#",
+  },
+ 
   // {
   //   id: 7,
   //   name: "Florencia Cattelani",
