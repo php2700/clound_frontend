@@ -1,4 +1,11 @@
+import { useRef, useState } from "react";
+
 const NewCloudgaiaSection = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlay = () => setIsPlaying(true);
+
   return (
     <section className="bg-[#474748] py-20 relative overflow-hidden">
       <img
@@ -22,21 +29,24 @@ const NewCloudgaiaSection = () => {
             />
 
             {/* Main Text Overlay */}
-            <div className="text-center absolute top-12 z-10">
-              <h2 className="text-white text-4xl font-bold leading-tight">
-                Welcome
-                <br />
-                to the <span className="text-yellow-400">new</span>
-              </h2>
-            </div>
-
+            {!isPlaying && (
+              <div className="text-center absolute top-12 z-10">
+                <h2 className="text-white text-4xl font-bold leading-tight">
+                  Welcome
+                  <br />
+                  to the <span className="text-yellow-400">new</span>
+                </h2>
+              </div>
+            )}
             {/* Video Player */}
             <video
+              ref={videoRef}
+              onPlay={handlePlay}
               className="absolute inset-0 w-full h-full object-cover rounded-lg"
               controls
               poster="https://via.placeholder.com/600x400?text=Video+Thumbnail"
             >
-              <source src="/mov_bbb.mp4" type="video/mp4" />
+              <source src="/CLOUDSCIENCE 1_1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
