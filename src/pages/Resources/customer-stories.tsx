@@ -42,7 +42,7 @@ export const Customer_Stories = () => {
       url: "/customer-stories/commerce-cloud-implementation",
       flagImg: "/flag-usa (1).svg",
       userImg: "/Ai image laptop people.png",
-      companyImg: "/doordash-logo-1.png",
+      companyImg: "/doordash-logo-1.jpg",
       services: "B2B Commerce | Marketing Cloud | Consumer Goods Cloud +",
       title: "A Scalable Engagement Platform to Power B2B Commerce Growth",
       description:
@@ -78,7 +78,7 @@ export const Customer_Stories = () => {
       url: "/customer-stories/blue-cross",
       flagImg: "/europion_union.png",
       // userImg: "/stories-dexter.webp",
-      userImg: "/frontelectric.jpeg",
+      userImg: "/blue-cross-user.png",
 
       companyImg: "/Blue Cross IDHO.png",
       services:

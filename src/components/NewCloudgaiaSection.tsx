@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 
 const NewCloudgaiaSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
 
   const handlePlay = () => setIsPlaying(true);
 
@@ -40,7 +39,6 @@ const NewCloudgaiaSection = () => {
             )}
             {/* Video Player */}
             <video
-              ref={videoRef}
               onPlay={handlePlay}
               className="absolute inset-0 w-full h-full object-cover rounded-lg"
               controls
