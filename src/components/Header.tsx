@@ -49,7 +49,7 @@ const Header = () => {
           </div>
 
           {/* Navigation (Desktop) */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
               <div className="flex items-center space-x-1 text-[#474747] hover:text-[#ff83a9] cursor-pointer text-base font-bold py-2">
@@ -161,7 +161,7 @@ const Header = () => {
           </nav>
 
           {/* Hamburger Icon (Mobile) */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={toggleMenu} aria-label="Toggle menu">
               {isMenuOpen ? (
                 <X className="h-6 w-6 text-[#474747]" />
@@ -174,7 +174,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg rounded-md mt-2 px-4 py-4 animate-fade-in">
+          <div className="lg:hidden bg-white shadow-lg rounded-md mt-2 px-4 py-4 animate-fade-in">
             <nav className="flex flex-col space-y-4">
               {/* Services */}
               <div>

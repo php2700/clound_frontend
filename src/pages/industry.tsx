@@ -172,7 +172,7 @@ const Industries = () => {
             <div className="flex justify-center">
               <div className="w-full flex flex-col items-center gap-2">
                 {/* Row 1 */}
-                <div className="flex gap-2 w-full">
+                <div className=" gap-3 w-full grid grid-cols-1 sm:grid-cols-2">
                   {[
                     {
                       // icon: <FaIndustry className="text-[#FF83A9] text-3xl mb-2" />,
@@ -216,7 +216,7 @@ const Industries = () => {
                 </div>
                 {/* Row 2 */}
 
-                <div className="flex gap-2 w-full">
+                <div className="gap-3 w-full grid grid-cols-1 sm:grid-cols-2">
                   {[
                     {
                       icon: (
@@ -242,7 +242,7 @@ const Industries = () => {
                       {card.icon}
                       <h4
                         style={{ fontSize: "40px", lineHeight: "1em" }}
-                        className="font-semibold text-[#008093] mb-1"
+                        className="font-semibold text-[#008093] mb-1 break-words"
                       >
                         {card.title}
                       </h4>
@@ -259,7 +259,7 @@ const Industries = () => {
                 </div>
 
                 {/* Row 3 */}
-                <div className="flex gap-2 w-full">
+                <div className="gap-3 w-full grid grid-cols-1 sm:grid-cols-2">
                   {[
                     {
                       icon: (
@@ -285,7 +285,7 @@ const Industries = () => {
                       {card.icon}
                       <h4
                         style={{ fontSize: "40px", lineHeight: "1em" }}
-                        className="font-semibold text-[#008093] mb-1"
+                        className="font-semibold text-[#008093] mb-1 break-words"
                       >
                         {card.title}
                       </h4>
@@ -303,7 +303,7 @@ const Industries = () => {
 
                 {/* row 4 */}
 
-                <div className="flex gap-2 w-full">
+                <div className="gap-3 w-full grid grid-cols-1 sm:grid-cols-2">
                   {[
                     {
                       icon: (

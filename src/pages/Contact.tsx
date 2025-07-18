@@ -328,7 +328,7 @@ const Contact = () => {
                 </span>
               </label>
 
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
+              <div className="flex  flex-row items-center justify-between mt-6">
                 <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[200px]">
                   <input
                     type="checkbox"
