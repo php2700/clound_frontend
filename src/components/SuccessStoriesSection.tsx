@@ -83,7 +83,7 @@ const SuccessStoriesSection = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl gap-6 mb-12 mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 max-w-7xl gap-6 mb-12 mx-auto">
             {stories.map((story, index) => (
               <div
                 key={index}
