@@ -316,7 +316,6 @@
 
 // export default Services;
 
-
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header"; // Fixed import path
 import Footer from "@/components/Footer"; // Fixed import path
@@ -324,22 +323,22 @@ import { FaHome, FaStar } from "react-icons/fa";
 import ExpertiseCollapse from "@/components/Expertise_cloud";
 import { Link } from "react-router-dom";
 // import { Link } from "lucide-react";
- 
+
 const Services = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
- 
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsHeaderVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
- 
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
- 
+
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[#F9F9F9]">
       <div
@@ -355,7 +354,7 @@ const Services = () => {
         >
           <Header />
         </div>
- 
+
         <div className="container mx-auto px-4 py-20 md:px-6 mt-20">
           <div className="px-6 py-10 md:px-10">
             {/* Breadcrumb */}
@@ -370,7 +369,7 @@ const Services = () => {
               <span className="mx-1 text-base font-bold ml-2">/</span>
               <span className="text-base font-bold ml-2">Services</span>
             </div>
- 
+
             {/* Heading & Description */}
             <div className="max-w-7xl mx-auto mt-5">
               <h1
@@ -396,7 +395,7 @@ const Services = () => {
             </div>
           </div>
         </div>
- 
+
         <div className="w-full mt-4">
           <img
             // src="/services.PNG"
@@ -405,7 +404,7 @@ const Services = () => {
             className="w-full h-[500px] object-cover"
           />
         </div>
- 
+
         <div className="container mx-auto  px-4 md:px-6">
           <div className="px-6 py-10 md:px-10">
             {/* 4 Cards */}
@@ -430,7 +429,7 @@ const Services = () => {
                   <span className="block h-0.5 w-0 bg-[#ff83a9] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
- 
+
               <div className="bg-white  rounded-lg p-6 ">
                 <img src="/services-icon-2.svg" className="mb-4" />
                 <h3
@@ -451,7 +450,7 @@ const Services = () => {
                   <span className="block h-0.5 w-0 bg-[#ff83a9] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
- 
+
               <div className="bg-white  rounded-lg p-6 ">
                 <img src="/services-icon-3.svg" className="mb-4" />
                 <h3
@@ -472,7 +471,7 @@ const Services = () => {
                   <span className="block h-0.5 w-0 bg-[#ff83a9] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
- 
+
               <div className="bg-white rounded-lg p-6 ">
                 <img src="/services-icon-4.svg" className="mb-4" />
                 <h3
@@ -494,7 +493,7 @@ const Services = () => {
                 </Link>
               </div>
             </div>
- 
+
             {/* Expand Section */}
             <div className="flex justify-center items-center mt-[100px] px-6 md:px-0">
               <div className="flex items-start items-center space-x-6 max-w-4xl">
@@ -508,7 +507,9 @@ const Services = () => {
                     style={{ lineHeight: "1.1em" }}
                     className="text-2xl md:text-3xl font-bold leading-tight"
                   >
-                    <span className="block text-[#474747] tracking-tight">Expand your</span>
+                    <span className="block text-[#474747] tracking-tight">
+                      Expand your
+                    </span>
                     <span className="block text-[#FF83A9] tracking-tight">
                       in-house capabilities
                     </span>
@@ -518,7 +519,7 @@ const Services = () => {
                       lineHeight: "1.2em",
                     }}
                     className="mt-4 md:text-lg max-w-2xl text-[#474747] "
-                     >
+                  >
                     Our Salesforce experts around the world integrate <br />
                     seamlessly with your team, empowering your internal talents
                     <br /> by providing support and training with a business
@@ -529,7 +530,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
- 
+
             <div className="bg-[#474747] text-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center mt-[100px] w-[99%] h-[380px] md:h-[250px] mx-auto">
               {/* Image */}
               <img
@@ -537,7 +538,7 @@ const Services = () => {
                 alt="Salesforce Partner"
                 className="w-[80px] md:w-[100px] h-auto object-contain mb-4 md:mb-0 ml-10 md:mr-4"
               />
- 
+
               {/* Metrics */}
               <div className="flex flex-wrap flex-1 justify-around items-center w-full">
                 {/* Customer Satisfaction */}
@@ -554,7 +555,7 @@ const Services = () => {
                     </span>
                   </div>
                 </div>
- 
+
                 {/* Certifications */}
                 <div className="text-center md:text-left mb-4 md:mb-0 min-w-[120px tracking-tight]">
                   <h3 className="text-xl md:text-3xl font-bold mb-1">
@@ -562,7 +563,7 @@ const Services = () => {
                   </h3>
                   <p className="text-3xl font-bold text-yellow-400">50+</p>
                 </div>
- 
+
                 {/* Projects */}
                 <div className="text-center md:text-left mb-4 md:mb-0 min-w-[100px] tracking-tight">
                   <h3 className="text-xl md:text-3xl font-bold mb-1">
@@ -570,7 +571,7 @@ const Services = () => {
                   </h3>
                   <p className="text-3xl font-bold text-yellow-400">120+</p>
                 </div>
- 
+
                 {/* Experts */}
                 <div className="text-center md:text-left mb-4 md:mb-0 min-w-[100px] tracking-tight">
                   <h3 className="text-xl md:text-3xl font-bold mb-1">
@@ -586,8 +587,8 @@ const Services = () => {
               </h2>
               <ExpertiseCollapse />
             </div>
- 
-            <div className="flex flex-col md:flex-row justify-center items-center gap-10 mt-20 px-6">
+
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-10 mt-20 px-6">
               <div className="relative w-[200px] h-[200px] flex justify-center items-center">
                 <div className="absolute inset-0  flex justify-center items-center">
                   <img
@@ -602,7 +603,7 @@ const Services = () => {
                   />
                 </div>
               </div>
- 
+
               <div className="text-left max-w-2xl">
                 <h2 className="text-xl md:text-6xl font-bold text-[#474747] mb-4">
                   Our way of work
@@ -633,7 +634,5 @@ const Services = () => {
     </div>
   );
 };
- 
+
 export default Services;
- 
- 

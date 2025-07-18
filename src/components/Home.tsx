@@ -168,7 +168,7 @@ const Home = () => {
         </div>
         <div className="container mx-auto mt-4 pb-10 px-6 md:px-10">
           <div className="px-6 py-10 md:px-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-4">
               <ImageHoverCard
                 imageSrc="/FRAME C.jpg"
                 title="100% Salesforce"

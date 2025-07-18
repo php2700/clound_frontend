@@ -491,8 +491,8 @@ export const Careers = () => {
                       Your browser does not support the video tag.
                     </video>
                   </div>
-                  <div className="full-h text-gray-700">
-                    <ul className="font-dm text-[16px] list-disc list-inside ml-4 space-y-4 leading-tight">
+                  <div className="full-h  text-gray-700">
+                    <ul className="font-dm  text-[16px] list-disc list-inside ml-4 space-y-4 leading-tight">
                       {item.points.map((point, idx) => (
                         <li key={idx}>{point}</li>
                       ))}
@@ -673,7 +673,7 @@ export const Careers = () => {
                 </a>
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="flex flex-row justify-between items-center gap-6">
               <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
                 <input
                   type="checkbox"
@@ -705,7 +705,7 @@ export const Careers = () => {
               </div>
               <button
                 type="submit"
-                className="w-full sm:w-auto bg-gray-200 text-[#474747] font-bold py-2 px-6 rounded-full hover:bg-[#ff83a9] transition-colors"
+                className=" sm:w-auto bg-gray-200 text-[#474747] font-bold py-2 px-6 rounded-full hover:bg-[#ff83a9] transition-colors"
               >
                 Apply
               </button>

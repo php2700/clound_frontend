@@ -1025,7 +1025,7 @@ const Implementation = () => {
                     </span>
                   </label>
 
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
+                  <div className="flex flex-row items-center justify-between mt-6">
                     <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
                       <input
                         type="checkbox"
@@ -1081,7 +1081,7 @@ const Implementation = () => {
                   <img src="/services-icon-1.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className=" text-[#008093] font-semibold mb-2 mt-6"
+                    className=" text-[#008093] font-semibold mb-2 mt-6 break-words"
                   >
                     Innovation
                   </h3>
@@ -1107,7 +1107,7 @@ const Implementation = () => {
                   <img src="/services-icon-4.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className=" text-[#008093] font-semibold mb-2 "
+                    className=" text-[#008093] font-semibold mb-2 break-words "
                   >
                     Strategic Growth
                   </h3>
@@ -1133,7 +1133,7 @@ const Implementation = () => {
                   <img src="/services-icon-2.svg" className="mb-4" />
                   <h3
                     style={{ fontSize: "40px" }}
-                    className="text-[#008093] font-semibold mb-2 mt-6"
+                    className="text-[#008093] font-semibold mb-2 mt-6 break-words"
                   >
                     Optimization
                   </h3>
