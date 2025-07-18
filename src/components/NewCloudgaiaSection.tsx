@@ -11,7 +11,7 @@ const NewCloudgaiaSection = () => {
         src="asset1.png"
         // src="/left-video.png"
         alt="Decorative Overlay"
-        className="absolute  w-[90px] z-0  left-0  top-0 hidden md:block"
+        className="absolute  w-[90px] z-0  left-0  top-0 hidden lg:block"
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
