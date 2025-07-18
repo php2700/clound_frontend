@@ -240,79 +240,79 @@ export const ConaService = () => {
         >
           <Header />
         </div>
-        {/* Main container for all CENTERED content */}
-        <div className="bg-white max-w-7xl mx-auto sm:p-8 md:px-6 mx-auto  px-4 ">
-          {/* Navigation & Breadcrumb */}
 
-          {/* Header Section */}
-          <header className="pb-8  pt-2">
-            <div className="flex items-center text-sm text-gray-700 mt-8">
-              <img src="/bread-home.svg" className="mr-1 text-xl ml-2" />
-              <span className="mx-1 text-base font-bold">/</span>
-              <span
-                className="text-base font-bold cursor-pointer"
-                onClick={handleHome}
+        <div className="container mx-auto  px-4 md:px-6 ">
+          <div className="px-6 py-10 md:px-10 ">
+            <header className="pb-8  pt-2">
+              <div className="flex items-center text-sm text-gray-700 mt-8">
+                <img src="/bread-home.svg" className="mr-1 text-xl ml-2" />
+                <span className="mx-1 text-base font-bold">/</span>
+                <span
+                  className="text-base font-bold cursor-pointer"
+                  onClick={handleHome}
+                >
+                  Resources
+                </span>
+                <span className="mx-1 text-base font-bold">/</span>
+                <span
+                  className="mx-1 text-base font-bold cursor-pointer"
+                  onClick={handlePage}
+                >
+                  Customer Stories
+                </span>
+                <span className="mx-1 text-base font-bold">/</span>
+                <span className="mx-1 text-base font-bold">Doordash</span>
+              </div>
+              <div className="mx-1 flex items-center text-lg font-medium mt-4">
+                <img
+                  src="/flag-usa (1).svg"
+                  className="w-5 h-5"
+                  alt="USA Flag"
+                />
+                <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
+                  Doordash
+                </span>
+              </div>
+              {/* <div className="font-medium text-gray-800 mb-2.5"><img src="/flag-usa (1).svg" /><span> CONA Services - US</span></div> */}
+              <h1
+                className="text-4xl md:text-6xl font-bold text-[#008093]  mt-5 mb-2"
+                style={{ lineHeight: "1em" }}
               >
-                Resources
-              </span>
-              <span className="mx-1 text-base font-bold">/</span>
-              <span
-                className="mx-1 text-base font-bold cursor-pointer"
-                onClick={handlePage}
-              >
-                Customer Stories
-              </span>
-              <span className="mx-1 text-base font-bold">/</span>
-              <span className="mx-1 text-base font-bold">
-                Doordash
-              </span>
-            </div>
-            <div className="mx-1 flex items-center text-lg font-medium mt-4">
-              <img src="/flag-usa (1).svg" className="w-5 h-5" alt="USA Flag" />
-              <span className="mx-1 text-[24px] text-[#474747] font-semibold ml-2">
-                 Doordash
-              </span>
-            </div>
-            {/* <div className="font-medium text-gray-800 mb-2.5"><img src="/flag-usa (1).svg" /><span> CONA Services - US</span></div> */}
-            <h1
-              className="text-4xl md:text-6xl font-bold text-[#008093]  mt-5 mb-2"
-              style={{ lineHeight: "1em" }}
-            >
-              Empowering customer engagement with a scalable B2B Commerce
-              platform
-            </h1>
-            <div className="flex items-center gap-3 mb-4 text-[24px] text-[#474747]">
-              {" "}
-              <img src="/logo-salesforce.svg" />{" "}
-              <span
+                Empowering customer engagement with a scalable B2B Commerce
+                platform
+              </h1>
+              <div className="flex items-center gap-3 mb-4 text-[24px] text-[#474747]">
+                {" "}
+                <img src="/logo-salesforce.svg" />{" "}
+                <span
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-2xl text-[#474747]"
+                >
+                  B2B Commerce | Marketing Cloud
+                </span>
+              </div>
+              <p
                 style={{ lineHeight: "1.2em" }}
-                className="text-2xl text-[#474747]"
+                className="text-lg text-lg my-10 text-[#474747]"
               >
-                B2B Commerce | Marketing Cloud
-              </span>
-            </div>
-            <p
-              style={{ lineHeight: "1.2em" }}
-              className="text-lg text-lg my-10 text-[#474747]"
-            >
-              Unlocking the potential of Salesforce by Doordash, a scalable and
-              digital platform designed to keep B2B
-              <br /> customers stocked with a variety of iconic products.
-            </p>
-          </header>
-          {/* Main Content Grid */}
-          <main className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-            <div className="bg-white text-[#008093] p-8 rounded-lg border border-gray-200 flex flex-col justify-start">
-              <span className="text-3xl mb-4">
-                <img src="/icon-info (13).svg"></img>{" "}
-              </span>
-              <h2
-                style={{ lineHeight: "1.2em" }}
-                className="font-semibold text-[#008093] text-[40px]  mb-4"
-              >
-                About Doordash Services
-              </h2>
-              {/* <p
+                Unlocking the potential of Salesforce by Doordash, a scalable
+                and digital platform designed to keep B2B
+                <br /> customers stocked with a variety of iconic products.
+              </p>
+            </header>
+            {/* Main Content Grid */}
+            <main className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+              <div className="bg-white text-[#008093] p-8 rounded-lg border border-gray-200 flex flex-col justify-start">
+                <span className="text-3xl mb-4">
+                  <img src="/icon-info (13).svg"></img>{" "}
+                </span>
+                <h2
+                  style={{ lineHeight: "1.2em" }}
+                  className="font-semibold text-[#008093] text-[40px]  mb-4"
+                >
+                  About Doordash Services
+                </h2>
+                {/* <p
                 className="text-[#f9f9f9] leading-relaxed mb-4"
                 style={{ lineHeight: "1.2em" }}
               >
@@ -323,110 +323,110 @@ export const ConaService = () => {
                 They provide solutions for bottlers to optimally manage their
                 day-to-day business and refresh the world.
               </p> */}
-              <p
-                style={{ lineHeight: "1.2em" }}
-                className="text-[#474747] text-lg"
-              >
-                {" "}
-                We partnered with the Doordash Digital Office (KDO), an
-                interdisciplinary and inter-agency team of product and
-                engineering specialists, to work as one team and upgrade their
-                B2B eCommerce platform with a focus on customer experience.
-              </p>
-            </div>
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="/Ai image laptop people.png"
-                alt="Store owners with a tablet"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="bg-[#ff83a9] p-8 rounded-lg">
-              <span className="text-3xl mb-4">
-                <img src="/icon-clock (17).svg" />
-              </span>
-              <h2
-                style={{ fontSize: "40px", lineHeight: "1em" }}
-                className="font-semibold text-[#F9F9F9] mb-4 mt-[20px]"
-              >
-                The Challenge
-              </h2>
-              <p
-                className="text-[#f9f9f9] text-lg "
-                style={{ lineHeight: "1.2em" }}
-              >
-                Doordash Services set out to transform its customer engagement
-                platform through Salesforce technology. The goal: deliver a
-                seamless, hyper-personalized buying experience for the 11
-                largest products, enabling them to streamline operations, boost
-                loyalty, and drive growth across the region.
-              </p>
-            </div>
-            <div className="bg-[#008093] text-[f9f9f9] text-white p-8 rounded-lg">
-              <span className="text-3xl mb-4">
-                <img src="/icon-solution.svg" />
-              </span>
-              <h2 className="text-[#f9f9f9] text-[40px] font-semibold">
-                The Solution
-              </h2>
-              <p
-                style={{ lineHeight: "1.2em" }}
-                className="text-[#f9f9f9] text-lg mb-4"
-              >
-                Together with Code Science and Salesforce, Doordash Services
-                enhanced its B2B Commerce strategy — one of the largest
-                implementations of Salesforce B2B Commerce on Lightning.
-              </p>
-              <p
-                style={{ lineHeight: "1.2em" }}
-                className="text-[#f9f9f9] text-lg mb-4"
-              >
-                Built with scalability, automation, and data-driven insights at
-                its core, the platform redefined how bottlers and customers do
-                business.
-              </p>
-              <p
-                style={{ lineHeight: "1.2em" }}
-                className="text-[#f9f9f9] text-lg mb-4"
-              >
-                Doordash: a scalable platform includes multiple storefronts,
-                hyper-personalized experiences, automated recurring orders,
-                optimized reporting, and more.
-              </p>
-            </div>
-          </main>
-          {/* Results Section */}
-          <section className="mt-12">
-            <div className="bg-[#474747] text-[#f9f9f9] text-center p-6 rounded-lg shadow-lg text-[40px]">
-              <h2 className=" text-[40px]  font-semibold flex items-center justify-center gap-4">
-                <span>
-                  <img src="/icon-stars-white.svg"></img>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#474747] text-lg"
+                >
+                  {" "}
+                  We partnered with the Doordash Digital Office (KDO), an
+                  interdisciplinary and inter-agency team of product and
+                  engineering specialists, to work as one team and upgrade their
+                  B2B eCommerce platform with a focus on customer experience.
+                </p>
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/Ai image laptop people.png"
+                  alt="Store owners with a tablet"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-[#ff83a9] p-8 rounded-lg">
+                <span className="text-3xl mb-4">
+                  <img src="/icon-clock (17).svg" />
                 </span>
-                {resultsData.title}
-              </h2>
-            </div>
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-2">
-              {resultsData.stats.map((stat) => {
-                const Icon = iconComponents[stat.icon];
-                return (
-                  <div
-                    key={stat.label}
-                    className="bg-white border border-gray-200 rounded-lg p-6 text-center flex flex-col items-center justify-start shadow-sm hover:shadow-lg transition-shadow"
-                  >
-                    {Icon && <Icon />}
-                    <p className="mt-4 text-2xl md:text-3xl font-bold text-[#008093]">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-sm md:text-base text-gray-500">
-                      {stat.label}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-          {/* Coca-Cola Video Section */}
-          {/* <section className="mt-12">
+                <h2
+                  style={{ fontSize: "40px", lineHeight: "1em" }}
+                  className="font-semibold text-[#F9F9F9] mb-4 mt-[20px]"
+                >
+                  The Challenge
+                </h2>
+                <p
+                  className="text-[#f9f9f9] text-lg "
+                  style={{ lineHeight: "1.2em" }}
+                >
+                  Doordash Services set out to transform its customer engagement
+                  platform through Salesforce technology. The goal: deliver a
+                  seamless, hyper-personalized buying experience for the 11
+                  largest products, enabling them to streamline operations,
+                  boost loyalty, and drive growth across the region.
+                </p>
+              </div>
+              <div className="bg-[#008093] text-[f9f9f9] text-white p-8 rounded-lg">
+                <span className="text-3xl mb-4">
+                  <img src="/icon-solution.svg" />
+                </span>
+                <h2 className="text-[#f9f9f9] text-[40px] font-semibold">
+                  The Solution
+                </h2>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#f9f9f9] text-lg mb-4"
+                >
+                  Together with Code Science and Salesforce, Doordash Services
+                  enhanced its B2B Commerce strategy — one of the largest
+                  implementations of Salesforce B2B Commerce on Lightning.
+                </p>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#f9f9f9] text-lg mb-4"
+                >
+                  Built with scalability, automation, and data-driven insights
+                  at its core, the platform redefined how bottlers and customers
+                  do business.
+                </p>
+                <p
+                  style={{ lineHeight: "1.2em" }}
+                  className="text-[#f9f9f9] text-lg mb-4"
+                >
+                  Doordash: a scalable platform includes multiple storefronts,
+                  hyper-personalized experiences, automated recurring orders,
+                  optimized reporting, and more.
+                </p>
+              </div>
+            </main>
+            {/* Results Section */}
+            <section className="mt-12">
+              <div className="bg-[#474747] text-[#f9f9f9] text-center p-6 rounded-lg shadow-lg text-[40px]">
+                <h2 className=" text-[40px]  font-semibold flex items-center justify-center gap-4">
+                  <span>
+                    <img src="/icon-stars-white.svg"></img>
+                  </span>
+                  {resultsData.title}
+                </h2>
+              </div>
+              <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-2">
+                {resultsData.stats.map((stat) => {
+                  const Icon = iconComponents[stat.icon];
+                  return (
+                    <div
+                      key={stat.label}
+                      className="bg-white border border-gray-200 rounded-lg p-6 text-center flex flex-col items-center justify-start shadow-sm hover:shadow-lg transition-shadow"
+                    >
+                      {Icon && <Icon />}
+                      <p className="mt-4 text-2xl md:text-3xl font-bold text-[#008093]">
+                        {stat.value}
+                      </p>
+                      <p className="mt-1 text-sm md:text-base text-gray-500">
+                        {stat.label}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+            {/* Coca-Cola Video Section */}
+            {/* <section className="mt-12">
             <div className="relative rounded-lg shadow-xl overflow-hidden">
               <div
                 className="relative w-full"
@@ -450,10 +450,10 @@ export const ConaService = () => {
               </div>
             </div>
           </section> */}
-          {/* Solutions and Benefits Section */}
-          <section className="mt-16 ">
-            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8  ">
-              {/* <div
+            {/* Solutions and Benefits Section */}
+            <section className="mt-16 ">
+              <div className="grid grid-cols-1 lg:grid-cols-1 gap-8  ">
+                {/* <div
                 className="relative w-full rounded-lg overflow-hidden shadow-lg bg-[#008093]"
                 style={{ paddingBottom: "56.25%" }}
               >
@@ -468,101 +468,98 @@ export const ConaService = () => {
                   allowFullScreen
                 ></iframe>
               </div> */}
-              <div className="bg-[#008093] text-white p-8 rounded-lg shadow-lg">
-                <h2 style={{ fontSize: "40px" }} className=" font-semibold ">
-                  {solutionsAndBenefitsData.solutionsTitle}
-                </h2>
-                <ul className="mt-6 space-y-3">
-                  {solutionsAndBenefitsData.solutionItems.map((item) => (
-                    <li key={item.text} className="flex items-center text-lg ">
-                      {item.checked ? (
-                        <FaCheck className="mr-3 text-[#474747] flex-shrink-0" />
-                      ) : (
-                        <div className="w-[14px] mr-3 flex-shrink-0"></div>
-                      )}
-                      <span style={{ lineHeight: "1em" }} className="text-lg">
-                        {item.text}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="bg-[#008093] text-white p-8 rounded-lg shadow-lg">
+                  <h2 style={{ fontSize: "40px" }} className=" font-semibold ">
+                    {solutionsAndBenefitsData.solutionsTitle}
+                  </h2>
+                  <ul className="mt-6 space-y-3">
+                    {solutionsAndBenefitsData.solutionItems.map((item) => (
+                      <li
+                        key={item.text}
+                        className="flex items-center text-lg "
+                      >
+                        {item.checked ? (
+                          <FaCheck className="mr-3 text-[#474747] flex-shrink-0" />
+                        ) : (
+                          <div className="w-[14px] mr-3 flex-shrink-0"></div>
+                        )}
+                        <span style={{ lineHeight: "1em" }} className="text-lg">
+                          {item.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 ">
-              {solutionsAndBenefitsData.benefitCards.map((card) => (
-                <div
-                  key={card.title}
-                  className="bg-[#474747] text-[#f9f9f9] p-8 rounded-lg shadow-lg"
-                >
-                  <img
-                    src={card.imgSrc}
-                    alt={card.title}
-                    className="h-12 w-12 mb-5"
-                    loading="lazy"
-                  />
-                  <h3
-                    style={{ lineHeight: "1.2em" }}
-                    className="text-2xl font-bold text-white mb-3"
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 ">
+                {solutionsAndBenefitsData.benefitCards.map((card) => (
+                  <div
+                    key={card.title}
+                    className="bg-[#474747] text-[#f9f9f9] p-8 rounded-lg shadow-lg"
                   >
-                    {card.title}
-                  </h3>
-                  <p
-                    style={{ lineHeight: "1.2em" }}
-                    className="leading-relaxed text-lg"
-                  >
-                    {card.description}
-                  </p>
-                </div>
-              ))}
-              {/* {solutionsAndBenefitsData.benefitCards.map((card) => { const Icon = benefitIcons[card.imgSrc]; return (<div key={card.title} className="bg-[#474747] text-[#f9f9f9] p-8 rounded-lg shadow-lg">{Icon && <Icon className="text-[#f9f9f9] text-4xl mb-5" />}<h3 className="text-2xl font-bold text-white mb-3">{card.title}</h3><p className="leading-relaxed">{card.description}</p></div>); })} */}
-            </div>
-          </section>
-          {/* Testimonials Section */}
-          <section className="mt-16 pt-12 border-t border-gray-200">
-            <div className="space-y-16">
-              {testimonialsData.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
-                >
-                  <blockquote className="md:col-span-2 text-[#474747] text-lg md:text-xl leading-relaxed">
-                    <p>{testimonial.quote}</p>
-                  </blockquote>
-                  <div className="md:col-span-1 md:px-8">
-                    <div className="font-bold text-xl text-[#474747]">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-[#474747]">{testimonial.title}</div>
                     <img
-                      src={testimonial.logoSrc}
-                      alt={`${testimonial.name}'s company logo`}
-                      style={{ width: "", height: "80px" }}
+                      src={card.imgSrc}
+                      alt={card.title}
+                      className="h-12 w-12 mb-5"
+                      loading="lazy"
                     />
+                    <h3
+                      style={{ lineHeight: "1.2em" }}
+                      className="text-2xl font-bold text-white mb-3"
+                    >
+                      {card.title}
+                    </h3>
+                    <p
+                      style={{ lineHeight: "1.2em" }}
+                      className="leading-relaxed text-lg"
+                    >
+                      {card.description}
+                    </p>
                   </div>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+                {/* {solutionsAndBenefitsData.benefitCards.map((card) => { const Icon = benefitIcons[card.imgSrc]; return (<div key={card.title} className="bg-[#474747] text-[#f9f9f9] p-8 rounded-lg shadow-lg">{Icon && <Icon className="text-[#f9f9f9] text-4xl mb-5" />}<h3 className="text-2xl font-bold text-white mb-3">{card.title}</h3><p className="leading-relaxed">{card.description}</p></div>); })} */}
+              </div>
+            </section>
+            {/* Testimonials Section */}
+            <section className="mt-16 pt-12 border-t border-gray-200">
+              <div className="space-y-16">
+                {testimonialsData.map((testimonial, index) => (
+                  <div
+                    key={index}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
+                  >
+                    <blockquote className="md:col-span-2 text-[#474747] text-lg md:text-xl leading-relaxed">
+                      <p>{testimonial.quote}</p>
+                    </blockquote>
+                    <div className="md:col-span-1 md:px-8">
+                      <div className="font-bold text-xl text-[#474747]">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-[#474747]">{testimonial.title}</div>
+                      <img
+                        src={testimonial.logoSrc}
+                        alt={`${testimonial.name}'s company logo`}
+                        style={{ width: "", height: "80px" }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
         </div>
 
-        {/* --- FULL-WIDTH CONTACT FORM SECTION --- */}
-        <section className="relative py-20 text-white bg-gray-900">
+        {/* <section className="relative py-20 text-white bg-gray-900">
           <div className="absolute inset-0 z-0">
-            <img
-              src="/conabannerback.webp"
-              alt="Abstract background"
-              className="w-full h-full object-cover"
-            />
             <div className="absolute inset-0 bg-black/90 bg-[url('/stories-cona-banner-back.webp')] bg-cover bg-center">
-              <h2 className=" text-[35px] text-center font-bold mt-12 tracking-tight whitespace-nowrap  mr]">
+              <h2 className=" text-[35px] text-center font-bold mt-12 tracking-tight whitespace-wrap">
                 Want to see how we can help you scale your B2B commerce?
               </h2>
+              <p className="text-[40px] text-center font-bold mt-1 ml-1">Let's talk.</p>
             </div>
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto px-4  ">
-            <div className="text-center mb-12   ">
-              <p className="text-[40px] font-bold mt-1 ml-1">Let's talk.</p>
-            </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-4  mt-10">
+            
             <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
@@ -601,7 +598,6 @@ export const ConaService = () => {
                   required
                   className="bg-white/90 text-gray-900 p-3 rounded-md border-none focus:ring-2 focus:ring-pink-500"
                 />
-                {/* <div className="relative"> */}
                 <select
                   name="country"
                   value={formData.country}
@@ -618,7 +614,6 @@ export const ConaService = () => {
                 <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#474747]  pointer-events-none ">
                   <ArrowDownwardIcon sx={{ fontSize: 16 }} />
                 </span>
-                {/* </div> */}
                 <textarea
                   name="message"
                   placeholder="Message*"
@@ -657,8 +652,6 @@ export const ConaService = () => {
                     id="not-robot"
                     className="h-4 w-4 mr-2 accent-blue-600"
                     required
-                    // checked={isRobot}
-                    // onChange={(e) => setIsRobot(e.target.checked)}
                   />
                   <label
                     htmlFor="not-robot"
@@ -683,6 +676,128 @@ export const ConaService = () => {
                 <button
                   type="submit"
                   className="bg-[#FF83A9] text-[#f9f9f9] font-semibold px-6 py-2 rounded-full transition-all"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </section> */}
+
+        <section className="relative min-h-screen bg-gray-900 text-white">
+          <div className="absolute inset-0 bg-black/80 bg-[url('/stories-cona-banner-back.webp')] bg-cover bg-center z-0"></div>
+          <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-12">
+            <h2 className="text-[35px] font-bold text-center leading-snug tracking-tight">
+              Want to see how we can help you scale your B2B commerce?
+            </h2>
+            <p className="text-[40px] font-bold">Let's talk.</p>
+
+            <form
+              onSubmit={handleFormSubmit}
+              className="mt-10 w-full max-w-2xl space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name*"
+                  value={formData.firstName}
+                  onChange={handleFormChange}
+                  required
+                  className="bg-white/90 text-gray-900 p-3 rounded-md w-full focus:ring-2 focus:ring-pink-500"
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name*"
+                  value={formData.lastName}
+                  onChange={handleFormChange}
+                  required
+                  className="bg-white/90 text-gray-900 p-3 rounded-md w-full focus:ring-2 focus:ring-pink-500"
+                />
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company*"
+                  value={formData.company}
+                  onChange={handleFormChange}
+                  required
+                  className="bg-white/90 text-gray-900 p-3 rounded-md w-full focus:ring-2 focus:ring-pink-500"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email*"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  required
+                  className="bg-white/90 text-gray-900 p-3 rounded-md w-full focus:ring-2 focus:ring-pink-500"
+                />
+                <select
+                  name="country"
+                  value={formData.country}
+                  onChange={handleFormChange}
+                  required
+                  className="md:col-span-2 bg-white/90 text-gray-900 p-3 rounded-md w-full appearance-none"
+                >
+                  <option value="">Country*</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="IN">India</option>
+                  <option value="Other">Other</option>
+                </select>
+                <textarea
+                  name="message"
+                  placeholder="Message*"
+                  value={formData.message}
+                  onChange={handleFormChange}
+                  rows="4"
+                  required
+                  className="md:col-span-2 bg-white/90 text-gray-900 p-3 rounded-md w-full focus:ring-2 focus:ring-pink-500"
+                ></textarea>
+              </div>
+
+              <div className="text-xs text-white">
+                By continuing, I confirm that I have read and agree to the{" "}
+                <strong className="cursor-pointer underline">
+                  Privacy Policy
+                </strong>
+              </div>
+
+              <div className="flex items-start space-x-2 text-xs text-white">
+                <input
+                  type="checkbox"
+                  id="agreeToEmails"
+                  name="agreeToEmails"
+                  checked={formData.agreeToEmails}
+                  onChange={handleFormChange}
+                  className="h-4 w-4 text-pink-600"
+                />
+                <label htmlFor="agreeToEmails">
+                  I agree to receive emails from Codescience with updates on
+                  services, events, and alerts. I can unsubscribe at any time.
+                </label>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6">
+                <div className="bg-white text-black text-[10px] p-2 rounded-md flex items-center justify-between w-full sm:w-[220px]">
+                  <div className="flex items-center">
+                    <input type="checkbox" className="mr-2" required />
+                    I'm not a robot
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <img
+                      src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                      alt="reCAPTCHA"
+                      className="h-5"
+                    />
+                    <span className="text-[6px]">reCAPTCHA</span>
+                    <span className="text-[6px]">Privacy - Terms</span>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="bg-[#FF83A9] text-white font-semibold px-6 py-2 rounded-full hover:bg-pink-500 transition"
                 >
                   Send
                 </button>

@@ -299,7 +299,7 @@ const Innovation = () => {
                 </div>
 
                 {/* Right Sticky Form */}
-                <div className="lg:w-[42%] w-full">
+                {/* <div className="lg:w-[42%] w-full">
                   <div className="lg:sticky top-28">
                     <form
                       className="bg-[#fcc000] text-[#474747] p-6 rounded-lg shadow-lg space-y-4 h-[660px] "
@@ -310,8 +310,7 @@ const Innovation = () => {
                         <br />a free consultation
                       </h2>
 
-                      {/* First & Last Name */}
-                      <div className="flex gap-4">
+                      <div className="flex gap-4 flex-col md:flex-row">
                         <input
                           type="text"
                           placeholder="First Name*"
@@ -330,7 +329,6 @@ const Innovation = () => {
                         />
                       </div>
 
-                      {/* Email & Company */}
                       <div className="flex gap-4">
 
                         <input
@@ -351,7 +349,6 @@ const Innovation = () => {
                         />
                       </div>
 
-                      {/* Country Dropdown */}
                       <div className="relative">
                         <select
                           required
@@ -377,7 +374,6 @@ const Innovation = () => {
                           <ArrowDownwardIcon sx={{ fontSize: 16 }} />
                         </span>
                       </div>
-                      {/* Message */}
                       <textarea
                         placeholder="Message*"
                         className="w-full p-3 h-28 rounded bg-white text-black text-lg  focus:outline-none"
@@ -386,7 +382,6 @@ const Innovation = () => {
                         onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
 
-                      {/* Checkbox */}
                       <p className="text-xs text-[#474747]">
                         By continuing, I confirm that I have read and agree to
                         the
@@ -411,7 +406,6 @@ const Innovation = () => {
                         </p>
                       </div>
 
-                      {/* Submit */}
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
                         <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
                           <input
@@ -451,7 +445,153 @@ const Innovation = () => {
                       </div>
                     </form>
                   </div>
-                </div>
+                </div> */}
+                    <div className="lg:w-[45%] w-full sticky top-10 self-start">
+                                <form className="bg-[#FCC000] text-white text-bg-[#f9f9f9] p-8 rounded-xl space-y-6 " onSubmit={handleSubmit}>
+                                  <p
+                                    style={{ lineHeight: "1.2em" }}
+                                    className="text-xl md:text-2xl font-bold text-left tracking-tight text-[#474747]"
+                                  >
+                                    Complete the form and book <br /> a free consultation
+                                  </p>
+                
+                                  {/* Name Fields */}
+                                  <div className="flex flex-col md:flex-row gap-4 bg">
+                                    <input
+                                      type="text"
+                                      placeholder="First Name*"
+                                      required
+                                      className="flex-1 p-3 bg-white text-black rounded-md"
+                                      value={firstName}
+                                      onChange={(e) => setFirstName(e.target.value)}
+                                    />
+                                    <input
+                                      type="text"
+                                      placeholder="Last Name*"
+                                      required
+                                      className="flex-1 p-3 bg-white text-black rounded-md"
+                                      value={lastName}
+                                      onChange={(e) => setLastName(e.target.value)}
+                                    />
+                                  </div>
+                
+                                  {/* Company + Email */}
+                                  <div className="flex flex-col md:flex-row gap-4">
+                                    <input
+                                      type="text"
+                                      placeholder="Company*"
+                                      required
+                                      className="flex-1 p-3 bg-white text-black rounded-md"
+                                      value={company}
+                                      onChange={(e) => setCompany(e.target.value)}
+                                    />
+                                    <input
+                                      type="email"
+                                      placeholder="Email*"
+                                      required
+                                      className="flex-1 p-3 bg-white text-black rounded-md"
+                                      value={email}
+                                      onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                  </div>
+                
+                                  {/* Country Dropdown */}
+                                  <div className="relative">
+                                    <select
+                                      required
+                                      className="w-full p-3 bg-white text-[#474747] rounded-md appearance-none"
+                                      defaultValue=""
+                                      value={country}
+                                      onChange={(e) => setCountry(e.target.value)}
+                                    >
+                                      <option disabled value="">
+                                        Country*
+                                      </option>
+                                      {countries.map((country, id) => (
+                                        <option key={id} value={country}>
+                                          {country}
+                                        </option>
+                                      ))}
+                                    </select>
+                                    <span className="absolute right-5 top-1/2 -translate-y-1/2 text-[#474747]  pointer-events-none ">
+                                      <ArrowDownwardIcon sx={{ fontSize: 16 }} />
+                                    </span>
+                                  </div>
+                
+                                  {/* Message */}
+                                  <textarea
+                                    placeholder="Message*"
+                                    required
+                                    className="w-full p-3 bg-white text-black rounded-md h-32"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                  />
+                
+                                  <p className="text-[12px] font-light text-[#474747]">
+                                    By continuing, I confirm that I have read and agree to the{" "}
+                                    <a href="/privacycona" target="_blank" rel="noopener noreferrer">
+                                      <span className="font-semibold  cursor-pointer ">
+                                       Privacy Policy
+                                      </span>
+                                    </a>
+                                    {/* <span className=""></span>. */}
+                                  </p>
+                
+                                  <label className="flex items-start text-[12px] font-light text-[#474747]">
+                                    <input
+                                      type="checkbox"
+                                      className="mt-1 accent-white"
+                                      required
+                                      checked={isAgree}
+                                      onChange={(e) => setIsAgree(e.target.checked)}
+                                    />
+                                    <span className="ml-2 text-[#474747]">
+                                      I agree to receive emails from Codescience with updates on
+                                      services, events, and alerts. I can unsubscribe at any
+                                      time ..
+                                    </span>
+                                  </label>
+                
+                                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6">
+                                    <div className="bg-white border border-gray-300 rounded-md px-2 py-2 flex items-center w-[210px]">
+                                      <input
+                                        type="checkbox"
+                                        id="not-robot"
+                                        required
+                                        className="h-4 w-4 mr-2 accent-blue-600"
+                                        checked={isRobot}
+                                        onChange={(e) => setIsRobot(e.target.checked)}
+                                      />
+                                      <label
+                                        htmlFor="not-robot"
+                                        className="text-[10px] text-[#000] mr-auto"
+                                      >
+                                        I'm not a robot
+                                      </label>
+                                      <div className="flex flex-col items-center cursor-pointer">
+                                        <img
+                                          src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                                          alt="reCAPTCHA logo"
+                                          className="h-6 mb-1"
+                                        />
+                                        <span className="text-[7px] text-[#555] leading-none">
+                                          reCAPTCHA
+                                        </span>
+                                        <span className="text-[6px] text-[#000] cursor-pointer leading-none">
+                                          Privacy – Terms
+                
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <button
+                                      type="submit"
+                                      className="bg-white text-[#474747] font-semibold px-6 py-2 rounded-full hover:bg-[#FF83A9] hover:text-white transition-all"
+                                    >
+                                      Send
+                                    </button>
+                                  </div>
+                                </form>
+                              </div>
               </div>
             </div>
 

@@ -11,14 +11,12 @@ const NewCloudgaiaSection = () => {
         src="asset1.png"
         // src="/left-video.png"
         alt="Decorative Overlay"
-        className="absolute  w-[90px] z-0  left-0  top-0"
+        className="absolute  w-[90px] z-0  left-0  top-0 hidden md:block"
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Left Section: Video Player */}
           <div className="relative bg-[#2A8A9D] rounded-lg p-12 w-full lg:w-1/2 h-64 flex items-center justify-center overflow-hidden">
-            {/* Background Pattern */}
             <div
               className="absolute inset-0 opacity-10 pointer-events-none"
               style={{

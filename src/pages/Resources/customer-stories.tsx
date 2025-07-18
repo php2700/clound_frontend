@@ -290,7 +290,7 @@ delivering personalized experiences tailored to each segment and touchpoint.`,
                   }
                                          rounded-xl overflow-hidden my-8`}
                 >
-                  <div className="lg:w-1/2 w-full h-64 lg:h-auto">
+                  <div className="lg:w-1/2 w-full h-70 lg:h-auto">
                     <img
                       src={item?.userImg}
                       alt="story"
@@ -339,6 +339,59 @@ delivering personalized experiences tailored to each segment and touchpoint.`,
               ))}
             </div>
           </div>
+
+          {/* <div className="container mx-auto mt-24 px-4 sm:px-6 lg:px-10">
+  <div>
+    {storyData?.map((item, index) => (
+      <div
+        key={index}
+        className={`flex flex-col lg:flex-row ${
+          index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+        } rounded-xl overflow-hidden my-10`}
+      >
+        <div className="lg:w-1/2 w-full h-48 sm:h-64 md:h-80 lg:h-auto">
+          <img
+            src={item?.userImg}
+            alt="story"
+            className="w-full h-[40vh] object-cover"
+          />
+        </div>
+
+        <div className="lg:w-1/2 w-full py-6 px-4 sm:px-6 md:px-10 flex flex-col justify-between">
+          <div className="flex items-center gap-3 mb-4 flex-wrap">
+            <img
+              src={item?.companyImg}
+              alt="company"
+              className="h-6 sm:h-8 md:h-10 object-contain"
+              style={{ width: "auto", maxWidth: "150px" }}
+            />
+            {item?.flagImg && (
+              <img src={item?.flagImg} alt="flag" className="h-4 sm:h-5" />
+            )}
+          </div>
+
+          <div className="text-sm sm:text-base text-[#ff83a9] mb-2 leading-snug">
+            {item?.services}
+          </div>
+
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#474747] mb-2 leading-tight">
+            {item?.title}
+          </div>
+
+          <div className="text-sm sm:text-base md:text-lg text-[#474747] mb-4 leading-relaxed">
+            {item?.description}
+          </div>
+
+          <Link to={item?.url}>
+            <button className="mt-auto self-start bg-[#fcc000] text-sm sm:text-base text-[#474747] font-bold px-5 py-2 rounded-3xl hover:bg-[#ff83a9] hover:text-white transition">
+              Read the full story
+            </button>
+          </Link>
+        </div>
+      </div>
+    ))}
+  </div>
+</div> */}
 
           <div
             className="relative w-full h-[300px] bg-cover bg-center"

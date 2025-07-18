@@ -21,7 +21,7 @@ import axios from "axios";
 
 const images = [
   // { img: "/Depositphotos_151402814_ds (1).jpg" },
-  
+
   { img: "/careersnews.jpg" },
 
   { img: "/career2.jpg" },
@@ -31,7 +31,6 @@ const images = [
   // { img: "/Depositphotos_763920694_L (1).jpg" },
   { img: "/career3.jpg" },
 
- 
   // { img: "/careers-slide-7.webp" },
 ];
 
@@ -306,8 +305,8 @@ export const Careers = () => {
             businesses through technology.
           </div>
         </div>
-        <div className="bg-[#f9f9f9]  sm:px-6 lg:px-12 flex flex-col lg:flex-row  gap-8">
-          <div className="relative w-full max-w-3xl px-6 py-24">
+        <div className="bg-[#f9f9f9]  sm:px-6  lg:px-12 flex flex-col lg:flex-row  gap-8">
+          <div className="relative w-full max-w-3xl px-6 py-24 ">
             <img
               // src="Screenshot (187).png"
               src="/maapnew (187).jpg"
@@ -315,8 +314,8 @@ export const Careers = () => {
               className="w-full opacity-80"
             />
           </div>
-          <div className="max-w-xl text-center lg:text-left py-20 pt-20">
-            <h2 className="text-[#ff83a9] text-2xl font-bold mb-4 text-[32px] pt-24 ">
+          <div className="max-w-xl text-center lg:text-left py-20 pt-20  ">
+            <h2 className="text-[#ff83a9] text-2xl font-bold mb-4 text-[32px] md:pt-24  ">
               Codescience around the world
             </h2>
             <p className="text-[#474747] font-text text-[18px] mb-6 ">
