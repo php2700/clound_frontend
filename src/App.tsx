@@ -34,6 +34,7 @@ import IntegrityForm from "./pages/IntegrityForm";
 import Privacypolicy from "./pages/Privacypolicy";
 import { Thankyou } from "./pages/thankyou";
 import { NonProfit } from "./pages/Resources/non_profit";
+import DynamicTitle from "./pages/dynamicTitle";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <DynamicTitle />
         <ScrollToTop />
         <Routes>
           {/* <Route path="/" element={<Layout />}> */}

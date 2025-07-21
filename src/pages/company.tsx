@@ -37,7 +37,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Ashwin Sankaran",
-    title: "Board Member",
+    title: "Board Member & Advisor",
     image: "/ashwin.png",
     linkedIn: "#",
   },
