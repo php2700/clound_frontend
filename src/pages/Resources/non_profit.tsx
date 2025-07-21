@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { text } from "stream/consumers";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import axios from "axios";
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
 const ProductsIcon = () => (
   <svg
@@ -87,6 +89,8 @@ const iconComponents = {
 
 export const NonProfit = () => {
   const navigate = useNavigate();
+    const [isRobot, setIsRobot] = useState(false);
+
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -97,7 +101,6 @@ export const NonProfit = () => {
     email: "",
     country: "",
     message: "",
-    agreeToEmails: false,
   });
 
   const handleFormChange = (e) => {
@@ -108,10 +111,28 @@ export const NonProfit = () => {
     }));
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Thank you for your message!");
+    const handleFormSubmit = (e) => {
+ e.preventDefault();
+    axios
+      .post(`${API_BASE_URL}api/user/non-profit`, formData)
+      .then((res) => {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          company:"",
+          email: "",
+          country: "",
+          message: "",
+        });
+        setIsRobot(false);
+        // toast.success("Details_added", {
+        //   position: "top-right",
+        // });
+        navigate("/thank-you");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   // --- All dynamic data for sections ---
@@ -703,7 +724,7 @@ export const NonProfit = () => {
                   type="checkbox"
                   id="agreeToEmails"
                   name="agreeToEmails"
-                  checked={formData.agreeToEmails}
+                  // checked={formData.agreeToEmails}
                   onChange={handleFormChange}
                   className="h-4 w-4 rounded text-pink-600 focus:ring-pink-500"
                 />
