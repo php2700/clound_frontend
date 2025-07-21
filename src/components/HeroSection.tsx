@@ -6,7 +6,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const HeroSection = () => {
   const images = [
     {
-      url: "/image (9).png",
+      url: "/all-in-growth.png",
       title: "All-in for your Growth",
       description:
         "Digital Transformation <br/> through the power of Salesforce.",
@@ -23,22 +23,6 @@ const HeroSection = () => {
       buttonText: "Read the success story",
       buttonLink: "/customer-stories/non-profit-cloud",
     },
-    // {
-    //   url: "agent.webp",
-    //   buttonText: "Read about AI Expert Insights",
-    //   buttonLink: "/resources/blog",
-    //   imageRight:
-    //     "PNG-AGENTFORCE-CARROUSEL-r7vqlsma9mbm1a8wi5hm7menkf81biqh6vd6g2xiww.png",
-    // },
-    // {
-    //   url: "/home-hero1.jpeg",
-    //   imageLeft:
-    //     "https://cloudgaia.com/storage/2025/07/PNG-en-ingles-e1751395670583.png",
-    //   paragraph:
-    //     "Real challenges. Real solutions. This E-book is your roadmap to<br/>evolving your Consumer Goods strat —powered by Cloudgaia <br/>and Salesforce.",
-    //   buttonText: "Download",
-    //   buttonLink: "/download",
-    // },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -112,7 +96,7 @@ const HeroSection = () => {
               style={{ backgroundImage: `url('${image.url}')` }}
               aria-hidden={index !== currentImageIndex}
             >
-              {(index === 1 || index === 2) && (
+              {(index === 1 || index === 0) && (
                 <div className="absolute inset-0 bg-[#1f1f25] opacity-60"></div>
               )}
             </div>
