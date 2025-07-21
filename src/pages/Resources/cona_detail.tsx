@@ -13,6 +13,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { text } from "stream/consumers";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import axios from "axios";
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
+
 
 const ProductsIcon = () => (
   <svg
@@ -97,17 +100,16 @@ const SalesforceLogo = () => (
 export const ConaService = () => {
   const navigate = useNavigate();
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-
+  const [isRobot, setIsRobot] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [formData, setFormData] = useState({
-    firstName: "",
+   firstName: "",
     lastName: "",
     company: "",
     email: "",
     country: "",
     message: "",
-    agreeToEmails: false,
-  });
+  }); 
 
   const handleFormChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -118,9 +120,27 @@ export const ConaService = () => {
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Thank you for your message!");
+ e.preventDefault();
+    axios
+      .post(`${API_BASE_URL}api/user/cloud`, formData)
+      .then((res) => {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          company:"",
+          email: "",
+          country: "",
+          message: "",
+        });
+        setIsRobot(false);
+        // toast.success("Details_added", {
+        //   position: "top-right",
+        // });
+        navigate("/thank-you");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   // --- All dynamic data for sections ---
@@ -769,7 +789,7 @@ export const ConaService = () => {
                   type="checkbox"
                   id="agreeToEmails"
                   name="agreeToEmails"
-                  checked={formData.agreeToEmails}
+                  // checked={formData.agreeToEmails}
                   onChange={handleFormChange}
                   className="h-4 w-4 text-pink-600"
                 />
