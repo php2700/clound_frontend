@@ -21,7 +21,8 @@ const DynamicTitle = () => {
     "/customer-stories/commerce-cloud-implementation":"Doordash Success Story | Efficient Management with salesforce",
     "/customer-stories/education-cloud":"Kaplan - USA -CodeScience",
     "/customer-stories/schneider-electric":"Schneider Electric Success Story | Transformation with salesforce",
-    "/customer-stories/blue-cross":"Blue Cross Idaho Success Story | scalability with salesforce"
+    "/customer-stories/blue-cross":"Blue Cross Idaho Success Story | scalability with salesforce",
+    "/resources/blog":"CodeScience Blog | Innovation in AI Technology & salesforce"
   };
 
   const currentTitle = titles[location.pathname] || "CodeScience";
