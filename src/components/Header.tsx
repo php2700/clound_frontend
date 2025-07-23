@@ -116,13 +116,13 @@ const Header = () => {
                 />
               </div>
               <div className="absolute opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out delay-100 bg-white shadow-lg rounded-md mt-0 py-2 w-44 transform group-hover:translate-y-0 translate-y-[-10px] group-hover:visible invisible pointer-events-none group-hover:pointer-events-auto">
-                {/* <Link
+                <Link
                   to="/resources/blog"
                   className="inline-block px-4 mt-2 mb-1 text-base text-[#474747] font-bold relative group/link"
                 >
                   Blog
                   <span className="absolute left-4 bottom-0 h-0.5 bg-[#ff83a9] w-0 group-hover/link:w-[calc(100%-2rem)] transition-all duration-300 ease-in-out"></span>
-                </Link> */}
+                </Link>
                 <Link
                   to="/resources/customer-stories"
                   className="inline-block px-4 mt-6 mb-4 text-base text-[#474747]  font-bold relative group/link"
