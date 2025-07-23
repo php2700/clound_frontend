@@ -193,7 +193,7 @@ const Footer = () => {
                 <h4 className="font-bold mb-2 text-[#999999]">Resources</h4>
                 <ul className="space-y-3 font-bold">
                   {[
-                    { label: "Blog", to: "/resources/blog" },
+                    // { label: "Blog", to: "/resources/blog" },
                     {
                       label: "Success stories",
                       to: "/resources/customer-stories",
