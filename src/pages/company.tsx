@@ -457,7 +457,7 @@ const Company = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-[180px] rounded-lg mx-auto object-cover mb-4"
+                      className="w-full  h-auto sm:h-[180px] rounded-lg mx-auto object-cover mb-4"
                     />
                     {/* Assuming this is a LinkedIn icon link */}
                     <a
