@@ -248,10 +248,13 @@ export const Blog = () => {
                     </div>
 
                     {/* Read Article pushed to bottom */}
-                    <div className="relative mt-auto font-bold text-[#474747] text-base cursor-pointer group w-max">
-                      <span>Read Article</span>
-                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
-                    </div>
+                 <div
+    onClick={() => handleView(item)} // <-- इस लाइन को जोड़ें
+    className="relative mt-auto font-bold text-[#474747] text-base cursor-pointer group w-max"
+>
+    <span>Read Article</span>
+    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#ff83a9] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+</div>
                   </div>
                 </div>
               ))}
