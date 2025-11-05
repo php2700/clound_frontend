@@ -1,4 +1,6 @@
 import Header from "@/components/Header";
+import WhatsAppChat from "@/components/Whatsapp";
+
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import NewCloudgaiaSection from "@/components/NewCloudgaiaSection";
@@ -50,6 +52,7 @@ const Index = () => {
       <Home />
       <SuccessStoriesSection />
       <Footer />
+         <WhatsAppChat />
     </div>
   );
 };
