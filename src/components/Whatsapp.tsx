@@ -2,7 +2,7 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppChat = () => {
-  const whatsappNumber = "911111111111111111"; 
+  const whatsappNumber = "+91 836 981 1521"; 
 
   const defaultMessage = "welcome code-science";
   const encodedMessage = encodeURIComponent(defaultMessage);
